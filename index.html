@@ -36,7 +36,7 @@ a{color:var(--mavi)}
 <body>
 <header><div class="ic">
   <h1>Yol Hakkı — Gizlilik Politikası</h1>
-  <p>Geliştirici: BE STUDIO · Yürürlük tarihi: 5 Kasım 2026</p>
+  <p>Geliştirici: BE STUDIO · Yürürlük tarihi: 8 Kasım 2026</p>
 </div></header>
 <main>
 <nav class="dil" aria-label="Dil"><a href="#tr">Türkçe</a><a href="#en">English</a></nav>
@@ -56,12 +56,15 @@ a{color:var(--mavi)}
       <tr><td>Ad, e-posta adresi, profil fotoğrafı</td><td>Yalnızca Google ile giriş yaparsanız</td><td>Profilinizi göstermek ve ilerlemenizi hesabınızla eşleştirmek</td></tr>
       <tr><td>Sınav sonuçları, soru istatistikleri (görülen, doğru/yanlış sayısı)</td><td>Sınav ve test çözdüğünüzde</td><td>Sonuç geçmişinizi göstermek, yanlış yaptığınız soruları tekrar önüne getirmek</td></tr>
       <tr><td>Oturum bilgisi (misafir veya Google oturumu)</td><td>Giriş yaptığınızda</td><td>Uygulamayı her açtığınızda yeniden giriş yapmanızı gerektirmemek</td></tr>
+      <tr><td>Hesap kimliği (Firebase kullanıcı numarası), ad, e-posta, profil fotoğrafı</td><td>Google ile giriş yaptığınızda</td><td>Hesabınızı oluşturmak ve oturumunuzu güvenle doğrulamak (Firebase Authentication)</td></tr>
+      <tr><td>Eğitmen / işletme başvuru bilgileri: ad soyad, sürücü kursu adı, şehir/ilçe, telefon numarası, e-posta; isteğe bağlı olarak eğitmenlik belge no, vergi no veya MEB kurum kodu ve istenen eğitmen sayısı</td><td>Yalnızca eğitmen veya sürücü kursu hesabı için başvuru yaparsanız</td><td>Başvurunuzu incelemek, hesabınızı onaylamak ve gerekirse sizinle iletişime geçmek</td></tr>
+      <tr><td>Eğitmenlerin eklediği sorular ve ekleyenin adı veya kurs adı</td><td>Onaylı eğitmen veya kurs soru eklediğinde</td><td>Soruları tüm kullanıcıların soru bankasına eklemek</td></tr>
     </tbody>
   </table>
   <h3>Toplamadığımız bilgiler</h3>
   <ul>
     <li>Konum, rehber, kamera, mikrofon, fotoğraf veya dosyalarınıza erişmeyiz.</li>
-    <li>Telefon numarası, kimlik numarası veya ödeme bilgisi istemeyiz.</li>
+    <li>Öğrencilerden telefon numarası istemeyiz; telefon numarası yalnızca eğitmen/işletme başvurusunda istenir. Kimlik numarası veya ödeme bilgisi istemeyiz.</li>
     <li>Reklam kimliği kullanmayız; Uygulamada reklam ve analiz/izleme aracı yoktur.</li>
     <li>Google şifrenizi hiçbir zaman görmeyiz; giriş işlemi doğrudan Google tarafından yapılır.</li>
   </ul>
@@ -71,7 +74,10 @@ a{color:var(--mavi)}
   <h2>3. Bilgilerin saklanması</h2>
   <ul>
     <li>Sınav sonuçlarınız, soru istatistikleriniz ve oturum bilginiz <b>cihazınızda</b>, Uygulamanın yerel deposunda saklanır.</li>
-    <li>Misafir kullanımda hiçbir bilgi sunucularımıza gönderilmez.</li>
+    <li>Misafir kullanımda hiçbir kişisel bilgi sunucularımıza gönderilmez.</li>
+    <li>Google ile giriş yaptığınızda hesap kimliğiniz, adınız, e-postanız ve profil fotoğrafınız <b>Google Firebase Authentication</b> sunucularında saklanır.</li>
+    <li>Eğitmen/işletme başvuruları, onaylı hesap kayıtları ve eğitmenlerin eklediği sorular <b>Google Cloud Firestore</b> veritabanında (veri merkezi konumu: Frankfurt, Almanya) saklanır. Başvuru bilgilerini yalnızca siz ve BE STUDIO yöneticileri görebilir; erişim güvenlik kurallarıyla sınırlandırılmıştır.</li>
+    <li>Başvuru bilgileri, hesabınız aktif olduğu sürece veya siz silinmesini isteyene kadar saklanır. Reddedilen başvurular en geç 12 ay içinde silinir.</li>
     <li>Uygulamayı kaldırdığınızda veya uygulama verilerini temizlediğinizde bu bilgiler cihazınızdan silinir.</li>
   </ul>
 </section>
@@ -83,6 +89,7 @@ a{color:var(--mavi)}
     <thead><tr><th>Taraf</th><th>Türü</th><th>Ne için</th></tr></thead>
     <tbody>
       <tr><td>Google LLC (Google ile Oturum Açma)</td><td>Kimlik doğrulama hizmeti</td><td>Google ile giriş yapmayı seçerseniz kimliğinizi doğrulamak. Google'ın uygulamaları için <a href="https://policies.google.com/privacy" rel="noopener">Google Gizlilik Politikası</a> geçerlidir.</td></tr>
+      <tr><td>Google LLC (Firebase Authentication ve Cloud Firestore)</td><td>Bulut altyapı / veri işleyen</td><td>Google hesabıyla oturumunuzu doğrulamak; eğitmen/işletme başvurularını, onaylı hesapları ve eğitmen sorularını saklamak. Veriler BE STUDIO adına işlenir. <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase gizlilik bilgileri</a>.</td></tr>
       <tr><td>Soru bankası barındırma hizmeti</td><td>Web barındırma sağlayıcısı</td><td>Güncel soruların Uygulamaya indirilmesi. Bu istekte kişisel bilgi gönderilmez; sağlayıcı, her web sunucusunda olduğu gibi IP adresi gibi teknik bağlantı kayıtları tutabilir.</td></tr>
       <tr><td>Yetkili kurumlar</td><td>Resmî makamlar</td><td>Yalnızca yasal bir zorunluluk olması halinde.</td></tr>
     </tbody>
@@ -90,8 +97,8 @@ a{color:var(--mavi)}
 </section>
 
 <section>
-  <h2>5. Kurum ve eğitmen soru yönetimi</h2>
-  <p>Uygulamadaki "Soru yönetimi" bölümü, sürücü kursu kurumlarının ve eğitmenlerin soru bankasına soru eklemesi içindir. Bu bölümde eklenen sorular ve çözümleri tüm kullanıcılara gösterilir; bu alana kişisel bilgi girilmemelidir.</p>
+  <h2>5. Eğitmen ve sürücü kursu hesapları</h2>
+  <p>Eğitmenler ve sürücü kursları, Uygulamadaki "Eğitmen / işletme girişi" bölümünden Google hesabıyla başvuru yapabilir. Başvurular BE STUDIO tarafından incelenir; onaylanan hesaplar soru bankasına soru ekleyebilir. Eklenen sorular ve çözümleri tüm kullanıcılara gösterilir; bu alanlara kişisel bilgi girilmemelidir. Başvuru bilgileri yalnızca başvuruyu değerlendirmek ve hesabı yönetmek için kullanılır, üçüncü kişilerle paylaşılmaz.</p>
 </section>
 
 <section>
@@ -101,7 +108,7 @@ a{color:var(--mavi)}
 
 <section>
   <h2>7. Güvenlik</h2>
-  <p>Uygulama ile hizmet sağlayıcılar arasındaki bağlantılar şifrelidir (HTTPS). Bilgileriniz ağırlıklı olarak kendi cihazınızda tutulur. Hiçbir aktarım veya saklama yöntemi yüzde yüz güvenli değildir; ancak bilgilerinizi korumak için makul önlemleri alırız.</p>
+  <p>Uygulama ile hizmet sağlayıcılar arasındaki bağlantılar şifrelidir (HTTPS). Öğrencilerin sınav bilgileri kendi cihazlarında tutulur; sunucuda tutulan başvuru ve hesap bilgilerine erişim kimlik doğrulaması ve güvenlik kurallarıyla sınırlandırılmıştır. Hiçbir aktarım veya saklama yöntemi yüzde yüz güvenli değildir; ancak bilgilerinizi korumak için makul önlemleri alırız.</p>
 </section>
 
 <section>
@@ -110,6 +117,7 @@ a{color:var(--mavi)}
   <ul>
     <li><b>Çıkış yapmak:</b> Profil sayfasından "Çıkış yap" ile oturumunuzu kapatabilirsiniz.</li>
     <li><b>Verileri silmek:</b> Uygulamayı kaldırmanız veya cihaz ayarlarından uygulama verilerini temizlemeniz, cihazdaki tüm sonuç ve istatistikleri siler.</li>
+    <li><b>Hesap ve başvuru verilerini silmek:</b> Google hesabınızla ilişkili hesap kaydınızın, eğitmen/işletme başvurunuzun ve eklediğiniz soruların silinmesi için <a href="mailto:bestudio5454@gmail.com?subject=EHL%C4%B0YET%20BENDE%20-%20Veri%20silme%20talebi">bestudio5454@gmail.com</a> adresine, giriş yaptığınız e-posta adresinden "Veri silme talebi" konulu bir e-posta göndermeniz yeterlidir. Talebiniz en geç 30 gün içinde yerine getirilir. Eklediğiniz soruları eğitmen panelinden kendiniz de silebilirsiniz.</li>
     <li><b>Google erişimini kaldırmak:</b> <a href="https://myaccount.google.com/permissions" rel="noopener">Google hesabı izinleri</a> sayfasından Uygulamanın erişimini istediğiniz zaman kaldırabilirsiniz.</li>
     <li><b>Talepleriniz için:</b> <a href="mailto:bestudio5454@gmail.com">bestudio5454@gmail.com</a> adresine yazabilirsiniz. Taleplerinizi en geç 30 gün içinde yanıtlarız.</li>
   </ul>
@@ -131,7 +139,7 @@ a{color:var(--mavi)}
 <div id="en" lang="en">
 <section>
   <h2>Yol Hakkı — Privacy Policy (English)</h2>
-  <p class="soluk">Developer: BE STUDIO · Effective date: November 5, 2026</p>
+  <p class="soluk">Developer: BE STUDIO · Effective date: November 8, 2026</p>
   <p>This policy covers the <b>Yol Hakkı</b> driving-school app ("App") developed by BE STUDIO. The App offers driving licence practice exams, lessons, track animations and a driving simulation.</p>
 </section>
 <section>
@@ -140,18 +148,23 @@ a{color:var(--mavi)}
     <li><b>Name, email address and profile photo</b> — only if you choose to sign in with Google, to show your profile and link your progress to your account.</li>
     <li><b>Exam results and question statistics</b> (seen, correct and wrong counts) — to show your history and bring back questions you answered wrong.</li>
     <li><b>Session information</b> (guest or Google session) — so you stay signed in.</li>
+    <li><b>Account ID (Firebase user ID), name, email and profile photo</b> — when you sign in with Google, to create your account and verify your session (Firebase Authentication).</li>
+    <li><b>Instructor / driving-school application details</b> — full name, driving school name, city, phone number, email and optionally instructor certificate no, tax no or MEB institution code and requested number of instructors; only if you apply for an instructor or business account, to review the application, approve the account and contact you.</li>
+    <li><b>Questions added by approved instructors</b> and the instructor's or school's name — to add them to every user's question bank.</li>
   </ul>
-  <p>We do not access location, contacts, camera, microphone, photos or files. We do not use advertising IDs, ads, or analytics/tracking tools. We never see your Google password.</p>
+  <p>We do not ask students for phone numbers (phone numbers are requested only in instructor/business applications). We do not access location, contacts, camera, microphone, photos or files. We do not use advertising IDs, ads, or analytics/tracking tools. We never see your Google password.</p>
 </section>
 <section>
   <h2>Storage</h2>
-  <p>Results, statistics and session information are stored <b>locally on your device</b>. In guest mode nothing is sent to our servers. Uninstalling the App or clearing its data deletes this information.</p>
+  <p>Results, statistics and session information are stored <b>locally on your device</b>. In guest mode no personal information is sent to our servers. Uninstalling the App or clearing its data deletes this information.</p>
+  <p>When you sign in with Google, your account ID, name, email and photo are stored by <b>Google Firebase Authentication</b>. Instructor/business applications, approved account records and instructor questions are stored in <b>Google Cloud Firestore</b> (data centre: Frankfurt, Germany). Application details are visible only to you and BE STUDIO administrators. They are kept while your account is active or until you ask us to delete them; rejected applications are deleted within 12 months.</p>
 </section>
 <section>
   <h2>Sharing</h2>
   <p>We do <b>not sell, rent or share</b> personal information for advertising. Information is processed only by:</p>
   <ul>
     <li><b>Google LLC (Sign in with Google)</b> — authentication service, if you choose Google sign-in. <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> applies.</li>
+    <li><b>Google LLC (Firebase Authentication and Cloud Firestore)</b> — cloud infrastructure that processes data on behalf of BE STUDIO, to verify sign-in and store applications, approved accounts and instructor questions.</li>
     <li><b>Question bank hosting provider</b> — web hosting, to download updated questions. No personal information is sent; like any web server, it may keep technical logs such as IP addresses.</li>
     <li><b>Authorities</b> — only when required by law.</li>
   </ul>
@@ -162,7 +175,7 @@ a{color:var(--mavi)}
 </section>
 <section>
   <h2>Your rights and data deletion</h2>
-  <p>Under Türkiye's Personal Data Protection Law (KVKK, No. 6698) and other applicable laws, you may request access to, correction or deletion of your data. You can sign out from the Profile page, delete all local data by uninstalling the App or clearing its data, and remove the App's access at <a href="https://myaccount.google.com/permissions" rel="noopener">Google account permissions</a>. For requests, email <a href="mailto:bestudio5454@gmail.com">bestudio5454@gmail.com</a>; we reply within 30 days.</p>
+  <p>Under Türkiye's Personal Data Protection Law (KVKK, No. 6698) and other applicable laws, you may request access to, correction or deletion of your data. You can sign out from the Profile page, delete all local data by uninstalling the App or clearing its data, and remove the App's access at <a href="https://myaccount.google.com/permissions" rel="noopener">Google account permissions</a>. To delete your account record, application or added questions, email bestudio5454@gmail.com from your signed-in address with the subject "Data deletion request"; we complete it within 30 days. For other requests, email <a href="mailto:bestudio5454@gmail.com">bestudio5454@gmail.com</a>; we reply within 30 days.</p>
 </section>
 <section>
   <h2>Changes and contact</h2>
