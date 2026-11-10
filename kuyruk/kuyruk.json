@@ -1,31 +1,5 @@
 [
  {
-  "uid": "k001",
-  "kat": "iy",
-  "metin": "Yetişkinde kalp masajı yapılırken göğüs kemiğine hangi bölgeden bası uygulanır?",
-  "dogru": "Göğüs kemiğinin alt yarısından",
-  "yanlislar": [
-   "Karın bölgesinin ortasından",
-   "Köprücük kemiklerinin üzerinden",
-   "Göğsün sol üst kısmından"
-  ],
-  "cozum": "Yetişkinde bası, göğüs kemiğinin alt yarısına iki el üst üste konularak, kollar dik tutulup yapılır.",
-  "levha": null
- },
- {
-  "uid": "k002",
-  "kat": "iy",
-  "metin": "Yetişkinde temel yaşam desteğinde kalp masajı ve suni solunum hangi oranda uygulanır?",
-  "dogru": "30 bası, 2 solunum",
-  "yanlislar": [
-   "15 bası, 1 solunum",
-   "5 bası, 5 solunum",
-   "10 bası, 2 solunum"
-  ],
-  "cozum": "Güncel uygulamada yetişkinde 30 göğüs basısının ardından 2 kurtarıcı solunum yapılır ve döngü sürdürülür.",
-  "levha": null
- },
- {
   "uid": "k003",
   "kat": "iy",
   "metin": "Yetişkinde kalp masajı dakikada yaklaşık kaç bası hızında yapılmalıdır?",
@@ -556,45 +530,6 @@
    "Tanıdığı kişiye"
   ],
   "cozum": "Önceliklendirme (triyaj) hayatı tehdit eden durumlara göre yapılır; sessiz kazazede daha ağır olabilir.",
-  "levha": null
- },
- {
-  "uid": "k049",
-  "kat": "tc",
-  "metin": "Takip mesafesiyle ilgili genel kural nedir?",
-  "dogru": "Aracın km/s cinsinden hızının yarısı kadar metre mesafe bırakılır",
-  "yanlislar": [
-   "Hız ne olursa olsun 5 metre bırakılır",
-   "Öndeki araca tampon tampona yaklaşılır",
-   "Hızın iki katı kadar metre bırakılır"
-  ],
-  "cozum": "Örneğin 90 km/s hızla giden sürücü öndeki araçla en az 45 metre mesafe bırakmalıdır; yağışlı havada mesafe artırılır.",
-  "levha": null
- },
- {
-  "uid": "k050",
-  "kat": "tc",
-  "metin": "Yağışlı ve kaygan yolda takip mesafesi nasıl ayarlanmalıdır?",
-  "dogru": "Normalden daha uzun tutulmalıdır",
-  "yanlislar": [
-   "Normalden kısa tutulmalıdır",
-   "Hiç değiştirilmemelidir",
-   "Öndeki aracın stop lambası görülmeyecek kadar uzun tutulmalıdır"
-  ],
-  "cozum": "Kaygan zeminde fren mesafesi uzar; güvenlik için takip mesafesi artırılır.",
-  "levha": null
- },
- {
-  "uid": "k051",
-  "kat": "tc",
-  "metin": "Kontrolsüz kavşakta, geçiş üstünlüğü olan araçlar yoksa ilk geçiş hakkı kimindir?",
-  "dogru": "Kavşağa sağdan gelen araca",
-  "yanlislar": [
-   "Kavşağa soldan gelen araca",
-   "Daha hızlı giden araca",
-   "Büyük araca"
-  ],
-  "cozum": "Kontrolsüz kavşaklarda geçiş hakkı ana yol ve sağdan gelen kuralına göre belirlenir.",
   "levha": null
  },
  {
@@ -1417,32 +1352,6 @@
   "levha": null
  },
  {
-  "uid": "k117",
-  "kat": "mt",
-  "metin": "Benzinli motorlarda yakıt–hava karışımını ateşleyen parça hangisidir?",
-  "dogru": "Buji",
-  "yanlislar": [
-   "Enjektör",
-   "Kızdırma bujisi",
-   "Termostat"
-  ],
-  "cozum": "Benzinli motorda karışım, bujinin oluşturduğu kıvılcımla ateşlenir.",
-  "levha": null
- },
- {
-  "uid": "k119",
-  "kat": "mt",
-  "metin": "Motor soğutma sisteminde antifriz kullanılmasının amacı nedir?",
-  "dogru": "Suyun donmasını önlemek ve sistemi korozyona karşı korumak",
-  "yanlislar": [
-   "Motor gücünü artırmak",
-   "Yakıt tüketimini artırmak",
-   "Fren hidroliğini azaltmak"
-  ],
-  "cozum": "Antifriz donma noktasını düşürür, kaynama noktasını yükseltir ve paslanmayı önler.",
-  "levha": null
- },
- {
   "uid": "k120",
   "kat": "mt",
   "metin": "Motor çalışırken yağ basıncı ikaz lambası yanarsa ne yapılmalıdır?",
@@ -1778,19 +1687,6 @@
    "Motorun durması"
   ],
   "cozum": "Gereksiz uzun rölanti yakıt israfı ve hava kirliliği demektir.",
-  "levha": null
- },
- {
-  "uid": "k151",
-  "kat": "ta",
-  "metin": "Trafikte saygılı sürücü davranışına örnek hangisidir?",
-  "dogru": "Yaya geçidinde bekleyen yayaya yol vermek",
-  "yanlislar": [
-   "Selektör yaparak öndeki aracı sıkıştırmak",
-   "Kırmızı ışıkta korna çalmak",
-   "Engelli park yerine park etmek"
-  ],
-  "cozum": "Saygılı sürücü diğer yol kullanıcılarının haklarını gözetir.",
   "levha": null
  },
  {

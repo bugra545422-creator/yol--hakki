@@ -1,136 +1,241 @@
 {
-  "surum": 1793970112892,
-  "aciklama": "EHLİYET BENDE soru bankası güncellemesi. Uygulama bu dosyayı internetten düzenli olarak okur.",
-  "sorular": [
-    {
-      "uid": "y1",
-      "kat": "iy",
-      "metin": "Kalp masajına başlamadan önce kazazede nasıl bir zemine yatırılmalıdır?",
-      "dogru": "Sert ve düz bir zemine",
-      "yanlislar": [
-        "Yumuşak bir yatağa",
-        "Eğimli bir yüzeye",
-        "Oturur şekilde sandalyeye"
-      ],
-      "cozum": "Kalp masajının etkili olması için göğüs basısı sert ve düz bir zeminde yapılır; yumuşak zeminde bası kuvveti emilir.",
-      "levha": null
-    },
-    {
-      "uid": "y2",
-      "kat": "iy",
-      "metin": "Ağızdan ağıza suni solunum yapılırken kazazedenin burnu ne yapılmalıdır?",
-      "dogru": "Kapatılmalı (parmaklarla sıkılmalı)",
-      "yanlislar": [
-        "Açık bırakılmalı",
-        "Pamukla tıkanmalı",
-        "Suyla temizlenmeli"
-      ],
-      "cozum": "Verilen havanın burundan kaçmaması için burun kanatları parmaklarla kapatılır.",
-      "levha": null
-    },
-    {
-      "uid": "y3",
-      "kat": "iy",
-      "metin": "İlk yardımcı, kazazedeye müdahale etmeden önce kendini nasıl korumalıdır?",
-      "dogru": "Ortam güvenliğini sağlamalı, mümkünse eldiven kullanmalı",
-      "yanlislar": [
-        "Hiçbir önlem almadan müdahale etmeli",
-        "Önce kazazedenin eşyalarını toplamalı",
-        "Kazazedeyi hemen sarsarak uyandırmalı"
-      ],
-      "cozum": "İlk yardımcının kendisi de yaralanırsa yardım edemez; önce güvenlik sağlanır, kan ve vücut sıvılarına karşı eldiven kullanılır.",
-      "levha": null
-    },
-    {
-      "uid": "y4",
-      "kat": "tc",
-      "metin": "Yanan yeşil ok ışığı sürücüye ne bildirir?",
-      "dogru": "Yalnızca okun gösterdiği yöne dikkatle geçilebileceğini",
-      "yanlislar": [
-        "Tüm yönlere geçilebileceğini",
-        "Durulması gerektiğini",
-        "Yalnızca yayaların geçebileceğini"
-      ],
-      "cozum": "Yeşil ok, yalnızca gösterdiği yöne geçişe izin verir; sürücü yine de yayalara ve diğer araçlara dikkat eder.",
-      "levha": null
-    },
-    {
-      "uid": "y5",
-      "kat": "tc",
-      "metin": "Gece yağmurlu havada sürüş için en doğru davranış hangisidir?",
-      "dogru": "Hızı azaltıp takip mesafesini artırmak",
-      "yanlislar": [
-        "Uzun farla hızlı gitmek",
-        "Takip mesafesini kısaltmak",
-        "Sis farını kapatıp hızlanmak"
-      ],
-      "cozum": "Yağmurda görüş azalır ve fren mesafesi uzar; hız düşürülür, takip mesafesi artırılır.",
-      "levha": null
-    },
-    {
-      "uid": "y6",
-      "kat": "tc",
-      "metin": "Uykusuzluk ve yorgunluk sürücüyü nasıl etkiler?",
-      "dogru": "Tepki süresini uzatır ve kaza riskini artırır",
-      "yanlislar": [
-        "Dikkati artırır",
-        "Fren mesafesini kısaltır",
-        "Sürüşü etkilemez"
-      ],
-      "cozum": "Yorgun sürücü tehlikeyi geç fark eder ve geç tepki verir; uzun yolda düzenli mola verilmelidir.",
-      "levha": null
-    },
-    {
-      "uid": "y7",
-      "kat": "mt",
-      "metin": "Soğutma suyu seviyesi nasıl kontrol edilmelidir?",
-      "dogru": "Motor soğukken, genleşme kabındaki işaretlere bakılarak",
-      "yanlislar": [
-        "Motor sıcakken radyatör kapağı açılarak",
-        "Araç çalışırken egzoza bakılarak",
-        "Yağ çubuğu ile"
-      ],
-      "cozum": "Sıcak sistemde basınçlı su yakabilir; seviye motor soğukken genleşme kabındaki en az–en çok işaretlerine göre kontrol edilir.",
-      "levha": null
-    },
-    {
-      "uid": "y8",
-      "kat": "mt",
-      "metin": "Lastik basıncı en doğru ne zaman ölçülür?",
-      "dogru": "Lastikler soğukken",
-      "yanlislar": [
-        "Uzun yolculuktan hemen sonra",
-        "Lastikler sıcakken",
-        "Yağmur yağarken"
-      ],
-      "cozum": "Lastik ısındıkça içindeki hava genleşir ve basınç yüksek görünür; doğru ölçüm lastikler soğukken yapılır.",
-      "levha": null
-    },
-    {
-      "uid": "y9",
-      "kat": "ta",
-      "metin": "Başka bir sürücünün hatası yüzünden tehlikeli bir durum yaşadığında ne yapmalısın?",
-      "dogru": "Sakin kalıp güvenli sürüşe devam etmeliyim",
-      "yanlislar": [
-        "Aracını takip edip hesap sormalıyım",
-        "Önüne geçip ani fren yapmalıyım",
-        "Sürekli korna çalmalıyım"
-      ],
-      "cozum": "Öfkeyle verilen tepkiler yeni tehlikeler yaratır; sakin kalmak hem kendin hem başkaları için en güvenli yoldur.",
-      "levha": null
-    },
-    {
-      "uid": "y10",
-      "kat": "ta",
-      "metin": "Trafikte sabırlı olmanın en önemli faydası nedir?",
-      "dogru": "Gerginliği ve kaza riskini azaltır",
-      "yanlislar": [
-        "Yolculuğu her zaman kısaltır",
-        "Ceza puanını sıfırlar",
-        "Yakıt deposunu doldurur"
-      ],
-      "cozum": "Sabırlı sürücü aceleyle riskli hareketler yapmaz; bu da kaza ve tartışma riskini azaltır.",
-      "levha": null
-    }
-  ]
+ "surum": "2026-11-10-18",
+ "aciklama": "EHLİYET BENDE soru bankası güncellemesi. Uygulama bu dosyayı internetten düzenli olarak okur.",
+ "sorular": [
+  {
+   "uid": "y1",
+   "kat": "iy",
+   "metin": "Kalp masajına başlamadan önce kazazede nasıl bir zemine yatırılmalıdır?",
+   "dogru": "Sert ve düz bir zemine",
+   "yanlislar": [
+    "Yumuşak bir yatağa",
+    "Eğimli bir yüzeye",
+    "Oturur şekilde sandalyeye"
+   ],
+   "cozum": "Kalp masajının etkili olması için göğüs basısı sert ve düz bir zeminde yapılır; yumuşak zeminde bası kuvveti emilir.",
+   "levha": null
+  },
+  {
+   "uid": "y2",
+   "kat": "iy",
+   "metin": "Ağızdan ağıza suni solunum yapılırken kazazedenin burnu ne yapılmalıdır?",
+   "dogru": "Kapatılmalı (parmaklarla sıkılmalı)",
+   "yanlislar": [
+    "Açık bırakılmalı",
+    "Pamukla tıkanmalı",
+    "Suyla temizlenmeli"
+   ],
+   "cozum": "Verilen havanın burundan kaçmaması için burun kanatları parmaklarla kapatılır.",
+   "levha": null
+  },
+  {
+   "uid": "y3",
+   "kat": "iy",
+   "metin": "İlk yardımcı, kazazedeye müdahale etmeden önce kendini nasıl korumalıdır?",
+   "dogru": "Ortam güvenliğini sağlamalı, mümkünse eldiven kullanmalı",
+   "yanlislar": [
+    "Hiçbir önlem almadan müdahale etmeli",
+    "Önce kazazedenin eşyalarını toplamalı",
+    "Kazazedeyi hemen sarsarak uyandırmalı"
+   ],
+   "cozum": "İlk yardımcının kendisi de yaralanırsa yardım edemez; önce güvenlik sağlanır, kan ve vücut sıvılarına karşı eldiven kullanılır.",
+   "levha": null
+  },
+  {
+   "uid": "y4",
+   "kat": "tc",
+   "metin": "Yanan yeşil ok ışığı sürücüye ne bildirir?",
+   "dogru": "Yalnızca okun gösterdiği yöne dikkatle geçilebileceğini",
+   "yanlislar": [
+    "Tüm yönlere geçilebileceğini",
+    "Durulması gerektiğini",
+    "Yalnızca yayaların geçebileceğini"
+   ],
+   "cozum": "Yeşil ok, yalnızca gösterdiği yöne geçişe izin verir; sürücü yine de yayalara ve diğer araçlara dikkat eder.",
+   "levha": null
+  },
+  {
+   "uid": "y5",
+   "kat": "tc",
+   "metin": "Gece yağmurlu havada sürüş için en doğru davranış hangisidir?",
+   "dogru": "Hızı azaltıp takip mesafesini artırmak",
+   "yanlislar": [
+    "Uzun farla hızlı gitmek",
+    "Takip mesafesini kısaltmak",
+    "Sis farını kapatıp hızlanmak"
+   ],
+   "cozum": "Yağmurda görüş azalır ve fren mesafesi uzar; hız düşürülür, takip mesafesi artırılır.",
+   "levha": null
+  },
+  {
+   "uid": "y6",
+   "kat": "tc",
+   "metin": "Uykusuzluk ve yorgunluk sürücüyü nasıl etkiler?",
+   "dogru": "Tepki süresini uzatır ve kaza riskini artırır",
+   "yanlislar": [
+    "Dikkati artırır",
+    "Fren mesafesini kısaltır",
+    "Sürüşü etkilemez"
+   ],
+   "cozum": "Yorgun sürücü tehlikeyi geç fark eder ve geç tepki verir; uzun yolda düzenli mola verilmelidir.",
+   "levha": null
+  },
+  {
+   "uid": "y7",
+   "kat": "mt",
+   "metin": "Soğutma suyu seviyesi nasıl kontrol edilmelidir?",
+   "dogru": "Motor soğukken, genleşme kabındaki işaretlere bakılarak",
+   "yanlislar": [
+    "Motor sıcakken radyatör kapağı açılarak",
+    "Araç çalışırken egzoza bakılarak",
+    "Yağ çubuğu ile"
+   ],
+   "cozum": "Sıcak sistemde basınçlı su yakabilir; seviye motor soğukken genleşme kabındaki en az–en çok işaretlerine göre kontrol edilir.",
+   "levha": null
+  },
+  {
+   "uid": "y8",
+   "kat": "mt",
+   "metin": "Lastik basıncı en doğru ne zaman ölçülür?",
+   "dogru": "Lastikler soğukken",
+   "yanlislar": [
+    "Uzun yolculuktan hemen sonra",
+    "Lastikler sıcakken",
+    "Yağmur yağarken"
+   ],
+   "cozum": "Lastik ısındıkça içindeki hava genleşir ve basınç yüksek görünür; doğru ölçüm lastikler soğukken yapılır.",
+   "levha": null
+  },
+  {
+   "uid": "y9",
+   "kat": "ta",
+   "metin": "Başka bir sürücünün hatası yüzünden tehlikeli bir durum yaşadığında ne yapmalısın?",
+   "dogru": "Sakin kalıp güvenli sürüşe devam etmeliyim",
+   "yanlislar": [
+    "Aracını takip edip hesap sormalıyım",
+    "Önüne geçip ani fren yapmalıyım",
+    "Sürekli korna çalmalıyım"
+   ],
+   "cozum": "Öfkeyle verilen tepkiler yeni tehlikeler yaratır; sakin kalmak hem kendin hem başkaları için en güvenli yoldur.",
+   "levha": null
+  },
+  {
+   "uid": "y10",
+   "kat": "ta",
+   "metin": "Trafikte sabırlı olmanın en önemli faydası nedir?",
+   "dogru": "Gerginliği ve kaza riskini azaltır",
+   "yanlislar": [
+    "Yolculuğu her zaman kısaltır",
+    "Ceza puanını sıfırlar",
+    "Yakıt deposunu doldurur"
+   ],
+   "cozum": "Sabırlı sürücü aceleyle riskli hareketler yapmaz; bu da kaza ve tartışma riskini azaltır.",
+   "levha": null
+  },
+  {
+   "uid": "k049",
+   "kat": "tc",
+   "metin": "Takip mesafesiyle ilgili genel kural nedir?",
+   "dogru": "Aracın km/s cinsinden hızının yarısı kadar metre mesafe bırakılır",
+   "yanlislar": [
+    "Hız ne olursa olsun 5 metre bırakılır",
+    "Öndeki araca tampon tampona yaklaşılır",
+    "Hızın iki katı kadar metre bırakılır"
+   ],
+   "cozum": "Örneğin 90 km/s hızla giden sürücü öndeki araçla en az 45 metre mesafe bırakmalıdır; yağışlı havada mesafe artırılır.",
+   "levha": null
+  },
+  {
+   "uid": "k001",
+   "kat": "iy",
+   "metin": "Yetişkinde kalp masajı yapılırken göğüs kemiğine hangi bölgeden bası uygulanır?",
+   "dogru": "Göğüs kemiğinin alt yarısından",
+   "yanlislar": [
+    "Karın bölgesinin ortasından",
+    "Köprücük kemiklerinin üzerinden",
+    "Göğsün sol üst kısmından"
+   ],
+   "cozum": "Yetişkinde bası, göğüs kemiğinin alt yarısına iki el üst üste konularak, kollar dik tutulup yapılır.",
+   "levha": null
+  },
+  {
+   "uid": "k050",
+   "kat": "tc",
+   "metin": "Yağışlı ve kaygan yolda takip mesafesi nasıl ayarlanmalıdır?",
+   "dogru": "Normalden daha uzun tutulmalıdır",
+   "yanlislar": [
+    "Normalden kısa tutulmalıdır",
+    "Hiç değiştirilmemelidir",
+    "Öndeki aracın stop lambası görülmeyecek kadar uzun tutulmalıdır"
+   ],
+   "cozum": "Kaygan zeminde fren mesafesi uzar; güvenlik için takip mesafesi artırılır.",
+   "levha": null
+  },
+  {
+   "uid": "k117",
+   "kat": "mt",
+   "metin": "Benzinli motorlarda yakıt–hava karışımını ateşleyen parça hangisidir?",
+   "dogru": "Buji",
+   "yanlislar": [
+    "Enjektör",
+    "Kızdırma bujisi",
+    "Termostat"
+   ],
+   "cozum": "Benzinli motorda karışım, bujinin oluşturduğu kıvılcımla ateşlenir.",
+   "levha": null
+  },
+  {
+   "uid": "k002",
+   "kat": "iy",
+   "metin": "Yetişkinde temel yaşam desteğinde kalp masajı ve suni solunum hangi oranda uygulanır?",
+   "dogru": "30 bası, 2 solunum",
+   "yanlislar": [
+    "15 bası, 1 solunum",
+    "5 bası, 5 solunum",
+    "10 bası, 2 solunum"
+   ],
+   "cozum": "Güncel uygulamada yetişkinde 30 göğüs basısının ardından 2 kurtarıcı solunum yapılır ve döngü sürdürülür.",
+   "levha": null
+  },
+  {
+   "uid": "k051",
+   "kat": "tc",
+   "metin": "Kontrolsüz kavşakta, geçiş üstünlüğü olan araçlar yoksa ilk geçiş hakkı kimindir?",
+   "dogru": "Kavşağa sağdan gelen araca",
+   "yanlislar": [
+    "Kavşağa soldan gelen araca",
+    "Daha hızlı giden araca",
+    "Büyük araca"
+   ],
+   "cozum": "Kontrolsüz kavşaklarda geçiş hakkı ana yol ve sağdan gelen kuralına göre belirlenir.",
+   "levha": null
+  },
+  {
+   "uid": "k151",
+   "kat": "ta",
+   "metin": "Trafikte saygılı sürücü davranışına örnek hangisidir?",
+   "dogru": "Yaya geçidinde bekleyen yayaya yol vermek",
+   "yanlislar": [
+    "Selektör yaparak öndeki aracı sıkıştırmak",
+    "Kırmızı ışıkta korna çalmak",
+    "Engelli park yerine park etmek"
+   ],
+   "cozum": "Saygılı sürücü diğer yol kullanıcılarının haklarını gözetir.",
+   "levha": null
+  },
+  {
+   "uid": "k119",
+   "kat": "mt",
+   "metin": "Motor soğutma sisteminde antifriz kullanılmasının amacı nedir?",
+   "dogru": "Suyun donmasını önlemek ve sistemi korozyona karşı korumak",
+   "yanlislar": [
+    "Motor gücünü artırmak",
+    "Yakıt tüketimini artırmak",
+    "Fren hidroliğini azaltmak"
+   ],
+   "cozum": "Antifriz donma noktasını düşürür, kaynama noktasını yükseltir ve paslanmayı önler.",
+   "levha": null
+  }
+ ],
+ "guncelleme": "2026-11-10"
 }
