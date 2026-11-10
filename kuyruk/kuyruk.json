@@ -1,0 +1,2030 @@
+[
+ {
+  "uid": "k001",
+  "kat": "iy",
+  "metin": "Yetişkinde kalp masajı yapılırken göğüs kemiğine hangi bölgeden bası uygulanır?",
+  "dogru": "Göğüs kemiğinin alt yarısından",
+  "yanlislar": [
+   "Karın bölgesinin ortasından",
+   "Köprücük kemiklerinin üzerinden",
+   "Göğsün sol üst kısmından"
+  ],
+  "cozum": "Yetişkinde bası, göğüs kemiğinin alt yarısına iki el üst üste konularak, kollar dik tutulup yapılır.",
+  "levha": null
+ },
+ {
+  "uid": "k002",
+  "kat": "iy",
+  "metin": "Yetişkinde temel yaşam desteğinde kalp masajı ve suni solunum hangi oranda uygulanır?",
+  "dogru": "30 bası, 2 solunum",
+  "yanlislar": [
+   "15 bası, 1 solunum",
+   "5 bası, 5 solunum",
+   "10 bası, 2 solunum"
+  ],
+  "cozum": "Güncel uygulamada yetişkinde 30 göğüs basısının ardından 2 kurtarıcı solunum yapılır ve döngü sürdürülür.",
+  "levha": null
+ },
+ {
+  "uid": "k003",
+  "kat": "iy",
+  "metin": "Yetişkinde kalp masajı dakikada yaklaşık kaç bası hızında yapılmalıdır?",
+  "dogru": "100–120",
+  "yanlislar": [
+   "40–60",
+   "60–80",
+   "150–180"
+  ],
+  "cozum": "Etkili kalp masajı için dakikada 100–120 bası hızı önerilir; çok yavaş ya da çok hızlı bası dolaşımı yeterince sağlamaz.",
+  "levha": null
+ },
+ {
+  "uid": "k004",
+  "kat": "iy",
+  "metin": "Solunumun kontrolünde 'bak–dinle–hisset' yöntemi en fazla ne kadar sürede uygulanır?",
+  "dogru": "10 saniye",
+  "yanlislar": [
+   "1 dakika",
+   "3 saniye",
+   "30 saniye"
+  ],
+  "cozum": "Solunum değerlendirmesi 10 saniyeyi geçmemelidir; solunum yoksa vakit kaybetmeden temel yaşam desteğine başlanır.",
+  "levha": null
+ },
+ {
+  "uid": "k006",
+  "kat": "iy",
+  "metin": "Bilinci kapalı, solunumu olan ve omurga yaralanması şüphesi bulunmayan kazazedeye hangi pozisyon verilir?",
+  "dogru": "Koma (derlenme) pozisyonu",
+  "yanlislar": [
+   "Şok pozisyonu",
+   "Yarı oturur pozisyon",
+   "Sırtüstü baş aşağıda pozisyon"
+  ],
+  "cozum": "Koma pozisyonu dilin geriye kaçmasını ve kusmuğun soluk yoluna kaçmasını önler.",
+  "levha": null
+ },
+ {
+  "uid": "k007",
+  "kat": "iy",
+  "metin": "Şok belirtileri gösteren ve bacaklarında yaralanma olmayan kazazedeye hangi pozisyon verilir?",
+  "dogru": "Sırtüstü yatırılıp bacakları yaklaşık 30 cm yükseltilir",
+  "yanlislar": [
+   "Yüzüstü yatırılır",
+   "Oturtulup başı öne eğilir",
+   "Ayağa kaldırılıp yürütülür"
+  ],
+  "cozum": "Bacakların yükseltilmesi kanın hayati organlara yönelmesine yardımcı olur; üzeri örtülerek ısı kaybı önlenir.",
+  "levha": null
+ },
+ {
+  "uid": "k008",
+  "kat": "iy",
+  "metin": "Aşağıdakilerden hangisi şokun belirtilerinden biridir?",
+  "dogru": "Soğuk, soluk ve nemli deri",
+  "yanlislar": [
+   "Yavaş ve dolgun nabız",
+   "Kızarmış ve sıcak yüz",
+   "Derin ve yavaş solunum"
+  ],
+  "cozum": "Şokta nabız hızlı ve zayıf, deri soğuk, soluk ve nemlidir; kazazede huzursuz olabilir.",
+  "levha": null
+ },
+ {
+  "uid": "k009",
+  "kat": "iy",
+  "metin": "Burnu kanayan kişiye ilk yardımda ne yapılır?",
+  "dogru": "Baş hafifçe öne eğilir, burun kanatları yaklaşık 5 dakika bastırılır",
+  "yanlislar": [
+   "Baş geriye yatırılır",
+   "Burnuna pamuk sıkıca tıkanır ve sırtüstü yatırılır",
+   "Bol su içirilir"
+  ],
+  "cozum": "Baş geriye atılırsa kan boğaza akar ve kusmaya yol açabilir; baş öne eğilip burun kanatları sıkılır.",
+  "levha": null
+ },
+ {
+  "uid": "k010",
+  "kat": "iy",
+  "metin": "Hafif dereceli yanıklarda ilk yapılması gereken nedir?",
+  "dogru": "Yanık bölge en az 10–20 dakika soğuk (çeşme) suyla soğutulur",
+  "yanlislar": [
+   "Yanık bölgeye diş macunu sürülür",
+   "Su toplayan kabarcıklar patlatılır",
+   "Yanığa buz doğrudan bastırılır"
+  ],
+  "cozum": "Soğuk su ısı hasarını durdurur ve ağrıyı azaltır; diş macunu, yoğurt gibi maddeler ve buz zarar verir.",
+  "levha": null
+ },
+ {
+  "uid": "k011",
+  "kat": "iy",
+  "metin": "Elbisesi yanmakta olan kişiye ilk ne yapılmalıdır?",
+  "dogru": "Koşması engellenip yere yatırılır, battaniye ile sarılarak alev söndürülür",
+  "yanlislar": [
+   "Koşarak su aramasına izin verilir",
+   "Üzerine benzin dökülür",
+   "Ayakta tutulup üzerine hava üflenir"
+  ],
+  "cozum": "Koşmak alevi büyütür; kişi yere yatırılıp yuvarlanır veya battaniyeyle sarılır.",
+  "levha": null
+ },
+ {
+  "uid": "k013",
+  "kat": "iy",
+  "metin": "Kırık şüphesi olan kol ya da bacakta ilk yardım nasıl yapılır?",
+  "dogru": "Kırık bölge bulunduğu şekilde, bir üst ve alt eklemi içine alacak biçimde tespit edilir",
+  "yanlislar": [
+   "Kırık yerine oturtulmaya çalışılır",
+   "Kazazede yürütülerek hastaneye götürülür",
+   "Bölgeye masaj yapılır"
+  ],
+  "cozum": "Tespit, kırık uçlarının hareketini ve ek yaralanmaları önler; kırık asla yerine oturtulmaya çalışılmaz.",
+  "levha": null
+ },
+ {
+  "uid": "k014",
+  "kat": "iy",
+  "metin": "Açık kırıkta kemik ucu dışarı çıkmışsa ne yapılır?",
+  "dogru": "Kemik içeri itilmez, yara temiz bir bezle örtülüp tespit edilir",
+  "yanlislar": [
+   "Kemik ucu içeri itilir",
+   "Yara alkolle yıkanıp açık bırakılır",
+   "Kemiğin üzerine sıkı turnike yapılır"
+  ],
+  "cozum": "Kemiği içeri itmek enfeksiyon ve ek hasar yaratır; yara örtülür, bölge hareketsiz hale getirilir.",
+  "levha": null
+ },
+ {
+  "uid": "k015",
+  "kat": "iy",
+  "metin": "Omurga yaralanması şüphesi olan kazazedede en önemli kural nedir?",
+  "dogru": "Baş–boyun–gövde ekseni bozulmadan hareket ettirilmemelidir",
+  "yanlislar": [
+   "Hemen oturtulmalıdır",
+   "Başı bir yana çevrilip yastık konulmalıdır",
+   "Ayağa kaldırılıp yürümesi denenmelidir"
+  ],
+  "cozum": "Omurga yaralanmasında eksenin bozulması felce yol açabilir; zorunlu değilse kazazede yerinden oynatılmaz.",
+  "levha": null
+ },
+ {
+  "uid": "k016",
+  "kat": "iy",
+  "metin": "Kaza yapmış araç içindeki kazazede, araçta yangın tehlikesi varsa hangi yöntemle çıkarılır?",
+  "dogru": "Rentek (Rautek) manevrası ile",
+  "yanlislar": [
+   "Kolundan çekilerek",
+   "Ayaklarından sürüklenerek",
+   "Kazazede kendi başına çıkmaya zorlanarak"
+  ],
+  "cozum": "Rentek manevrası baş–boyun–gövde eksenini mümkün olduğunca koruyarak hızlı çıkarmayı sağlar.",
+  "levha": null
+ },
+ {
+  "uid": "k017",
+  "kat": "iy",
+  "metin": "Dış kanamada ilk uygulanacak yöntem hangisidir?",
+  "dogru": "Kanayan yere temiz bir bezle doğrudan baskı uygulamak",
+  "yanlislar": [
+   "Hemen turnike uygulamak",
+   "Yarayı açık bırakıp beklemek",
+   "Yaraya toprak ya da kahve koymak"
+  ],
+  "cozum": "Doğrudan baskı çoğu kanamayı durdurur; turnike yalnızca kopmalarda ve diğer yöntemler yetersizse en son başvurulan yöntemdir.",
+  "levha": null
+ },
+ {
+  "uid": "k018",
+  "kat": "iy",
+  "metin": "Turnike uygulandığında nelere dikkat edilir?",
+  "dogru": "Uygulama saati not edilir ve görünür yere yazılır",
+  "yanlislar": [
+   "Turnike her 2 dakikada bir gevşetilir",
+   "Turnikenin üzeri sıkıca kapatılıp gizlenir",
+   "Turnike eklem üzerine uygulanır"
+  ],
+  "cozum": "Sağlık ekibinin turnike süresini bilmesi gerekir; turnike kendi başına gevşetilmez ve eklem üzerine uygulanmaz.",
+  "levha": null
+ },
+ {
+  "uid": "k019",
+  "kat": "iy",
+  "metin": "Kopan bir uzuv sağlık kuruluşuna nasıl gönderilir?",
+  "dogru": "Temiz bir beze sarılıp naylon poşete konur, poşet buzlu suya yerleştirilir",
+  "yanlislar": [
+   "Doğrudan buzun içine gömülür",
+   "Alkole batırılır",
+   "Sıcak suda bekletilir"
+  ],
+  "cozum": "Uzuv buza doğrudan değerse doku zarar görür; temiz ve serin şekilde, kazazedeyle birlikte gönderilir.",
+  "levha": null
+ },
+ {
+  "uid": "k020",
+  "kat": "iy",
+  "metin": "Solunum yolu tam tıkanmış (konuşamayan, öksüremeyen) yetişkine hangi uygulama yapılır?",
+  "dogru": "Heimlich manevrası",
+  "yanlislar": [
+   "Kalp masajı",
+   "Şok pozisyonu",
+   "Su içirme"
+  ],
+  "cozum": "Heimlich manevrasında göbeğin biraz üstünden içe ve yukarı doğru baskı uygulanarak yabancı cisim çıkarılmaya çalışılır.",
+  "levha": null
+ },
+ {
+  "uid": "k021",
+  "kat": "iy",
+  "metin": "Solunum yolu kısmen tıkanmış ve öksürebilen kişiye ne yapılır?",
+  "dogru": "Öksürmesi teşvik edilir, müdahale edilmez",
+  "yanlislar": [
+   "Hemen Heimlich manevrası yapılır",
+   "Sırtına sertçe vurulur",
+   "Ağzına parmak sokulup cisim aranır"
+  ],
+  "cozum": "Öksürük en etkili temizleme yoludur; kişi öksürebiliyorsa öksürmesi desteklenir ve izlenir.",
+  "levha": null
+ },
+ {
+  "uid": "k023",
+  "kat": "iy",
+  "metin": "Sara (epilepsi) nöbeti geçiren kişiye ne yapılmalıdır?",
+  "dogru": "Çevresindeki tehlikeli eşyalar uzaklaştırılır, başının altına yumuşak bir şey konur",
+  "yanlislar": [
+   "Ağzına kaşık ya da bez sıkıştırılır",
+   "Kasılmaları güç kullanılarak durdurulur",
+   "Su içirilmeye çalışılır"
+  ],
+  "cozum": "Nöbet sırasında ağza bir şey konulmaz ve hareketler engellenmez; nöbet sonrası koma pozisyonu verilir.",
+  "levha": null
+ },
+ {
+  "uid": "k024",
+  "kat": "iy",
+  "metin": "Güneş çarpması yaşayan kişiye ilk yardımda ne yapılır?",
+  "dogru": "Serin bir yere alınır, giysileri gevşetilir ve vücudu ıslak bezle soğutulur",
+  "yanlislar": [
+   "Güneşte bekletilir",
+   "Kalın battaniyeyle sarılır",
+   "Alkol içirilir"
+  ],
+  "cozum": "Vücut ısısını düşürmek esastır; bilinci açıksa yudum yudum su verilebilir.",
+  "levha": null
+ },
+ {
+  "uid": "k025",
+  "kat": "iy",
+  "metin": "Donma vakasında donan bölge nasıl ısıtılır?",
+  "dogru": "Ilık suyla yavaş yavaş, ovalamadan",
+  "yanlislar": [
+   "Kar ile ovularak",
+   "Ateşe tutularak",
+   "Sıcak su torbasıyla doğrudan"
+  ],
+  "cozum": "Donmuş doku hassastır; ovalamak ve ani yüksek ısı dokuya zarar verir.",
+  "levha": null
+ },
+ {
+  "uid": "k026",
+  "kat": "iy",
+  "metin": "Bilinci kapalı zehirlenmiş bir kişiye ne yapılmamalıdır?",
+  "dogru": "Kusturulmaya çalışılmamalıdır",
+  "yanlislar": [
+   "Koma pozisyonu verilmemelidir",
+   "112 aranmamalıdır",
+   "Solunumu kontrol edilmemelidir"
+  ],
+  "cozum": "Bilinci kapalı kişiyi kusturmak kusmuğun soluk yoluna kaçmasına neden olur.",
+  "levha": null
+ },
+ {
+  "uid": "k027",
+  "kat": "iy",
+  "metin": "Göze yabancı cisim batmışsa ne yapılır?",
+  "dogru": "Cisim çıkarılmaz, her iki göz kapatılarak sağlık kuruluşuna gidilir",
+  "yanlislar": [
+   "Cisim hemen çekilerek çıkarılır",
+   "Göz ovuşturulur",
+   "Göze kolonya damlatılır"
+  ],
+  "cozum": "İki göz birlikte hareket ettiği için her ikisi de kapatılır; batmış cisim yerinden oynatılmaz.",
+  "levha": null
+ },
+ {
+  "uid": "k028",
+  "kat": "iy",
+  "metin": "Göze kimyasal madde kaçtığında ne yapılır?",
+  "dogru": "Göz bol temiz suyla en az 15 dakika yıkanır",
+  "yanlislar": [
+   "Göz kapatılıp beklenir",
+   "Göz ovuşturulur",
+   "Göze süt damlatılır"
+  ],
+  "cozum": "Bol suyla yıkama kimyasalın yoğunluğunu azaltır; yıkama yanaktan dışa doğru yapılır.",
+  "levha": null
+ },
+ {
+  "uid": "k030",
+  "kat": "iy",
+  "metin": "112 aranırken aşağıdakilerden hangisi mutlaka bildirilmelidir?",
+  "dogru": "Olay yerinin açık adresi ve yaralı sayısı",
+  "yanlislar": [
+   "Kazazedelerin meslekleri",
+   "Araçların kasko şirketleri",
+   "Kazanın kimin hatası olduğu"
+  ],
+  "cozum": "Ekibin doğru yere hızlı ulaşması için açık adres, olayın türü ve yaralı sayısı bildirilir; telefon ilk kapatan arayan olmamalıdır.",
+  "levha": null
+ },
+ {
+  "uid": "k031",
+  "kat": "iy",
+  "metin": "İlk yardımcı kaza yerinde öncelikle ne yapmalıdır?",
+  "dogru": "Kendi ve çevresinin güvenliğini sağlamalıdır",
+  "yanlislar": [
+   "Hemen kazazedeleri araçtan çıkarmalıdır",
+   "Kazazedelere su içirmelidir",
+   "Olay yerinin fotoğrafını çekmelidir"
+  ],
+  "cozum": "Olay yerini güvenli hale getirmeden yapılan müdahale yeni kazalara ve ilk yardımcının yaralanmasına yol açabilir.",
+  "levha": null
+ },
+ {
+  "uid": "k032",
+  "kat": "iy",
+  "metin": "Kaza yerinde ilk yardımcının kazazedelere ilk yaklaşımında öncelik sıralaması hangisidir?",
+  "dogru": "Bilinç, solunum ve dolaşım değerlendirmesi",
+  "yanlislar": [
+   "Giysilerin düzeltilmesi",
+   "Kimlik bilgilerinin alınması",
+   "Yaralıların su ihtiyacının sorulması"
+  ],
+  "cozum": "Hayati bulgular (ABC) önce değerlendirilir; hayatı tehdit eden durumlar öncelikle ele alınır.",
+  "levha": null
+ },
+ {
+  "uid": "k034",
+  "kat": "iy",
+  "metin": "Karın bölgesinden organları dışarı çıkmış yaralıya ne yapılır?",
+  "dogru": "Organlar içeri itilmez, nemli temiz bir bezle örtülür",
+  "yanlislar": [
+   "Organlar içeri itilir",
+   "Yaralıya su içirilir",
+   "Yara üzerine kuru pamuk bastırılır"
+  ],
+  "cozum": "Organların içeri itilmesi enfeksiyon ve ek hasar yaratır; üzeri nemli temiz bezle örtülür, dizler bükük pozisyonda tutulur.",
+  "levha": null
+ },
+ {
+  "uid": "k035",
+  "kat": "iy",
+  "metin": "Hayvan ısırıklarında ilk yardımda ne yapılır?",
+  "dogru": "Yara bol sabunlu suyla yıkanır ve kuduz riski için sağlık kuruluşuna gidilir",
+  "yanlislar": [
+   "Yara dikilmeye çalışılır",
+   "Yaraya tuz basılır",
+   "Hiçbir şey yapılmaz"
+  ],
+  "cozum": "Sabunlu suyla yıkama mikrop yükünü azaltır; kuduz aşısı değerlendirmesi için hekime başvurulur.",
+  "levha": null
+ },
+ {
+  "uid": "k036",
+  "kat": "iy",
+  "metin": "Arı sokmasında iğne deride kalmışsa ne yapılır?",
+  "dogru": "İğne cımbızla sıkılmadan, kazınarak çıkarılır ve bölgeye soğuk uygulanır",
+  "yanlislar": [
+   "İğne parmakla sıkılarak çıkarılır",
+   "Bölgeye sıcak uygulanır",
+   "Bölge sertçe ovalanır"
+  ],
+  "cozum": "İğneyi sıkmak zehir kesesindeki zehrin daha fazla yayılmasına neden olur.",
+  "levha": null
+ },
+ {
+  "uid": "k037",
+  "kat": "iy",
+  "metin": "Kalp krizi şüphesi olan bilinci açık kişi hangi pozisyonda dinlendirilir?",
+  "dogru": "Yarı oturur pozisyonda",
+  "yanlislar": [
+   "Baş aşağı pozisyonda",
+   "Yüzüstü",
+   "Ayakta"
+  ],
+  "cozum": "Yarı oturur pozisyon solunumu ve kalbin iş yükünü kolaylaştırır; kişi hareket ettirilmez, 112 aranır.",
+  "levha": null
+ },
+ {
+  "uid": "k038",
+  "kat": "iy",
+  "metin": "Kaza yerinde ölmüş görünen bir kişiye ilk yardımcının tutumu ne olmalıdır?",
+  "dogru": "Ölüm kararını sağlık personeli verir; yaşam bulguları kontrol edilip gerekirse temel yaşam desteği yapılır",
+  "yanlislar": [
+   "Hemen üzeri örtülüp bırakılır",
+   "Olay yerinden uzaklaştırılır",
+   "Kimliği alınıp ailesine haber verilir"
+  ],
+  "cozum": "İlk yardımcı ölüm kararı veremez; yaşam belirtilerini değerlendirir ve gerekli müdahaleyi yapar.",
+  "levha": null
+ },
+ {
+  "uid": "k039",
+  "kat": "iy",
+  "metin": "Aşağıdakilerden hangisi ilk yardımın amaçlarından biri değildir?",
+  "dogru": "İlaçla tedavi etmek",
+  "yanlislar": [
+   "Hayati tehlikeyi ortadan kaldırmak",
+   "Durumun kötüleşmesini önlemek",
+   "İyileşmeyi kolaylaştırmak"
+  ],
+  "cozum": "İlk yardım ilaçsız uygulamalardır; tedavi sağlık personelinin görevidir.",
+  "levha": null
+ },
+ {
+  "uid": "k040",
+  "kat": "iy",
+  "metin": "Kazazedenin vücut ısısını korumak için ne yapılmalıdır?",
+  "dogru": "Üzeri battaniye veya giysiyle örtülür",
+  "yanlislar": [
+   "Islak giysileriyle bekletilir",
+   "Soğuk zemine yatırılıp açık bırakılır",
+   "Alkol içirilir"
+  ],
+  "cozum": "Kazazedeler, özellikle şok riskinde, ısı kaybına karşı korunmalıdır.",
+  "levha": null
+ },
+ {
+  "uid": "k041",
+  "kat": "iy",
+  "metin": "Kafa travması geçiren kişinin kulağından kan ve berrak sıvı geliyorsa ne yapılır?",
+  "dogru": "Kulak tıkanmaz, kazazede sıvının aktığı tarafa yan yatırılır (omurga şüphesi yoksa)",
+  "yanlislar": [
+   "Kulak pamukla sıkıca tıkanır",
+   "Kulağa su dökülür",
+   "Başı sertçe sallanarak sıvı boşaltılır"
+  ],
+  "cozum": "Bu durum kafa tabanı kırığını düşündürür; akıntı engellenmez, kazazede izlenir ve 112 aranır.",
+  "levha": null
+ },
+ {
+  "uid": "k042",
+  "kat": "iy",
+  "metin": "Bilinci yerinde olmayan kazazedeye neden ağızdan yiyecek ya da içecek verilmez?",
+  "dogru": "Soluk yoluna kaçarak boğulmaya yol açabileceği için",
+  "yanlislar": [
+   "Midesi bulanacağı için",
+   "Ateşini yükselteceği için",
+   "Kan şekerini düşüreceği için"
+  ],
+  "cozum": "Yutma refleksi zayıfladığından verilen sıvı ya da yiyecek soluk yolunu tıkayabilir.",
+  "levha": null
+ },
+ {
+  "uid": "k043",
+  "kat": "iy",
+  "metin": "Tetanoz riski hangi yaralanmalarda daha yüksektir?",
+  "dogru": "Toprak ve paslı cisimle kirlenmiş derin yaralarda",
+  "yanlislar": [
+   "Hafif güneş yanıklarında",
+   "Burun kanamalarında",
+   "Kas kramplarında"
+  ],
+  "cozum": "Kirli ve derin yaralarda tetanoz riski vardır; aşı durumu için sağlık kuruluşuna başvurulmalıdır.",
+  "levha": null
+ },
+ {
+  "uid": "k044",
+  "kat": "iy",
+  "metin": "Boğulma (suda) vakasında sudan çıkarılan kişinin solunumu yoksa ne yapılır?",
+  "dogru": "Hemen temel yaşam desteğine başlanır",
+  "yanlislar": [
+   "Önce midesindeki su boşaltılmaya çalışılır",
+   "Ayaklarından tutulup sallanır",
+   "Güneşte kurumaya bırakılır"
+  ],
+  "cozum": "Midedeki suyu boşaltmaya çalışmak zaman kaybettirir; solunum yoksa derhal temel yaşam desteği başlatılır.",
+  "levha": null
+ },
+ {
+  "uid": "k045",
+  "kat": "iy",
+  "metin": "Elektrik çarpmasında kazazedeye dokunmadan önce ne yapılır?",
+  "dogru": "Akım kesilir ya da kazazede yalıtkan bir cisimle akımdan uzaklaştırılır",
+  "yanlislar": [
+   "Kazazedeye çıplak elle hemen dokunulur",
+   "Üzerine su dökülür",
+   "Islak bir sopayla itilir"
+  ],
+  "cozum": "İlk yardımcının da çarpılmaması için önce akım kesilir; ıslak cisimler iletken olabilir.",
+  "levha": null
+ },
+ {
+  "uid": "k046",
+  "kat": "iy",
+  "metin": "Hipotermi (vücut ısısının aşırı düşmesi) yaşayan kazazedeye ne yapılır?",
+  "dogru": "Ilık ortama alınır, ıslak giysileri çıkarılıp kuru örtülerle sarılır",
+  "yanlislar": [
+   "Alkol içirilir",
+   "Kolları ve bacakları sertçe ovulur",
+   "Soğuk suyla yıkanır"
+  ],
+  "cozum": "Isınma yavaş ve kontrollü olmalıdır; alkol ve ovalama zararlıdır.",
+  "levha": null
+ },
+ {
+  "uid": "k047",
+  "kat": "iy",
+  "metin": "Kas krampı yaşayan kişiye ne yapılır?",
+  "dogru": "Kas yavaşça gerilir ve hafif masaj yapılır",
+  "yanlislar": [
+   "Kas üzerine buz bastırılıp sertçe vurulur",
+   "Kişi koşmaya zorlanır",
+   "Hiçbir şey yapılmaz, sıcakta beklenir"
+  ],
+  "cozum": "Kasın yavaşça germe hareketi ve hafif masaj krampı çözer; sıvı alımı desteklenir.",
+  "levha": null
+ },
+ {
+  "uid": "k048",
+  "kat": "iy",
+  "metin": "Kaza yerinde birden fazla yaralı varsa ilk yardımcı öncelikle kime müdahale eder?",
+  "dogru": "Hayati tehlikesi olan ve hızlı müdahaleyle kurtarılabilecek kazazedeye",
+  "yanlislar": [
+   "En çok bağıran kazazedeye",
+   "En yakındaki kazazedeye",
+   "Tanıdığı kişiye"
+  ],
+  "cozum": "Önceliklendirme (triyaj) hayatı tehdit eden durumlara göre yapılır; sessiz kazazede daha ağır olabilir.",
+  "levha": null
+ },
+ {
+  "uid": "k049",
+  "kat": "tc",
+  "metin": "Takip mesafesiyle ilgili genel kural nedir?",
+  "dogru": "Aracın km/s cinsinden hızının yarısı kadar metre mesafe bırakılır",
+  "yanlislar": [
+   "Hız ne olursa olsun 5 metre bırakılır",
+   "Öndeki araca tampon tampona yaklaşılır",
+   "Hızın iki katı kadar metre bırakılır"
+  ],
+  "cozum": "Örneğin 90 km/s hızla giden sürücü öndeki araçla en az 45 metre mesafe bırakmalıdır; yağışlı havada mesafe artırılır.",
+  "levha": null
+ },
+ {
+  "uid": "k050",
+  "kat": "tc",
+  "metin": "Yağışlı ve kaygan yolda takip mesafesi nasıl ayarlanmalıdır?",
+  "dogru": "Normalden daha uzun tutulmalıdır",
+  "yanlislar": [
+   "Normalden kısa tutulmalıdır",
+   "Hiç değiştirilmemelidir",
+   "Öndeki aracın stop lambası görülmeyecek kadar uzun tutulmalıdır"
+  ],
+  "cozum": "Kaygan zeminde fren mesafesi uzar; güvenlik için takip mesafesi artırılır.",
+  "levha": null
+ },
+ {
+  "uid": "k051",
+  "kat": "tc",
+  "metin": "Kontrolsüz kavşakta, geçiş üstünlüğü olan araçlar yoksa ilk geçiş hakkı kimindir?",
+  "dogru": "Kavşağa sağdan gelen araca",
+  "yanlislar": [
+   "Kavşağa soldan gelen araca",
+   "Daha hızlı giden araca",
+   "Büyük araca"
+  ],
+  "cozum": "Kontrolsüz kavşaklarda geçiş hakkı ana yol ve sağdan gelen kuralına göre belirlenir.",
+  "levha": null
+ },
+ {
+  "uid": "k052",
+  "kat": "tc",
+  "metin": "Kavşakta trafik görevlisi, trafik ışıkları ve işaretler aynı anda bulunuyorsa hangisine uyulur?",
+  "dogru": "Trafik görevlisinin talimatına",
+  "yanlislar": [
+   "Trafik ışıklarına",
+   "Trafik işaretlerine",
+   "Kim önce gelirse ona"
+  ],
+  "cozum": "Öncelik sırası: trafik görevlisi, ışıklı işaretler, trafik işaret levhaları ve yer işaretleri.",
+  "levha": null
+ },
+ {
+  "uid": "k053",
+  "kat": "tc",
+  "metin": "Dönel kavşakta geçiş hakkı kimindir?",
+  "dogru": "Kavşak içindeki (ada etrafında dönen) araçlara",
+  "yanlislar": [
+   "Kavşağa girmek üzere olan araçlara",
+   "Sağdan gelen araçlara",
+   "Büyük araçlara"
+  ],
+  "cozum": "Dönel kavşakta, kavşak içinde dönmekte olan araçların geçiş hakkı vardır; giren araçlar yol verir.",
+  "levha": null
+ },
+ {
+  "uid": "k054",
+  "kat": "tc",
+  "metin": "Ambulans, itfaiye gibi geçiş üstünlüğüne sahip araçlar ışıklı ve sesli uyarı verirken diğer sürücüler ne yapmalıdır?",
+  "dogru": "Yolu açıp gerekirse sağa yanaşarak durmalıdır",
+  "yanlislar": [
+   "Hızlanarak önünden geçmelidir",
+   "Peşine takılarak yararlanmalıdır",
+   "Kendi şeridinde aynı hızla devam etmelidir"
+  ],
+  "cozum": "Geçiş üstünlüğüne sahip araçlara yol verilir; arkalarından takip ederek yararlanmak yasaktır.",
+  "levha": null
+ },
+ {
+  "uid": "k055",
+  "kat": "tc",
+  "metin": "Tepe üstüne yaklaşırken öndeki aracı geçmek neden yasaktır?",
+  "dogru": "Karşıdan gelen araçlar görülemediği için",
+  "yanlislar": [
+   "Yol daraldığı için",
+   "Motor zorlandığı için",
+   "Lastikler aşınacağı için"
+  ],
+  "cozum": "Görüş mesafesinin yetersiz olduğu tepe üstleri, dönemeçler ve kavşaklarda geçme yasaktır.",
+  "levha": null
+ },
+ {
+  "uid": "k056",
+  "kat": "tc",
+  "metin": "Aşağıdaki yerlerden hangisinde öndeki aracı geçmek yasaktır?",
+  "dogru": "Hemzemin demiryolu geçidinde",
+  "yanlislar": [
+   "Bölünmüş yolun düz ve açık kesiminde",
+   "Otoyolun sol şeridinde",
+   "Kesik çizgili düz yolda"
+  ],
+  "cozum": "Hemzemin geçitler, yaya geçitleri, kavşaklar, tepe üstleri ve dönemeçler geçme yasağı olan yerlerdir.",
+  "levha": null
+ },
+ {
+  "uid": "k057",
+  "kat": "tc",
+  "metin": "Öndeki aracı geçmek isteyen sürücü hangi taraftan geçmelidir?",
+  "dogru": "Soldan",
+  "yanlislar": [
+   "Sağdan",
+   "Banketten",
+   "Hangisi boşsa"
+  ],
+  "cozum": "Geçme kural olarak soldan yapılır; sola dönmek üzere sola yanaşan araç ise sağdan geçilebilir.",
+  "levha": null
+ },
+ {
+  "uid": "k058",
+  "kat": "tc",
+  "metin": "Geçilmekte olan aracın sürücüsü ne yapmalıdır?",
+  "dogru": "Hızını artırmamalı ve geçişi kolaylaştırmalıdır",
+  "yanlislar": [
+   "Hızlanarak geçişi engellemelidir",
+   "Sola kayarak yolu kapatmalıdır",
+   "Selektör yapıp korna çalmalıdır"
+  ],
+  "cozum": "Geçilen aracın hızlanması ya da yolu kapatması ciddi kazalara yol açar.",
+  "levha": null
+ },
+ {
+  "uid": "k059",
+  "kat": "tc",
+  "metin": "Yol çizgilerinden 'devamlı yol çizgisi' ne anlama gelir?",
+  "dogru": "Çizginin üzerine basılamaz ve geçilemez",
+  "yanlislar": [
+   "Geçmek serbesttir",
+   "Park yeri olduğunu gösterir",
+   "Sadece toplu taşıma araçları içindir"
+  ],
+  "cozum": "Devamlı çizgi şerit değiştirme ve geçme yasağını gösterir.",
+  "levha": null
+ },
+ {
+  "uid": "k061",
+  "kat": "tc",
+  "metin": "Bir tarafı devamlı, diğer tarafı kesik çizgili yol çizgisinde hangi taraftaki sürücü geçme yapabilir?",
+  "dogru": "Kesik çizgi tarafındaki sürücü",
+  "yanlislar": [
+   "Devamlı çizgi tarafındaki sürücü",
+   "Her iki taraftaki sürücü",
+   "Hiçbir sürücü"
+  ],
+  "cozum": "Sürücü kendi tarafındaki çizgiye göre hareket eder; kesik çizgi tarafında geçiş serbesttir.",
+  "levha": null
+ },
+ {
+  "uid": "k062",
+  "kat": "tc",
+  "metin": "Gece karşıdan araç gelirken uzun huzmeli farlar ne zaman kısa hüzmeye çevrilmelidir?",
+  "dogru": "Karşıdaki sürücünün gözünü almayacak mesafede, karşılaşmadan önce",
+  "yanlislar": [
+   "Karşılaştıktan sonra",
+   "Hiçbir zaman",
+   "Sadece yerleşim yerinde"
+  ],
+  "cozum": "Uzun far karşıdaki sürücüyü kamaştırır; karşılaşmalarda ve yakın takipte kısa far kullanılır.",
+  "levha": null
+ },
+ {
+  "uid": "k063",
+  "kat": "tc",
+  "metin": "Öndeki aracı yakından takip ederken gece hangi far kullanılmalıdır?",
+  "dogru": "Kısa huzmeli far",
+  "yanlislar": [
+   "Uzun huzmeli far",
+   "Sis farı",
+   "Dörtlü flaşör"
+  ],
+  "cozum": "Uzun far öndeki sürücüyü aynalardan kamaştırır.",
+  "levha": null
+ },
+ {
+  "uid": "k064",
+  "kat": "tc",
+  "metin": "Sisli havada hangi ışıklar kullanılmalıdır?",
+  "dogru": "Kısa huzmeli far ve varsa sis lambaları",
+  "yanlislar": [
+   "Uzun huzmeli far",
+   "Sadece park lambaları",
+   "Hiçbir ışık"
+  ],
+  "cozum": "Uzun far sis zerreciklerinden yansıyarak görüşü azaltır.",
+  "levha": null
+ },
+ {
+  "uid": "k065",
+  "kat": "tc",
+  "metin": "Arızalanan aracını yolda durdurmak zorunda kalan sürücü ne yapmalıdır?",
+  "dogru": "Dörtlü flaşörü yakmalı ve yeterli uzaklığa yansıtıcı (reflektör) koymalıdır",
+  "yanlislar": [
+   "Aracı olduğu yerde bırakıp gitmelidir",
+   "Sadece kornaya basmalıdır",
+   "Uzun farlarını yakmalıdır"
+  ],
+  "cozum": "Diğer sürücüleri zamanında uyarmak için flaşör ve reflektör kullanılır.",
+  "levha": null
+ },
+ {
+  "uid": "k066",
+  "kat": "tc",
+  "metin": "Yerleşim yeri içinde korna nasıl kullanılmalıdır?",
+  "dogru": "Zorunlu olmadıkça kullanılmamalı, gerektiğinde kısa süreli çalınmalıdır",
+  "yanlislar": [
+   "Sık ve uzun çalınmalıdır",
+   "Selamlaşmak için kullanılmalıdır",
+   "Kırmızı ışıkta öndekini uyarmak için kullanılmalıdır"
+  ],
+  "cozum": "Gereksiz korna gürültü kirliliğine ve gerginliğe yol açar.",
+  "levha": null
+ },
+ {
+  "uid": "k067",
+  "kat": "tc",
+  "metin": "Yaya geçidine yaklaşan sürücü, geçitte yaya varsa ne yapmalıdır?",
+  "dogru": "Yavaşlamalı ve gerekirse durarak yayaya yol vermelidir",
+  "yanlislar": [
+   "Korna çalarak yayayı uyarmalıdır",
+   "Hızlanarak yaya geçmeden geçmelidir",
+   "Selektör yapıp geçmelidir"
+  ],
+  "cozum": "Işıksız yaya geçitlerinde yayaların geçiş hakkı vardır.",
+  "levha": null
+ },
+ {
+  "uid": "k068",
+  "kat": "tc",
+  "metin": "Okul geçidinde görevli bulunduğunda sürücü ne yapmalıdır?",
+  "dogru": "Görevlinin uyarılarına uymalı ve öğrencilere yol vermelidir",
+  "yanlislar": [
+   "Korna çalarak geçmelidir",
+   "Hızını artırmalıdır",
+   "Öğrencilerin kenara çekilmesini beklemeden geçmelidir"
+  ],
+  "cozum": "Okul bölgelerinde çocukların hareketleri beklenmedik olabileceği için azami dikkat gerekir.",
+  "levha": null
+ },
+ {
+  "uid": "k069",
+  "kat": "tc",
+  "metin": "Hemzemin geçide yaklaşan sürücü bariyerler inmeye başladıysa ne yapmalıdır?",
+  "dogru": "Durmalı ve bariyer tamamen kalkana kadar beklemelidir",
+  "yanlislar": [
+   "Bariyerler kapanmadan hızla geçmelidir",
+   "Bariyerlerin arasından geçmelidir",
+   "Korna çalarak geçmelidir"
+  ],
+  "cozum": "Bariyer inerken, ışıklı uyarı yanarken ya da tren yaklaşırken geçide girilmez.",
+  "levha": null
+ },
+ {
+  "uid": "k070",
+  "kat": "tc",
+  "metin": "Bariyersiz hemzemin geçitten geçerken nasıl davranılmalıdır?",
+  "dogru": "Yavaşlanmalı, durulup iki tarafa bakılarak tren gelmiyorsa geçilmelidir",
+  "yanlislar": [
+   "Hızlanarak geçilmelidir",
+   "Geçitte durup beklenmelidir",
+   "Vites boşa alınarak geçilmelidir"
+  ],
+  "cozum": "Trenin durma mesafesi çok uzundur; tren her zaman önceliklidir.",
+  "levha": null
+ },
+ {
+  "uid": "k071",
+  "kat": "tc",
+  "metin": "Park etmenin yasak olduğu yerlerden biri aşağıdakilerden hangisidir?",
+  "dogru": "Yaya geçitleri ve kavşaklar",
+  "yanlislar": [
+   "Park yeri olarak işaretlenmiş alan",
+   "Otopark",
+   "Kendi evinin otoparkı"
+  ],
+  "cozum": "Yaya geçitleri, kavşaklar, tüneller, köprüler, dönemeçler ve tepe üstleri gibi yerlerde park etmek yasaktır.",
+  "levha": null
+ },
+ {
+  "uid": "k072",
+  "kat": "tc",
+  "metin": "'Duraklama' ile 'park etme' arasındaki fark nedir?",
+  "dogru": "Duraklama; trafik zorunluluğu dışında, yolcu indirme-bindirme veya yükleme için kısa süreli durmadır, park etme ise daha uzun süreli bırakmadır",
+  "yanlislar": [
+   "İkisi aynıdır",
+   "Park sadece gece yapılır",
+   "Duraklama sadece otoyolda yapılır"
+  ],
+  "cozum": "Duraklama kısa süreli ve amaçlıdır; park ise aracın belirli bir süre bırakılmasıdır.",
+  "levha": null
+ },
+ {
+  "uid": "k073",
+  "kat": "tc",
+  "metin": "Otoyolda geri gitmek ve U dönüşü yapmak hakkında hangisi doğrudur?",
+  "dogru": "Yasaktır",
+  "yanlislar": [
+   "Gece serbesttir",
+   "Trafik azsa serbesttir",
+   "Emniyet şeridinde serbesttir"
+  ],
+  "cozum": "Otoyolda geri gitme, U dönüşü ve orta refüjden geçiş kesinlikle yasaktır.",
+  "levha": null
+ },
+ {
+  "uid": "k075",
+  "kat": "tc",
+  "metin": "Otoyola giriş şeridinden ana yola katılan sürücü ne yapmalıdır?",
+  "dogru": "Hızını ana yol trafiğine uydurup boşluk bulunca güvenle katılmalıdır",
+  "yanlislar": [
+   "Giriş şeridinin sonunda durup beklemelidir",
+   "Ana yoldaki araçların yol vermesini zorlamalıdır",
+   "Emniyet şeridine geçmelidir"
+  ],
+  "cozum": "Hızlanma şeridi, ana yol hızına ulaşıp güvenli katılmak için kullanılır.",
+  "levha": null
+ },
+ {
+  "uid": "k076",
+  "kat": "tc",
+  "metin": "Bölünmüş yollarda en sol şerit hangi amaçla kullanılır?",
+  "dogru": "Geçme amacıyla",
+  "yanlislar": [
+   "Yavaş giden araçlar için",
+   "Park etmek için",
+   "Duraklamak için"
+  ],
+  "cozum": "Sol şerit geçiş içindir; geçiş bitince sağdaki şeride dönülür.",
+  "levha": null
+ },
+ {
+  "uid": "k077",
+  "kat": "tc",
+  "metin": "Sürücü sola dönüş yapacaksa nasıl hareket etmelidir?",
+  "dogru": "Önceden sinyal verip yolun sol kenarına yakın şeride geçmeli, yavaşlayarak dönmelidir",
+  "yanlislar": [
+   "Sağ şeritten aniden sola dönmelidir",
+   "Sinyal vermeden dönmelidir",
+   "Dönüşü hızlanarak yapmalıdır"
+  ],
+  "cozum": "Dönüşe hazırlık önceden yapılır; ani şerit değiştirmek kazalara neden olur.",
+  "levha": null
+ },
+ {
+  "uid": "k078",
+  "kat": "tc",
+  "metin": "Sağa dönüş yapacak sürücü dönüşten önce hangi şeritte olmalıdır?",
+  "dogru": "En sağdaki şeritte",
+  "yanlislar": [
+   "En soldaki şeritte",
+   "Orta şeritte",
+   "Emniyet şeridinde"
+  ],
+  "cozum": "Sağa dönüşler en sağ şeritten, kısa ve kavisli yapılır.",
+  "levha": null
+ },
+ {
+  "uid": "k079",
+  "kat": "tc",
+  "metin": "Işıklı trafik işaretinde sarı ışık tek başına yanarken sürücü ne yapmalıdır?",
+  "dogru": "Kavşağa girmemek için durmaya hazırlanmalı, güvenle durabiliyorsa durmalıdır",
+  "yanlislar": [
+   "Hızlanarak kavşaktan geçmelidir",
+   "Hemen ani fren yapmalıdır",
+   "Korna çalarak geçmelidir"
+  ],
+  "cozum": "Sarı ışık kırmızının geleceğini gösterir; kavşağa girmiş araç geçişini tamamlar.",
+  "levha": null
+ },
+ {
+  "uid": "k080",
+  "kat": "tc",
+  "metin": "Sürekli yanıp sönen sarı ışık ne anlama gelir?",
+  "dogru": "Dikkatli ve yavaş geçilmesi gerektiğini",
+  "yanlislar": [
+   "Durmanın zorunlu olduğunu",
+   "Geçişin yasak olduğunu",
+   "Yolun trafiğe kapalı olduğunu"
+  ],
+  "cozum": "Yanıp sönen sarı ışık, kavşakta dikkat ve yavaşlamayı ifade eder; geçiş kuralları uygulanır.",
+  "levha": null
+ },
+ {
+  "uid": "k081",
+  "kat": "tc",
+  "metin": "Yeşil ışıkta kavşağa giren sürücü kavşak çıkışının dolu olduğunu görürse ne yapmalıdır?",
+  "dogru": "Kavşağa girmemeli, yol açılana kadar beklemelidir",
+  "yanlislar": [
+   "Kavşağın ortasında durmalıdır",
+   "Korna çalarak öndekileri zorlamalıdır",
+   "Karşı şeride geçmelidir"
+  ],
+  "cozum": "Kavşak içinde kalan araç diğer yöndeki trafiği kilitler.",
+  "levha": null
+ },
+ {
+  "uid": "k082",
+  "kat": "tc",
+  "metin": "Sürücü belgesi olmadan araç kullanmanın sonucu nedir?",
+  "dogru": "Yasaktır ve idari para cezası uygulanır, araç trafikten men edilir",
+  "yanlislar": [
+   "Gündüz serbesttir",
+   "Şehir içinde serbesttir",
+   "Sadece uyarı verilir"
+  ],
+  "cozum": "Sürücü belgesi olmadan araç kullanmak Karayolları Trafik Kanunu'na göre yasaktır.",
+  "levha": null
+ },
+ {
+  "uid": "k083",
+  "kat": "tc",
+  "metin": "Araç kullanırken cep telefonu kullanımıyla ilgili hangisi doğrudur?",
+  "dogru": "Elde tutularak konuşmak ve mesajlaşmak yasaktır",
+  "yanlislar": [
+   "Kırmızı ışıkta beklerken mesajlaşmak serbesttir",
+   "Hız düşükse serbesttir",
+   "Şehir dışında serbesttir"
+  ],
+  "cozum": "Telefon dikkatin dağılmasına yol açar; sürüş sırasında elde tutularak kullanılması yasaktır.",
+  "levha": null
+ },
+ {
+  "uid": "k084",
+  "kat": "tc",
+  "metin": "Emniyet kemeri ile ilgili hangisi doğrudur?",
+  "dogru": "Araçta emniyet kemeri bulunan koltuklarda oturanların kemer takması zorunludur",
+  "yanlislar": [
+   "Sadece sürücü takmalıdır",
+   "Şehir içinde takmak gerekmez",
+   "Arka koltuktakiler takmaz"
+  ],
+  "cozum": "Kemer ön ve arka koltuktakileri çarpmanın etkisinden korur.",
+  "levha": null
+ },
+ {
+  "uid": "k085",
+  "kat": "tc",
+  "metin": "Yorgun ve uykusuz araç kullanmanın en önemli tehlikesi nedir?",
+  "dogru": "Tepki süresinin uzaması ve direksiyonda uyuklama",
+  "yanlislar": [
+   "Yakıt tüketiminin azalması",
+   "Lastiklerin daha az aşınması",
+   "Motorun daha az ısınması"
+  ],
+  "cozum": "Yorgunluk alkol etkisine benzer şekilde dikkat ve tepki süresini bozar; düzenli mola verilmelidir.",
+  "levha": null
+ },
+ {
+  "uid": "k086",
+  "kat": "tc",
+  "metin": "Alkollü araç kullanmanın sürüşe etkisi nedir?",
+  "dogru": "Tepki süresini uzatır, görüş alanını daraltır ve mesafe tahminini bozar",
+  "yanlislar": [
+   "Dikkati artırır",
+   "Reflekslerin hızlanmasını sağlar",
+   "Hiçbir etkisi yoktur"
+  ],
+  "cozum": "Alkol küçük miktarlarda bile karar verme ve algılama yeteneğini olumsuz etkiler.",
+  "levha": null
+ },
+ {
+  "uid": "k087",
+  "kat": "tc",
+  "metin": "Sürüş sırasında ilaç kullanan sürücü neye dikkat etmelidir?",
+  "dogru": "İlacın uyku hali yapıp yapmadığını öğrenmeli, böyle ilaçlarda araç kullanmamalıdır",
+  "yanlislar": [
+   "Tüm ilaçlar sürüşe engel değildir, düşünmeye gerek yoktur",
+   "İlacı alkolle birlikte almalıdır",
+   "İlaç kullanırken hızını artırmalıdır"
+  ],
+  "cozum": "Bazı ilaçlar uyuşukluk ve dikkat dağınıklığı yapar; prospektüs ve hekim uyarıları dikkate alınmalıdır.",
+  "levha": null
+ },
+ {
+  "uid": "k088",
+  "kat": "tc",
+  "metin": "Trafik kazası sonrası olay yerinde sürücülerin yükümlülüklerinden biri hangisidir?",
+  "dogru": "Yaralı varsa ilk yardım yapmak ve yetkililere haber vermek",
+  "yanlislar": [
+   "Olay yerinden hemen uzaklaşmak",
+   "Kaza yerindeki izleri silmek",
+   "Yaralıları tanımadığı araçlara bindirmek"
+  ],
+  "cozum": "Yaralanmalı kazalarda yetkililere haber verilir, olay yeri korunur ve ilk yardım sağlanır.",
+  "levha": null
+ },
+ {
+  "uid": "k089",
+  "kat": "tc",
+  "metin": "Ölümlü veya yaralanmalı kazada araçların yeri nasıl olmalıdır?",
+  "dogru": "Yetkililer gelene kadar araçların yeri değiştirilmemeli, yeri işaretlenmelidir",
+  "yanlislar": [
+   "Araçlar hemen yol kenarına çekilmelidir",
+   "Araçlar başka yere götürülmelidir",
+   "İzler temizlenmelidir"
+  ],
+  "cozum": "Kaza tespiti için araçların konumu önemlidir; ancak tehlike yaratıyorsa yeri işaretlenip kaldırılabilir.",
+  "levha": null
+ },
+ {
+  "uid": "k090",
+  "kat": "tc",
+  "metin": "Sadece maddi hasarlı kazada sürücüler anlaşmışsa ne yapabilirler?",
+  "dogru": "Kaza tespit tutanağını birlikte doldurup araçları yoldan kaldırabilirler",
+  "yanlislar": [
+   "Trafiği kapatıp polisi beklemek zorundadırlar",
+   "Tutanak düzenlemeden ayrılmalıdırlar",
+   "Araçları olay yerinde bırakmalıdırlar"
+  ],
+  "cozum": "Maddi hasarlı kazalarda trafiği aksatmamak için tutanak doldurulup yol açılır.",
+  "levha": null
+ },
+ {
+  "uid": "k091",
+  "kat": "tc",
+  "metin": "Trafik işaret levhalarından üçgen şeklinde, kırmızı kenarlı olanlar hangi gruba girer?",
+  "dogru": "Tehlike uyarı işaretleri",
+  "yanlislar": [
+   "Bilgi işaretleri",
+   "Yasaklama işaretleri",
+   "Durma ve park işaretleri"
+  ],
+  "cozum": "Üçgen levhalar ileride bir tehlike olduğunu bildirir.",
+  "levha": null
+ },
+ {
+  "uid": "k092",
+  "kat": "tc",
+  "metin": "Yuvarlak, kırmızı çerçeveli trafik levhaları genel olarak neyi bildirir?",
+  "dogru": "Yasaklama ve kısıtlamaları",
+  "yanlislar": [
+   "Turistik yerleri",
+   "Yön bilgisini",
+   "Tehlike yaklaşımını"
+  ],
+  "cozum": "Yuvarlak kırmızı çerçeveli levhalar yasak veya sınırlama getirir.",
+  "levha": null
+ },
+ {
+  "uid": "k093",
+  "kat": "tc",
+  "metin": "Mavi zemin üzerine beyaz semboller içeren yuvarlak levhalar genel olarak neyi bildirir?",
+  "dogru": "Mecburiyetleri",
+  "yanlislar": [
+   "Yasakları",
+   "Tehlikeleri",
+   "Turistik bilgileri"
+  ],
+  "cozum": "Mavi yuvarlak levhalar (ör. mecburi yön, mecburi asgari hız) uyulması zorunlu kuralları gösterir.",
+  "levha": null
+ },
+ {
+  "uid": "k094",
+  "kat": "tc",
+  "metin": "'DUR' levhası bulunan kavşağa gelen sürücü ne yapmalıdır?",
+  "dogru": "Tam durmalı, yolun durumunu kontrol edip geçiş hakkına uyarak hareket etmelidir",
+  "yanlislar": [
+   "Yavaşlayıp durmadan geçmelidir",
+   "Korna çalarak geçmelidir",
+   "Sadece gece durmalıdır"
+  ],
+  "cozum": "DUR levhasında trafik olmasa bile tam duruş zorunludur.",
+  "levha": null
+ },
+ {
+  "uid": "k095",
+  "kat": "tc",
+  "metin": "'Yol ver' levhası ile karşılaşan sürücü ne yapmalıdır?",
+  "dogru": "Ana yoldaki araçlara yol vermeli, gerekirse durmalıdır",
+  "yanlislar": [
+   "Hızını artırmalıdır",
+   "Mutlaka tam durmalıdır, yol boş olsa da beklemelidir",
+   "Ana yoldaki araçları durdurmalıdır"
+  ],
+  "cozum": "Yol ver işareti, ana yoldaki trafiğe öncelik tanınmasını ister.",
+  "levha": null
+ },
+ {
+  "uid": "k096",
+  "kat": "tc",
+  "metin": "Taşıt yolu üzerindeki 'balık kılçığı' (zebra) şeklindeki taralı alanlar ne anlama gelir?",
+  "dogru": "Bu alanlara girilmez ve durulmaz",
+  "yanlislar": [
+   "Park alanıdır",
+   "Geçiş üstünlüğü gösterir",
+   "Yaya geçididir"
+  ],
+  "cozum": "Taralı alanlar trafiği yönlendirmek içindir; üzerinden geçmek ve durmak yasaktır.",
+  "levha": null
+ },
+ {
+  "uid": "k097",
+  "kat": "tc",
+  "metin": "Yayaların karşıya geçişi için ışıklı trafik işareti bulunmayan yaya geçitlerinde öncelik kimindir?",
+  "dogru": "Yayaların",
+  "yanlislar": [
+   "Taşıtların",
+   "Büyük taşıtların",
+   "Motosikletlerin"
+  ],
+  "cozum": "Işıksız yaya geçitlerinde sürücüler yayaya yol vermek zorundadır.",
+  "levha": null
+ },
+ {
+  "uid": "k098",
+  "kat": "tc",
+  "metin": "Bisikletli ve motosikletliyi geçerken sürücü nelere dikkat etmelidir?",
+  "dogru": "Yan mesafeyi yeterli bırakmalı ve geçişten sonra hemen önüne kırmamalıdır",
+  "yanlislar": [
+   "Korna çalıp hızla yanından geçmelidir",
+   "Onları yol kenarına sıkıştırmalıdır",
+   "Yakından takip etmelidir"
+  ],
+  "cozum": "İki tekerlekliler rüzgâr ve yol bozukluklarından kolay etkilenir; geniş mesafe bırakılmalıdır.",
+  "levha": null
+ },
+ {
+  "uid": "k099",
+  "kat": "tc",
+  "metin": "Araçla tünele girerken hangi ışık yakılmalıdır?",
+  "dogru": "Kısa huzmeli far",
+  "yanlislar": [
+   "Hiçbir ışık yakılmaz",
+   "Uzun far",
+   "Sadece sis lambası"
+  ],
+  "cozum": "Tünelde gündüz bile kısa far yakılarak görme ve görülme sağlanır.",
+  "levha": null
+ },
+ {
+  "uid": "k100",
+  "kat": "tc",
+  "metin": "Dik ve uzun yokuş aşağı inerken nasıl hareket edilmelidir?",
+  "dogru": "Küçük vites kullanılarak motor freninden yararlanılmalıdır",
+  "yanlislar": [
+   "Vites boşa alınmalıdır",
+   "Sürekli ayak freni kullanılmalıdır",
+   "Kontak kapatılmalıdır"
+  ],
+  "cozum": "Boş viteste ve sürekli frenle inmek frenlerin ısınıp etkisini kaybetmesine yol açar.",
+  "levha": null
+ },
+ {
+  "uid": "k101",
+  "kat": "tc",
+  "metin": "Dar yolda yokuş yukarı ve yokuş aşağı giden iki araç karşılaşırsa geçiş hakkı genellikle kimindir?",
+  "dogru": "Yokuş yukarı çıkan aracın",
+  "yanlislar": [
+   "Yokuş aşağı inen aracın",
+   "Küçük aracın",
+   "Hızlı giden aracın"
+  ],
+  "cozum": "Yokuş aşağı inen araç yer müsaitse durarak yokuş yukarı çıkana yol verir.",
+  "levha": null
+ },
+ {
+  "uid": "k102",
+  "kat": "tc",
+  "metin": "Yağmurda su birikintisinin üzerinden hızla geçerken lastiklerin yolla temasını kaybetmesine ne denir?",
+  "dogru": "Kızaklama (aquaplaning)",
+  "yanlislar": [
+   "Patinaj",
+   "Balans",
+   "Rot ayarı"
+  ],
+  "cozum": "Su tabakası lastik ile yol arasına girer; direksiyon ve fren etkisizleşir. Hız düşürülmelidir.",
+  "levha": null
+ },
+ {
+  "uid": "k103",
+  "kat": "tc",
+  "metin": "Buzlu yolda fren yapılırken nasıl davranılmalıdır?",
+  "dogru": "Ani fren yapılmamalı, frene yumuşak ve kademeli basılmalıdır",
+  "yanlislar": [
+   "Frene sonuna kadar ani basılmalıdır",
+   "El freni çekilmelidir",
+   "Direksiyon sert kırılmalıdır"
+  ],
+  "cozum": "Ani fren ve sert direksiyon hareketleri buzda savrulmaya yol açar.",
+  "levha": null
+ },
+ {
+  "uid": "k104",
+  "kat": "tc",
+  "metin": "Kış lastiklerinin kullanılmasının temel amacı nedir?",
+  "dogru": "Soğuk, karlı ve buzlu yolda yol tutuşunu artırmak",
+  "yanlislar": [
+   "Yakıt tüketimini artırmak",
+   "Aracın daha gürültülü çalışması",
+   "Lastik basıncını düşürmek"
+  ],
+  "cozum": "Kış lastiklerinin hamuru soğukta sertleşmez ve diş yapısı karda tutuşu artırır.",
+  "levha": null
+ },
+ {
+  "uid": "k105",
+  "kat": "tc",
+  "metin": "Taşıt yolu ile ilgili 'şerit' nedir?",
+  "dogru": "Taşıt yolunun, taşıtların bir sıra halinde güvenle gidebilmesi için çizgilerle ayrılmış bölümü",
+  "yanlislar": [
+   "Yolun kenarındaki toprak kısım",
+   "Yaya kaldırımı",
+   "Yolun ortasındaki refüj"
+  ],
+  "cozum": "Şerit, taşıtların tek sıra halinde ilerlediği yol bölümüdür.",
+  "levha": null
+ },
+ {
+  "uid": "k106",
+  "kat": "tc",
+  "metin": "'Banket' nedir?",
+  "dogru": "Taşıt yolu ile kaldırım veya hendek arasındaki, araçların zorunlu hallerde durabileceği yol kenarı bölümü",
+  "yanlislar": [
+   "Yolun ortasındaki ada",
+   "Bisiklet yolu",
+   "Otoyolun hızlanma şeridi"
+  ],
+  "cozum": "Banket zorunlu durumlarda kullanılır; normal sürüşte trafiğe açık değildir.",
+  "levha": null
+ },
+ {
+  "uid": "k107",
+  "kat": "tc",
+  "metin": "Araçlardan çıkan egzoz gazının çevreye etkisini azaltmak için sürücü ne yapabilir?",
+  "dogru": "Aracın bakımını düzenli yaptırıp gereksiz rölantide çalıştırmamalıdır",
+  "yanlislar": [
+   "Motoru sürekli yüksek devirde çalıştırmalıdır",
+   "Katalitik konvertörü söktürmelidir",
+   "Lastik basıncını düşük tutmalıdır"
+  ],
+  "cozum": "Düzenli bakım, doğru lastik basıncı ve sakin sürüş hem yakıtı hem emisyonu azaltır.",
+  "levha": null
+ },
+ {
+  "uid": "k108",
+  "kat": "tc",
+  "metin": "Aracın atık motor yağı nasıl bertaraf edilmelidir?",
+  "dogru": "Yetkili servis ya da atık yağ toplama noktalarına teslim edilerek",
+  "yanlislar": [
+   "Kanalizasyona dökülerek",
+   "Toprağa dökülerek",
+   "Dereye bırakılarak"
+  ],
+  "cozum": "Atık yağ toprağı ve suyu kirletir; lisanslı toplama noktalarına verilmelidir.",
+  "levha": null
+ },
+ {
+  "uid": "k109",
+  "kat": "tc",
+  "metin": "Aracın penceresinden çöp atmak hakkında hangisi doğrudur?",
+  "dogru": "Hem çevreyi kirletir hem de trafikte tehlike oluşturur",
+  "yanlislar": [
+   "Otoyolda serbesttir",
+   "Sadece gece serbesttir",
+   "Çevreye zararı yoktur"
+  ],
+  "cozum": "Atılan cisimler arkadaki araçlara çarpabilir; çevre kirliliğine yol açar.",
+  "levha": null
+ },
+ {
+  "uid": "k110",
+  "kat": "tc",
+  "metin": "Ekonomik sürüş için hangisi yapılmalıdır?",
+  "dogru": "Ani hızlanma ve ani frenlerden kaçınılmalı, uygun viteste sabit hızla gidilmelidir",
+  "yanlislar": [
+   "Motor sürekli yüksek devirde tutulmalıdır",
+   "Klima ve camlar aynı anda açık tutulmalıdır",
+   "Bagajda gereksiz yük taşınmalıdır"
+  ],
+  "cozum": "Akıcı ve öngörülü sürüş yakıt tüketimini ve emisyonu belirgin biçimde azaltır.",
+  "levha": null
+ },
+ {
+  "uid": "k111",
+  "kat": "tc",
+  "metin": "Sürücünün araç kullanırken kör noktaları kontrol etmesi neden önemlidir?",
+  "dogru": "Aynalarda görünmeyen araçlarla çarpışmayı önlemek için",
+  "yanlislar": [
+   "Yakıt tasarrufu için",
+   "Motor sağlığı için",
+   "Hız sınırını öğrenmek için"
+  ],
+  "cozum": "Şerit değiştirmeden önce omuz üstünden bakış, aynalarda görünmeyen araçları fark etmeyi sağlar.",
+  "levha": null
+ },
+ {
+  "uid": "k112",
+  "kat": "tc",
+  "metin": "Okul taşıtı, üzerinde 'DUR' yazılı lambalar yanarken öğrenci indiriyorsa diğer sürücüler ne yapmalıdır?",
+  "dogru": "Durmalı veya çok yavaşlayarak öğrencilere dikkat etmelidir",
+  "yanlislar": [
+   "Korna çalarak geçmelidir",
+   "Hızlanarak geçmelidir",
+   "Okul taşıtının önüne park etmelidir"
+  ],
+  "cozum": "Öğrenciler taşıt çevresinde aniden yola çıkabilir; azami dikkat gerekir.",
+  "levha": null
+ },
+ {
+  "uid": "k113",
+  "kat": "tc",
+  "metin": "Trafik görevlisinin kolunu yukarı kaldırması ne anlama gelir?",
+  "dogru": "Kavşaktaki tüm yönler için 'dikkat, dur' anlamına gelir; kavşağa girmiş olanlar geçişini tamamlar",
+  "yanlislar": [
+   "Tüm yönler için geçiş serbesttir",
+   "Sadece yayalar durmalıdır",
+   "Hızlanılmalıdır"
+  ],
+  "cozum": "Kolun yukarı kaldırılması sarı ışık gibi değerlendirilir.",
+  "levha": null
+ },
+ {
+  "uid": "k114",
+  "kat": "tc",
+  "metin": "Trafik görevlisi kollarını yana açarak yan durduğunda, görevlinin önünden ve arkasından gelen sürücüler için anlamı nedir?",
+  "dogru": "Durmaları gerekir",
+  "yanlislar": [
+   "Geçebilirler",
+   "Sağa dönebilirler",
+   "Hızlanmaları gerekir"
+  ],
+  "cozum": "Görevlinin önü ve arkası kırmızı ışık, yanları yeşil ışık gibi değerlendirilir.",
+  "levha": null
+ },
+ {
+  "uid": "k115",
+  "kat": "tc",
+  "metin": "Gece sürüşünde karşıdan gelen aracın uzun farları gözünüzü alıyorsa ne yapmalısınız?",
+  "dogru": "Hız azaltılıp bakış yolun sağ kenarına yöneltilmelidir",
+  "yanlislar": [
+   "Karşı araca uzun farla cevap verilmelidir",
+   "Gözler kapatılmalıdır",
+   "Hızlanarak bir an önce geçilmelidir"
+  ],
+  "cozum": "Kamaşma anında hızı azaltıp sağ kenar çizgisine bakmak yön kaybını önler.",
+  "levha": null
+ },
+ {
+  "uid": "k116",
+  "kat": "tc",
+  "metin": "Araç içinde çocukların güvenliği için ne yapılmalıdır?",
+  "dogru": "Yaşına ve boyuna uygun çocuk güvenlik koltuğu kullanılmalıdır",
+  "yanlislar": [
+   "Çocuk kucakta taşınmalıdır",
+   "Çocuk ön koltukta kemersiz oturtulmalıdır",
+   "Çocuk bagajda taşınmalıdır"
+  ],
+  "cozum": "Kucakta taşınan çocuk çarpışmada yetişkin tarafından ezilebilir veya fırlayabilir.",
+  "levha": null
+ },
+ {
+  "uid": "k117",
+  "kat": "mt",
+  "metin": "Benzinli motorlarda yakıt–hava karışımını ateşleyen parça hangisidir?",
+  "dogru": "Buji",
+  "yanlislar": [
+   "Enjektör",
+   "Kızdırma bujisi",
+   "Termostat"
+  ],
+  "cozum": "Benzinli motorda karışım, bujinin oluşturduğu kıvılcımla ateşlenir.",
+  "levha": null
+ },
+ {
+  "uid": "k119",
+  "kat": "mt",
+  "metin": "Motor soğutma sisteminde antifriz kullanılmasının amacı nedir?",
+  "dogru": "Suyun donmasını önlemek ve sistemi korozyona karşı korumak",
+  "yanlislar": [
+   "Motor gücünü artırmak",
+   "Yakıt tüketimini artırmak",
+   "Fren hidroliğini azaltmak"
+  ],
+  "cozum": "Antifriz donma noktasını düşürür, kaynama noktasını yükseltir ve paslanmayı önler.",
+  "levha": null
+ },
+ {
+  "uid": "k120",
+  "kat": "mt",
+  "metin": "Motor çalışırken yağ basıncı ikaz lambası yanarsa ne yapılmalıdır?",
+  "dogru": "Araç güvenli yerde durdurulup motor kapatılmalı ve yağ seviyesi kontrol edilmelidir",
+  "yanlislar": [
+   "Yola devam edilmelidir",
+   "Motor yüksek devirde çalıştırılmalıdır",
+   "Lamba sökülmelidir"
+  ],
+  "cozum": "Yağ basıncının düşmesi motorun kısa sürede ciddi hasar görmesine yol açabilir.",
+  "levha": null
+ },
+ {
+  "uid": "k122",
+  "kat": "mt",
+  "metin": "Motorun aşırı ısındığı yolda fark edilirse ne yapılmalıdır?",
+  "dogru": "Araç güvenli yerde durdurulmalı, motor soğumadan radyatör kapağı açılmamalıdır",
+  "yanlislar": [
+   "Sıcak radyatöre hemen soğuk su dökülmelidir",
+   "Radyatör kapağı hemen açılmalıdır",
+   "Yüksek devirde sürüşe devam edilmelidir"
+  ],
+  "cozum": "Sıcak sistemdeki basınç kapağı açınca kaynar suyun fışkırmasına ve yanıklara yol açar.",
+  "levha": null
+ },
+ {
+  "uid": "k125",
+  "kat": "mt",
+  "metin": "Fren pedalı süngerimsi ve normalden derine basıyorsa olası neden nedir?",
+  "dogru": "Fren sistemine hava girmesi ya da hidroliğin azalması",
+  "yanlislar": [
+   "Lastik basıncının yüksek olması",
+   "Yakıt deposunun dolu olması",
+   "Silecek suyunun bitmesi"
+  ],
+  "cozum": "Hidrolik sistemdeki hava basıncı iletmez; fren etkinliği tehlikeli biçimde düşer.",
+  "levha": null
+ },
+ {
+  "uid": "k126",
+  "kat": "mt",
+  "metin": "ABS fren sisteminin temel faydası nedir?",
+  "dogru": "Ani frende tekerleklerin kilitlenmesini önleyerek direksiyon hâkimiyetini korumak",
+  "yanlislar": [
+   "Fren mesafesini her koşulda sıfırlamak",
+   "Yakıt tasarrufu sağlamak",
+   "Lastik ömrünü ikiye katlamak"
+  ],
+  "cozum": "ABS'li araçta ani frende pedala sonuna kadar basılır ve araç yönlendirilebilir.",
+  "levha": null
+ },
+ {
+  "uid": "k127",
+  "kat": "mt",
+  "metin": "ESP (elektronik denge programı) ne işe yarar?",
+  "dogru": "Savrulma eğilimini algılayıp tekerlere ayrı ayrı fren uygulayarak aracı dengeler",
+  "yanlislar": [
+   "Motoru soğutur",
+   "Lastik basıncını ölçer",
+   "Farları otomatik yakar"
+  ],
+  "cozum": "ESP özellikle virajlarda ve kaygan zeminde kayma riskini azaltır.",
+  "levha": null
+ },
+ {
+  "uid": "k128",
+  "kat": "mt",
+  "metin": "Lastik hava basıncı düşükse ne olur?",
+  "dogru": "Lastik aşırı ısınır, yakıt tüketimi artar ve yol tutuş bozulur",
+  "yanlislar": [
+   "Fren mesafesi kısalır",
+   "Yakıt tüketimi azalır",
+   "Lastik ömrü uzar"
+  ],
+  "cozum": "Doğru basınç, araç üreticisinin önerdiği değerlerde ve lastikler soğukken ölçülmelidir.",
+  "levha": null
+ },
+ {
+  "uid": "k129",
+  "kat": "mt",
+  "metin": "Rot–balans ayarı bozuk olan araçta hangisi görülür?",
+  "dogru": "Direksiyonda titreme ve lastiklerde düzensiz aşınma",
+  "yanlislar": [
+   "Motor yağının artması",
+   "Akünün hızla şarj olması",
+   "Farların daha parlak yanması"
+  ],
+  "cozum": "Rot ayarı aracın düz gitmesini, balans ise tekerleklerin titreşimsiz dönmesini sağlar.",
+  "levha": null
+ },
+ {
+  "uid": "k130",
+  "kat": "mt",
+  "metin": "Lastik değiştirirken bijonlar nasıl sıkılır?",
+  "dogru": "Çapraz sırayla",
+  "yanlislar": [
+   "Saat yönünde sırayla tek tek sonuna kadar",
+   "Rastgele",
+   "Sadece üstteki bijon sıkılarak"
+  ],
+  "cozum": "Çapraz sıkma, jantın göbeğe düzgün oturmasını sağlar.",
+  "levha": null
+ },
+ {
+  "uid": "k131",
+  "kat": "mt",
+  "metin": "Akü kutup başlarında beyaz oksitlenme oluşursa ne yapılır?",
+  "dogru": "Temizlenip ince bir koruyucu (vazelin vb.) sürülür",
+  "yanlislar": [
+   "Üzerine su dökülür",
+   "Kutup başları sökülüp atılır",
+   "Hiçbir şey yapılmaz"
+  ],
+  "cozum": "Oksitlenme elektrik iletimini zayıflatır ve marş sorunlarına yol açar.",
+  "levha": null
+ },
+ {
+  "uid": "k132",
+  "kat": "mt",
+  "metin": "Aküden takviye kablosuyla çalıştırma yapılırken nasıl bağlantı yapılır?",
+  "dogru": "Artı kutup artıya, eksi kutup eksiye (veya şaseye) bağlanır",
+  "yanlislar": [
+   "Artı kutup eksiye bağlanır",
+   "Sadece eksi kutuplar bağlanır",
+   "Kablolar rastgele bağlanır"
+  ],
+  "cozum": "Ters bağlantı elektronik aksama ve aküye ciddi zarar verir; kıvılcım riskine dikkat edilir.",
+  "levha": null
+ },
+ {
+  "uid": "k134",
+  "kat": "mt",
+  "metin": "Triger kayışının kopması motorda neye yol açabilir?",
+  "dogru": "Supap ve pistonların çarpışarak ciddi motor hasarına",
+  "yanlislar": [
+   "Silecek motorunun durmasına",
+   "Akünün şarj olmasına",
+   "Lastiklerin aşınmasına"
+  ],
+  "cozum": "Triger kayışı üreticinin önerdiği kilometrede değiştirilmelidir.",
+  "levha": null
+ },
+ {
+  "uid": "k136",
+  "kat": "mt",
+  "metin": "Hava filtresinin tıkanması neye yol açar?",
+  "dogru": "Motor gücünün düşmesine ve yakıt tüketiminin artmasına",
+  "yanlislar": [
+   "Fren mesafesinin kısalmasına",
+   "Lastik basıncının artmasına",
+   "Farların daha iyi aydınlatmasına"
+  ],
+  "cozum": "Motor yanma için temiz ve yeterli hava ister; tıkalı filtre karışımı bozar.",
+  "levha": null
+ },
+ {
+  "uid": "k137",
+  "kat": "mt",
+  "metin": "Motor yağı ne zaman değiştirilmelidir?",
+  "dogru": "Üreticinin belirttiği kilometre veya süre dolduğunda",
+  "yanlislar": [
+   "Hiç değiştirilmez, eksildikçe eklenir",
+   "Sadece motor arıza yaptığında",
+   "Her depo dolumunda"
+  ],
+  "cozum": "Yağ zamanla kirlenir ve özelliğini kaybeder; filtresiyle birlikte zamanında değiştirilir.",
+  "levha": null
+ },
+ {
+  "uid": "k138",
+  "kat": "mt",
+  "metin": "Fren hidroliği seviyesinin sürekli azalması neye işaret eder?",
+  "dogru": "Fren sisteminde kaçak veya balataların aşırı aşınmasına",
+  "yanlislar": [
+   "Normal bir durumdur",
+   "Motor yağının fazla olduğuna",
+   "Akünün iyi şarj olduğuna"
+  ],
+  "cozum": "Fren hidroliğindeki düşüş fren güvenliğini doğrudan etkiler; vakit kaybetmeden kontrol ettirilmelidir.",
+  "levha": null
+ },
+ {
+  "uid": "k139",
+  "kat": "mt",
+  "metin": "Direksiyon simidinin normalden ağır dönmesi hangi nedenden kaynaklanabilir?",
+  "dogru": "Direksiyon (hidrolik/elektrik) yardımında arıza veya ön lastik basıncının düşük olması",
+  "yanlislar": [
+   "Yakıtın azalması",
+   "Silecek suyunun bitmesi",
+   "Klima gazının azalması"
+  ],
+  "cozum": "Direksiyonun ağırlaşması hem yorgunluk hem de manevra güçlüğü yaratır.",
+  "levha": null
+ },
+ {
+  "uid": "k140",
+  "kat": "mt",
+  "metin": "Gösterge panelinde motor arıza (check engine) lambasının sürekli yanması neyi gösterir?",
+  "dogru": "Motor yönetim sisteminin bir arıza algıladığını",
+  "yanlislar": [
+   "Emniyet kemerinin takılı olduğunu",
+   "Sinyal lambasının yandığını",
+   "Kapıların kapalı olduğunu"
+  ],
+  "cozum": "Lamba yanıyorsa araç en kısa sürede serviste arıza tespit cihazıyla kontrol ettirilmelidir.",
+  "levha": null
+ },
+ {
+  "uid": "k141",
+  "kat": "mt",
+  "metin": "Silecek lastikleri aşındığında ne olur?",
+  "dogru": "Camı iyi temizleyemez, yağmurda görüş azalır",
+  "yanlislar": [
+   "Motor ısınır",
+   "Fren etkisizleşir",
+   "Yakıt tüketimi düşer"
+  ],
+  "cozum": "Görüş güvenli sürüşün temelidir; silecekler düzenli yenilenmelidir.",
+  "levha": null
+ },
+ {
+  "uid": "k142",
+  "kat": "mt",
+  "metin": "Motor yağı seviyesi kontrol edilirken yağ çubuğunda seviye nerede olmalıdır?",
+  "dogru": "Alt (min) ve üst (max) işaretleri arasında",
+  "yanlislar": [
+   "Alt işaretin altında",
+   "Üst işaretin çok üstünde",
+   "Çubukta hiç yağ görünmemeli"
+  ],
+  "cozum": "Eksik yağ motoru aşındırır, fazla yağ da contalara zarar verebilir.",
+  "levha": null
+ },
+ {
+  "uid": "k143",
+  "kat": "mt",
+  "metin": "Katalitik konvertörün görevi nedir?",
+  "dogru": "Egzoz gazındaki zararlı maddeleri daha az zararlı gazlara dönüştürmek",
+  "yanlislar": [
+   "Motor gücünü artırmak",
+   "Yakıt deposunu soğutmak",
+   "Lastik basıncını ayarlamak"
+  ],
+  "cozum": "Katalitik konvertör hava kirliliğini azaltır; kurşunlu yakıt ve yağ yakan motor ona zarar verir.",
+  "levha": null
+ },
+ {
+  "uid": "k144",
+  "kat": "mt",
+  "metin": "Turbo şarjlı motorlarda uzun yolculuktan hemen sonra ne yapılması önerilir?",
+  "dogru": "Motor bir süre rölantide çalıştırılıp turbonun soğuması beklenir",
+  "yanlislar": [
+   "Motor yüksek devirde gazlanıp kapatılır",
+   "Motor hemen kapatılıp üzerine su dökülür",
+   "Kontak açık bırakılıp araç terk edilir"
+  ],
+  "cozum": "Ani kapatma sıcak turbonun yağlamasını keser; kısa rölanti ömrünü uzatır.",
+  "levha": null
+ },
+ {
+  "uid": "k145",
+  "kat": "mt",
+  "metin": "Lastik diş derinliği azaldığında en büyük risk nedir?",
+  "dogru": "Islak zeminde yol tutuşun azalması ve kızaklama",
+  "yanlislar": [
+   "Yakıt tüketiminin düşmesi",
+   "Motor gücünün artması",
+   "Direksiyonun hafiflemesi"
+  ],
+  "cozum": "Diş kanalları suyu tahliye eder; aşınmış lastik suyu atamaz ve araç kayar.",
+  "levha": null
+ },
+ {
+  "uid": "k146",
+  "kat": "mt",
+  "metin": "Araçta yangın çıkması halinde ilk ne yapılmalıdır?",
+  "dogru": "Kontak kapatılır, yolcular uzaklaştırılır ve yangın söndürücü kullanılır",
+  "yanlislar": [
+   "Motor kaputu hızla sonuna kadar açılır",
+   "Yangına su dökülür",
+   "Araç hızla sürülmeye devam edilir"
+  ],
+  "cozum": "Kontağı kapatmak yakıt akışını ve elektrik kıvılcımını keser; kaput sonuna kadar açılırsa yangına hava girer.",
+  "levha": null
+ },
+ {
+  "uid": "k147",
+  "kat": "mt",
+  "metin": "Yakıt deposu tamamen boşalana kadar araç kullanmanın sakıncası nedir?",
+  "dogru": "Depo dibindeki tortu yakıt sistemine geçebilir ve yakıt pompası zarar görebilir",
+  "yanlislar": [
+   "Hiçbir sakıncası yoktur",
+   "Fren balataları aşınır",
+   "Farlar zayıflar"
+  ],
+  "cozum": "Ayrıca yolda kalmak tehlikeli durumlara yol açar; yakıt seviyesi düzenli takip edilmelidir.",
+  "levha": null
+ },
+ {
+  "uid": "k148",
+  "kat": "mt",
+  "metin": "Hararet göstergesi motor çalışırken neyi gösterir?",
+  "dogru": "Motor soğutma suyunun sıcaklığını",
+  "yanlislar": [
+   "Yağ miktarını",
+   "Yakıt miktarını",
+   "Lastik basıncını"
+  ],
+  "cozum": "Gösterge kırmızı bölgeye yaklaşırsa motor aşırı ısınıyordur.",
+  "levha": null
+ },
+ {
+  "uid": "k149",
+  "kat": "mt",
+  "metin": "Soğuk havada dizel aracı çalıştırırken neye dikkat edilir?",
+  "dogru": "Kızdırma lambası sönene kadar beklenip sonra marşa basılır",
+  "yanlislar": [
+   "Marşa sürekli 30 saniye basılır",
+   "Gaz pedalına defalarca basılır",
+   "Motor yüksek devirde soğuk çalıştırılır"
+  ],
+  "cozum": "Kızdırma bujileri yanma odasını ısıtır; lamba sönünce çalıştırmak kolaylaşır.",
+  "levha": null
+ },
+ {
+  "uid": "k150",
+  "kat": "mt",
+  "metin": "Araçta 'rölanti' ne demektir?",
+  "dogru": "Gaz pedalına basılmadan motorun boşta çalışması",
+  "yanlislar": [
+   "Aracın en yüksek hızı",
+   "Vitesin geri konumu",
+   "Motorun durması"
+  ],
+  "cozum": "Gereksiz uzun rölanti yakıt israfı ve hava kirliliği demektir.",
+  "levha": null
+ },
+ {
+  "uid": "k151",
+  "kat": "ta",
+  "metin": "Trafikte saygılı sürücü davranışına örnek hangisidir?",
+  "dogru": "Yaya geçidinde bekleyen yayaya yol vermek",
+  "yanlislar": [
+   "Selektör yaparak öndeki aracı sıkıştırmak",
+   "Kırmızı ışıkta korna çalmak",
+   "Engelli park yerine park etmek"
+  ],
+  "cozum": "Saygılı sürücü diğer yol kullanıcılarının haklarını gözetir.",
+  "levha": null
+ },
+ {
+  "uid": "k152",
+  "kat": "ta",
+  "metin": "Engelliler için ayrılmış park yerine park etmekle ilgili hangisi doğrudur?",
+  "dogru": "Yetkisi olmayan sürücülerin park etmesi yasaktır ve trafik adabına aykırıdır",
+  "yanlislar": [
+   "Kısa süreliğine serbesttir",
+   "Gece serbesttir",
+   "Dörtlü yakılırsa serbesttir"
+  ],
+  "cozum": "Engelli park yerleri ihtiyacı olanlar içindir; birkaç dakikalık işgal bile onları mağdur eder.",
+  "levha": null
+ },
+ {
+  "uid": "k153",
+  "kat": "ta",
+  "metin": "Trafikte başka bir sürücü hata yaptığında doğru tutum hangisidir?",
+  "dogru": "Sakin kalıp tartışmaya girmemek ve güvenli mesafeyi korumak",
+  "yanlislar": [
+   "Peşine düşüp uyarmak",
+   "Korna ve selektörle tepki göstermek",
+   "Önüne geçip aniden fren yapmak"
+  ],
+  "cozum": "Öfkeyle verilen tepkiler kazaları ve kavgaları artırır; empati ve sabır trafik adabının temelidir.",
+  "levha": null
+ },
+ {
+  "uid": "k154",
+  "kat": "ta",
+  "metin": "Empati kavramı trafikte neyi ifade eder?",
+  "dogru": "Kendini diğer yol kullanıcılarının yerine koyarak davranmayı",
+  "yanlislar": [
+   "Yalnızca kendi hakkını savunmayı",
+   "Hızlı araç kullanmayı",
+   "Kuralları esnetmeyi"
+  ],
+  "cozum": "Empati kuran sürücü yaya, yaşlı, çocuk ve engelli yol kullanıcılarının ihtiyaçlarını gözetir.",
+  "levha": null
+ },
+ {
+  "uid": "k155",
+  "kat": "ta",
+  "metin": "Yaşlı ve engelli yayalar karşıya geçerken sürücü nasıl davranmalıdır?",
+  "dogru": "Sabırla beklemeli, acele ettirmemelidir",
+  "yanlislar": [
+   "Korna çalarak hızlandırmalıdır",
+   "Yanlarından hızla geçmelidir",
+   "Selektör yapmalıdır"
+  ],
+  "cozum": "Hareket kısıtlılığı olan yayalara karşı anlayışlı olmak trafik adabının gereğidir.",
+  "levha": null
+ },
+ {
+  "uid": "k156",
+  "kat": "ta",
+  "metin": "Su birikintisinin yanından geçerken yayalara karşı nasıl davranılmalıdır?",
+  "dogru": "Yavaşlanarak yayaların ıslanması önlenmelidir",
+  "yanlislar": [
+   "Hızla geçilmelidir",
+   "Korna çalınmalıdır",
+   "Yayalara selektör yapılmalıdır"
+  ],
+  "cozum": "Yayaları ıslatmak hem saygısızlıktır hem de onları tehlikeli harekete zorlayabilir.",
+  "levha": null
+ },
+ {
+  "uid": "k157",
+  "kat": "ta",
+  "metin": "Trafikte 'öfke kontrolü' neden önemlidir?",
+  "dogru": "Öfke dikkat ve karar verme yeteneğini bozarak kaza riskini artırır",
+  "yanlislar": [
+   "Öfke sürüş becerisini artırır",
+   "Öfkeli sürücü daha dikkatli olur",
+   "Öfkenin trafikte etkisi yoktur"
+  ],
+  "cozum": "Öfkelenen sürücü risk alır, mesafeyi ve hızı ayarlayamaz.",
+  "levha": null
+ },
+ {
+  "uid": "k158",
+  "kat": "ta",
+  "metin": "Kavşakta yeşil ışık yanar yanmaz öndeki araç hemen hareket etmediğinde ne yapılmalıdır?",
+  "dogru": "Birkaç saniye sabırla beklenmelidir",
+  "yanlislar": [
+   "Uzun süre korna çalınmalıdır",
+   "Selektör yapılmalıdır",
+   "Sağından geçilmelidir"
+  ],
+  "cozum": "Öndeki sürücü kavşağın güvenli olduğunu kontrol ediyor olabilir; sabırlı olmak gerekir.",
+  "levha": null
+ },
+ {
+  "uid": "k159",
+  "kat": "ta",
+  "metin": "Trafikte 'fermuar sistemi' (dönüşümlü geçiş) ne zaman uygulanır?",
+  "dogru": "Şerit daralmalarında araçların sırayla birer birer birleşmesi için",
+  "yanlislar": [
+   "Park ederken",
+   "Otoyola girişte hiç uygulanmaz",
+   "Yaya geçidinde"
+  ],
+  "cozum": "Fermuar sistemi daralan yolda trafiğin adil ve akıcı birleşmesini sağlar.",
+  "levha": null
+ },
+ {
+  "uid": "k160",
+  "kat": "ta",
+  "metin": "Sürücülerin birbirine selam vermek için uzun süre korna çalması hakkında hangisi doğrudur?",
+  "dogru": "Gürültü kirliliği yaratır ve trafik adabına uygun değildir",
+  "yanlislar": [
+   "Trafik adabının gereğidir",
+   "Zorunludur",
+   "Gece yapılması uygundur"
+  ],
+  "cozum": "Korna yalnızca tehlikeyi önlemek için kullanılmalıdır.",
+  "levha": null
+ },
+ {
+  "uid": "k161",
+  "kat": "ta",
+  "metin": "Araçla düğün konvoyu ya da kutlama yaparken hangisi doğrudur?",
+  "dogru": "Trafik kurallarına uyulmalı, yolu kapatmak ve tehlikeli manevra yapmak yasaktır",
+  "yanlislar": [
+   "Yolu kapatmak serbesttir",
+   "Kırmızı ışıkta geçmek serbesttir",
+   "Camdan sarkmak serbesttir"
+  ],
+  "cozum": "Kutlamalar başkalarının can güvenliğini tehlikeye atamaz.",
+  "levha": null
+ },
+ {
+  "uid": "k162",
+  "kat": "ta",
+  "metin": "Trafik kurallarına uymanın temel nedeni ne olmalıdır?",
+  "dogru": "Kendisinin ve başkalarının can güvenliğini korumak",
+  "yanlislar": [
+   "Ceza almamak için sadece polis varken",
+   "Sınavı geçmek",
+   "Araç sigortası için"
+  ],
+  "cozum": "Kurallar herkesin güvenle yol kullanabilmesi içindir; denetim olsun ya da olmasın uyulmalıdır.",
+  "levha": null
+ },
+ {
+  "uid": "k163",
+  "kat": "ta",
+  "metin": "Trafikte bencil davranışa örnek hangisidir?",
+  "dogru": "Kuyruğu atlayıp emniyet şeridinden ilerlemek",
+  "yanlislar": [
+   "Yayaya yol vermek",
+   "Sinyal vermek",
+   "Takip mesafesini korumak"
+  ],
+  "cozum": "Emniyet şeridini işgal etmek acil araçların geçişini engeller ve haksızlıktır.",
+  "levha": null
+ },
+ {
+  "uid": "k164",
+  "kat": "ta",
+  "metin": "Yağmurlu havada otobüs durağında bekleyenlerin yanından geçerken nasıl davranılır?",
+  "dogru": "Yavaşlanıp su sıçratmamaya özen gösterilir",
+  "yanlislar": [
+   "Hızla geçilir",
+   "Korna çalınır",
+   "Durağa yanaşılıp beklenir"
+  ],
+  "cozum": "Yol kullanıcılarına saygı, onları rahatsız edecek davranışlardan kaçınmayı gerektirir.",
+  "levha": null
+ },
+ {
+  "uid": "k165",
+  "kat": "ta",
+  "metin": "Sürücünün trafikte 'sorumluluk' duygusu neyi gerektirir?",
+  "dogru": "Davranışlarının sonuçlarını üstlenmeyi ve kurallara uymayı",
+  "yanlislar": [
+   "Hatalarını başkalarına yüklemeyi",
+   "Sadece kendi güvenliğini düşünmeyi",
+   "Hızlı gitmeyi"
+  ],
+  "cozum": "Sorumlu sürücü hem kendi hem başkalarının güvenliğini gözetir.",
+  "levha": null
+ },
+ {
+  "uid": "k166",
+  "kat": "ta",
+  "metin": "Trafikte yardımlaşmaya örnek hangisidir?",
+  "dogru": "Arızalı araca güvenli şekilde yardım edip trafiği uyarmak",
+  "yanlislar": [
+   "Kaza yerinde fotoğraf çekmek",
+   "Kaza yerinde yavaşlayıp trafiği kilitlemek",
+   "Arızalı aracın yanından korna çalarak geçmek"
+  ],
+  "cozum": "Yardım ederken güvenlik önlemleri alınmalıdır; meraktan yavaşlamak ise ikincil kazalara yol açar.",
+  "levha": null
+ },
+ {
+  "uid": "k167",
+  "kat": "ta",
+  "metin": "Hastane ve okul çevresinde sürücü nasıl davranmalıdır?",
+  "dogru": "Yavaş ve sessiz sürmeli, korna çalmamalıdır",
+  "yanlislar": [
+   "Hızlanarak bölgeden çıkmalıdır",
+   "Korna ile uyarı yapmalıdır",
+   "Müzik sesini açmalıdır"
+  ],
+  "cozum": "Hassas bölgelerde gürültü ve hız insanların sağlığını ve güvenliğini etkiler.",
+  "levha": null
+ },
+ {
+  "uid": "k168",
+  "kat": "ta",
+  "metin": "Aracın camından yüksek sesle müzik dinlemek hakkında hangisi doğrudur?",
+  "dogru": "Çevreyi rahatsız eder ve dışarıdaki uyarı seslerini duymayı engeller",
+  "yanlislar": [
+   "Trafik güvenliğini artırır",
+   "Sadece otoyolda serbesttir",
+   "Hiçbir etkisi yoktur"
+  ],
+  "cozum": "Ambulans sireni gibi uyarıların duyulmaması tehlikeli sonuçlar doğurabilir.",
+  "levha": null
+ },
+ {
+  "uid": "k169",
+  "kat": "ta",
+  "metin": "Trafikte sabırlı olmanın sürücüye faydası nedir?",
+  "dogru": "Stresi azaltır, daha güvenli kararlar vermesini sağlar",
+  "yanlislar": [
+   "Varış süresini her zaman yarıya indirir",
+   "Yakıtı artırır",
+   "Kurallardan muaf tutar"
+  ],
+  "cozum": "Sabırlı sürücü riskli sollama ve agresif manevralardan kaçınır.",
+  "levha": null
+ }
+]
