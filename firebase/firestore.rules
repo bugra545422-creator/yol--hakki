@@ -1,0 +1,51 @@
+rules_version = '2';
+// EHLİYET BENDE — eğitmen / işletme başvuruları, roller ve paylaşılan sorular
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function girisli() { return request.auth != null; }
+    function yonetici() {
+      return girisli() && request.auth.token.email_verified == true &&
+        request.auth.token.email in ['bestudio5454@gmail.com', 'bugra545422@gmail.com'];
+    }
+    function rolVar() { return girisli() && exists(/databases/$(database)/documents/roller/$(request.auth.uid)); }
+
+    // Başvurular: herkes yalnızca kendi başvurusunu "bekliyor" olarak oluşturur/günceller, onayı sadece yönetici verir
+    match /basvurular/{uid} {
+      allow read: if yonetici() || (girisli() && request.auth.uid == uid);
+      allow create, update: if yonetici() || (girisli() && request.auth.uid == uid
+        && request.resource.data.durum == 'bekliyor'
+        && request.resource.data.tur in ['egitmen', 'isletme']
+        && request.resource.data.eposta == request.auth.token.email
+        && request.resource.data.size() < 20);
+      allow delete: if yonetici();
+    }
+
+    // Roller: onaylanan eğitmen / işletme hesapları (yalnızca yönetici yazar)
+    match /roller/{uid} {
+      allow read: if yonetici() || (girisli() && request.auth.uid == uid);
+      allow write: if yonetici();
+    }
+
+    // Eğitmen / kurs profilleri: şehir listesinde herkes okur; yalnızca onaylı hesap kendi profilini, yönetici hepsini yazar
+    match /egitmenler/{uid} {
+      allow read: if true;
+      allow create, update: if yonetici() || (rolVar() && request.auth.uid == uid
+        && request.resource.data.sehir is string && request.resource.data.size() < 16
+        && request.resource.data.get('tanitim', '').size() <= 300
+        && request.resource.data.get('siniflar', []).size() <= 10);
+      allow delete: if yonetici() || (girisli() && request.auth.uid == uid);
+    }
+
+    // Sorular: herkes okur; onaylı eğitmen / işletme ve yönetici ekler; kendi sorusunu siler
+    match /sorular/{id} {
+      allow read: if true;
+      allow create: if (rolVar() || yonetici())
+        && request.resource.data.ekleyenUid == request.auth.uid
+        && request.resource.data.kat is string && request.resource.data.metin is string
+        && request.resource.data.dogru is string && request.resource.data.yanlislar is list
+        && request.resource.data.yanlislar.size() == 3 && request.resource.data.metin.size() < 1000;
+      allow update, delete: if yonetici() || (rolVar() && resource.data.ekleyenUid == request.auth.uid);
+    }
+  }
+}
