@@ -1,31 +1,5 @@
 [
  {
-  "uid": "k003",
-  "kat": "iy",
-  "metin": "Yetişkinde kalp masajı dakikada yaklaşık kaç bası hızında yapılmalıdır?",
-  "dogru": "100–120",
-  "yanlislar": [
-   "40–60",
-   "60–80",
-   "150–180"
-  ],
-  "cozum": "Etkili kalp masajı için dakikada 100–120 bası hızı önerilir; çok yavaş ya da çok hızlı bası dolaşımı yeterince sağlamaz.",
-  "levha": null
- },
- {
-  "uid": "k004",
-  "kat": "iy",
-  "metin": "Solunumun kontrolünde 'bak–dinle–hisset' yöntemi en fazla ne kadar sürede uygulanır?",
-  "dogru": "10 saniye",
-  "yanlislar": [
-   "1 dakika",
-   "3 saniye",
-   "30 saniye"
-  ],
-  "cozum": "Solunum değerlendirmesi 10 saniyeyi geçmemelidir; solunum yoksa vakit kaybetmeden temel yaşam desteğine başlanır.",
-  "levha": null
- },
- {
   "uid": "k006",
   "kat": "iy",
   "metin": "Bilinci kapalı, solunumu olan ve omurga yaralanması şüphesi bulunmayan kazazedeye hangi pozisyon verilir?",
@@ -530,45 +504,6 @@
    "Tanıdığı kişiye"
   ],
   "cozum": "Önceliklendirme (triyaj) hayatı tehdit eden durumlara göre yapılır; sessiz kazazede daha ağır olabilir.",
-  "levha": null
- },
- {
-  "uid": "k052",
-  "kat": "tc",
-  "metin": "Kavşakta trafik görevlisi, trafik ışıkları ve işaretler aynı anda bulunuyorsa hangisine uyulur?",
-  "dogru": "Trafik görevlisinin talimatına",
-  "yanlislar": [
-   "Trafik ışıklarına",
-   "Trafik işaretlerine",
-   "Kim önce gelirse ona"
-  ],
-  "cozum": "Öncelik sırası: trafik görevlisi, ışıklı işaretler, trafik işaret levhaları ve yer işaretleri.",
-  "levha": null
- },
- {
-  "uid": "k053",
-  "kat": "tc",
-  "metin": "Dönel kavşakta geçiş hakkı kimindir?",
-  "dogru": "Kavşak içindeki (ada etrafında dönen) araçlara",
-  "yanlislar": [
-   "Kavşağa girmek üzere olan araçlara",
-   "Sağdan gelen araçlara",
-   "Büyük araçlara"
-  ],
-  "cozum": "Dönel kavşakta, kavşak içinde dönmekte olan araçların geçiş hakkı vardır; giren araçlar yol verir.",
-  "levha": null
- },
- {
-  "uid": "k054",
-  "kat": "tc",
-  "metin": "Ambulans, itfaiye gibi geçiş üstünlüğüne sahip araçlar ışıklı ve sesli uyarı verirken diğer sürücüler ne yapmalıdır?",
-  "dogru": "Yolu açıp gerekirse sağa yanaşarak durmalıdır",
-  "yanlislar": [
-   "Hızlanarak önünden geçmelidir",
-   "Peşine takılarak yararlanmalıdır",
-   "Kendi şeridinde aynı hızla devam etmelidir"
-  ],
-  "cozum": "Geçiş üstünlüğüne sahip araçlara yol verilir; arkalarından takip ederek yararlanmak yasaktır.",
   "levha": null
  },
  {
@@ -1352,32 +1287,6 @@
   "levha": null
  },
  {
-  "uid": "k120",
-  "kat": "mt",
-  "metin": "Motor çalışırken yağ basıncı ikaz lambası yanarsa ne yapılmalıdır?",
-  "dogru": "Araç güvenli yerde durdurulup motor kapatılmalı ve yağ seviyesi kontrol edilmelidir",
-  "yanlislar": [
-   "Yola devam edilmelidir",
-   "Motor yüksek devirde çalıştırılmalıdır",
-   "Lamba sökülmelidir"
-  ],
-  "cozum": "Yağ basıncının düşmesi motorun kısa sürede ciddi hasar görmesine yol açabilir.",
-  "levha": null
- },
- {
-  "uid": "k122",
-  "kat": "mt",
-  "metin": "Motorun aşırı ısındığı yolda fark edilirse ne yapılmalıdır?",
-  "dogru": "Araç güvenli yerde durdurulmalı, motor soğumadan radyatör kapağı açılmamalıdır",
-  "yanlislar": [
-   "Sıcak radyatöre hemen soğuk su dökülmelidir",
-   "Radyatör kapağı hemen açılmalıdır",
-   "Yüksek devirde sürüşe devam edilmelidir"
-  ],
-  "cozum": "Sıcak sistemdeki basınç kapağı açınca kaynar suyun fışkırmasına ve yanıklara yol açar.",
-  "levha": null
- },
- {
   "uid": "k125",
   "kat": "mt",
   "metin": "Fren pedalı süngerimsi ve normalden derine basıyorsa olası neden nedir?",
@@ -1687,19 +1596,6 @@
    "Motorun durması"
   ],
   "cozum": "Gereksiz uzun rölanti yakıt israfı ve hava kirliliği demektir.",
-  "levha": null
- },
- {
-  "uid": "k152",
-  "kat": "ta",
-  "metin": "Engelliler için ayrılmış park yerine park etmekle ilgili hangisi doğrudur?",
-  "dogru": "Yetkisi olmayan sürücülerin park etmesi yasaktır ve trafik adabına aykırıdır",
-  "yanlislar": [
-   "Kısa süreliğine serbesttir",
-   "Gece serbesttir",
-   "Dörtlü yakılırsa serbesttir"
-  ],
-  "cozum": "Engelli park yerleri ihtiyacı olanlar içindir; birkaç dakikalık işgal bile onları mağdur eder.",
   "levha": null
  },
  {
