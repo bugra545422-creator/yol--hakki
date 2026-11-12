@@ -1,5 +1,5 @@
 {
- "surum": "2026-11-11-26",
+ "surum": "2026-11-12-34",
  "aciklama": "EHLİYET BENDE soru bankası güncellemesi. Uygulama bu dosyayı internetten düzenli olarak okur.",
  "sorular": [
   {
@@ -339,7 +339,111 @@
    ],
    "cozum": "Sıcak sistemdeki basınç kapağı açınca kaynar suyun fışkırmasına ve yanıklara yol açar.",
    "levha": null
+  },
+  {
+   "uid": "k055",
+   "kat": "tc",
+   "metin": "Tepe üstüne yaklaşırken öndeki aracı geçmek neden yasaktır?",
+   "dogru": "Karşıdan gelen araçlar görülemediği için",
+   "yanlislar": [
+    "Yol daraldığı için",
+    "Motor zorlandığı için",
+    "Lastikler aşınacağı için"
+   ],
+   "cozum": "Görüş mesafesinin yetersiz olduğu tepe üstleri, dönemeçler ve kavşaklarda geçme yasaktır.",
+   "levha": null
+  },
+  {
+   "uid": "k006",
+   "kat": "iy",
+   "metin": "Bilinci kapalı, solunumu olan ve omurga yaralanması şüphesi bulunmayan kazazedeye hangi pozisyon verilir?",
+   "dogru": "Koma (derlenme) pozisyonu",
+   "yanlislar": [
+    "Şok pozisyonu",
+    "Yarı oturur pozisyon",
+    "Sırtüstü baş aşağıda pozisyon"
+   ],
+   "cozum": "Koma pozisyonu dilin geriye kaçmasını ve kusmuğun soluk yoluna kaçmasını önler.",
+   "levha": null
+  },
+  {
+   "uid": "k056",
+   "kat": "tc",
+   "metin": "Aşağıdaki yerlerden hangisinde öndeki aracı geçmek yasaktır?",
+   "dogru": "Hemzemin demiryolu geçidinde",
+   "yanlislar": [
+    "Bölünmüş yolun düz ve açık kesiminde",
+    "Otoyolun sol şeridinde",
+    "Kesik çizgili düz yolda"
+   ],
+   "cozum": "Hemzemin geçitler, yaya geçitleri, kavşaklar, tepe üstleri ve dönemeçler geçme yasağı olan yerlerdir.",
+   "levha": null
+  },
+  {
+   "uid": "k125",
+   "kat": "mt",
+   "metin": "Fren pedalı süngerimsi ve normalden derine basıyorsa olası neden nedir?",
+   "dogru": "Fren sistemine hava girmesi ya da hidroliğin azalması",
+   "yanlislar": [
+    "Lastik basıncının yüksek olması",
+    "Yakıt deposunun dolu olması",
+    "Silecek suyunun bitmesi"
+   ],
+   "cozum": "Hidrolik sistemdeki hava basıncı iletmez; fren etkinliği tehlikeli biçimde düşer.",
+   "levha": null
+  },
+  {
+   "uid": "k007",
+   "kat": "iy",
+   "metin": "Şok belirtileri gösteren ve bacaklarında yaralanma olmayan kazazedeye hangi pozisyon verilir?",
+   "dogru": "Sırtüstü yatırılıp bacakları yaklaşık 30 cm yükseltilir",
+   "yanlislar": [
+    "Yüzüstü yatırılır",
+    "Oturtulup başı öne eğilir",
+    "Ayağa kaldırılıp yürütülür"
+   ],
+   "cozum": "Bacakların yükseltilmesi kanın hayati organlara yönelmesine yardımcı olur; üzeri örtülerek ısı kaybı önlenir.",
+   "levha": null
+  },
+  {
+   "uid": "k057",
+   "kat": "tc",
+   "metin": "Öndeki aracı geçmek isteyen sürücü hangi taraftan geçmelidir?",
+   "dogru": "Soldan",
+   "yanlislar": [
+    "Sağdan",
+    "Banketten",
+    "Hangisi boşsa"
+   ],
+   "cozum": "Geçme kural olarak soldan yapılır; sola dönmek üzere sola yanaşan araç ise sağdan geçilebilir.",
+   "levha": null
+  },
+  {
+   "uid": "k153",
+   "kat": "ta",
+   "metin": "Trafikte başka bir sürücü hata yaptığında doğru tutum hangisidir?",
+   "dogru": "Sakin kalıp tartışmaya girmemek ve güvenli mesafeyi korumak",
+   "yanlislar": [
+    "Peşine düşüp uyarmak",
+    "Korna ve selektörle tepki göstermek",
+    "Önüne geçip aniden fren yapmak"
+   ],
+   "cozum": "Öfkeyle verilen tepkiler kazaları ve kavgaları artırır; empati ve sabır trafik adabının temelidir.",
+   "levha": null
+  },
+  {
+   "uid": "k126",
+   "kat": "mt",
+   "metin": "ABS fren sisteminin temel faydası nedir?",
+   "dogru": "Ani frende tekerleklerin kilitlenmesini önleyerek direksiyon hâkimiyetini korumak",
+   "yanlislar": [
+    "Fren mesafesini her koşulda sıfırlamak",
+    "Yakıt tasarrufu sağlamak",
+    "Lastik ömrünü ikiye katlamak"
+   ],
+   "cozum": "ABS'li araçta ani frende pedala sonuna kadar basılır ve araç yönlendirilebilir.",
+   "levha": null
   }
  ],
- "guncelleme": "2026-11-11"
+ "guncelleme": "2026-11-12"
 }
