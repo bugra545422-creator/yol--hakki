@@ -1,4 +1,4 @@
-# Yol Hakkı – özgün soru kuyruğu (2/3): Trafik ve çevre
+# Ehliyet Bende – özgün soru kuyruğu (2/3): Trafik ve çevre
 S = [
 ("tc","Takip mesafesiyle ilgili genel kural nedir?","Aracın km/s cinsinden hızının yarısı kadar metre mesafe bırakılır","Hız ne olursa olsun 5 metre bırakılır","Öndeki araca tampon tampona yaklaşılır","Hızın iki katı kadar metre bırakılır","Örneğin 90 km/s hızla giden sürücü öndeki araçla en az 45 metre mesafe bırakmalıdır; yağışlı havada mesafe artırılır."),
 ("tc","Yağışlı ve kaygan yolda takip mesafesi nasıl ayarlanmalıdır?","Normalden daha uzun tutulmalıdır","Normalden kısa tutulmalıdır","Hiç değiştirilmemelidir","Öndeki aracın stop lambası görülmeyecek kadar uzun tutulmalıdır","Kaygan zeminde fren mesafesi uzar; güvenlik için takip mesafesi artırılır."),

@@ -1,4 +1,4 @@
-# Yol Hakkı – özgün soru kuyruğu (1/3): İlk yardım
+# Ehliyet Bende – özgün soru kuyruğu (1/3): İlk yardım
 # Biçim: (kat, soru, doğru, yanlış1, yanlış2, yanlış3, çözüm)
 S = [
 ("iy","Yetişkinde kalp masajı yapılırken göğüs kemiğine hangi bölgeden bası uygulanır?","Göğüs kemiğinin alt yarısından","Karın bölgesinin ortasından","Köprücük kemiklerinin üzerinden","Göğsün sol üst kısmından","Yetişkinde bası, göğüs kemiğinin alt yarısına iki el üst üste konularak, kollar dik tutulup yapılır."),

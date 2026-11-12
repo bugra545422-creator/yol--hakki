@@ -1,4 +1,4 @@
-# Yol Hakkı – özgün soru kuyruğu (3/3): Araç tekniği ve trafik adabı
+# Ehliyet Bende – özgün soru kuyruğu (3/3): Araç tekniği ve trafik adabı
 S = [
 ("mt","Benzinli motorlarda yakıt–hava karışımını ateşleyen parça hangisidir?","Buji","Enjektör","Kızdırma bujisi","Termostat","Benzinli motorda karışım, bujinin oluşturduğu kıvılcımla ateşlenir."),
 ("mt","Dizel motorlarda yakıt nasıl ateşlenir?","Sıkıştırılarak ısınan havaya püskürtülen yakıtın kendiliğinden tutuşmasıyla","Bujinin kıvılcımıyla","Akü ısısıyla","Egzoz gazıyla","Dizel motorlar sıkıştırma ateşlemelidir; soğuk havada kızdırma bujileri ilk çalıştırmaya yardım eder."),
