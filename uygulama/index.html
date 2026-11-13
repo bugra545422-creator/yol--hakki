@@ -566,7 +566,16 @@ kbd{display:inline-flex;align-items:center;justify-content:center;min-width:26px
 .gz-tuval .bildirim.kotu{border-left:5px solid var(--kirmizi)}
 .gz-sonuc{display:flex;align-items:baseline;gap:8px;margin:8px 0}.gz-sonuc b{font-size:3rem;line-height:1}.gz-sonuc.iyi b{color:var(--yesil)}.gz-sonuc.kotu b{color:var(--kirmizi)}
 .gz-ihlal{display:grid;gap:6px;max-height:40vh;overflow:auto}
-@media (max-width:640px){.gz-orta{max-width:56%;padding:6px 10px}.gz-hiz{min-width:0}.gz-hiz b{font-size:1.3rem}.gz-limit{width:36px;height:36px;border-width:5px;font-size:.85rem}.gz-km{display:none}.gz-ust-dugme{bottom:44px}}
+@media (max-width:640px){
+  .gz-hud{flex-wrap:wrap;left:6px;right:6px;top:6px;gap:6px}
+  .gz-orta{order:3;flex-basis:100%;max-width:none;padding:5px 10px;border-radius:10px}
+  .gz-orta b{font-size:.9rem}.gz-orta small{font-size:.72rem}.gz-ok{font-size:1.3rem;min-width:22px}
+  .gz-hiz{min-width:0;padding:4px 8px}.gz-hiz b{font-size:1.25rem}.gz-vites{width:32px;height:32px;font-size:1rem}
+  .gz-limit{width:34px;height:34px;border-width:5px;font-size:.8rem}.gz-km{display:none}.gz-puan{padding:4px 8px}.gz-puan b{font-size:1.1rem}
+  .gz-ust-dugme{left:6px;bottom:12px;gap:4px}.gz-ust-dugme .k-tus{min-height:28px;padding:2px 8px;font-size:.72rem}
+  .gz-ikon{left:auto;right:52px;transform:none;bottom:12px;gap:4px}.gz-sin{width:28px;height:26px;font-size:.9rem}.gz-kemer{font-size:.72rem;padding:4px 8px}
+  .gz-tuval .bildirim{font-size:.85rem}
+}
 
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -2540,7 +2549,7 @@ function gzBaslat(devam){
       </div>
       <div class="gz-ikon"><span id="gSinSol" class="gz-sin">◀</span><span id="gKemer" class="gz-kemer" title="Emniyet kemeri">🔔 Kemer</span><span id="gSinSag" class="gz-sin">▶</span></div>
       <div class="gz-ilerleme"><i id="gIl"></i></div>
-      <div class="gz-ust-dugme"><button class="k-tus" id="gKam">🎥 Kamera</button><button class="k-tus" id="gKemerBtn">Kemer (K)</button><button class="k-tus" id="gBitir">Bitir</button></div>
+      <div class="gz-ust-dugme"><button class="k-tus" id="gKam">🎥 Kamera</button><button class="k-tus" id="gBitir">Bitir</button></div>
       <div id="bild"></div>${TAM_DUGME}
     </div>${kokpitHTML('oto')}</div>
     <p class="pad soluk" id="ipucu" style="padding-top:10px">Kemerini tak (K), vitesi D'ye al, el frenini indir (H) ve yola çık.</p>
