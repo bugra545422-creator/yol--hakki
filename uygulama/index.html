@@ -517,6 +517,57 @@ html.web .sponsor-kose{top:64px}
   html.web .ana-izgara{grid-template-columns:repeat(3,1fr)}
 }
 
+/* ===== Simülatör kontrolleri ===== */
+.kontrol-serit{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:.88rem;color:var(--soluk);padding-top:10px}
+.kontrol-serit .btn{margin-left:auto;min-height:40px;padding:6px 14px;font-size:.92rem}
+kbd{display:inline-flex;align-items:center;justify-content:center;min-width:26px;height:26px;padding:0 6px;border-radius:6px;background:var(--yuzey);border:1px solid var(--cizgi);border-bottom-width:3px;font:600 .82rem/1 system-ui,sans-serif;color:var(--metin);margin-right:3px}
+.kontrol-sekme{display:flex;gap:6px;margin:10px 0 14px}
+.kontrol-sekme button{flex:1;padding:10px;border-radius:10px;border:1px solid var(--cizgi);background:var(--yuzey);font-weight:700;color:var(--metin)}
+.kontrol-sekme button[aria-selected="true"]{background:var(--asfalt);color:#fff;border-color:var(--asfalt)}
+.ks-izgara{display:grid;gap:8px}
+.ks{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 10px;border:1px solid var(--cizgi);border-radius:10px;background:var(--yuzey)}
+.ks .tuslar{display:flex;gap:2px;flex-wrap:wrap}
+.ks .btn{min-height:38px;padding:6px 12px;font-size:.88rem;min-width:140px}
+.ks .btn.bekliyor{border-color:var(--serit);background:rgba(242,194,27,.18);animation:nabiz 1s ease-in-out infinite}
+@keyframes nabiz{50%{box-shadow:0 0 0 4px rgba(242,194,27,.35)}}
+.ks-gorsel{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px;border-radius:14px;background:var(--asfalt);color:#fff;margin-bottom:4px}
+.ok-tuslar{display:grid;grid-template-columns:repeat(3,44px);gap:6px}
+.ok-tuslar kbd{width:44px;height:44px;font-size:1.1rem;background:#454D55;color:#fff;border-color:#2A2F34}
+.ok-tuslar kbd:nth-of-type(1){animation:bas 2.4s ease-in-out infinite}
+.ok-tuslar kbd:nth-of-type(3){animation:bas 2.4s ease-in-out 1.2s infinite}
+@keyframes bas{0%,30%,100%{transform:none;background:#454D55}10%,20%{transform:translateY(2px);background:var(--serit);color:#14181B}}
+.ks-etiket{font-size:.9rem;color:#C9CFD4}
+
+/* ===== Trafik güzergahı ===== */
+.gz-kurallar{margin:10px 0 0 1.1rem;display:grid;gap:4px;color:var(--metin);font-size:.95rem}
+.gz-tuval{aspect-ratio:auto!important;min-height:260px;background:#A9CDEB}
+.gz-hud{position:absolute;left:10px;right:10px;top:10px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;pointer-events:none;z-index:3}
+.gz-sol,.gz-sag{display:flex;gap:8px;align-items:center}
+.gz-hiz{background:rgba(20,24,27,.82);color:#fff;border-radius:12px;padding:6px 12px;display:flex;align-items:baseline;gap:4px;min-width:96px}
+.gz-hiz b{font-size:1.8rem;line-height:1;font-variant-numeric:tabular-nums}.gz-hiz small{font-size:.75rem;color:#C9CFD4}
+.gz-hiz.asim{background:rgba(196,30,58,.92)}
+.gz-limit,.gz-mini-lim{width:46px;height:46px;border-radius:50%;background:#fff;border:6px solid #C8203A;color:#111;font-weight:800;display:inline-flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.gz-mini-lim{width:30px;height:30px;border-width:4px;font-size:.78rem;vertical-align:middle}
+.gz-vites{background:rgba(20,24,27,.82);color:var(--serit);font-weight:800;border-radius:10px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.gz-orta{background:rgba(20,24,27,.86);color:#fff;border-radius:14px;padding:8px 14px;display:flex;align-items:center;gap:10px;max-width:46%}
+.gz-orta small{display:block;color:#C9CFD4;font-size:.78rem}
+.gz-ok{font-size:1.7rem;line-height:1;color:var(--serit);min-width:30px;text-align:center}
+.gz-puan,.gz-km{background:rgba(20,24,27,.82);color:#fff;border-radius:12px;padding:6px 12px;text-align:center;line-height:1.1}
+.gz-puan small,.gz-km small{display:block;font-size:.7rem;color:#C9CFD4}.gz-puan b{font-size:1.4rem;color:#6FE09F}.gz-puan.dusuk b{color:#FF8A8A}
+.gz-km b{font-size:1.1rem}
+.gz-ikon{position:absolute;left:50%;transform:translateX(-50%);bottom:16px;display:flex;gap:10px;align-items:center;z-index:3;pointer-events:none}
+.gz-sin{width:38px;height:30px;border-radius:8px;background:rgba(20,24,27,.6);color:#4B4F38;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.gz-sin.acik{color:#2BE36F;background:rgba(20,24,27,.85)}
+.gz-kemer{background:rgba(196,30,58,.9);color:#fff;font-size:.8rem;font-weight:700;padding:5px 10px;border-radius:999px;pointer-events:auto;cursor:pointer}
+.gz-kemer.takili{background:rgba(30,142,79,.9)}
+.gz-ilerleme{position:absolute;left:0;right:0;bottom:0;height:5px;background:rgba(0,0,0,.25);z-index:3}.gz-ilerleme i{display:block;height:100%;background:var(--serit);width:0}
+.gz-ust-dugme{position:absolute;left:10px;bottom:16px;display:flex;gap:6px;z-index:4}
+.gz-ust-dugme .k-tus{min-height:34px;padding:4px 10px;font-size:.8rem}
+.gz-tuval .bildirim.kotu{border-left:5px solid var(--kirmizi)}
+.gz-sonuc{display:flex;align-items:baseline;gap:8px;margin:8px 0}.gz-sonuc b{font-size:3rem;line-height:1}.gz-sonuc.iyi b{color:var(--yesil)}.gz-sonuc.kotu b{color:var(--kirmizi)}
+.gz-ihlal{display:grid;gap:6px;max-height:40vh;overflow:auto}
+@media (max-width:640px){.gz-orta{max-width:56%;padding:6px 10px}.gz-hiz{min-width:0}.gz-hiz b{font-size:1.3rem}.gz-limit{width:36px;height:36px;border-width:5px;font-size:.85rem}.gz-km{display:none}.gz-ust-dugme{bottom:44px}}
+
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -1638,17 +1689,23 @@ function webBagla(){
 }
 
 /* ---------- Oyun kolu (Xbox, PlayStation, genel USB/Bluetooth kollar) ----------
-   Sol çubuk / D-pad sol-sağ: direksiyon · RT ya da A: gaz · LT ya da B: fren
-   LB / RB: sol / sağ sinyal · X: el freni · Y: arkaya bak
-   D-pad yukarı: D · aşağı: R · Back/Select: N · Start: baştan başla
+   Varsayılan: sol çubuk direksiyon · RT gaz · LT fren · LB/RB sinyal · X el freni · Y arkaya bak
+   D-pad yukarı D · aşağı R · Back N · B P · Start baştan. Atamalar ⚙ Kontroller penceresinden değiştirilir.
    Menülerde: D-pad / sol çubuk ile gezin, A seç, B geri. */
-const KOL = { onceki:{}, sonGez:0, aktif:false };
+const KOL_EYLEM = [
+  ['direksiyon','Direksiyon','eksen'], ['gaz','Gaz'], ['fren','Fren'],
+  ['vitesD','Vites D (sürüş)'], ['vitesR','Vites R (geri)'], ['vitesN','Vites N (boş)'], ['vitesP','Vites P (park)'],
+  ['sinyalSol','Sol sinyal'], ['sinyalSag','Sağ sinyal'], ['elFreni','El freni'], ['arkaBak','Arkaya bak'], ['bastan','Baştan başla'] ];
+const KOL_VARSAYILAN = {direksiyon:0, gaz:7, fren:6, vitesD:12, vitesR:13, vitesN:8, vitesP:1, sinyalSol:4, sinyalSag:5, elFreni:2, arkaBak:3, bastan:9};
+const KOL_TUS_AD = ['A / ✕','B / ◯','X / ▢','Y / △','LB / L1','RB / R1','LT / L2','RT / R2','Back / Share','Start / Options','Sol çubuk bas','Sağ çubuk bas','D-pad ↑','D-pad ↓','D-pad ←','D-pad →','Home'];
+const KOL_EKSEN_AD = ['Sol çubuk ←→','Sol çubuk ↑↓','Sağ çubuk ←→','Sağ çubuk ↑↓'];
+let KOL_ATAMA = (()=>{ try{ return {...KOL_VARSAYILAN, ...(JSON.parse(localStorage.getItem('eb:kol')||'{}'))}; }catch(e){ return {...KOL_VARSAYILAN}; } })();
+const kolKaydet = () => { try{ localStorage.setItem('eb:kol', JSON.stringify(KOL_ATAMA)); }catch(e){} };
+const KOL = { onceki:{}, sonGez:0, aktif:false, bekle:null, eksenTaban:null };
 function _tusBas(key){ document.dispatchEvent(new KeyboardEvent('keydown',{key, bubbles:true})); }
-function _kolDurum(var_){ const e=document.getElementById('kolDurum'); if(e) e.hidden=!var_; }
-window.addEventListener('gamepadconnected', e=>{
-  _kolDurum(true);
-  if(!KOL.aktif){ KOL.aktif=true; requestAnimationFrame(_kolDongu); }
-});
+function _kolDurum(var_){ const e=document.getElementById('kolDurum'); if(e) e.hidden=!var_; const k=document.getElementById('kpDurum'); if(k) kontrolKolCiz(); }
+function kolBaslat(){ if(!KOL.aktif){ KOL.aktif=true; requestAnimationFrame(_kolDongu); } }
+window.addEventListener('gamepadconnected', ()=>{ _kolDurum(true); kolBaslat(); });
 window.addEventListener('gamepaddisconnected', ()=>{ _kolDurum([...navigator.getGamepads()].some(Boolean)); });
 function _odaklanabilir(){
   return [...document.querySelectorAll(document.getElementById('perde') ? '#perde button:not([disabled]), #perde a[href]' : 'button:not([disabled]), a[href], [tabindex="0"]')]
@@ -1663,21 +1720,34 @@ function _gez(yon){
 function _kolDongu(){
   const pads=[...(navigator.getGamepads?navigator.getGamepads():[])].filter(Boolean);
   if(!pads.length){ KOL.aktif=false; return; }
-  const g=pads[0], b=i=>!!(g.buttons[i]&&g.buttons[i].pressed), v=i=>g.buttons[i]?g.buttons[i].value:0;
-  const yeni=i=>b(i)&&!KOL.onceki[i];
+  const g=pads[0], b=i=>i>=0 && !!(g.buttons[i]&&g.buttons[i].pressed), v=i=>i>=0&&g.buttons[i]?g.buttons[i].value:0;
+  const yeni=i=>b(i)&&!KOL.onceki[i], A=KOL_ATAMA;
+  // Tuş atama bekleniyor: basılan ilk yeni tuş (ya da direksiyon için oynatılan eksen) atanır
+  if(KOL.bekle){
+    const e=KOL.bekle;
+    if(e==='direksiyon'){
+      if(!KOL.eksenTaban) KOL.eksenTaban=g.axes.slice();
+      const k=g.axes.findIndex((x,i)=>Math.abs(x-(KOL.eksenTaban[i]||0))>0.6);
+      if(k>=0){ A.direksiyon=k; KOL.bekle=null; KOL.eksenTaban=null; kolKaydet(); kontrolKolCiz(); }
+    } else {
+      const k=g.buttons.findIndex((_,i)=>yeni(i));
+      if(k>=0){ for(const [ad,,tip] of KOL_EYLEM) if(ad!==e && tip!=='eksen' && A[ad]===k) A[ad]=-1; A[e]=k; KOL.bekle=null; kolKaydet(); kontrolKolCiz(); }
+    }
+    g.buttons.forEach((_,i)=>KOL.onceki[i]=b(i)); requestAnimationFrame(_kolDongu); return;
+  }
   const Z=(typeof simAlan!=='undefined')?simAlan:null, tus=Z&&Z.aktif&&Z.tus;
-  const simde = !!(tus && document.getElementById('cv'));
+  const simde = !!(tus && document.getElementById('cv')) && !document.getElementById('perde');
   if(simde){
-    const x=g.axes[0]||0, dp=(b(15)?1:0)-(b(14)?1:0);
+    const x=g.axes[A.direksiyon]||0, dp=(b(15)?1:0)-(b(14)?1:0);
     if(Math.abs(x)>0.12){ tus.tut=true; tus.yon += (Math.max(-1,Math.min(1,x)) - tus.yon)*0.25; tus._kol=true; }
     else if(tus._kol){ tus.tut=false; tus._kol=false; }
     if(dp!==KOL.dp){ tus.sol = dp<0; tus.sag = dp>0; KOL.dp=dp; }
-    const gaz = v(7)>0.2 || b(0), fren = v(6)>0.2 || b(1);
+    const gaz = v(A.gaz)>0.2 || b(A.gaz), fren = v(A.fren)>0.2 || b(A.fren);
     if(gaz!==KOL.gaz){ tus.gaz=gaz; KOL.gaz=gaz; }
     if(fren!==KOL.fren){ tus.fren=fren; KOL.fren=fren; }
-    if(yeni(4)) _tusBas('q'); if(yeni(5)) _tusBas('e'); if(yeni(2)) _tusBas('h'); if(yeni(3)) _tusBas('b');
-    if(yeni(12)) _tusBas('d'); if(yeni(13)) _tusBas('r'); if(yeni(8)) _tusBas('n');
-    if(yeni(9)) document.getElementById('bastan')?.click();
+    if(yeni(A.sinyalSol)) _tusBas('q'); if(yeni(A.sinyalSag)) _tusBas('e'); if(yeni(A.elFreni)) _tusBas('h'); if(yeni(A.arkaBak)) _tusBas('b');
+    if(yeni(A.vitesD)) _tusBas('d'); if(yeni(A.vitesR)) _tusBas('r'); if(yeni(A.vitesN)) _tusBas('n'); if(yeni(A.vitesP)) _tusBas('p');
+    if(yeni(A.bastan)) document.getElementById('bastan')?.click();
   } else {
     KOL.gaz=KOL.fren=false;
     const t=performance.now(), y=g.axes[1]||0, xx=g.axes[0]||0;
@@ -1688,6 +1758,50 @@ function _kolDongu(){
   }
   g.buttons.forEach((_,i)=>KOL.onceki[i]=b(i));
   requestAnimationFrame(_kolDongu);
+}
+
+/* ---------- Simülatör kontrolleri: ilk açılışta kısa tanıtım + ⚙ Kontroller penceresi ---------- */
+function simKontrolHTML(tur){
+  if(!WEB) return '';
+  let goruldu=false; try{ goruldu=!!localStorage.getItem('eb:kontrolTanitim'); }catch(e){}
+  if(!goruldu) setTimeout(()=>{ if(document.getElementById('cv') && !document.getElementById('perde')){ try{ localStorage.setItem('eb:kontrolTanitim','1'); }catch(e){} kontrolGoster(tur); } }, 500);
+  const vites = tur==='moto' ? '' : '<span><kbd>D</kbd><kbd>R</kbd><kbd>N</kbd><kbd>P</kbd> vites</span>';
+  return `<div class="pad kontrol-serit"><span><kbd>↑</kbd> gaz</span><span><kbd>↓</kbd>/<kbd>Boşluk</kbd> fren</span><span><kbd>←</kbd><kbd>→</kbd> ${tur==='moto'?'gidon':'direksiyon'}</span>${vites}
+    <button class="btn cerceve" id="kontrolBtn" data-tur="${tur}" type="button">⚙ Kontroller</button></div>`;
+}
+document.addEventListener('click', e=>{ const k=e.target.closest && e.target.closest('#kontrolBtn'); if(k) kontrolGoster(k.dataset.tur); });
+function kontrolGoster(tur){
+  const moto = tur==='moto';
+  const S=(k,a)=>`<div class="ks"><span class="tuslar">${k}</span><span>${a}</span></div>`;
+  const kb=t=>`<kbd>${t}</kbd>`;
+  sayfaAc(`<h2>Kontroller</h2>
+    <div class="kontrol-sekme" role="tablist"><button role="tab" aria-selected="true" data-ks="kb">⌨ Klavye</button><button role="tab" aria-selected="false" data-ks="kol">🎮 Oyun kolu</button></div>
+    <div id="ksKb" class="ks-izgara">
+      <div class="ks-gorsel" aria-hidden="true">
+        <div class="ok-tuslar"><span></span>${kb('↑')}<span></span>${kb('←')}${kb('↓')}${kb('→')}</div>
+        <div class="ks-etiket"><b>↑</b> Gaz · <b>↓</b> Fren · <b>← →</b> ${moto?'Gidon':'Direksiyon'}</div>
+      </div>
+      ${S(kb('↑'),'Gaz')}${S(kb('↓')+' '+kb('Boşluk'),'Fren')}${S(kb('←')+' '+kb('→'),moto?'Gidonu çevir':'Direksiyonu çevir')}
+      ${moto?'':S(kb('D'),'Vites D: ileri sürüş')+S(kb('R'),'Vites R: geri')+S(kb('N')+' '+kb('P'),'Boş / park')+S(kb('Q')+' '+kb('E'),'Sol / sağ sinyal')+S(kb('H'),'El freni')+S(kb('B'),'Geri giderken arkaya bak')}
+      <p class="soluk" style="font-size:.88rem">${moto?'Gaza basmadan önce motoru dengede tut; çizgilere basma.':'Otomatik vites: önce frene bas, vitesi D\'ye al, el frenini indir, sonra gaza bas.'}</p>
+    </div>
+    <div id="ksKol" hidden><p class="soluk" id="kpDurum"></p><div id="kpListe" class="ks-izgara"></div>
+      <div class="satir" style="gap:10px;margin-top:12px"><button class="btn cerceve" id="kpSifirla" style="flex:1">Varsayılana dön</button></div></div>
+    <button class="btn ana tam" style="margin-top:14px" id="ksTamam">Anladım, sürüşe başla</button>`);
+  document.querySelectorAll('[data-ks]').forEach(t=>t.onclick=()=>{ document.querySelectorAll('[data-ks]').forEach(x=>x.setAttribute('aria-selected', String(x===t)));
+    $('#ksKb').hidden = t.dataset.ks!=='kb'; $('#ksKol').hidden = t.dataset.ks!=='kol'; KOL.bekle=null; kontrolKolCiz(); });
+  $('#ksTamam').onclick=()=>{ KOL.bekle=null; sayfaKapat(); };
+  $('#kpSifirla').onclick=()=>{ KOL_ATAMA={...KOL_VARSAYILAN}; kolKaydet(); KOL.bekle=null; kontrolKolCiz(); };
+  if([...(navigator.getGamepads?navigator.getGamepads():[])].some(Boolean)){ document.querySelector('[data-ks="kol"]').click(); kolBaslat(); }
+}
+function kontrolKolCiz(){
+  const d=document.getElementById('kpDurum'), l=document.getElementById('kpListe'); if(!d||!l) return;
+  const pad=[...(navigator.getGamepads?navigator.getGamepads():[])].find(Boolean);
+  d.innerHTML = pad ? `✅ Bağlı: <b>${esc(String(pad.id).replace(/\s*\(.*$/,'').slice(0,48))}</b>. Değiştirmek istediğin eylemin yanındaki düğmeye bas, sonra koldaki tuşa bas.` : 'Oyun kolu bağlı değil. Kolu USB ya da Bluetooth ile bağlayıp koldaki herhangi bir tuşa bas.';
+  l.innerHTML = KOL_EYLEM.map(([k,ad,tip])=>{ const i=KOL_ATAMA[k], bek=KOL.bekle===k;
+    const deger = i<0 ? '—' : (tip==='eksen' ? (KOL_EKSEN_AD[i]||'Eksen '+i) : (KOL_TUS_AD[i]||'Tuş '+i));
+    return `<div class="ks"><span>${ad}</span><button class="btn cerceve kp-ata ${bek?'bekliyor':''}" data-ata="${k}" ${pad?'':'disabled'}>${bek?(tip==='eksen'?'Çubuğu oynat…':'Bir tuşa bas…'):esc(deger)}</button></div>`; }).join('');
+  l.querySelectorAll('[data-ata]').forEach(b=>b.onclick=()=>{ KOL.bekle=b.dataset.ata; KOL.eksenTaban=null; kolBaslat(); kontrolKolCiz(); });
 }
 
 /* ---------- PC / yatay tablet: içerik iki sütuna dağıtılır ---------- */
@@ -1829,8 +1943,7 @@ function parkurSim(sen){
     <p class="pad soluk" style="padding-top:10px" id="ipucu"></p>
     <div class="pad satir" style="padding-top:10px"><button class="btn cerceve" style="flex:1" id="genel">Genel bakış</button><button class="btn cerceve" style="flex:1" id="bastan">Baştan başla</button></div>
     <div class="pad satir" style="padding-top:8px">${kayitlarDugmesi()}</div>
-    <p class="pad soluk" style="font-size:.85rem">Klavye: ok tuşları yön ve gaz, boşluk fren.</p>
-    ${WEB?`<p class="pad soluk" style="font-size:.85rem">Oyun kolu: sol çubuk gidon, RT ya da A gaz, LT ya da B fren, Start baştan.</p>`:''}`;
+    ${simKontrolHTML('moto')}`;
   document.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{ pistD.sen=+b.dataset.s; animDurdur(); simCiz(); });
   const IPUCU = ['Hunilerin bir sağından bir solundan geç; çizgilerin dışına çıkma.','Önce üst halkayı sola, sonra alt halkayı sağa dön; sarı daireyi takip et, halka çizgilerine basma.','Sarı çizginin üzerinde, çizgiden ayrılmadan yavaşça ilerle.','Kutunun içinde durmadan, ayağını yere koymadan ve çizgilere basmadan tek hamlede U dönüşü yap.','Sarı kutunun içinde yumuşak bir frenle tam dur.','Hunilere çarpmadan yanından geç ve şeridine dön.','Sarı çizgiye en az 20 km/s ile gel, frene bas ve yeşil alanda dur.'];
   const ilk=sen.asamalar[0], sonA=sen.asamalar[sen.asamalar.length-1];
@@ -2014,12 +2127,14 @@ function pistSayfa(ek){
   <div class="sekmeler" role="tablist" style="padding-top:8px">
     <button role="tab" data-mod="anlatim" aria-selected="${pistD.mod==='anlatim'}">Anlatım</button>
     <button role="tab" data-mod="sim" aria-selected="${pistD.mod==='sim'}">Sürüş simülasyonu</button>
+    ${WEB&&T==='oto'?`<button role="tab" data-mod="guzergah" aria-selected="${pistD.mod==='guzergah'}">🚦 Trafik güzergahı · 50 km</button>`:''}
   </div>
   <div id="pistIc"></div>`, 'pist');
   document.querySelectorAll('[data-tur]').forEach(b=>b.onclick=()=>{ if(AGIR.includes(b.dataset.tur) && !simAcik()) return premiumTeklif('Kamyon, otobüs ve tır pistleri'); pistD.tur=b.dataset.tur; pistD.adim=0; pistD.sen=0; animDurdur(); pistSayfa(); });
   document.querySelectorAll('[data-mod]').forEach(b=>b.onclick=()=>{ pistD.mod=b.dataset.mod; animDurdur(); pistSayfa(); });
   G3.kamSifirla();
-  pistD.mod==='anlatim' ? anlatimCiz() : simCiz();
+  if(pistD.mod==='guzergah' && !(WEB&&T==='oto')) pistD.mod='sim';
+  pistD.mod==='anlatim' ? anlatimCiz() : pistD.mod==='guzergah' ? guzergahCiz() : simCiz();
 }
 function anlatimCiz(){
   const T=pistD.tur, liste=ADIMLAR[T], adim=liste[pistD.adim];
@@ -2078,8 +2193,7 @@ function simCiz(){
     ${sen.beyan?`<div class="pad" style="padding-top:8px"><button class="btn ana tam" id="beyan">“${esc(sen.beyan)}”</button></div>`:''}
     <div>
     </div>
-    ${kontrolTip?'':`<p class="pad soluk" style="font-size:.85rem">Klavye: ok tuşları yön ve gaz, boşluk fren, R vites, Q/E sinyal, H el freni.</p>`}
-    ${kontrolTip||!WEB?'':`<p class="pad soluk" style="font-size:.85rem">Oyun kolu: sol çubuk direksiyon, RT ya da A gaz, LT ya da B fren, D-pad yukarı D, aşağı R, Back N, LB/RB sinyal, X el freni, Y arkaya bak, Start baştan.</p>`}`;
+    ${kontrolTip?'':simKontrolHTML('oto')}`;
   document.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{ pistD.sen=+b.dataset.s; animDurdur(); G3.kamSifirla(); simCiz(); });
   gorunumBagla();
   const cv=$('#cv'), tk=$('#tk'); let K=kurTuval(cv, SAHNE[sen.sahne].b);
@@ -2278,6 +2392,497 @@ function simCiz(){
       }
     }
   }
+  animId=requestAnimationFrame(dongu);
+}
+
+/* ================== Trafik güzergahı (web): ~50 km, trafik kurallarına uyum puanı ==================
+   Yol, s (yol boyunca metre) ve d (şerit merkezine göre sağa doğru metre) koordinatlarıyla tutulur.
+   3D görüntü s etrafındaki ~1,2 km için parça parça üretilir; fizik ve kurallar s/d üzerinde çalışır.
+   Bölgeler: şehir (50) → çevre yolu (70) → şehirlerarası (90) → köy geçişi (50) → şehirlerarası (90)
+   → otoyol (120) → şehre dönüş (50). Okul bölgelerinde sınır 30. */
+const GZ_BOLGE = [
+  [0, 6000, 'sehir', 50, 'Şehir merkezi'],
+  [6000, 14000, 'cevre', 70, 'Çevre yolu'],
+  [14000, 22000, 'kir', 90, 'Şehirlerarası yol'],
+  [22000, 23500, 'koy', 50, 'Köy geçişi'],
+  [23500, 30000, 'kir', 90, 'Şehirlerarası yol'],
+  [30000, 44000, 'otoyol', 120, 'Otoyol'],
+  [44000, 50000, 'sehir', 50, 'Şehre dönüş'] ];
+const GZ_OKUL = [[2200, 2800], [47000, 47600]];
+const GZ_UZ = 50000, GZ_DS = 2;
+const GZ_CEZA = {
+  kirmizi:   [20, 'Kırmızı ışıkta geçtin'],
+  dur:       [10, 'DUR levhasında tam durmadın'],
+  tren:      [10, 'Hemzemin geçitte durup kontrol etmedin'],
+  yaya:      [15, 'Yaya geçidinde yayaya yol vermedin'],
+  hiz:       [2,  'Hız sınırını aştın'],
+  hizCok:    [5,  'Hız sınırını çok aştın'],
+  okulHiz:   [5,  'Okul bölgesinde hız sınırını aştın'],
+  sinyal:    [3,  'Şerit değiştirirken sinyal vermedin'],
+  donusSin:  [5,  'Dönüşte sinyal vermedin'],
+  donusHiz:  [3,  'Kavşakta hızlı döndün'],
+  cizgi:     [10, 'Devamlı çizgide karşı şeride geçtin'],
+  karsi:     [5,  'Karşı şeritte uzun süre kaldın'],
+  takip:     [3,  'Takip mesafesini korumadın'],
+  yoldan:    [10, 'Yoldan çıktın'],
+  kaza:      [25, 'Çarpışma'],
+  kemer:     [5,  'Emniyet kemeri takmadan yola çıktın'],
+  solSerit:  [2,  'Otoyolda gereksiz yere sol şeritte kaldın'] };
+
+function gzRastgele(t){ return ()=>{ t=t+0x6D2B79F5|0; let r=Math.imul(t^t>>>15,1|t); r=r+Math.imul(r^r>>>7,61|r)^r; return ((r^r>>>14)>>>0)/4294967296; }; }
+const gzBolge = s => GZ_BOLGE.find(b=>s>=b[0]&&s<b[1]) || GZ_BOLGE[GZ_BOLGE.length-1];
+const gzOkul = s => GZ_OKUL.some(o=>s>=o[0]&&s<o[1]);
+const gzLimit = s => gzOkul(s) ? 30 : gzBolge(s)[3];
+function gzKenar(s){ const t=gzBolge(s)[2]; return t==='otoyol' ? {sol:-0.6, sag:7.0, otoyol:true} : t==='cevre' ? {sol:-3.75, sag:3.75} : {sol:-3.5, sag:3.5}; }
+
+/* ---------- Güzergahı üret: geometri (x, z, yön, eğrilik) + olaylar ---------- */
+let GZ_ROTA = null;
+function gzRotaKur(){
+  if(GZ_ROTA) return GZ_ROTA;
+  const R = gzRastgele(20261114), ara=(a,b)=>a+(b-a)*R();
+  const parca=[], olay=[]; let s=0;
+  const duz = L => { parca.push([s, L, 0]); s+=L; };
+  const yay = (Rr, aci, yon) => { const L=Rr*aci; parca.push([s, L, yon/Rr]); s+=L; };
+  let kavsakNo=0, sonDonus='sol';
+  const kavsak = (kontrol, donus) => { olay.push({s, tur:'kavsak', kontrol, donus, faz:(kavsakNo++*7.3)%22}); if(donus) yay(14, Math.PI/2, donus==='sag'?1:-1); else duz(14); };
+  for(const [b0,b1,tip] of GZ_BOLGE){
+    while(s < b1-40){
+      const kalan=b1-s;
+      if(tip==='sehir'){
+        const L=Math.min(kalan-30, ara(170,320)); if(L<60){ duz(kalan); break; }
+        if(R()<0.5 && L>120) olay.push({s:s+L*0.5, tur:'yaya'});
+        duz(L);
+        const k = ['isik','dur','isik','yok','isik','dur'][Math.floor(R()*6)];
+        const dn = R()<0.42 ? (sonDonus = sonDonus==='sag'?'sol':'sag') : null;
+        kavsak(k, dn);
+      } else if(tip==='cevre'){
+        duz(Math.min(kalan, ara(350,700)));
+        if(s<b1-300){ if(R()<0.45) kavsak('isik', null); else { olay.push({s:s+40, tur:'yaya'}); yay(ara(300,500), ara(0.25,0.7), R()<0.5?1:-1); } }
+      } else if(tip==='koy'){
+        olay.push({s:s+300, tur:'yaya'}); olay.push({s:s+900, tur:'yaya'}); duz(kalan); break;
+      } else if(tip==='kir'){
+        duz(Math.min(kalan, ara(400,1100)));
+        if(s<b1-400) yay(ara(380,900), ara(0.2,0.8), R()<0.5?1:-1);
+      } else { // otoyol
+        duz(Math.min(kalan, ara(900,2000)));
+        if(s<b1-600) yay(ara(1300,2600), ara(0.08,0.35), R()<0.5?1:-1);
+      }
+    }
+    if(s<b1) duz(b1-s);
+  }
+  // Hemzemin geçit ve yavaş araçlar
+  olay.push({s:18300, tur:'tren'});
+  for(let x=14600; x<29500; x+=ara(2200,3200)) if(!(x>21600&&x<23900)) olay.push({s:x, tur:'yavas', arac:'kamyon', v:40/3.6});
+  for(let x=30800; x<43500; x+=ara(1400,2200)) olay.push({s:x, tur:'yavas', arac:R()<0.5?'kamyon':'otobus', v:ara(78,88)/3.6, d:5.25});
+  // Hız levhaları
+  for(const b of GZ_BOLGE) olay.push({s:b[0]+8, tur:'levha', limit:b[3], ad:b[4]});
+  for(const [o0,o1] of GZ_OKUL){ olay.push({s:o0-60, tur:'okulLevha'}); olay.push({s:o0, tur:'levha', limit:30, ad:'Okul bölgesi'}); olay.push({s:o1, tur:'levha', limit:gzBolge(o1)[3], ad:'Okul bölgesi sonu'}); olay.push({s:(o0+o1)/2, tur:'yaya', okul:true}); }
+  olay.push({s:GZ_UZ, tur:'bitis'});
+  olay.sort((a,b)=>a.s-b.s); olay.forEach((e,i)=>e.i=i);
+  // Örnekleme
+  const N=Math.ceil(s/GZ_DS)+2, X=new Float32Array(N), Zz=new Float32Array(N), TH=new Float32Array(N), K=new Float32Array(N);
+  let x=0, z=0, th=0, pi=0;
+  for(let i=0;i<N;i++){
+    const ss=i*GZ_DS; while(pi<parca.length-1 && ss>=parca[pi][0]+parca[pi][1]) pi++;
+    const k=parca[pi][2]; X[i]=x; Zz[i]=z; TH[i]=th; K[i]=k;
+    const thm=th+k*GZ_DS/2; x+=Math.cos(thm)*GZ_DS; z+=Math.sin(thm)*GZ_DS; th+=k*GZ_DS;
+  }
+  // Orta çizgi: kavşak, yaya, köy ve virajlarda devamlı
+  const CZ=new Uint8Array(N);
+  for(let i=0;i<N;i++){ const ss=i*GZ_DS, t=gzBolge(ss)[2]; let d=t==='koy';
+    for(let j=Math.max(0,i-40); j<=Math.min(N-1,i+40) && !d; j+=4) if(Math.abs(K[j])>1/700) d=true;
+    CZ[i]=d?1:0; }
+  for(const e of olay) if(e.tur==='kavsak'||e.tur==='yaya'||e.tur==='tren'){ for(let j=Math.max(0,Math.floor((e.s-70)/GZ_DS)); j<Math.min(N,(e.s+40)/GZ_DS); j++) CZ[j]=1; }
+  GZ_ROTA = {X, Z:Zz, TH, K, CZ, N, olay, uz:s};
+  return GZ_ROTA;
+}
+function gzNokta(s){ const R=GZ_ROTA; let f=Math.max(0, Math.min(R.N-1.001, s/GZ_DS)); const i=Math.floor(f); f-=i;
+  return { x:R.X[i]+(R.X[i+1]-R.X[i])*f, z:R.Z[i]+(R.Z[i+1]-R.Z[i])*f, th:R.TH[i]+(R.TH[i+1]-R.TH[i])*f, k:R.K[i] }; }
+function gzDunya(s, d){ const p=gzNokta(s); return { x:p.x - Math.sin(p.th)*d, z:p.z + Math.cos(p.th)*d, th:p.th, k:p.k }; }
+function gzKavsakMerkez(e){ const p=gzNokta(e.s); return {x:p.x+Math.cos(p.th)*7, z:p.z+Math.sin(p.th)*7, th:p.th}; }
+function gzIsik(e, t){ const c=((t+e.faz)%22+22)%22; return c<10?'yesil':c<13?'sari':'kirmizi'; }
+
+/* ---------- Sayfa ---------- */
+const GZ = { r:null };
+function guzergahCiz(){
+  if(!window.THREE || !G3.destekVar()){ $('#pistIc').innerHTML='<div class="blok"><p>Bu tarayıcı 3D grafiği desteklemiyor. Chrome, Edge ya da Firefox\'un güncel sürümüyle dene.</p></div>'; return; }
+  gzRotaKur(); G3.ayir();
+  let kayit=null; try{ kayit=JSON.parse(localStorage.getItem('eb:gz')||'null'); }catch(e){}
+  let enIyi=null; try{ enIyi=JSON.parse(localStorage.getItem('eb:gzEnIyi')||'null'); }catch(e){}
+  $('#pistIc').innerHTML = `
+    <div class="blok gz-giris">
+      <h3>Trafik güzergahı · ${GZ_UZ/1000} km</h3>
+      <p class="soluk">Şehir merkezinden başlayıp çevre yolu, şehirlerarası yol, köy geçişi ve otoyoldan geçerek şehre dönen bir sürüş. Trafik ışıkları, DUR levhaları, yaya geçitleri, okul bölgeleri, hız sınırları ve diğer araçlar var. 100 puanla başlarsın; her kural ihlali puan düşürür. <b>70 ve üzeri</b> geçer.</p>
+      <ul class="gz-kurallar">
+        <li>Kırmızı ışıkta dur, DUR levhasında ve hemzemin geçitte tam dur.</li>
+        <li>Yaya geçidinde yaya varsa yol ver; okul bölgesinde en fazla 30 km/s.</li>
+        <li>Dönüşlerde ve şerit değiştirirken önceden sinyal ver; devamlı çizgide sollama yapma.</li>
+        <li>Önündeki araçla en az 2 saniyelik mesafe bırak; otoyolda sağ şeritte ilerle.</li>
+        <li>Önce emniyet kemerini tak (<kbd>K</kbd>), sonra vitesi D'ye al ve el frenini indir.</li>
+      </ul>
+      ${enIyi?`<p class="soluk" style="margin-top:8px">En iyi sonucun: <b>${enIyi.puan}</b> puan (${(enIyi.s/1000).toFixed(1).replace('.',',')} km).</p>`:''}
+      <div class="satir" style="gap:10px;margin-top:12px;flex-wrap:wrap">
+        ${kayit && kayit.s>300 && !kayit.bitti ? `<button class="btn ana" id="gzDevam" style="flex:1">Kaldığın yerden devam et (${(kayit.s/1000).toFixed(1).replace('.',',')} km · ${kayit.puan} puan)</button><button class="btn cerceve" id="gzYeni" style="flex:1">Baştan başla</button>` : `<button class="btn ana tam" id="gzYeni">Sürüşe başla</button>`}
+      </div>
+    </div>`;
+  $('#gzYeni').onclick=()=>gzBaslat(null);
+  $('#gzDevam') && ($('#gzDevam').onclick=()=>gzBaslat(kayit));
+}
+
+function gzBaslat(devam){
+  const R=gzRotaKur();
+  $('#pistIc').innerHTML = `
+    <div class="sim-kabin gz-kabin" id="kabin"><div class="tuval-kutu gz-tuval" id="tk">
+      <div class="gz-hud">
+        <div class="gz-sol"><div class="gz-hiz"><b id="gHiz">0</b><small>km/s</small></div><div class="gz-limit" id="gLim">50</div><div class="gz-vites" id="gVit">P</div></div>
+        <div class="gz-orta" id="gYon"></div>
+        <div class="gz-sag"><div class="gz-puan"><small>Puan</small><b id="gPuan">100</b></div><div class="gz-km"><b id="gKm">0,0</b><small>/ ${GZ_UZ/1000} km</small></div></div>
+      </div>
+      <div class="gz-ikon"><span id="gSinSol" class="gz-sin">◀</span><span id="gKemer" class="gz-kemer" title="Emniyet kemeri">🔔 Kemer</span><span id="gSinSag" class="gz-sin">▶</span></div>
+      <div class="gz-ilerleme"><i id="gIl"></i></div>
+      <div class="gz-ust-dugme"><button class="k-tus" id="gKam">🎥 Kamera</button><button class="k-tus" id="gKemerBtn">Kemer (K)</button><button class="k-tus" id="gBitir">Bitir</button></div>
+      <div id="bild"></div>${TAM_DUGME}
+    </div>${kokpitHTML('oto')}</div>
+    <p class="pad soluk" id="ipucu" style="padding-top:10px">Kemerini tak (K), vitesi D'ye al, el frenini indir (H) ve yola çık.</p>
+    ${simKontrolHTML('oto')}`;
+  const tk=$('#tk');
+  // Renderer (tek örnek, yeniden kullanılır)
+  if(!GZ.r){ GZ.r=new THREE.WebGLRenderer({antialias:true, powerPreference:'high-performance'}); GZ.r.outputEncoding=THREE.sRGBEncoding; }
+  const r=GZ.r; r.setPixelRatio(Math.min(window.devicePixelRatio||1, 1.5)); r.domElement.id='cv'; r.domElement.className='g3'; tk.prepend(r.domElement);
+  const sahne=new THREE.Scene(); sahne.background=new THREE.Color(0xA9CDEB); sahne.fog=new THREE.Fog(0xA9CDEB, 180, 720);
+  sahne.add(new THREE.HemisphereLight(0xffffff, 0x5C7A3E, 0.95)); const gunes=new THREE.DirectionalLight(0xffffff, 0.55); gunes.position.set(60,120,40); sahne.add(gunes);
+  const kam=new THREE.PerspectiveCamera(60, 16/9, 0.1, 900);
+  const boyutla=()=>{ const W=tk.clientWidth, H=tk.closest('.tamekran') ? tk.clientHeight : Math.round(Math.max(260, Math.min(W*0.56, window.innerHeight*0.68)));
+    if(!tk.closest('.tamekran')) tk.style.height=H+'px'; r.setSize(W,H,false); r.domElement.style.width=W+'px'; r.domElement.style.height=H+'px'; kam.aspect=W/Math.max(1,H); kam.updateProjectionMatrix(); };
+  boyutla();
+  const mat=(c,o={})=>new THREE.MeshLambertMaterial({color:c, ...o});
+  const M_ASF=mat(0x41484F), M_BEYAZ=new THREE.MeshBasicMaterial({color:0xF2F3EF}), M_SARI=new THREE.MeshBasicMaterial({color:0xF2C21B}), M_KALD=mat(0x8E938C), M_CIM=mat(0x6E9A48), M_BAR=mat(0xA9B0B6), M_KIRMIZI=new THREE.MeshBasicMaterial({color:0xC41E3A});
+  const zemin=new THREE.Mesh(new THREE.PlaneGeometry(2400,2400).rotateX(-Math.PI/2), M_CIM); zemin.position.y=-0.02; sahne.add(zemin);
+  const dokuOn={};
+  const levhaDoku=(anahtar, ciz)=>{ if(dokuOn[anahtar]) return dokuOn[anahtar]; const c=document.createElement('canvas'); c.width=c.height=128; ciz(c.getContext('2d')); const t=new THREE.CanvasTexture(c); t.encoding=THREE.sRGBEncoding; return dokuOn[anahtar]=t; };
+  const hizDoku=n=>levhaDoku('h'+n, x=>{ x.fillStyle='#fff'; x.beginPath(); x.arc(64,64,60,0,7); x.fill(); x.lineWidth=16; x.strokeStyle='#C8203A'; x.beginPath(); x.arc(64,64,54,0,7); x.stroke(); x.fillStyle='#111'; x.font='800 54px Arial'; x.textAlign='center'; x.textBaseline='middle'; x.fillText(n,64,68); });
+  const durDoku=()=>levhaDoku('dur', x=>{ x.fillStyle='#C8203A'; x.beginPath(); for(let k=0;k<8;k++){ const a=Math.PI/8+k*Math.PI/4; x.lineTo(64+60*Math.cos(a),64+60*Math.sin(a)); } x.fill(); x.fillStyle='#fff'; x.font='800 40px Arial'; x.textAlign='center'; x.textBaseline='middle'; x.fillText('DUR',64,66); });
+  const yayaDoku=()=>levhaDoku('yaya', x=>{ x.fillStyle='#1D5BA8'; x.fillRect(4,4,120,120); x.fillStyle='#fff'; x.beginPath(); x.moveTo(64,14); x.lineTo(116,112); x.lineTo(12,112); x.fill(); x.fillStyle='#111'; x.beginPath(); x.arc(64,52,8,0,7); x.fill(); x.fillRect(58,62,12,26); x.fillRect(46,90,36,6); });
+  const okulDoku=()=>levhaDoku('okul', x=>{ x.fillStyle='#fff'; x.beginPath(); x.moveTo(64,6); x.lineTo(124,116); x.lineTo(4,116); x.fill(); x.lineWidth=10; x.strokeStyle='#C8203A'; x.beginPath(); x.moveTo(64,14); x.lineTo(116,110); x.lineTo(12,110); x.closePath(); x.stroke(); x.fillStyle='#111'; x.beginPath(); x.arc(52,58,7,0,7); x.arc(76,62,6,0,7); x.fill(); x.fillRect(46,66,12,24); x.fillRect(71,70,10,20); });
+  const trenDoku=()=>levhaDoku('tren', x=>{ x.fillStyle='#fff'; x.fillRect(0,0,128,128); x.strokeStyle='#C8203A'; x.lineWidth=18; x.beginPath(); x.moveTo(10,10); x.lineTo(118,118); x.moveTo(118,10); x.lineTo(10,118); x.stroke(); });
+  const levha=(grp, s, d, doku, yuk=2.3, boy=0.9)=>{ const p=gzDunya(s,d); const dir=new THREE.Mesh(new THREE.CylinderGeometry(0.05,0.05,yuk,6), M_BAR); dir.position.set(p.x,yuk/2,p.z); grp.add(dir);
+    const y=new THREE.Mesh(new THREE.PlaneGeometry(boy,boy), new THREE.MeshBasicMaterial({map:doku, transparent:true, side:THREE.DoubleSide})); y.position.set(p.x,yuk+boy/2-0.1,p.z); y.rotation.y=-p.th-Math.PI/2; grp.add(y); return y; };
+  // Şerit/şerit-benzeri yüzey: s1..s2 arasında d1..d2 genişliğinde, y yüksekliğinde
+  const serit=(grp, s1, s2, d1, d2, y, m, adim=4)=>{ const pos=[], idx=[]; let n=0;
+    for(let ss=s1; ; ss+=adim){ const so=Math.min(ss,s2), a=gzDunya(so,typeof d1==='function'?d1(so):d1), b=gzDunya(so,typeof d2==='function'?d2(so):d2); pos.push(a.x,y,a.z, b.x,y,b.z); n++; if(so>=s2) break; }
+    for(let i=0;i<n-1;i++){ const k=i*2; idx.push(k,k+1,k+2, k+1,k+3,k+2); }
+    const g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3)); g.setIndex(idx); g.computeVertexNormals(); const me=new THREE.Mesh(g,m); me.material.side=THREE.DoubleSide; grp.add(me); return me; };
+  const duvar=(grp, s1, s2, d, y1, y2, m)=>{ const pos=[], idx=[]; let n=0;
+    for(let ss=s1; ; ss+=6){ const so=Math.min(ss,s2), a=gzDunya(so,d); pos.push(a.x,y1,a.z, a.x,y2,a.z); n++; if(so>=s2) break; }
+    for(let i=0;i<n-1;i++){ const k=i*2; idx.push(k,k+1,k+2, k+1,k+3,k+2); }
+    const g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3)); g.setIndex(idx); g.computeVertexNormals(); const me=new THREE.Mesh(g,m); m.side=THREE.DoubleSide; grp.add(me); };
+  const kutu=(grp,x,y,z,w,h,dd,renk,th=0)=>{ const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,dd), mat(renk)); m.position.set(x,y+h/2,z); m.rotation.y=-th; grp.add(m); return m; };
+  const BINA=[0xD9CBB0,0xC9D3D9,0xE6E0D4,0xB8C4B0,0xD8B9A6,0xA9B7C6,0xE9D9C0];
+  const PARCA=200, parcalar=new Map();
+  const kavsakS=R.olay.filter(e=>e.tur==='kavsak').map(e=>e.s);
+  const kavsakYakin=ss=>kavsakS.some(k=>ss>k-30 && ss<k+45);
+  function parcaKur(i){
+    const s1=i*PARCA, s2=Math.min(R.uz, s1+PARCA+4); if(s1>=R.uz) return null;
+    const g=new THREE.Group(), rnd=gzRastgele(9000+i);
+    const kenarS=ss=>gzKenar(ss).sol, kenarD=ss=>gzKenar(ss).sag;
+    serit(g, s1, s2, kenarS, kenarD, 0.02, M_ASF);
+    serit(g, s1, s2, ss=>kenarS(ss)+0.2, ss=>kenarS(ss)+0.35, 0.035, M_BEYAZ);
+    serit(g, s1, s2, ss=>kenarD(ss)-0.35, ss=>kenarD(ss)-0.2, 0.035, M_BEYAZ);
+    // orta çizgi / şerit çizgisi
+    for(let ss=s1; ss<s2; ss+=4){ const ii=Math.floor(ss/GZ_DS), kn=gzKenar(ss);
+      if(kn.otoyol){ if(Math.floor(ss/4)%3===0) serit(g, ss, Math.min(s2,ss+4), 3.42, 3.58, 0.035, M_BEYAZ, 4); }
+      else if(R.CZ[ii] || Math.floor(ss/4)%3===0) serit(g, ss, Math.min(s2,ss+4), -0.08, 0.08, 0.035, M_BEYAZ, 4); }
+    // çevre
+    for(let ss=s1; ss<s2; ss+=25){ const b=gzBolge(ss)[2], kn=gzKenar(ss);
+      for(const yon of [1,-1]){
+        const kenar = yon>0 ? kn.sag : kn.sol;
+        if(b==='sehir' || b==='koy'){
+          if(!kavsakYakin(ss)){ if(yon>0) serit(g, ss, Math.min(s2,ss+25), kn.sag+0.1, kn.sag+3, 0.12, M_KALD, 5); else serit(g, ss, Math.min(s2,ss+25), kn.sol-3, kn.sol-0.1, 0.12, M_KALD, 5); }
+          if(!kavsakYakin(ss) && rnd()<(b==='sehir'?0.85:0.4)){ const p=gzDunya(ss+12, kenar+yon*(b==='sehir'?11:9)); const h=b==='sehir'?6+rnd()*22:3+rnd()*3; kutu(g,p.x,0,p.z,8+rnd()*8,h,8+rnd()*4,BINA[Math.floor(rnd()*BINA.length)],p.th); if(b==='koy') kutu(g,p.x,h,p.z,7,1.4,9,0xA64B32,p.th); }
+        } else if(b==='otoyol'){
+          if(yon>0) duvar(g, ss, Math.min(s2,ss+25), kn.sag+1.2, 0.5, 0.8, M_BAR); else duvar(g, ss, Math.min(s2,ss+25), -0.8, 0, 0.8, M_BAR);
+          if(rnd()<0.5){ const p=gzDunya(ss+rnd()*20, kenar+yon*(10+rnd()*25)); agac(g,p.x,p.z,rnd); }
+        } else {
+          if(!kavsakYakin(ss) && rnd()<0.7){ const p=gzDunya(ss+rnd()*20, kenar+yon*(5+rnd()*30)); agac(g,p.x,p.z,rnd); }
+          if(b==='cevre' && rnd()<0.15){ const p=gzDunya(ss+12, kenar+yon*18); kutu(g,p.x,0,p.z,14,5,12,BINA[Math.floor(rnd()*BINA.length)],p.th); }
+        }
+      }
+    }
+    // olay görselleri
+    for(const e of R.olay){ if(e.s<s1-30 || e.s>=s2) continue;
+      if(e.tur==='kavsak'){
+        if(e.s>=s1){ const c=gzKavsakMerkez(e); const ort=new THREE.Mesh(new THREE.PlaneGeometry(16,16).rotateX(-Math.PI/2), M_ASF); ort.position.set(c.x,0.016,c.z); ort.rotation.y=-c.th; g.add(ort); const yol=new THREE.Mesh(new THREE.PlaneGeometry(9,90).rotateX(-Math.PI/2), M_ASF); yol.position.set(c.x,0.015,c.z); yol.rotation.y=-c.th; g.add(yol);
+          serit(g, e.s-4.5, e.s-4, 0, gzKenar(e.s).sag-0.2, 0.04, M_BEYAZ, 0.5);
+          if(e.kontrol==='isik'){ e.isik=isikKur(g, e.s-3.5, gzKenar(e.s).sag+1.0); e.isikKarsi=isikKur(g, e.s+16, gzKenar(e.s).sol-1.0, true); }
+          if(e.kontrol==='dur') levha(g, e.s-6, gzKenar(e.s).sag+1.0, durDoku());
+          for(let k=0;k<6;k++) serit(g, e.s-3.2, e.s-1.2, -3+k*1.1, -2.5+k*1.1, 0.04, M_BEYAZ, 2); }
+      } else if(e.tur==='yaya'){
+        if(e.s>=s1) for(let k=-3;k<4;k++) serit(g, e.s-1.6, e.s+1.6, k*1.0-0.25, k*1.0+0.25, 0.04, M_BEYAZ, 3.2);
+        if(e.s-25>=s1) levha(g, e.s-25, gzKenar(e.s).sag+1.0, yayaDoku());
+      } else if(e.tur==='tren'){
+        if(e.s>=s1){ serit(g, e.s-6, e.s-5.5, 0, 3.3, 0.04, M_BEYAZ, 0.5); for(const o of [-0.7,0.7]){ const c=gzDunya(e.s+o,0); const ray=new THREE.Mesh(new THREE.BoxGeometry(0.12,0.15,80), mat(0x6E767E)); ray.position.set(c.x,0.08,c.z); ray.rotation.y=-c.th; g.add(ray); } levha(g, e.s-30, 4.5, trenDoku()); levha(g, e.s-8, 4.5, durDoku()); }
+      } else if(e.tur==='levha'){ if(e.s>=s1) levha(g, e.s, gzKenar(e.s).sag+1.2, hizDoku(e.limit)); }
+      else if(e.tur==='okulLevha'){ if(e.s>=s1) levha(g, e.s, gzKenar(e.s).sag+1.2, okulDoku()); }
+      else if(e.tur==='bitis'){ if(e.s>=s1){ const c=gzDunya(e.s,0); const k=new THREE.Mesh(new THREE.BoxGeometry(0.6,0.6,12), M_KIRMIZI); k.position.set(c.x,4.6,c.z); k.rotation.y=-c.th; g.add(k); for(const d of [-4,4]){ const p=gzDunya(e.s,d); kutu(g,p.x,0,p.z,0.3,4.6,0.3,0xF2F3EF); } serit(g, e.s-0.5, e.s+0.5, -3.5, 3.5, 0.04, M_SARI, 1); } }
+    }
+    sahne.add(g); return g;
+  }
+  function agac(g,x,z,rnd){ const h=3+rnd()*4; const gv=new THREE.Mesh(new THREE.CylinderGeometry(0.15,0.2,h*0.4,5), mat(0x6B4A2E)); gv.position.set(x,h*0.2,z); g.add(gv);
+    const ta=new THREE.Mesh(new THREE.ConeGeometry(h*0.3,h*0.75,7), mat(rnd()<0.5?0x2E6B33:0x3F7D3A)); ta.position.set(x,h*0.4+h*0.37,z); g.add(ta); }
+  function isikKur(g, s, d, karsi){ const p=gzDunya(s,d); const dir=new THREE.Mesh(new THREE.CylinderGeometry(0.08,0.08,3.4,6), M_BAR); dir.position.set(p.x,1.7,p.z); g.add(dir);
+    const kut=new THREE.Mesh(new THREE.BoxGeometry(0.4,1.1,0.4), mat(0x14181B)); kut.position.set(p.x,3.8,p.z); kut.rotation.y=-p.th; g.add(kut);
+    const l=[0xFF3B3B,0xFFC21B,0x22D36F].map((c,k)=>{ const m=new THREE.Mesh(new THREE.SphereGeometry(0.13,10,8), new THREE.MeshBasicMaterial({color:c})); m.position.set(p.x,4.15-k*0.35,p.z); g.add(m); m.userData.renk=c; return m; });
+    return {l, karsi}; }
+
+  // Araçlar
+  const RENKLER=[0xF4F5F2,0x2B2F34,0x9AA3AB,0xC41E3A,0x1D5BA8,0x2E6B33,0xE8742A,0x6D4C8E];
+  const oyuncuM=G3.aracModel('oto', 0xF2C21B); sahne.add(oyuncuM.grup);
+  const havuz={oto:[], kamyon:[], otobus:[]};
+  const aracAl=tur=>{ const p=havuz[tur].find(m=>!m.kullan); if(p){ p.kullan=true; p.grup.visible=true; return p; } const m=G3.aracModel(tur, tur==='oto'?RENKLER[havuz.oto.length%RENKLER.length]:tur==='otobus'?0xF4F5F2:0x2F6E9E); m.kullan=true; sahne.add(m.grup); havuz[tur].push(m); return m; };
+  const aracBirak=m=>{ m.kullan=false; m.grup.visible=false; };
+  const yayaM=()=>{ const g=new THREE.Group(); const c=[0xC41E3A,0x1D5BA8,0x2E6B33,0xE8742A][Math.floor(Math.random()*4)];
+    const go=new THREE.Mesh(new THREE.CylinderGeometry(0.22,0.26,1.0,8), mat(c)); go.position.y=1.0; g.add(go);
+    const ba=new THREE.Mesh(new THREE.SphereGeometry(0.17,10,8), mat(0xE2B38B)); ba.position.y=1.68; g.add(ba);
+    for(const z of [-0.1,0.1]){ const b=new THREE.Mesh(new THREE.BoxGeometry(0.12,0.5,0.12), mat(0x2F353B)); b.position.set(0,0.25,z); g.add(b); }
+    sahne.add(g); return g; };
+
+  // Durum
+  const tus={sol:false,sag:false,gaz:false,fren:false,yon:0,tut:false};
+  const Z={ aktif:true, tus, s:devam?devam.s:20, d:1.75, psi:0, v:0, vites:'P', elFreni:true, sinyal:null, sinyalSon:{sol:-99,sag:-99}, kemer:false,
+    puan:devam?devam.puan:100, ihlal:devam?devam.ihlal||[]:[], t:devam?devam.t||0:0, kam:'dis', bitti:false, serit:null, karsiT:0, solT:0, hizT:0, hizCokT:0, takipT:0, cd:{}, durMin:{}, gecti:{}, donusSin:{}, kazaT:0, kemerUyari:false, yavasT:0 };
+  simAlan=Z;
+  const AI=[], yayalar={}, kesisen=[];
+  let yavasNo=0;
+  const bild=(m, ms=1800, tip='')=>{ const b=$('#bild'); if(!b) return; b.innerHTML=`<div class="bildirim ${tip}">${m}</div>`; clearTimeout(bild.z); bild.z=setTimeout(()=>{ b.innerHTML=''; }, ms); };
+  const ihlal=(kod, cd=6)=>{ if((Z.cd[kod]||-99) > Z.t-cd) return; Z.cd[kod]=Z.t; const [p,m]=GZ_CEZA[kod]; Z.puan=Math.max(0,Z.puan-p); Z.ihlal.push({kod, m, p, km:+(Z.s/1000).toFixed(2)}); bild(`⚠ ${m} <b>−${p}</b>`, 2600, 'kotu'); };
+  const tusDurum=()=>{ $('#sSol')?.setAttribute('aria-pressed', Z.sinyal==='sol'); $('#sSag')?.setAttribute('aria-pressed', Z.sinyal==='sag'); $('#elFren')?.setAttribute('aria-pressed', !!Z.elFreni);
+    document.querySelectorAll('.vites-sec').forEach(b=>b.setAttribute('aria-checked', b.dataset.v===Z.vites)); const k=$('#gKemer'); if(k){ k.classList.toggle('takili', Z.kemer); k.textContent = Z.kemer?'✓ Kemer':'🔔 Kemer'; } };
+  const vitesDegis=h=>{ if(h===Z.vites) return; if(Math.abs(Z.v)>0.4){ bild('Vites değiştirmek için önce tam dur.',1400); return; } Z.vites=h; tusDurum(); };
+  const sinyalVer=y=>{ Z.sinyal = Z.sinyal===y ? null : y; tusDurum(); };
+  const elFren=()=>{ Z.elFreni=!Z.elFreni; tusDurum(); };
+  const kemer=()=>{ Z.kemer=!Z.kemer; tusDurum(); if(Z.kemer) bild('Emniyet kemeri takıldı.',1000); };
+  const dokun=(el,fn)=>{ if(!el) return; el.addEventListener('pointerdown', e=>{ e.preventDefault(); fn(); }); el.addEventListener('click', e=>{ if(e.detail===0) fn(); }); };
+  document.querySelectorAll('.vites-sec').forEach(b=>dokun(b, ()=>vitesDegis(b.dataset.v))); dokun($('#sSol'), ()=>sinyalVer('sol')); dokun($('#sSag'), ()=>sinyalVer('sag')); dokun($('#elFren'), elFren);
+  dokun($('#gKemerBtn'), kemer); dokun($('#gKemer'), kemer);
+  $('#gKam').onclick=()=>{ Z.kam = Z.kam==='dis'?'ic':'dis'; };
+  $('#gBitir').onclick=()=>rapor(false);
+  kokpitBagla(tus, boyutla);
+  const km={ArrowLeft:'sol',ArrowRight:'sag',ArrowUp:'gaz',ArrowDown:'fren',' ':'fren'};
+  document.onkeydown=e=>{ if(!Z.aktif || Z.bitti || document.getElementById('perde')) return; if(km[e.key]){ tus[km[e.key]]=true; e.preventDefault(); }
+    const k=e.key.toLowerCase(); if('prnd'.includes(k) && k.length===1) vitesDegis(k.toUpperCase()); if(k==='q') sinyalVer('sol'); if(k==='e') sinyalVer('sag'); if(k==='h') elFren(); if(k==='k') kemer(); if(k==='c') Z.kam = Z.kam==='dis'?'ic':'dis'; };
+  document.onkeyup=e=>{ if(km[e.key]) tus[km[e.key]]=false; };
+  tusDurum();
+  if(devam) bild(`${(devam.s/1000).toFixed(1).replace('.',',')} km'den devam ediyorsun.`, 2200);
+
+  function kaydet(){ try{ localStorage.setItem('eb:gz', JSON.stringify({s:Z.s, puan:Z.puan, ihlal:Z.ihlal.slice(-200), t:Z.t, bitti:Z.bitti})); }catch(e){} }
+  function rapor(tamam){
+    if(Z.bitti) return; Z.bitti=true; Z.v=0; kaydet();
+    const gec = tamam && Z.puan>=70, kmS=(Z.s/1000).toFixed(1).replace('.',',');
+    try{ const eb=JSON.parse(localStorage.getItem('eb:gzEnIyi')||'null'); if(tamam && (!eb || Z.puan>eb.puan)) localStorage.setItem('eb:gzEnIyi', JSON.stringify({puan:Z.puan, s:Z.s, t:Date.now()})); }catch(e){}
+    try{ hesapZamanla(); }catch(e){}
+    const say={}; Z.ihlal.forEach(x=>{ say[x.kod]=say[x.kod]||{m:x.m,n:0,p:0}; say[x.kod].n++; say[x.kod].p+=x.p; });
+    const satir=Object.values(say).sort((a,b)=>b.p-a.p).map(x=>`<div class="satir ara"><span>${esc(x.m)} <small class="soluk">× ${x.n}</small></span><b style="color:var(--kirmizi)">−${x.p}</b></div>`).join('') || '<p class="soluk">Hiç kural ihlali yapmadın. Harika!</p>';
+    const dk=Math.round(Z.t/60), ort=Z.t>0? Math.round(Z.s/Z.t*3.6):0;
+    sayfaAc(`<h2>${tamam ? (gec?'🎉 Güzergahı başarıyla tamamladın':'Güzergah tamamlandı, ama puanın yetmedi') : 'Sürüş raporu'}</h2>
+      <div class="gz-sonuc ${gec?'iyi':tamam?'kotu':''}"><b>${Z.puan}</b><span>/ 100 puan</span></div>
+      <p class="soluk">${kmS} km · ${dk} dk · ortalama ${ort} km/s ${tamam?'· Geçme puanı 70':''}</p>
+      <h3 style="margin-top:12px">İhlaller</h3><div class="gz-ihlal">${satir}</div>
+      <div class="satir" style="gap:10px;margin-top:14px">${tamam?'':'<button class="btn ana" id="gzSurdur" style="flex:1">Sürüşe devam et</button>'}<button class="btn cerceve" id="gzYeniden" style="flex:1">Baştan başla</button></div>`);
+    $('#gzYeniden').onclick=()=>{ sayfaKapat(); try{ localStorage.removeItem('eb:gz'); }catch(e){} temizle(); gzBaslat(null); };
+    $('#gzSurdur') && ($('#gzSurdur').onclick=()=>{ sayfaKapat(); Z.bitti=false; son=performance.now(); });
+  }
+  function temizle(){ Z.aktif=false; parcalar.forEach(g=>{ sahne.remove(g); g.traverse(o=>{ o.geometry?.dispose?.(); }); }); parcalar.clear(); }
+
+  // Yapay zekâ trafiği
+  function aiEkle(o){ const M=aracAl(o.tur||'oto'); const a={M, s:o.s, d:o.d, v:o.v, vH:o.v, yon:o.yon||1, tur:o.tur||'oto', L:o.tur==='oto'?4.4:o.tur==='otobus'?12:7.6, w:o.tur==='oto'?1.8:2.5, sinyal:null}; AI.push(a); return a; }
+  function aiGuncelle(dt){
+    const bolge=gzBolge(Z.s), tip=bolge[2], iki=tip!=='otoyol';
+    // yavaş araçlar
+    for(const e of R.olay){ if(e.tur!=='yavas' || e.olustu) continue; if(e.s < Z.s+650 && e.s > Z.s+120){ e.olustu=true; aiEkle({s:e.s, d:e.d??1.75, v:e.v, tur:e.arac}); } else if(e.s<Z.s) e.olustu=true; }
+    // aynı yönde normal trafik
+    const ayni=AI.filter(a=>a.yon>0 && a.s>Z.s).length;
+    if(ayni<(tip==='sehir'?2:3) && Math.random()<dt*0.6){ const s=Z.s+380+Math.random()*300; const lim=gzLimit(s)/3.6; const d = tip==='otoyol' ? (Math.random()<0.7?5.25:1.75) : 1.75;
+      if(!AI.some(a=>Math.abs(a.s-s)<30 && Math.abs(a.d-d)<2)) aiEkle({s, d, v:lim*(0.82+Math.random()*0.12), tur:Math.random()<0.15&&tip!=='sehir'?'kamyon':'oto'}); }
+    // karşı yönden gelenler
+    if(iki && Math.random()<dt*(tip==='sehir'?0.18:0.28)){ const s=Z.s+500+Math.random()*350; if(!AI.some(a=>a.yon<0 && Math.abs(a.s-s)<60)) aiEkle({s, d:-1.75, v:gzLimit(s)/3.6*0.92, yon:-1, tur:Math.random()<0.12?'otobus':'oto'}); }
+    for(const a of AI){
+      const lim=gzLimit(a.s)/3.6; if(a.yon>0 && a.tur==='oto') a.vH=Math.min(a.vH, lim*0.98);
+      let hedef=a.yon>0 ? a.vH : lim*0.92;
+      if(a.yon>0){
+        // önündeki araç ya da oyuncu
+        let bosluk=1e9; for(const b of AI) if(b!==a && b.yon>0 && Math.abs(b.d-a.d)<2 && b.s>a.s) bosluk=Math.min(bosluk, b.s-a.s-(a.L+b.L)/2);
+        if(Math.abs(Z.d-a.d)<2 && Z.s>a.s) bosluk=Math.min(bosluk, Z.s-a.s-a.L/2-2.4);
+        if(bosluk<a.v*2+8) hedef=Math.min(hedef, Math.max(0,(bosluk-6)/2.2));
+        // ışık ve dur
+        for(const e of R.olay){ if(e.s<a.s-1 || e.s>a.s+90) continue;
+          if(e.tur==='kavsak' && (e.kontrol==='dur' || (e.kontrol==='isik' && gzIsik(e,Z.t)!=='yesil'))){ const kalan=e.s-6-a.s; if(kalan>-1){ if(e.kontrol==='dur'){ a.durdu = a.durdu===e.i ? e.i : (a.v<0.3&&kalan<4 ? e.i : a.durdu); if(a.durdu!==e.i) hedef=Math.min(hedef, Math.max(0,kalan/2.5)); } else hedef=Math.min(hedef, Math.max(0,kalan/2.5)); } }
+          if(e.tur==='yaya' && yayalar[e.i]?.yolda){ const kalan=e.s-5-a.s; if(kalan>-1) hedef=Math.min(hedef, Math.max(0,kalan/2.5)); } }
+      }
+      a.v += Math.max(-6*dt, Math.min(2*dt, hedef-a.v));
+      a.s += a.yon*a.v*dt;
+    }
+    for(let i=AI.length-1;i>=0;i--){ const a=AI[i]; if(a.s<Z.s-140 || a.s>Z.s+1100 || a.s>R.uz-5){ aracBirak(a.M); AI.splice(i,1); } }
+  }
+  function aiCiz(){ const yan=Math.floor(performance.now()/350)%2===0;
+    for(const a of AI){ const p=gzDunya(a.s, a.d); const th=p.th+(a.yon<0?Math.PI:0), ar=a.L/2-0.8;
+      a.M.grup.position.set(p.x - Math.cos(th)*ar*0.5, 0, p.z - Math.sin(th)*ar*0.5); a.M.grup.rotation.y=-th;
+      (a.M.fren||[]).forEach(l=>l.material.color.setHex(a.v<0.5||a.fren?0xFF2A2A:0x6B0F0F)); } }
+
+  // Yayalar
+  function yayaGuncelle(dt){
+    for(const e of R.olay){ if(e.tur!=='yaya') continue;
+      const y=yayalar[e.i];
+      if(!y && e.s>Z.s+55 && e.s<Z.s+110){ if(Math.random()<(e.okul?0.9:0.6)){ yayalar[e.i]={M:yayaM(), x:gzKenar(e.s).sag+1.2, hiz:-1.25-Math.random()*0.3, yolda:false, bekle:Math.random()*1.2}; } else yayalar[e.i]={yok:true}; }
+      if(y && !y.yok){
+        if(y.bekle>0) y.bekle-=dt; else y.x+=y.hiz*dt;
+        const kn=gzKenar(e.s); y.yolda = y.x<kn.sag+0.2 && y.x>kn.sol-0.2;
+        const p=gzDunya(e.s, y.x); y.M.position.set(p.x, Math.abs(Math.sin(Z.t*8))*0.06, p.z); y.M.rotation.y=-p.th+Math.PI/2;
+        if(y.x<kn.sol-2.5 || e.s<Z.s-60){ sahne.remove(y.M); yayalar[e.i]={yok:true}; }
+      }
+    }
+  }
+  // Kesişen trafik (ışık kırmızıyken)
+  function kesisenGuncelle(dt){
+    for(const e of R.olay){ if(e.tur!=='kavsak' || e.kontrol!=='isik' || e.s<Z.s-20 || e.s>Z.s+220) continue;
+      const kir=gzIsik(e,Z.t)==='kirmizi';
+      if(kir && !kesisen.some(k=>k.e===e) && Math.random()<dt*0.7){ const M=aracAl('oto'); kesisen.push({e, M, u:-45, v:11, yon:Math.random()<0.5?1:-1}); } }
+    for(let i=kesisen.length-1;i>=0;i--){ const k=kesisen[i]; k.u+=k.v*dt; const c=gzKavsakMerkez(k.e), sag={x:-Math.sin(c.th), z:Math.cos(c.th)};
+      const u=k.u*k.yon, yan=k.yon*1.75*-1; const px=c.x+sag.x*u+Math.cos(c.th)*yan, pz=c.z+sag.z*u+Math.sin(c.th)*yan;
+      k.M.grup.position.set(px,0,pz); k.M.grup.rotation.y=-(c.th+(k.yon>0?Math.PI/2:-Math.PI/2));
+      k.icinde = Math.abs(k.u)<7;
+      if(k.u>45){ aracBirak(k.M); kesisen.splice(i,1); } }
+  }
+
+  // Görsel güncelleme
+  const ORT=new THREE.Vector3(), BAK=new THREE.Vector3();
+  let kamPoz=null;
+  function ciz(){
+    const ip=Math.floor(Z.s/PARCA);
+    for(let i=ip-1;i<=ip+5;i++) if(i>=0 && !parcalar.has(i)){ const g=parcaKur(i); if(g) parcalar.set(i,g); }
+    parcalar.forEach((g,i)=>{ if(i<ip-1 || i>ip+5){ sahne.remove(g); g.traverse(o=>o.geometry?.dispose?.()); parcalar.delete(i); } });
+    for(const e of R.olay){ if(e.tur==='kavsak' && e.isik && e.s>Z.s-60 && e.s<Z.s+1000){ const d=gzIsik(e,Z.t), dk={yesil:'kirmizi',sari:'sari',kirmizi:'yesil'}[d];
+      const boya=(o,durum)=>o.l.forEach((m,k)=>m.material.color.setHex((['kirmizi','sari','yesil'][k]===durum)?m.userData.renk:0x2A2E33)); boya(e.isik,d); e.isikKarsi && boya(e.isikKarsi,dk); } }
+    const p=gzDunya(Z.s, Z.d), th=p.th+Z.psi;
+    oyuncuM.grup.position.set(p.x - Math.cos(th)*1.3, 0, p.z - Math.sin(th)*1.3); oyuncuM.grup.rotation.y=-th;
+    oyuncuM.onTeker.forEach(f=>f.rotation.y=-tus.yon*0.5);
+    const yan=Math.floor(performance.now()/350)%2===0;
+    (oyuncuM.sinyalSol||[]).forEach(l=>l.material.color.setHex(Z.sinyal==='sol'&&yan?0xFFB52E:0x6A4A12));
+    (oyuncuM.sinyalSag||[]).forEach(l=>l.material.color.setHex(Z.sinyal==='sag'&&yan?0xFFB52E:0x6A4A12));
+    (oyuncuM.fren||[]).forEach(l=>l.material.color.setHex(tus.fren?0xFF2A2A:0x6B0F0F));
+    zemin.position.set(Math.round(p.x/50)*50, -0.02, Math.round(p.z/50)*50);
+    const ic = Z.kam==='ic';
+    (oyuncuM.dis||[]).forEach(m=>m.visible=!ic); (oyuncuM.lambalar||[]).forEach(m=>m.visible=!ic);
+    if(ic){ const gx=p.x+Math.cos(th)*(-0.05)-(-Math.sin(th))*0.38, gz=p.z+Math.sin(th)*(-0.05)-Math.cos(th)*0.38; kam.position.set(gx,1.22,gz); BAK.set(gx+Math.cos(th)*20, 1.0, gz+Math.sin(th)*20); kam.lookAt(BAK); kam.fov=70; }
+    else { ORT.set(p.x-Math.cos(th)*8.5, 3.4, p.z-Math.sin(th)*8.5); if(!kamPoz) kamPoz=ORT.clone(); kamPoz.lerp(ORT, 0.12); kam.position.copy(kamPoz); BAK.set(p.x+Math.cos(th)*8, 1.1, p.z+Math.sin(th)*8); kam.lookAt(BAK); kam.fov=60; }
+    kam.updateProjectionMatrix();
+    aiCiz();
+    r.render(sahne, kam);
+  }
+
+  // HUD
+  function hud(){
+    const kmh=Math.round(Math.abs(Z.v)*3.6), lim=gzLimit(Z.s);
+    $('#gHiz').textContent=kmh; const L=$('#gLim'); L.textContent=lim; $('#gHiz').parentElement.classList.toggle('asim', kmh>lim+3);
+    $('#gVit').textContent=Z.vites; $('#gPuan').textContent=Z.puan; $('#gPuan').parentElement.classList.toggle('dusuk', Z.puan<70);
+    $('#gKm').textContent=(Z.s/1000).toFixed(1).replace('.',','); $('#gIl').style.width=(Z.s/R.uz*100).toFixed(2)+'%';
+    const yan=Math.floor(performance.now()/350)%2===0; $('#gSinSol').classList.toggle('acik', Z.sinyal==='sol'&&yan); $('#gSinSag').classList.toggle('acik', Z.sinyal==='sag'&&yan);
+    // sıradaki talimat
+    let metin='';
+    for(const e of R.olay){ if(e.s<Z.s-2) continue; if(e.s>Z.s+400) break; const m=Math.max(0,Math.round((e.s-Z.s)/10)*10);
+      if(e.tur==='kavsak'){ const ok=e.donus==='sag'?'↱':e.donus==='sol'?'↰':'↑'; const ne=e.donus?(e.donus==='sag'?'Sağa dön':'Sola dön'):'Düz devam'; const kt={isik:'Trafik ışığı',dur:'DUR levhası',yok:'Kavşak'}[e.kontrol];
+        metin=`<span class="gz-ok">${ok}</span><div><b>${m} m</b> · ${ne}<small>${kt}${e.kontrol==='isik'?' · '+{yesil:'yeşil',sari:'sarı',kirmizi:'kırmızı'}[gzIsik(e,Z.t)]:''}</small></div>`; break; }
+      if(e.tur==='yaya'){ metin=`<span class="gz-ok">🚸</span><div><b>${m} m</b> · Yaya geçidi<small>Yaya varsa dur, yol ver</small></div>`; break; }
+      if(e.tur==='tren'){ metin=`<span class="gz-ok">🚆</span><div><b>${m} m</b> · Hemzemin geçit<small>Durma çizgisinde tam dur</small></div>`; break; }
+      if(e.tur==='okulLevha'){ metin=`<span class="gz-ok">🏫</span><div><b>${m} m</b> · Okul bölgesi<small>Hız sınırı 30 km/s</small></div>`; break; }
+      if(e.tur==='levha' && e.s>Z.s+5 && e.limit!==lim){ metin=`<span class="gz-ok gz-mini-lim">${e.limit}</span><div><b>${m} m</b> · ${esc(e.ad)}<small>Yeni hız sınırı ${e.limit} km/s</small></div>`; break; }
+      if(e.tur==='bitis'){ metin=`<span class="gz-ok">🏁</span><div><b>${m} m</b> · Bitiş<small>Bitiş çizgisinden sonra dur</small></div>`; break; }
+    }
+    if(!metin && gzBolge(Z.s)[2]==='otoyol' && Z.d<3.5) metin='<span class="gz-ok">⇢</span><div><b>Otoyol</b><small>Sollamadan sonra sağ şeride dön</small></div>';
+    const y=$('#gYon'); if(y._m!==metin){ y.innerHTML=metin; y._m=metin; y.hidden=!metin; }
+  }
+
+  // Fizik ve kurallar
+  function adim(dt){
+    Z.t+=dt;
+    const n=gzNokta(Z.s), kn=gzKenar(Z.s), tip=gzBolge(Z.s)[2], lim=gzLimit(Z.s);
+    // hız
+    const yavas=d=>{ Z.v = Math.abs(Z.v)<=d?0:Z.v-Math.sign(Z.v)*d; };
+    const ileri=Z.vites==='D', geri=Z.vites==='R';
+    if(Z.vites==='P') Z.v=0;
+    else if(Z.elFreni){ yavas(7*dt); if(tus.gaz && !Z.elUyari){ Z.elUyari=true; bild('El freni çekili! İndirmek için H.',1800); } }
+    else if(tus.fren) yavas(7.5*dt);
+    else if(tus.gaz && (ileri||geri)){ const yon=ileri?1:-1, vmax=ileri?46:5; if(Z.v*yon<0) yavas(7*dt); else Z.v = yon*Math.min(vmax, Math.abs(Z.v)+3.4*(1-Math.abs(Z.v)/50)*dt); }
+    else { yavas((0.35+Math.abs(Z.v)*0.012)*dt); if(ileri && Math.abs(Z.v)<1.2 && !tus.fren && Z.kalkti) Z.v+=0.6*dt; }
+    if(!tus.gaz) Z.elUyari=false; if(Math.abs(Z.v)>1) Z.kalkti=true;
+    // direksiyon (hıza duyarlı)
+    const giris=direksiyonGirdi(tus,dt), v=Z.v, delta=giris*0.55/(1+v*v/70);
+    const yaw=v*Math.tan(delta)/2.6, ds=v*Math.cos(Z.psi)/Math.max(0.2, 1-n.k*Z.d);
+    Z.psi += (yaw - n.k*ds)*dt; Z.psi=Math.max(-1.2,Math.min(1.2,Z.psi));
+    const sOnce=Z.s; Z.s += ds*dt; Z.d += v*Math.sin(Z.psi)*dt; Z.s=Math.max(0,Z.s);
+    // sinyal kaydı
+    if(Z.sinyal) Z.sinyalSon[Z.sinyal]=Z.t;
+    // kemer
+    if(Math.abs(v)>2 && !Z.kemer && !Z.kemerUyari){ Z.kemerUyari=true; ihlal('kemer',999); }
+    // yoldan çıkma / bariyer
+    const sol=kn.sol+(kn.otoyol?0:-0.4), sag=kn.sag+0.4;
+    if(Z.d+0.9>sag || Z.d-0.9<sol){ ihlal('yoldan',5); Z.v*=0.6; Z.d=Math.max(sol+1.0, Math.min(sag-1.0, Z.d)); Z.psi*=0.3; }
+    // şerit ve sinyal
+    const serit = kn.otoyol ? (Z.d<3.5?'sol':'sag') : (Z.d<0?'karsi':'sag');
+    if(Z.serit && serit!==Z.serit && Math.abs(v)>3 && Z.t-(Z.seritDegisT||-99)>0.8){
+      const yonu = (Z.serit==='sag' && (serit==='karsi'||serit==='sol')) ? 'sol' : 'sag';
+      if(Z.t-Z.sinyalSon[yonu]>4) ihlal('sinyal',4);
+      if(serit==='karsi' && R.CZ[Math.floor(Z.s/GZ_DS)]) ihlal('cizgi',8);
+      Z.seritDegisT=Z.t; if(Z.sinyal===yonu) setTimeout(()=>{ if(Z.sinyal===yonu && Z.t-Z.seritDegisT>1.5) { Z.sinyal=null; tusDurum(); } }, 2500);
+    }
+    Z.serit=serit;
+    Z.karsiT = serit==='karsi' ? Z.karsiT+dt : 0; if(Z.karsiT>14){ ihlal('karsi',14); Z.karsiT=0; }
+    if(kn.otoyol && serit==='sol' && v>15){ const sollanacak=AI.some(a=>a.yon>0 && a.s>Z.s-15 && a.s<Z.s+120 && a.d>3.5); Z.solT = sollanacak?0:Z.solT+dt; if(Z.solT>25){ ihlal('solSerit',30); Z.solT=0; } } else Z.solT=0;
+    // hız
+    const kmh=Math.abs(v)*3.6, okul=gzOkul(Z.s);
+    if(kmh>lim*1.3+2){ Z.hizCokT+=dt; if(Z.hizCokT>2) ihlal(okul?'okulHiz':'hizCok',8); } else Z.hizCokT=0;
+    if(kmh>lim*1.1+2){ Z.hizT+=dt; if(Z.hizT>3 && Z.hizCokT<=2) ihlal(okul?'okulHiz':'hiz',10); } else Z.hizT=0;
+    // takip mesafesi
+    let onde=null; for(const a of AI){ if(a.yon>0 && Math.abs(a.d-Z.d)<1.9 && a.s>Z.s && (!onde||a.s<onde.s)) onde=a; }
+    if(onde && v>8.3){ const gap=onde.s-Z.s-onde.L/2-2.4; if(gap<v*1.0){ Z.takipT+=dt; if(Z.takipT>3){ ihlal('takip',20); Z.takipT=0; } } else Z.takipT=0; } else Z.takipT=0;
+    // çarpışma
+    if(Z.t-Z.kazaT>3){
+      for(const a of AI){ if(Math.abs(a.s-Z.s)<(a.L+4.4)/2-0.3 && Math.abs(a.d-Z.d)<(a.w+1.8)/2-0.15){ kaza(); a.v=0; break; } }
+      for(const k of kesisen){ if(k.icinde && Math.abs(Z.s-(k.e.s+7))<5){ kaza(); break; } }
+      for(const i in yayalar){ const y=yayalar[i]; if(y && y.M && y.yolda){ const e=R.olay[i]; if(Math.abs(Z.s-e.s)<2.4 && Math.abs(y.x-Z.d)<1.2){ kaza(); break; } } }
+    }
+    // olaylar
+    for(const e of R.olay){ if(e.s<sOnce-20) continue; if(e.s>Z.s+40) break;
+      if(e.tur==='kavsak'){
+        const cizgi=e.s-4;
+        if(e.kontrol==='dur'||true){ if(Z.s>cizgi-16 && Z.s<cizgi+0.5) Z.durMin[e.i]=Math.min(Z.durMin[e.i]??99, Math.abs(v)); }
+        if(e.donus && Z.s>e.s-70 && Z.s<e.s+2 && Z.sinyal===e.donus) Z.donusSin[e.i]=true;
+        if(sOnce<cizgi && Z.s>=cizgi && !Z.gecti[e.i]){ Z.gecti[e.i]=true;
+          if(e.kontrol==='isik' && gzIsik(e,Z.t)==='kirmizi') ihlal('kirmizi',2);
+          if(e.kontrol==='dur' && (Z.durMin[e.i]??99)>0.5) ihlal('dur',2);
+          if(e.donus && !Z.donusSin[e.i]) ihlal('donusSin',2); }
+        if(e.donus && Z.s>e.s+2 && Z.s<e.s+20 && kmh>32) ihlal('donusHiz',10);
+        if(e.donus && Z.s>e.s+24 && Z.sinyal===e.donus && !Z.iptal?.[e.i]){ (Z.iptal||(Z.iptal={}))[e.i]=true; Z.sinyal=null; tusDurum(); }
+      }
+      if(e.tur==='tren'){ const cizgi=e.s-6; if(Z.s>cizgi-16 && Z.s<cizgi+0.5) Z.durMin[e.i]=Math.min(Z.durMin[e.i]??99, Math.abs(v));
+        if(sOnce<cizgi && Z.s>=cizgi && !Z.gecti[e.i]){ Z.gecti[e.i]=true; if((Z.durMin[e.i]??99)>0.5) ihlal('tren',2); } }
+      if(e.tur==='yaya'){ if(sOnce<e.s-1.6 && Z.s>=e.s-1.6 && yayalar[e.i]?.yolda) ihlal('yaya',3); }
+      if(e.tur==='levha' && sOnce<e.s && Z.s>=e.s) bild(`<span class="gz-mini-lim">${e.limit}</span> ${esc(e.ad)} · hız sınırı ${e.limit} km/s`, 2200);
+      if(e.tur==='bitis' && Z.s>=e.s && Math.abs(v)<0.5 && !Z.bitti){ rapor(true); }
+    }
+    if(Z.s>=R.uz-1 && Math.abs(v)>0.5 && !Z.bitisUyari){ Z.bitisUyari=true; bild('🏁 Bitiş çizgisini geçtin, şimdi güvenle dur.', 2500); }
+    if(Z.s>R.uz+60 && !Z.bitti) rapor(true);
+    if(Math.floor(Z.s/250)!==Math.floor(sOnce/250)) kaydet();
+  }
+  function kaza(){ Z.kazaT=Z.t; ihlal('kaza',2); Z.v=0; Z.psi=0; Z.d = gzKenar(Z.s).otoyol ? (Z.d<3.5?1.75:5.25) : 1.75; bild('💥 Çarpışma! Aracını durdur, çevreni kontrol et ve devam et.', 3000, 'kotu'); }
+
+  let son=performance.now();
+  const dongu=now=>{
+    if(!Z.aktif || !document.body.contains(r.domElement)) { Z.aktif=false; return; }
+    let dt=Math.min(0.05,(now-son)/1000); son=now;
+    if(!Z.bitti && !document.getElementById('perde')){ while(dt>0){ const h=Math.min(dt,0.02); adim(h); aiGuncelle(h); yayaGuncelle(h); kesisenGuncelle(h); dt-=h; } }
+    ciz(); hud();
+    animId=requestAnimationFrame(dongu);
+  };
   animId=requestAnimationFrame(dongu);
 }
 
@@ -2696,7 +3301,7 @@ const G3 = (()=>{
     return true;
   }
   function kamSifirla(){ KAM.pos=null; KAM.D=null; KAM.kullanici=false; KAM.az=-2.2; KAM.el=0.65; }
-  return { ciz, destekVar, ayir, kamSifirla, kameraPoz:()=>kam?kam.position:new THREE.Vector3(), yukseklik, rampaH, yardimci:{serit,kesikSerit,alan,cerceve,halka,kutu3,zeminYazi,huni3,direk,durLevhasi,levhaUcgen,agac,bina,cevre,lamba,mat,RENK,yaziDoku} };
+  return { aracModel, ciz, destekVar, ayir, kamSifirla, kameraPoz:()=>kam?kam.position:new THREE.Vector3(), yukseklik, rampaH, yardimci:{serit,kesikSerit,alan,cerceve,halka,kutu3,zeminYazi,huni3,direk,durLevhasi,levhaUcgen,agac,bina,cevre,lamba,mat,RENK,yaziDoku} };
 })();
 
 /* ---------- görünüm seçici (2D / 3D kameralar) ---------- */
@@ -4460,6 +5065,59 @@ async function sikayetlerSayfa(){
   }catch(e){ $('#skListe').innerHTML='<p class="soluk">Şikayetler yüklenemedi.</p>'; }
 }
 function akisKartHTML(){ return `<button class="liste-btn" id="akKart"><span class="ikon" aria-hidden="true" style="font-size:1.9rem">📣</span><span><b>Eğitmen akışı</b><span>Eğitmen ve kursların duyuruları, kampanyaları ve paylaşımları</span></span></button>`; }
+
+/* ================== Hesap eşitleme: telefon ↔ site ==================
+   Google ile giriş yapan kullanıcının sınav geçmişi, soru istatistikleri, Premium durumu ve güzergah
+   rekoru Firestore'da kullanicilar/{uid} belgesinde tutulur. Açılışta ve girişte iki taraf birleştirilir
+   (hiçbir kayıt silinmez), sonraki her kayıtta birkaç saniye içinde buluta gönderilir. */
+const HESAP = { zaman:null, esitlendi:false, gonderiliyor:false };
+const hesapVar = () => D.kullanici?.tur==='google' && !!D.kullanici.uid;
+function _gzEnIyi(){ try{ return JSON.parse(localStorage.getItem('eb:gzEnIyi')||'null'); }catch(e){ return null; } }
+function hesapBirlestir(u){
+  let degisti=false;
+  const k=g=>g.tarih+'|'+(g.dogru??'')+'|'+(g.kat?JSON.stringify(g.kat):'');
+  const m=new Map((D.gecmis||[]).map(g=>[k(g),g])); const once=m.size;
+  (u.gecmis||[]).forEach(g=>{ if(g && g.tarih && !m.has(k(g))) m.set(k(g),g); });
+  if(m.size!==once){ D.gecmis=[...m.values()].sort((a,b)=>b.tarih-a.tarih).slice(0,300); degisti=true; }
+  const top=x=>x?((x.g||0)+(x.d||0)+(x.y||0)):0;
+  for(const [id,x] of Object.entries(u.istat||{})){ if(top(x)>top(D.istat[id])){ D.istat[id]=x; degisti=true; } }
+  if(u.premium && u.premium.bitis > (D.premium?.bitis||0)){ D.premium=u.premium; try{ localStorage.setItem('yolhakki:premium', JSON.stringify(D.premium)); }catch(e){} degisti=true; }
+  const yerel=_gzEnIyi(); if(u.gzEnIyi && (!yerel || u.gzEnIyi.puan>yerel.puan)){ try{ localStorage.setItem('eb:gzEnIyi', JSON.stringify(u.gzEnIyi)); }catch(e){} }
+  return degisti;
+}
+async function hesapGonder(){
+  if(!hesapVar() || HESAP.gonderiliyor) return;
+  HESAP.gonderiliyor=true;
+  try{
+    const veri={ gecmis:(D.gecmis||[]).slice(0,300), istat:D.istat||{}, guncel:Date.now(), ad:D.kullanici.ad||'', eposta:D.kullanici.email||'' };
+    if(D.premium && D.premium.bitis) veri.premium = {plan:D.premium.plan||'', bitis:D.premium.bitis, kaynak:D.premium.kaynak||(WEB?'web':'play')};
+    const gz=_gzEnIyi(); if(gz) veri.gzEnIyi=gz;
+    await fsYaz('kullanicilar/'+D.kullanici.uid, veri);
+  }catch(e){ /* çevrimdışı ya da oturum yok: bir sonraki kayıtta tekrar denenir */ }
+  HESAP.gonderiliyor=false;
+}
+function hesapZamanla(){ if(!hesapVar()) return; clearTimeout(HESAP.zaman); HESAP.zaman=setTimeout(hesapGonder, 4000); }
+async function hesapEsitle(){
+  if(!hesapVar()) return;
+  try{
+    const u=await fsGetir('kullanicilar/'+D.kullanici.uid);
+    if(u && hesapBirlestir(u)){ await _verileriKaydetYerel(); if(['ana','sinav','profil'].includes(D.ekran) && !document.getElementById('perde')) git(D.ekran); }
+    await hesapGonder();
+  }catch(e){}
+}
+// Mevcut kayıt işlevlerini sar: yerel kayıttan sonra buluta gönderim zamanla
+const _verileriKaydetYerel = verileriKaydet;
+verileriKaydet = async function(){ await _verileriKaydetYerel(); hesapZamanla(); };
+const _premiumKaydetYerel = premiumKaydet;
+premiumKaydet = function(){ _premiumKaydetYerel(); hesapZamanla(); };
+const _verileriYukleYerel = verileriYukle;
+verileriYukle = async function(){ await _verileriYukleYerel();
+  if(D.kullanici?.tur==='google' && !D.kullanici.uid){ try{ const o=JSON.parse(YolHakkiAndroid.oturum()||'null'); if(o?.uid){ D.kullanici.uid=o.uid; await yaz('yolhakki:oturum', D.kullanici); } }catch(e){} }
+  if(hesapVar() && !HESAP.esitlendi){ HESAP.esitlendi=true; hesapEsitle(); } };
+const _googleHesabaGec = googleHesabaGec;
+googleHesabaGec = async function(p){ HESAP.esitlendi=false; await _googleHesabaGec(p); };
+// Güzergah rekoru değişince de gönder
+window.addEventListener('storage', e=>{ if(e.key==='eb:gzEnIyi') hesapZamanla(); });
 
 /* ================== Dersler ================== */
 const DERS_SEKME = [['hata','Sınav hataları'],['levha','Trafik levhaları'],['polis','Polis işaretleri'],['tc','Trafik ve çevre'],['mt','Araç tekniği'],['ta','Trafik adabı'],['iy','İlk yardım']];
