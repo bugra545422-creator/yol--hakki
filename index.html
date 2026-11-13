@@ -135,15 +135,106 @@ footer .ic{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-betwe
 footer nav{display:flex;flex-wrap:wrap;gap:16px}
 :focus-visible{outline:3px solid var(--serit);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ===== Animasyonlar ===== */
+@keyframes yukari{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes serit-ak{to{background-position:-88px 0}}
+@keyframes sur{from{transform:translateX(-260px)}to{transform:translateX(calc(100vw + 40px))}}
+@keyframes don{to{transform:rotate(360deg)}}
+@keyframes sallan{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-10px) rotate(var(--r,0deg))}}
+@keyframes isik-k{0%,30%{opacity:1}31%,100%{opacity:.18}}
+@keyframes isik-s{0%,30%{opacity:.18}31%,40%{opacity:1}41%,100%{opacity:.18}}
+@keyframes isik-y{0%,40%{opacity:.18}41%,96%{opacity:1}97%,100%{opacity:.18}}
+.kahraman .giris-a>*{opacity:0;animation:yukari .8s cubic-bezier(.2,.7,.2,1) forwards}
+.kahraman .giris-a>*:nth-child(2){animation-delay:.12s}.kahraman .giris-a>*:nth-child(3){animation-delay:.24s}
+.kahraman .giris-a>*:nth-child(4){animation-delay:.36s}.kahraman .giris-a>*:nth-child(5){animation-delay:.48s}.kahraman .giris-a>*:nth-child(6){animation-delay:.6s}
+.kahraman::after{animation:serit-ak 1.1s linear infinite}
+.tel.a{--r:-5deg;animation:sallan 6s ease-in-out infinite}.tel.b{--r:4deg;animation:sallan 6s ease-in-out -3s infinite}
+.yol-arac{position:absolute;left:0;bottom:30px;width:200px;z-index:1;animation:sur 9s linear infinite;pointer-events:none}
+.yol-arac svg{width:100%;height:auto;display:block}
+.yol-arac .tek{animation:don .55s linear infinite}
+.tek{transform-box:fill-box;transform-origin:center}
+.isik{position:absolute;right:7%;bottom:40px;width:34px;z-index:1}
+.isik .k{animation:isik-k 9s linear infinite}.isik .s{animation:isik-s 9s linear infinite}.isik .y{animation:isik-y 9s linear infinite}
+@media (max-width:860px){.isik{display:none}.yol-arac{width:140px}}
+/* kaydırınca belirme */
+.gor{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.gor.sol{transform:translateX(-46px)}.gor.sag{transform:translateX(46px)}
+.gor.gorundu{opacity:1;transform:none}
+/* kaydırma çubuğu: yol + araba */
+.ilerleme{position:absolute;left:0;right:0;bottom:-6px;height:6px;background:repeating-linear-gradient(90deg,rgba(242,194,27,.55) 0 18px,transparent 18px 32px)}
+.ilerleme i{position:absolute;left:0;top:0;bottom:0;width:var(--y,0%);background:var(--serit)}
+.ilerleme b{position:absolute;top:-9px;left:calc(var(--y,0%) - 12px);width:24px;height:22px;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 22'%3E%3Cpath d='M3 15c0-3 1-5 4-5l6-1c3-4 6-6 11-6h4c4 0 7 3 9 7l1 2c1 1 1 3 1 4v1H3z' fill='%23C8203A'/%3E%3Cpath d='M15 9c2-3 5-4 8-4h2v4zM27 5h2c3 0 5 2 6 4h-8z' fill='%23A9D1F5'/%3E%3Ccircle cx='11' cy='17' r='4' fill='%23111'/%3E%3Ccircle cx='31' cy='17' r='4' fill='%23111'/%3E%3C/svg%3E")}
+/* ehliyet sınıfları */
+.siniflar{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.sinif{background:var(--yuzey);border:1px solid var(--cizgi);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:10px;overflow:hidden;position:relative}
+.sinif .arac-k{height:150px;padding:8px 6px 0;display:flex;align-items:flex-end;justify-content:center;margin:0 -6px;background:linear-gradient(transparent 70%,rgba(0,0,0,.04) 70%,rgba(0,0,0,.04) 100%);border-radius:12px}
+.sinif .arac{width:100%;height:132px;overflow:visible;transition:transform 1.3s cubic-bezier(.15,.75,.2,1),opacity .6s}
+.sinif.gor .arac{transform:translateX(-70%);opacity:0}
+.sinif.gor.gorundu .arac{transform:none;opacity:1}
+.sinif.gorundu .tek{animation:don .45s linear 3}
+.sinif:hover .tek{animation:don .45s linear infinite}
+.sinif .ust-s{display:flex;align-items:center;gap:12px}
+.sinif .harf{min-width:58px;height:44px;padding:0 10px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:#14181B;color:var(--serit);font-weight:800;font-size:1.35rem;letter-spacing:.02em;border:2px solid #14181B;box-shadow:inset 0 0 0 2px rgba(242,194,27,.4)}
+.sinif h3{font-size:1.15rem;line-height:1.2}
+.sinif .yas{margin-left:auto;font-size:.82rem;font-weight:700;background:var(--yuzey2);border:1px solid var(--cizgi);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.sinif p{color:var(--soluk);font-size:.96rem}
+.sinif .not2{font-size:.84rem;color:var(--soluk);border-top:1px dashed var(--cizgi);padding-top:8px;margin-top:auto}
+@media (prefers-color-scheme:dark){.sinif .arac-k{background:linear-gradient(transparent 70%,rgba(255,255,255,.04) 70%)}}
+/* eğitmenler */
+.egitmen-izgara{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:40px;align-items:center;margin-bottom:34px}
+@media (max-width:760px){.egitmen-izgara{grid-template-columns:1fr}.figur-k{width:100%;max-width:240px;margin:24px auto 0}.balon{left:auto;right:-12px}}
+.figur-k{position:relative;height:330px;width:100%}
+.figur{position:absolute;left:0;bottom:0;width:100%;height:100%;transform:translateX(120%)}
+.figur .bacak{transform-box:fill-box;transform-origin:50% 0}
+.figur .kol-a{transform-box:fill-box;transform-origin:50% 6%;transition:transform .5s ease,opacity .35s}
+.figur .kol-c{opacity:0;transform:scale(.9);transform-box:fill-box;transform-origin:50% 50%;transition:opacity .4s ease .1s,transform .4s ease .1s}
+.figur .kafa{transform-box:fill-box;transform-origin:50% 100%}
+@keyframes yuru{from{transform:translateX(120%)}to{transform:translateX(0)}}
+@keyframes adim1{0%,100%{transform:rotate(16deg)}50%{transform:rotate(-16deg)}}
+@keyframes adim2{0%,100%{transform:rotate(-16deg)}50%{transform:rotate(16deg)}}
+@keyframes kol-salla{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(12deg)}}
+@keyframes bas-sall{0%,100%{transform:rotate(0)}30%{transform:rotate(-6deg)}60%{transform:rotate(4deg)}}
+@keyframes balon{from{opacity:0;transform:translateY(8px) scale(.9)}to{opacity:1;transform:none}}
+.figur-k.gorundu .figur{animation:yuru 1.8s cubic-bezier(.3,.6,.3,1) forwards}
+.figur-k.gorundu .bacak.b1{animation:adim1 .45s ease-in-out 4}
+.figur-k.gorundu .bacak.b2{animation:adim2 .45s ease-in-out 4}
+.figur-k.gorundu .kol-a.k1{animation:kol-salla .45s ease-in-out 4}
+.figur-k.gorundu .kol-a.k2{animation:kol-salla .45s ease-in-out -.225s 4}
+.figur-k.bagla .kol-a{opacity:0;transform:rotate(0)}
+.figur-k.bagla .kol-a.k1{transform:rotate(-40deg)}.figur-k.bagla .kol-a.k2{transform:rotate(40deg)}
+.figur-k.bagla .kol-c{opacity:1;transform:none}
+.figur-k.bagla .kafa{animation:bas-sall .9s ease .3s}
+.balon{position:absolute;left:46%;top:-14px;z-index:2;background:#fff;color:#14181B;font-weight:700;font-size:.92rem;padding:9px 13px;border-radius:14px 14px 14px 4px;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;max-width:190px;line-height:1.25}
+.figur-k.bagla .balon{animation:balon .45s ease .5s forwards}
+.kurs-one{background:#fff;color:#14181B;border-radius:20px;padding:20px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;border:3px solid var(--serit);position:relative}
+.kurs-one img{width:150px;height:auto;border-radius:8px}
+.kurs-one .rozet2{position:absolute;top:-12px;left:18px;background:var(--serit);color:#14181B;font-weight:800;font-size:.78rem;padding:3px 10px;border-radius:999px;letter-spacing:.04em}
+.kurs-one h3{font-size:1.25rem}
+.kurs-one p{color:#4A535B;font-size:.95rem;margin:4px 0 12px}
+.kurs-one .dugmeler{margin-top:0;gap:10px}
+.kurs-one .btn{min-height:46px;padding:10px 16px;font-size:.95rem}
+.btn.koyu{background:#14181B;color:#fff}
+.btn.cerceve2{border:2px solid #14181B;color:#14181B}
+@media (max-width:560px){.kurs-one{grid-template-columns:1fr}.kurs-one img{width:130px}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .gor,.sinif.gor .arac,.figur{opacity:1!important;transform:none!important}
+  .figur-k .kol-a{opacity:0}.figur-k .kol-c,.balon{opacity:1}
+  .yol-arac{display:none}
+}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="b-kirmizi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0656F"/><stop offset=".45" stop-color="#C8203A"/><stop offset="1" stop-color="#7A0F20"/></linearGradient><linearGradient id="b-mavi" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7FB2F0"/><stop offset=".45" stop-color="#1D5BA8"/><stop offset="1" stop-color="#0E2F5C"/></linearGradient><linearGradient id="b-gri" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9DEE3"/><stop offset=".45" stop-color="#8C96A0"/><stop offset="1" stop-color="#4B535B"/></linearGradient><linearGradient id="b-beyaz" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#E6E9EC"/><stop offset="1" stop-color="#A9B0B7"/></linearGradient><linearGradient id="b-sari" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE27A"/><stop offset=".45" stop-color="#F2C21B"/><stop offset="1" stop-color="#A07C05"/></linearGradient><linearGradient id="b-yesil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6FD39C"/><stop offset=".45" stop-color="#1E8E4F"/><stop offset="1" stop-color="#0D4A28"/></linearGradient><linearGradient id="b-siyah" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A636C"/><stop offset=".45" stop-color="#272C31"/><stop offset="1" stop-color="#0E1114"/></linearGradient><linearGradient id="b-turuncu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB27A"/><stop offset=".45" stop-color="#E8742A"/><stop offset="1" stop-color="#8A3A0B"/></linearGradient><linearGradient id="cam" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A9D1F5"/><stop offset=".35" stop-color="#3E6E99"/><stop offset=".36" stop-color="#2A4F72"/><stop offset="1" stop-color="#14263A"/></linearGradient><radialGradient id="jant" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#F4F6F8"/><stop offset=".6" stop-color="#A8B0B8"/><stop offset="1" stop-color="#5D656D"/></radialGradient><radialGradient id="lastik" cx=".5" cy=".5" r=".5"><stop offset=".72" stop-color="#2A2E33"/><stop offset=".9" stop-color="#16191C"/><stop offset="1" stop-color="#0B0D0F"/></radialGradient><linearGradient id="krom" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FAFBFC"/><stop offset=".5" stop-color="#B9C0C7"/><stop offset="1" stop-color="#6E767E"/></linearGradient><radialGradient id="golge" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient><symbol id="teker" viewBox="-20 -20 40 40"><circle r="20" fill="url(#lastik)"/><circle r="12.5" fill="url(#jant)"/><path d="M0,-3 L-2.6,-11.5 L2.6,-11.5 Z" fill="#7E868E" transform="rotate(0)"/><path d="M0,-3 L-2.6,-11.5 L2.6,-11.5 Z" fill="#7E868E" transform="rotate(72)"/><path d="M0,-3 L-2.6,-11.5 L2.6,-11.5 Z" fill="#7E868E" transform="rotate(144)"/><path d="M0,-3 L-2.6,-11.5 L2.6,-11.5 Z" fill="#7E868E" transform="rotate(216)"/><path d="M0,-3 L-2.6,-11.5 L2.6,-11.5 Z" fill="#7E868E" transform="rotate(288)"/><circle r="3.2" fill="#3C4248"/><circle r="12.5" fill="none" stroke="#5D656D" stroke-width=".8"/></symbol><symbol id="mteker" viewBox="-20 -20 40 40"><circle r="20" fill="url(#lastik)"/><circle r="15" fill="#2B3036"/><circle r="14" fill="none" stroke="url(#krom)" stroke-width="2"/><path d="M0,-2 L-1.2,-13.5 L1.2,-13.5 Z" fill="#9AA2AA" transform="rotate(0)"/><path d="M0,-2 L-1.2,-13.5 L1.2,-13.5 Z" fill="#9AA2AA" transform="rotate(60)"/><path d="M0,-2 L-1.2,-13.5 L1.2,-13.5 Z" fill="#9AA2AA" transform="rotate(120)"/><path d="M0,-2 L-1.2,-13.5 L1.2,-13.5 Z" fill="#9AA2AA" transform="rotate(180)"/><path d="M0,-2 L-1.2,-13.5 L1.2,-13.5 Z" fill="#9AA2AA" transform="rotate(240)"/><path d="M0,-2 L-1.2,-13.5 L1.2,-13.5 Z" fill="#9AA2AA" transform="rotate(300)"/><circle r="4" fill="url(#jant)"/><circle r="9" fill="none" stroke="#C8CDD2" stroke-width="2.4" stroke-dasharray="3 2.2"/></symbol></defs></svg>
 
 <header class="ust">
+  <div class="ilerleme" aria-hidden="true"><i></i><b></b></div>
   <div class="ic">
     <a class="marka" href="#"><img src="gorsel/ikon.png" alt="" width="36" height="36">EHLİYET BENDE</a>
     <nav aria-label="Bölümler">
       <a href="#ozellikler">Özellikler</a>
+      <a href="#siniflar">Ehliyet sınıfları</a>
       <a href="#premium">Premium</a>
       <a href="#egitmenler">Eğitmenler</a>
       <a href="#sss">SSS</a>
@@ -153,8 +244,11 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
 </header>
 
 <section class="kahraman">
+  <div class="yol-arac" aria-hidden="true"><svg viewBox="0 0 320 132"><g transform="translate(0,0)"><ellipse cx="161.0" cy="123" rx="151.0" ry="5" fill="url(#golge)"/><path d="M14,96 C13,84 18,76 30,72 L86,64 C102,49 122,40 148,38 L196,38 C216,38 230,46 246,61 L282,67 C298,70 306,78 307,88 L308,98 C308,104 304,106 298,106 L263,106 A25,25 0 0 0 213,106 L103,106 A25,25 0 0 0 53,106 L22,106 C16,106 14,102 14,96 Z" fill="url(#b-kirmizi)" stroke="rgba(0,0,0,.35)" stroke-width="1"/><path d="M24,80 C80,74 200,70 300,78" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.6"/><path d="M98,65 C112,51 128,44 148,43 L166,43 L168,65 Z" fill="url(#cam)"/><path d="M174,43 L196,43 C212,43 224,50 238,63 L176,65 Z" fill="url(#cam)"/><path d="M171,42 L172,104 M104,70 L104,100" stroke="rgba(0,0,0,.28)" stroke-width="1.2"/><rect x="186" y="74" width="16" height="3.4" rx="1.7" fill="url(#krom)"/><rect x="122" y="74" width="16" height="3.4" rx="1.7" fill="url(#krom)"/><path d="M232,60 l12,-2 l2,8 l-12,1 Z" fill="url(#b-kirmizi)" stroke="rgba(0,0,0,.4)"/><path d="M288,74 C298,75 304,79 305,84 L290,84 Z" fill="#FFF7CF" stroke="#999" stroke-width=".6"/><path d="M15,82 L30,78 L30,88 L15,90 Z" fill="#D21F2E"/><path d="M60,104 L256,104" stroke="rgba(0,0,0,.35)" stroke-width="3"/><use class="tek" href="#teker" x="57" y="81" width="42" height="42"/><use class="tek" href="#teker" x="217" y="81" width="42" height="42"/></g></svg></div>
+  <svg class="isik" viewBox="0 0 34 120" aria-hidden="true"><rect x="15" y="62" width="4" height="58" fill="#14181B"/><rect x="2" y="2" width="30" height="66" rx="7" fill="#14181B" stroke="#4A525B"/>
+<circle class="k" cx="17" cy="15" r="8" fill="#FF3B3B"/><circle class="s" cx="17" cy="35" r="8" fill="#FFC21B"/><circle class="y" cx="17" cy="55" r="8" fill="#22D36F"/></svg>
   <div class="ic">
-    <div>
+    <div class="giris-a">
       <span class="etiket">🚦 E-sınav + direksiyon sınavı</span>
       <h1>Ehliyetin <em>bir sınav</em> uzağında.</h1>
       <p class="alt">Gerçek e-sınav düzeninde denemeler, adım adım pist anlatımları ve 3D sürüş simülasyonu. Hepsi tek uygulamada.</p>
@@ -181,12 +275,12 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
 
 <section class="b" id="ozellikler">
   <div class="ic">
-    <div class="baslik">
+    <div class="baslik gor">
       <span class="ust-yazi">Neler var?</span>
       <h2>Kursta öğrendiğini evde tekrar et, eksiğini sınavdan önce gör.</h2>
     </div>
 
-    <div class="ozellik">
+    <div class="ozellik gor">
       <div>
         <h3>Gerçek düzende e-sınav denemesi</h3>
         <p>MEB e-sınavındaki konu dağılımıyla 50 soru, 45 dakika. Sonucu anında gör, her sorunun çözümünü oku.</p>
@@ -199,7 +293,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
       <div class="gorsel"><div class="tel"><img src="gorsel/sinav-acik.webp" alt="E-sınav deneme ekranı: soru ve şıklar" loading="lazy" width="390" height="844"></div></div>
     </div>
 
-    <div class="ozellik ters">
+    <div class="ozellik ters gor">
       <div>
         <h3>Pist anlatımı, adım adım</h3>
         <p>Otomobil, motosiklet, kamyon (C), otobüs (D) ve tır (CE) pistleri. Her aşama animasyonla gösterilir, ne zaman ne yapacağın madde madde yazar.</p>
@@ -212,7 +306,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
       <div class="gorsel"><div class="tel"><img src="gorsel/pist-acik.webp" alt="Otomobil pisti 3D anlatım ekranı" loading="lazy" width="390" height="844"></div></div>
     </div>
 
-    <div class="ozellik">
+    <div class="ozellik gor">
       <div>
         <h3>Parkuru kendin sür</h3>
         <p>Direksiyon, gaz, fren, vites, sinyal ve el freniyle simülasyonda dene; bilgisayarda klavye ya da oyun koluyla sür. Çizgiye basarsan ya da huniye çarparsan simülasyon hatanı anında söyler.</p>
@@ -225,7 +319,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
       <div class="gorsel"><div class="tel"><img src="gorsel/sim-acik.webp" alt="Sürüş simülasyonu: direksiyon ve pedallar" loading="lazy" width="390" height="844"></div></div>
     </div>
 
-    <div class="ozellik ters">
+    <div class="ozellik ters gor">
       <div>
         <h3>Konu anlatımı ve mini testler</h3>
         <p>Trafik levhaları, polis işaretleri, trafik ve çevre, araç tekniği, trafik adabı ve ilk yardım. Her bölümün sonunda çözümlü kısa test.</p>
@@ -239,43 +333,97 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
   </div>
 </section>
 
+<section class="b" id="siniflar" style="padding-top:12px">
+  <div class="ic">
+    <div class="baslik gor"><span class="ust-yazi">Ehliyet sınıfları</span><h2>Hangi ehliyet, hangi araç?</h2>
+      <p>Türkiye'de en çok alınan sürücü belgesi sınıfları, kullanabileceğin araçlar ve en küçük başvuru yaşı. Uygulamada her sınıfın pistini adım adım çalışabilirsin.</p></div>
+    <div class="siniflar"><article class="sinif gor"><div class="arac-k"><svg class="arac" viewBox="0 0 320 132" role="img" aria-label="Otomobil görseli"><g transform="translate(0,0)"><ellipse cx="161.0" cy="123" rx="151.0" ry="5" fill="url(#golge)"/><path d="M14,96 C13,84 18,76 30,72 L86,64 C102,49 122,40 148,38 L196,38 C216,38 230,46 246,61 L282,67 C298,70 306,78 307,88 L308,98 C308,104 304,106 298,106 L263,106 A25,25 0 0 0 213,106 L103,106 A25,25 0 0 0 53,106 L22,106 C16,106 14,102 14,96 Z" fill="url(#b-kirmizi)" stroke="rgba(0,0,0,.35)" stroke-width="1"/><path d="M24,80 C80,74 200,70 300,78" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.6"/><path d="M98,65 C112,51 128,44 148,43 L166,43 L168,65 Z" fill="url(#cam)"/><path d="M174,43 L196,43 C212,43 224,50 238,63 L176,65 Z" fill="url(#cam)"/><path d="M171,42 L172,104 M104,70 L104,100" stroke="rgba(0,0,0,.28)" stroke-width="1.2"/><rect x="186" y="74" width="16" height="3.4" rx="1.7" fill="url(#krom)"/><rect x="122" y="74" width="16" height="3.4" rx="1.7" fill="url(#krom)"/><path d="M232,60 l12,-2 l2,8 l-12,1 Z" fill="url(#b-kirmizi)" stroke="rgba(0,0,0,.4)"/><path d="M288,74 C298,75 304,79 305,84 L290,84 Z" fill="#FFF7CF" stroke="#999" stroke-width=".6"/><path d="M15,82 L30,78 L30,88 L15,90 Z" fill="#D21F2E"/><path d="M60,104 L256,104" stroke="rgba(0,0,0,.35)" stroke-width="3"/><use class="tek" href="#teker" x="57" y="81" width="42" height="42"/><use class="tek" href="#teker" x="217" y="81" width="42" height="42"/></g></svg></div>
+<div class="ust-s"><span class="harf">B</span><h3>Otomobil</h3><span class="yas">18 yaş</span></div><p>Otomobil ve kamyonet: azami yüklü ağırlığı 3.500 kg'ı, oturma yeri sürücü dahil 9'u geçmeyen araçlar.</p><p class="not2">Direksiyon sınavı manuel vitesli araçla verilir; belge hem manuel hem otomatik vitesli araçları kapsar.</p></article><article class="sinif gor"><div class="arac-k"><svg class="arac" viewBox="0 0 320 132" role="img" aria-label="Otomatik vitesli otomobil görseli"><g transform="translate(0,0)"><ellipse cx="161.0" cy="123" rx="151.0" ry="5" fill="url(#golge)"/><path d="M14,96 C13,84 18,76 30,72 L86,64 C102,49 122,40 148,38 L196,38 C216,38 230,46 246,61 L282,67 C298,70 306,78 307,88 L308,98 C308,104 304,106 298,106 L263,106 A25,25 0 0 0 213,106 L103,106 A25,25 0 0 0 53,106 L22,106 C16,106 14,102 14,96 Z" fill="url(#b-mavi)" stroke="rgba(0,0,0,.35)" stroke-width="1"/><path d="M24,80 C80,74 200,70 300,78" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.6"/><path d="M98,65 C112,51 128,44 148,43 L166,43 L168,65 Z" fill="url(#cam)"/><path d="M174,43 L196,43 C212,43 224,50 238,63 L176,65 Z" fill="url(#cam)"/><path d="M171,42 L172,104 M104,70 L104,100" stroke="rgba(0,0,0,.28)" stroke-width="1.2"/><rect x="186" y="74" width="16" height="3.4" rx="1.7" fill="url(#krom)"/><rect x="122" y="74" width="16" height="3.4" rx="1.7" fill="url(#krom)"/><path d="M232,60 l12,-2 l2,8 l-12,1 Z" fill="url(#b-mavi)" stroke="rgba(0,0,0,.4)"/><path d="M288,74 C298,75 304,79 305,84 L290,84 Z" fill="#FFF7CF" stroke="#999" stroke-width=".6"/><path d="M15,82 L30,78 L30,88 L15,90 Z" fill="#D21F2E"/><path d="M60,104 L256,104" stroke="rgba(0,0,0,.35)" stroke-width="3"/><use class="tek" href="#teker" x="57" y="81" width="42" height="42"/><use class="tek" href="#teker" x="217" y="81" width="42" height="42"/><g transform="translate(250,18)"><rect width="58" height="26" rx="13" fill="#14181B"/><text x="29" y="17.5" text-anchor="middle" font-size="12" font-weight="700" fill="#F2C21B" font-family="system-ui,sans-serif" letter-spacing="1.5">P R N D</text></g></g></svg></div>
+<div class="ust-s"><span class="harf">B</span><h3>Otomatik vitesli otomobil</h3><span class="yas">18 yaş</span></div><p>B sınıfıyla aynı araçlar; direksiyon sınavı otomatik vitesli araçla verilir.</p><p class="not2">Belgeye "otomatik vites" kısıtı işlenir; yalnızca otomatik vitesli araç kullanılabilir.</p></article><article class="sinif gor"><div class="arac-k"><svg class="arac" viewBox="0 0 500 132" role="img" aria-label="Otomobil + römork görseli"><ellipse cx="83.0" cy="123" rx="77.0" ry="5" fill="url(#golge)"/><path d="M14,52 L138,52 C142,52 144,54 144,58 L144,98 L14,98 C10,98 8,96 8,92 L8,58 C8,54 10,52 14,52 Z" fill="url(#b-gri)" stroke="rgba(0,0,0,.35)"/><path d="M8,60 L144,60" stroke="rgba(255,255,255,.6)" stroke-width="1.4"/><path d="M28,62 L28,96" stroke="rgba(0,0,0,.18)" stroke-width="1.2"/><path d="M48,62 L48,96" stroke="rgba(0,0,0,.18)" stroke-width="1.2"/><path d="M68,62 L68,96" stroke="rgba(0,0,0,.18)" stroke-width="1.2"/><path d="M88,62 L88,96" stroke="rgba(0,0,0,.18)" stroke-width="1.2"/><path d="M108,62 L108,96" stroke="rgba(0,0,0,.18)" stroke-width="1.2"/><path d="M128,62 L128,96" stroke="rgba(0,0,0,.18)" stroke-width="1.2"/><path d="M144,90 L178,92" stroke="#3A4046" stroke-width="5" stroke-linecap="round"/><circle cx="180" cy="92" r="4" fill="#3A4046"/><path d="M10,70 L18,70 L18,80 L10,80 Z" fill="#D21F2E"/><use class="tek" href="#teker" x="58" y="84" width="36" height="36"/><g transform="translate(176,0)"><ellipse cx="161.0" cy="123" rx="151.0" ry="5" fill="url(#golge)"/><path d="M14,96 C13,84 18,76 30,72 L86,64 C102,49 122,40 148,38 L196,38 C216,38 230,46 246,61 L282,67 C298,70 306,78 307,88 L308,98 C308,104 304,106 298,106 L263,106 A25,25 0 0 0 213,106 L103,106 A25,25 0 0 0 53,106 L22,106 C16,106 14,102 14,96 Z" fill="url(#b-gri)" stroke="rgba(0,0,0,.35)" stroke-width="1"/><path d="M24,80 C80,74 200,70 300,78" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.6"/><path d="M98,65 C112,51 128,44 148,43 L166,43 L168,65 Z" fill="url(#cam)"/><path d="M174,43 L196,43 C212,43 224,50 238,63 L176,65 Z" fill="url(#cam)"/><path d="M171,42 L172,104 M104,70 L104,100" stroke="rgba(0,0,0,.28)" stroke-width="1.2"/><rect x="186" y="74" width="16" height="3.4" rx="1.7" fill="url(#krom)"/><rect x="122" y="74" width="16" height="3.4" rx="1.7" fill="url(#krom)"/><path d="M232,60 l12,-2 l2,8 l-12,1 Z" fill="url(#b-gri)" stroke="rgba(0,0,0,.4)"/><path d="M288,74 C298,75 304,79 305,84 L290,84 Z" fill="#FFF7CF" stroke="#999" stroke-width=".6"/><path d="M15,82 L30,78 L30,88 L15,90 Z" fill="#D21F2E"/><path d="M60,104 L256,104" stroke="rgba(0,0,0,.35)" stroke-width="3"/><use class="tek" href="#teker" x="57" y="81" width="42" height="42"/><use class="tek" href="#teker" x="217" y="81" width="42" height="42"/></g></svg></div>
+<div class="ust-s"><span class="harf">BE</span><h3>Otomobil + römork</h3><span class="yas">18 yaş</span></div><p>B sınıfı araç ile azami yüklü ağırlığı 750 kg'ı geçen römorkun birlikte kullanılması.</p><p class="not2">B sınıfı sürücü belgesi gerekir.</p></article><article class="sinif gor"><div class="arac-k"><svg class="arac" viewBox="0 0 220 132" role="img" aria-label="Hafif motosiklet görseli"><ellipse cx="132.0" cy="123" rx="118.0" ry="5" fill="url(#golge)"/><path d="M60,100 L96,90" stroke="#2F353B" stroke-width="7" stroke-linecap="round"/><path d="M40,58 C60,52 100,54 118,62 L132,92 C128,96 120,98 112,98 L72,98 C52,96 40,84 40,58 Z" fill="url(#b-yesil)" stroke="rgba(0,0,0,.35)"/><path d="M108,84 L162,82 L160,96 L110,98 Z" fill="url(#b-yesil)" stroke="rgba(0,0,0,.35)"/><path d="M112,84 L160,82" stroke="#1B1F23" stroke-width="3"/><path d="M150,90 C154,64 160,44 168,28 L186,30 C184,52 180,74 174,94 Z" fill="url(#b-yesil)" stroke="rgba(0,0,0,.35)"/><path d="M170,36 L182,38" stroke="rgba(255,255,255,.5)" stroke-width="2"/><path d="M176,100 L172,54" stroke="url(#krom)" stroke-width="5" stroke-linecap="round"/><path d="M48,50 C66,44 100,44 112,52 L110,58 L52,58 Z" fill="#1B1F23"/><path d="M166,24 L194,22" stroke="#1B1F23" stroke-width="4" stroke-linecap="round"/><path d="M178,34 L188,34 L186,42 L176,42 Z" fill="#FFF7CF"/><path d="M36,60 L44,60 L44,68 L36,68 Z" fill="#D21F2E"/><use class="tek" href="#mteker" x="44" y="86" width="36" height="36"/><use class="tek" href="#mteker" x="158" y="86" width="36" height="36"/></svg></div>
+<div class="ust-s"><span class="harf">A1</span><h3>Hafif motosiklet</h3><span class="yas">16 yaş</span></div><p>Silindir hacmi 125 cm³'ü, gücü 11 kW'ı geçmeyen motosikletler.</p><p class="not2">Kurs, e-sınav ve motosiklet pisti sınavı.</p></article><article class="sinif gor"><div class="arac-k"><svg class="arac" viewBox="0 0 250 132" role="img" aria-label="Orta motosiklet görseli"><ellipse cx="132.0" cy="123" rx="118.0" ry="5" fill="url(#golge)"/><path d="M64,102 L128,88" stroke="#2F353B" stroke-width="6" stroke-linecap="round"/><path d="M118,92 C98,92 86,86 70,76" stroke="url(#krom)" stroke-width="7" stroke-linecap="round" fill="none"/><path d="M112,62 L162,60 L158,94 L120,96 Z" fill="#3A4148"/><path d="M118,68 L160,68" stroke="#5A626A" stroke-width="2"/><path d="M118,74 L160,74" stroke="#5A626A" stroke-width="2"/><path d="M118,80 L160,80" stroke="#5A626A" stroke-width="2"/><path d="M118,86 L160,86" stroke="#5A626A" stroke-width="2"/><path d="M100,60 L170,58" stroke="#E8742A" stroke-width="5"/><path d="M118,60 L160,96" stroke="#E8742A" stroke-width="5"/><path d="M200,102 L182,42" stroke="#C9A227" stroke-width="7" stroke-linecap="round"/><path d="M118,56 C126,40 158,36 178,44 L176,60 L120,62 Z" fill="url(#b-turuncu)" stroke="rgba(0,0,0,.35)"/><path d="M60,52 C84,48 104,50 120,56 L118,62 L66,62 Z" fill="#1B1F23"/><path d="M46,46 L66,52 L64,58 L48,56 Z" fill="url(#b-turuncu)"/><circle cx="190" cy="50" r="9" fill="#2F353B"/><circle cx="192" cy="50" r="6.5" fill="#FFF7CF"/><path d="M176,38 L196,36" stroke="#1B1F23" stroke-width="4" stroke-linecap="round"/><use class="tek" href="#mteker" x="42" y="78" width="44" height="44"/><use class="tek" href="#mteker" x="178" y="78" width="44" height="44"/></svg></div>
+<div class="ust-s"><span class="harf">A2</span><h3>Orta motosiklet</h3><span class="yas">18 yaş</span></div><p>Gücü 35 kW'ı geçmeyen motosikletler.</p><p class="not2">A sınıfına geçiş için en az 2 yıllık A2 deneyimi sayılır.</p></article><article class="sinif gor"><div class="arac-k"><svg class="arac" viewBox="0 0 260 132" role="img" aria-label="Motosiklet görseli"><ellipse cx="132.0" cy="123" rx="118.0" ry="5" fill="url(#golge)"/><path d="M64,102 L130,86" stroke="#2F353B" stroke-width="7" stroke-linecap="round"/><path d="M116,92 C92,100 70,96 40,84" stroke="url(#krom)" stroke-width="8" stroke-linecap="round" fill="none"/><path d="M120,62 L170,62 L164,94 L126,96 Z" fill="#30363C"/><path d="M126,68 L166,68" stroke="#4C545C" stroke-width="2"/><path d="M126,74 L166,74" stroke="#4C545C" stroke-width="2"/><path d="M126,80 L166,80" stroke="#4C545C" stroke-width="2"/><path d="M126,86 L166,86" stroke="#4C545C" stroke-width="2"/><path d="M206,102 L186,38" stroke="url(#krom)" stroke-width="6" stroke-linecap="round"/><path d="M146,62 L204,64 L190,92 L150,94 Z" fill="url(#b-kirmizi)" stroke="rgba(0,0,0,.35)"/><path d="M118,50 C128,36 160,32 180,40 L182,60 L122,62 Z" fill="url(#b-kirmizi)" stroke="rgba(0,0,0,.35)"/><path d="M172,36 C196,30 216,44 226,64 C210,68 192,66 178,60 Z" fill="url(#b-kirmizi)" stroke="rgba(0,0,0,.35)"/><path d="M194,32 L214,20 L222,42 Z" fill="url(#cam)" opacity=".9"/><path d="M66,50 C88,44 108,46 124,52 L122,62 L72,62 Z" fill="#1B1F23"/><path d="M36,46 L70,50 L68,62 L42,60 Z" fill="url(#b-kirmizi)" stroke="rgba(0,0,0,.35)"/><path d="M34,48 L42,49 L41,55 L33,54 Z" fill="#D21F2E"/><path d="M216,48 L226,52 L222,58 L212,56 Z" fill="#FFF7CF"/><path d="M180,36 L168,30" stroke="#1B1F23" stroke-width="4" stroke-linecap="round"/><use class="tek" href="#mteker" x="41" y="77" width="46" height="46"/><use class="tek" href="#mteker" x="183" y="77" width="46" height="46"/></svg></div>
+<div class="ust-s"><span class="harf">A</span><h3>Motosiklet</h3><span class="yas">20 / 24 yaş</span></div><p>Güç sınırı olmadan tüm motosikletler.</p><p class="not2">En az 2 yıllık A2 belgesiyle 20, doğrudan başvuruda 24 yaş.</p></article><article class="sinif gor"><div class="arac-k"><svg class="arac" viewBox="0 0 410 132" role="img" aria-label="Kamyon görseli"><ellipse cx="209.0" cy="124" rx="201.0" ry="5" fill="url(#golge)"/><path d="M10,20 L300,20 L300,96 L10,96 Z" fill="url(#b-beyaz)" stroke="rgba(0,0,0,.35)"/><path d="M30,24 L30,92" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M54,24 L54,92" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M78,24 L78,92" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M102,24 L102,92" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M126,24 L126,92" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M150,24 L150,92" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M174,24 L174,92" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M198,24 L198,92" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M222,24 L222,92" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M246,24 L246,92" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M270,24 L270,92" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M294,24 L294,92" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><text x="155" y="64" text-anchor="middle" font-size="22" font-weight="800" fill="#1D5BA8" font-family="system-ui,sans-serif">LOJİSTİK</text><path d="M10,96 L320,96 L320,104 L10,104 Z" fill="#30363C"/><path d="M10,82 L18,82 L18,92 L10,92 Z" fill="#D21F2E"/><g transform="translate(306,0)"><path d="M0,30 L64,30 C78,30 86,38 88,52 L92,96 C92,104 88,108 82,108 L0,108 Z" fill="url(#b-sari)" stroke="rgba(0,0,0,.35)"/><path d="M40,36 L66,36 C76,36 80,42 82,52 L84,64 L40,64 Z" fill="url(#cam)"/><path d="M36,34 L36,104" stroke="rgba(0,0,0,.3)"/><rect x="14" y="70" width="14" height="3" rx="1.5" fill="url(#krom)"/><path d="M78,82 L92,82 L92,92 L80,92 Z" fill="#FFF7CF"/><path d="M84,70 L94,70" stroke="url(#krom)" stroke-width="4"/><path d="M2,24 L60,24 L56,30 L2,30 Z" fill="url(#b-sari)" opacity=".9"/></g><use class="tek" href="#teker" x="46" y="80" width="48" height="48"/><use class="tek" href="#teker" x="98" y="80" width="48" height="48"/><use class="tek" href="#teker" x="326" y="80" width="48" height="48"/></svg></div>
+<div class="ust-s"><span class="harf">C</span><h3>Kamyon</h3><span class="yas">21 yaş</span></div><p>Azami yüklü ağırlığı 3.500 kg'ın üzerindeki kamyon ve çekiciler.</p><p class="not2">Ağır vasıta pistinde araç bilgisi, eğimde kalkış ve geri manevra sınavı.</p></article><article class="sinif gor"><div class="arac-k"><svg class="arac" viewBox="0 0 560 132" role="img" aria-label="Tır (çekici + dorse) görseli"><ellipse cx="284.0" cy="124" rx="276.0" ry="5" fill="url(#golge)"/><path d="M10,14 L430,14 L430,88 L10,88 Z" fill="url(#b-gri)" stroke="rgba(0,0,0,.35)"/><path d="M34,18 L34,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M62,18 L62,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M90,18 L90,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M118,18 L118,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M146,18 L146,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M174,18 L174,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M202,18 L202,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M230,18 L230,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M258,18 L258,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M286,18 L286,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M314,18 L314,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M342,18 L342,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M370,18 L370,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M398,18 L398,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M426,18 L426,84" stroke="rgba(0,0,0,.1)" stroke-width="1.4"/><path d="M10,88 L430,88 L430,96 L10,96 Z" fill="#30363C"/><path d="M200,96 L200,108" stroke="#30363C" stroke-width="4"/><path d="M10,74 L18,74 L18,84 L10,84 Z" fill="#D21F2E"/><path d="M400,96 L470,96 L470,104 L400,104 Z" fill="#30363C"/><g transform="translate(456,0)"><path d="M0,30 L64,30 C78,30 86,38 88,52 L92,96 C92,104 88,108 82,108 L0,108 Z" fill="url(#b-kirmizi)" stroke="rgba(0,0,0,.35)"/><path d="M40,36 L66,36 C76,36 80,42 82,52 L84,64 L40,64 Z" fill="url(#cam)"/><path d="M36,34 L36,104" stroke="rgba(0,0,0,.3)"/><rect x="14" y="70" width="14" height="3" rx="1.5" fill="url(#krom)"/><path d="M78,82 L92,82 L92,92 L80,92 Z" fill="#FFF7CF"/><path d="M84,70 L94,70" stroke="url(#krom)" stroke-width="4"/><path d="M2,24 L60,24 L56,30 L2,30 Z" fill="url(#b-kirmizi)" opacity=".9"/></g><use class="tek" href="#teker" x="48" y="82" width="44" height="44"/><use class="tek" href="#teker" x="94" y="82" width="44" height="44"/><use class="tek" href="#teker" x="140" y="82" width="44" height="44"/><use class="tek" href="#teker" x="396" y="80" width="48" height="48"/><use class="tek" href="#teker" x="478" y="80" width="48" height="48"/></svg></div>
+<div class="ust-s"><span class="harf">CE</span><h3>Tır (çekici + dorse)</h3><span class="yas">21 yaş</span></div><p>C sınıfı araçla azami yüklü ağırlığı 750 kg'ı geçen römork ya da yarı römork.</p><p class="not2">C sınıfı sürücü belgesi gerekir.</p></article><article class="sinif gor"><div class="arac-k"><svg class="arac" viewBox="0 0 480 132" role="img" aria-label="Otobüs görseli"><ellipse cx="239.0" cy="124" rx="231.0" ry="5" fill="url(#golge)"/><path d="M14,18 L448,18 C460,18 466,26 468,40 L470,96 C470,104 466,108 458,108 L410,108 A27,27 0 0 0 356,108 L118,108 A27,27 0 0 0 64,108 L18,108 C12,108 10,104 10,98 L10,24 C10,20 12,18 14,18 Z" fill="url(#b-beyaz)" stroke="rgba(0,0,0,.35)"/><path d="M10,70 L470,70 L470,82 L10,82 Z" fill="#1D5BA8"/><rect x="22" y="28" width="58" height="34" rx="4" fill="url(#cam)"/><rect x="86" y="28" width="58" height="34" rx="4" fill="url(#cam)"/><rect x="150" y="28" width="58" height="34" rx="4" fill="url(#cam)"/><rect x="214" y="28" width="58" height="34" rx="4" fill="url(#cam)"/><rect x="278" y="28" width="58" height="34" rx="4" fill="url(#cam)"/><rect x="342" y="28" width="58" height="34" rx="4" fill="url(#cam)"/><path d="M410,26 L448,26 C456,26 460,32 462,40 L464,64 L410,64 Z" fill="url(#cam)"/><rect x="374" y="28" width="30" height="76" rx="2" fill="url(#cam)" opacity=".85"/><path d="M389,28 L389,104" stroke="#9AA3AB"/><rect x="410" y="20" width="50" height="6" rx="2" fill="#14181B"/><text x="435" y="25.4" font-size="5" fill="#F2C21B" text-anchor="middle" font-family="system-ui">EHLİYET BENDE</text><path d="M458,88 L468,88 L468,96 L458,96 Z" fill="#FFF7CF"/><path d="M10,86 L16,86 L16,98 L10,98 Z" fill="#D21F2E"/><use class="tek" href="#teker" x="67" y="80" width="48" height="48"/><use class="tek" href="#teker" x="359" y="80" width="48" height="48"/></svg></div>
+<div class="ust-s"><span class="harf">D</span><h3>Otobüs</h3><span class="yas">24 yaş</span></div><p>Sürücü dahil 9'dan fazla oturma yeri olan otobüsler.</p><p class="not2">Ağır vasıta pistinde araç bilgisi ve manevra sınavı.</p></article></div>
+    <p class="gor" style="color:var(--soluk);font-size:.86rem;margin-top:14px">Bilgiler genel bilgilendirme içindir; başvuru şartları ve yaş sınırları için sürücü kursuna ya da Emniyet Genel Müdürlüğü'nün güncel duyurularına bak.</p>
+  </div>
+</section>
+
 <section class="b koyu-b" id="egitmenler">
   <div class="ic">
-    <div class="baslik">
-      <span class="ust-yazi" style="color:var(--serit)">Şehrindeki eğitmenler</span>
-      <h2>Direksiyon dersi için onaylı eğitmenler ve sürücü kursları.</h2>
-      <p>Şehrini seç, eğitmenleri ve kursları gör, arayarak ya da WhatsApp'tan ulaş.</p>
+    <div class="baslik gor">
+      <span class="ust-yazi" style="color:var(--serit)">Eğitmenler ve sürücü kursları</span>
+      <h2>Direksiyon dersi için yanındaki kursu bul.</h2>
+      <p>Uygulamada şehrini seç, onaylı eğitmenleri ve kursları gör, arayarak ya da WhatsApp'tan ulaş.</p>
+    </div>
+    <div class="egitmen-izgara">
+      <div class="figur-k" id="figur"><span class="balon">Hazırsan direksiyona geçelim!</span><svg class="figur" viewBox="0 0 220 330" aria-hidden="true">
+ <ellipse cx="110" cy="322" rx="62" ry="7" fill="rgba(0,0,0,.35)"/>
+ <g class="bacak b1"><path d="M96,196 L90,300" stroke="#3A4250" stroke-width="22" stroke-linecap="round"/><path d="M78,300 L104,300 C108,300 110,306 106,310 L76,310 C72,310 72,302 78,300 Z" fill="#14181B"/></g>
+ <g class="bacak b2"><path d="M124,196 L130,300" stroke="#465062" stroke-width="22" stroke-linecap="round"/><path d="M118,300 L144,300 C150,300 152,306 148,310 L118,310 C114,310 114,302 118,300 Z" fill="#14181B"/></g>
+ <g class="kol-a k1"><path d="M72,104 L62,176" stroke="#1D5BA8" stroke-width="20" stroke-linecap="round"/><path d="M62,176 L60,206" stroke="#E2B38B" stroke-width="15" stroke-linecap="round"/></g>
+ <path d="M74,96 C80,86 140,86 146,96 L152,200 C140,208 80,208 68,200 Z" fill="#1D5BA8"/>
+ <path d="M86,96 L96,100 L104,96 L110,108 L116,96 L124,100 L134,96" fill="none" stroke="#14407A" stroke-width="3"/>
+ <path d="M78,120 L142,120 L144,140 L76,140 Z" fill="#F2C21B"/><text x="110" y="134.5" text-anchor="middle" font-size="11" font-weight="800" fill="#14181B" font-family="system-ui,sans-serif">EĞİTMEN</text>
+ <g class="kol-a k2"><path d="M148,104 L158,176" stroke="#1D5BA8" stroke-width="20" stroke-linecap="round"/><path d="M158,176 L160,206" stroke="#E2B38B" stroke-width="15" stroke-linecap="round"/></g>
+ <g class="kol-c"><path d="M72,104 L66,150" stroke="#1D5BA8" stroke-width="20" stroke-linecap="round"/><path d="M148,104 L154,150" stroke="#1D5BA8" stroke-width="20" stroke-linecap="round"/>
+  <path d="M66,152 L150,146" stroke="#1A50943" stroke-width="0"/>
+  <path d="M68,154 L148,146" stroke="#E2B38B" stroke-width="15" stroke-linecap="round"/><path d="M152,156 L72,146" stroke="#1D5BA8" stroke-width="18" stroke-linecap="round"/><path d="M78,146 L70,146" stroke="#E2B38B" stroke-width="15" stroke-linecap="round"/></g>
+ <g class="kafa"><rect x="100" y="70" width="20" height="22" fill="#D9A37B"/><circle cx="110" cy="52" r="27" fill="#E8BB93"/>
+  <path d="M83,48 C84,24 136,20 138,46 C130,36 104,32 90,40 Z" fill="#2C2622"/><circle cx="100" cy="54" r="2.8" fill="#14181B"/><circle cx="120" cy="54" r="2.8" fill="#14181B"/>
+  <path d="M100,66 C106,71 114,71 120,66" fill="none" stroke="#8A4A32" stroke-width="2.4" stroke-linecap="round"/><path d="M95,46 L104,45 M116,45 L125,46" stroke="#2C2622" stroke-width="2.4" stroke-linecap="round"/></g>
+</svg></div>
+      <div class="gor sag">
+        <div class="kurs-one">
+          <span class="rozet2">ÖNERİLEN KURS</span>
+          <img src="gorsel/simsek-logo.png" alt="Özel Şimşek Sürücü Kursu logosu" width="335" height="140" loading="lazy">
+          <div>
+            <h3>Özel Şimşek Sürücü Kursu</h3>
+            <p>Sakarya · B, A ve ağır vasıta sınıflarında direksiyon eğitimi.</p>
+            <div class="dugmeler">
+              <a class="btn koyu" href="https://www.sakaryasimsek.com/tr/" target="_blank" rel="noopener">Kursun sitesine git</a>
+              <a class="btn cerceve2" href="https://www.google.com/maps/search/?api=1&amp;query=%C3%96zel+%C5%9Eim%C5%9Fek+S%C3%BCr%C3%BCc%C3%BC+Kursu+Sakarya" target="_blank" rel="noopener">Haritada gör</a>
+            </div>
+          </div>
+        </div>
+        <div class="dugmeler" style="margin-top:16px">
+          <a class="btn ana" href="https://www.google.com/maps/search/s%C3%BCr%C3%BCc%C3%BC+kursu/" target="_blank" rel="noopener" id="yakinKurs">📍 En yakın sürücü kursları</a>
+          <a class="btn ikincil" href="uygulama/">Uygulamada eğitmenleri gör</a>
+        </div>
+        <p style="color:#9AA3AB;font-size:.86rem;margin-top:10px">"En yakın sürücü kursları" Google Haritalar'ı konumuna göre açar.</p>
+      </div>
     </div>
     <div class="kartlar">
-      <div class="kart"><div class="i">🧭</div><h4>81 il</h4><p>Şehrini seç; ehliyet sınıfına göre filtrele.</p></div>
-      <div class="kart"><div class="i">📣</div><h4>Eğitmen akışı</h4><p>Kursların duyuruları, kampanyaları ve paylaşımları.</p></div>
-      <div class="kart"><div class="i">🏢</div><h4>Eğitmen ya da kurs musun?</h4><p>Uygulamadan başvur; onaylanınca şehrinin listesinde yer al, paylaşım yap.</p></div>
-      <div class="kart"><div class="i">🎮</div><h4>Oyun kolu desteği</h4><p>Simülatörleri bilgisayarda Xbox ya da PlayStation koluyla sür.</p></div>
-      <div class="kart"><div class="i">📄</div><h4>E-sınav sonucu</h4><p>Resmi MEB ve e-Devlet sonuç sayfalarına tek dokunuşla git.</p></div>
+      <div class="kart gor"><div class="i">🧭</div><h4>81 il</h4><p>Şehrini seç; ehliyet sınıfına göre filtrele.</p></div>
+      <div class="kart gor"><div class="i">📣</div><h4>Eğitmen akışı</h4><p>Kursların duyuruları, kampanyaları ve paylaşımları.</p></div>
+      <div class="kart gor"><div class="i">🏢</div><h4>Eğitmen ya da kurs musun?</h4><p>Uygulamadan başvur; onaylanınca şehrinin listesinde yer al, paylaşım yap.</p></div>
+      <div class="kart gor"><div class="i">🎮</div><h4>Oyun kolu desteği</h4><p>Simülatörleri bilgisayarda Xbox ya da PlayStation koluyla sür, tuşları kendine göre ayarla.</p></div>
     </div>
   </div>
 </section>
 
 <section class="b" id="premium">
   <div class="ic">
-    <div class="baslik">
+    <div class="baslik gor">
       <span class="ust-yazi">Premium</span>
       <h2>Temel özellikler ücretsiz. Daha fazlası için Premium.</h2>
       <p>Deneme sınavları, konu anlatımları, otomobil ve motosiklet pistleri ücretsiz. Premium aboneliği Google Play üzerinden alınır, istediğin zaman iptal edilir.</p>
     </div>
-    <div class="fiyatlar">
-      <div class="fiyat">
+    <div class="gor fiyatlar">
+      <div class="gor fiyat">
         <h3>Aylık</h3>
         <div class="t">49,99 ₺<small> / ay</small></div>
         <p>Her ay yenilenir.</p>
       </div>
-      <div class="fiyat one">
+      <div class="gor fiyat one">
         <span class="rozet">%17 avantajlı</span>
         <h3>Yıllık</h3>
         <div class="t">499,99 ₺<small> / yıl</small></div>
         <p>Yılda bir kez ödenir.</p>
       </div>
-      <div class="fiyat">
+      <div class="gor fiyat">
         <h3>Premium'da</h3>
         <ul>
           <li>Reklamsız kullanım</li>
@@ -293,20 +441,20 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
 
 <section class="b" id="sss" style="padding-top:0">
   <div class="ic">
-    <div class="baslik"><span class="ust-yazi">Sık sorulanlar</span><h2>Merak ettiklerin</h2></div>
-    <details><summary>Üye olmam gerekiyor mu?</summary><p>Hayır. Misafir olarak hemen başlayabilirsin; ilerlemen cihazında saklanır. İstersen Google hesabınla giriş yapıp ilerlemeni hesabına taşıyabilirsin (Android uygulamasında).</p></details>
-    <details><summary>Web sürümü ile Android uygulaması arasında fark var mı?</summary><p>Web sürümü aynı uygulamadır. Tüm sürüş simülatörleri (3D, kamyon, otobüs ve tır dahil) web sitesinde açıktır. Google ile giriş, Premium satın alma ve günlük hatırlatma bildirimleri yalnızca Google Play'deki Android uygulamasında çalışır.</p></details>
-    <details><summary>Oyun kolu ile oynayabilir miyim?</summary><p>Evet. Xbox, PlayStation ya da standart bir USB/Bluetooth oyun kolunu bilgisayara bağla. Sol çubuk direksiyon, RT gaz, LT fren, LB/RB sinyal, X el freni, D-pad yukarı/aşağı D ve R vitesi. Menülerde D-pad ile gezinir, A ile seçersin. Klavyeyle de oynayabilirsin: ok tuşları, boşluk, Q/E, H.</p></details>
-    <details><summary>Sorular resmi MEB sorusu mu?</summary><p>Sorular, sürücü kursu müfredatının konu başlıkları ve trafik mevzuatı esas alınarak hazırlanmıştır. EHLİYET BENDE bağımsız bir eğitim uygulamasıdır; Milli Eğitim Bakanlığı veya herhangi bir resmi kurumla bağlantısı yoktur.</p></details>
-    <details><summary>Hangi dillerde kullanılabilir?</summary><p>Arayüz Türkçe, İngilizce, Arapça, Farsça, Rusça, Fransızca, İtalyanca ve Almanca kullanılabilir. Sınav soruları ve konu anlatımları şimdilik Türkçedir.</p></details>
-    <details><summary>Premium'u nasıl iptal ederim?</summary><p>Google Play → Ödemeler ve abonelikler → Abonelikler bölümünden ya da uygulamada Premium sayfasındaki "Aboneliği yönet" düğmesinden.</p></details>
-    <details><summary>Hesabımı ve verilerimi nasıl silerim?</summary><p><a href="hesap-silme.html">Hesap silme sayfasındaki</a> adımları izleyebilir ya da bestudio5454@gmail.com adresine yazabilirsin.</p></details>
+    <div class="baslik gor"><span class="ust-yazi">Sık sorulanlar</span><h2>Merak ettiklerin</h2></div>
+    <details class="gor"><summary>Üye olmam gerekiyor mu?</summary><p>Hayır. Misafir olarak hemen başlayabilirsin; ilerlemen cihazında saklanır. İstersen Google hesabınla giriş yapıp ilerlemeni hesabına taşıyabilirsin; aynı hesapla telefonda ve sitede kaldığın yerden devam edersin.</p></details>
+    <details class="gor"><summary>Web sürümü ile Android uygulaması arasında fark var mı?</summary><p>Web sürümü aynı uygulamadır. Tüm sürüş simülatörleri (3D, kamyon, otobüs ve tır dahil) web sitesinde açıktır. Google ile giriş iki tarafta da çalışır. Premium satın alma ve günlük hatırlatma bildirimleri şimdilik Google Play'deki Android uygulamasında.</p></details>
+    <details class="gor"><summary>Oyun kolu ile oynayabilir miyim?</summary><p>Evet. Xbox, PlayStation ya da standart bir USB/Bluetooth oyun kolunu bilgisayara bağla. Sol çubuk direksiyon, RT gaz, LT fren, LB/RB sinyal, X el freni, D-pad yukarı/aşağı D ve R vitesi. Menülerde D-pad ile gezinir, A ile seçersin. Tuşları simülatördeki ⚙ Kontroller menüsünden değiştirebilirsin. Klavyeyle de oynayabilirsin: ok tuşları, boşluk, Q/E, H.</p></details>
+    <details class="gor"><summary>Sorular resmi MEB sorusu mu?</summary><p>Sorular, sürücü kursu müfredatının konu başlıkları ve trafik mevzuatı esas alınarak hazırlanmıştır. EHLİYET BENDE bağımsız bir eğitim uygulamasıdır; Milli Eğitim Bakanlığı veya herhangi bir resmi kurumla bağlantısı yoktur.</p></details>
+    <details class="gor"><summary>Hangi dillerde kullanılabilir?</summary><p>Arayüz Türkçe, İngilizce, Arapça, Farsça, Rusça, Fransızca, İtalyanca ve Almanca kullanılabilir. Sınav soruları ve konu anlatımları şimdilik Türkçedir.</p></details>
+    <details class="gor"><summary>Premium'u nasıl iptal ederim?</summary><p>Google Play → Ödemeler ve abonelikler → Abonelikler bölümünden ya da uygulamada Premium sayfasındaki "Aboneliği yönet" düğmesinden.</p></details>
+    <details class="gor"><summary>Hesabımı ve verilerimi nasıl silerim?</summary><p><a href="hesap-silme.html">Hesap silme sayfasındaki</a> adımları izleyebilir ya da bestudio5454@gmail.com adresine yazabilirsin.</p></details>
   </div>
 </section>
 
 <section class="b" style="padding-top:0">
   <div class="ic">
-    <div class="kapanis">
+    <div class="kapanis gor">
       <div><h2>Bugün bir deneme çöz.</h2><p>Kurulum yok, üyelik yok. Tarayıcında hemen başla.</p></div>
       <div class="dugmeler" style="margin:0"><a class="btn ana" href="uygulama/">▶ Hemen dene</a></div>
     </div>
@@ -323,5 +471,19 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
     </nav>
   </div>
 </footer>
+
+<script>
+(()=>{
+  const az=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('gorundu'); io.unobserve(e.target); } }),{threshold:.18,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.gor').forEach((el,i)=>{ if(az){ el.classList.add('gorundu'); return; } el.style.transitionDelay = (el.classList.contains('sinif')||el.classList.contains('kart')? (i%3)*90 : 0)+'ms'; io.observe(el); });
+  const f=document.getElementById('figur');
+  if(f){ if(az) f.classList.add('gorundu','bagla');
+    else new IntersectionObserver((es,o)=>es.forEach(e=>{ if(e.isIntersecting){ f.classList.add('gorundu'); setTimeout(()=>f.classList.add('bagla'),1850); o.disconnect(); } }),{threshold:.35}).observe(f); }
+  const il=document.querySelector('.ilerleme');
+  const yaz=()=>{ const h=document.documentElement; const y=h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight)*100; il && il.style.setProperty('--y',y.toFixed(1)+'%'); };
+  addEventListener('scroll',yaz,{passive:true}); yaz();
+})();
+</script>
 </body>
 </html>
