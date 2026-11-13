@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /kuyruk/
+Disallow: /sunucu/
+Disallow: /firebase/
+Disallow: /ceviri/
+
+Sitemap: https://ehliyetbende.com/sitemap.xml
