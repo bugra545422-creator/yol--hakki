@@ -37,6 +37,11 @@ service cloud.firestore {
       allow delete: if yonetici() || (girisli() && request.auth.uid == uid);
     }
 
+    // Kullanıcı verileri: sınav geçmişi, istatistikler, Premium ve güzergah rekoru (telefon ↔ site eşitleme). Yalnızca kendisi okur/yazar.
+    match /kullanicilar/{uid} {
+      allow read, write: if girisli() && request.auth.uid == uid;
+    }
+
     // Sorular: herkes okur; onaylı eğitmen / işletme ve yönetici ekler; kendi sorusunu siler
     match /sorular/{id} {
       allow read: if true;
