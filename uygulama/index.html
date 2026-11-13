@@ -980,6 +980,7 @@ function googleGiris(){
     try{ YolHakkiAndroid.googleGiris(); }catch(e){ window.googleGirisSonuc({hata:'bilinmeyen', mesaj:String(e)}); }
     return;
   }
+  if(WEB) return webGoogleGiris();
   if(!GOOGLE_CLIENT_ID){
     sayfaAc(`<h2>Google girişi</h2>
       <p class="soluk">Google ile giriş, EHLİYET BENDE uygulamasının Google Play sürümünde çalışır. Burada misafir olarak devam edebilirsin; ilerlemen bu cihazda saklanır.</p>
@@ -1008,6 +1009,7 @@ function googleGiris(){
   document.head.appendChild(s);
 }
 async function cikis(){ try{ if(D.kullanici?.tur==='google' && window.YolHakkiAndroid?.googleCikis) YolHakkiAndroid.googleCikis(); }catch(e){}
+  if(WEB && D.kullanici?.tur==='google') await webCikis();
   D.kullanici=null; D.gecmis=[]; await yaz('yolhakki:oturum', null); try{ window.google?.accounts?.id?.disableAutoSelect(); }catch(e){} girisEkrani(); }
 
 function sayfaAc(html){ sayfaKapat(); const p=document.createElement('div'); p.className='perde'; p.id='perde'; p.innerHTML=`<div class="sayfa" role="dialog" aria-modal="true">${html}</div>`; p.onclick=e=>{ if(e.target===p) sayfaKapat(); }; document.body.appendChild(p); }
@@ -1725,6 +1727,47 @@ function webDuzen(){
 if(WEB){
   new MutationObserver(()=>webDuzen()).observe(document.getElementById('app')||document.body,{childList:true});
   GENIS.addEventListener && GENIS.addEventListener('change',()=>{ if(typeof D!=='undefined' && D.ekran) try{ git(D.ekran); }catch(e){} });
+}
+
+/* ================== Web: Firebase ile Google girişi (Android ile aynı hesap) ================== */
+const FB_WEB = { apiKey:'AIzaSyA8lituMJdUZlGL_AzsiaU3qbQwIsA4k5k', authDomain:'ehliyet-bende.firebaseapp.com', projectId:'ehliyet-bende',
+  storageBucket:'ehliyet-bende.firebasestorage.app', messagingSenderId:'575547204439', appId:'1:575547204439:web:846498138aded776729412' };
+let _fbWeb = null;
+function fbWeb(){
+  if(_fbWeb) return _fbWeb;
+  const V='10.14.1', K='https://www.gstatic.com/firebasejs/'+V+'/';
+  _fbWeb = (async()=>{
+    const ap = await import(K+'firebase-app.js'), au = await import(K+'firebase-auth.js');
+    const auth = au.getAuth(ap.initializeApp(FB_WEB));
+    try{ auth.languageCode = (typeof DIL!=='undefined' && DIL) || 'tr'; }catch(e){}
+    return {au, auth};
+  })();
+  _fbWeb.catch(()=>{ _fbWeb=null; });
+  return _fbWeb;
+}
+function _webKullanici(u){ return {uid:u.uid, ad:u.displayName||'', eposta:u.email||'', foto:u.photoURL||''}; }
+async function webGoogleGiris(){
+  sayfaAc('<div style="text-align:center;padding:10px 0"><h2>Google ile giriş</h2><p class="soluk">Google hesabını seç…</p></div>');
+  let f; try{ f = await fbWeb(); }catch(e){ return window.googleGirisSonuc({hata:'internet'}); }
+  const p = new f.au.GoogleAuthProvider(); p.setCustomParameters({prompt:'select_account'});
+  try{
+    const r = await f.au.signInWithPopup(f.auth, p);
+    window.googleGirisSonuc(_webKullanici(r.user));
+  }catch(e){
+    const c = (e && e.code) || '';
+    if(c==='auth/popup-closed-by-user' || c==='auth/cancelled-popup-request' || c==='auth/user-cancelled') return sayfaKapat();
+    if(c==='auth/popup-blocked' || c==='auth/operation-not-supported-in-this-environment'){ try{ sessionStorage.setItem('eb:yonlendirme','1'); }catch(e3){} try{ await f.au.signInWithRedirect(f.auth, p); return; }catch(e2){} }
+    if(c==='auth/network-request-failed') return window.googleGirisSonuc({hata:'internet'});
+    window.googleGirisSonuc({hata:'bilinmeyen', mesaj:c||String(e)});
+  }
+}
+async function webJeton(){
+  try{ const f = await fbWeb(); if(f.auth.authStateReady) await f.auth.authStateReady(); const u=f.auth.currentUser; return u ? await u.getIdToken() : null; }catch(e){ return null; }
+}
+async function webCikis(){ try{ const f = await fbWeb(); await f.au.signOut(f.auth); }catch(e){} }
+// Yönlendirmeyle girişten dönüldüyse sonucu al (yalnız o durumda Firebase yüklenir)
+if(WEB){ let y=false; try{ y=!!sessionStorage.getItem('eb:yonlendirme'); sessionStorage.removeItem('eb:yonlendirme'); }catch(e){}
+  if(y) setTimeout(async()=>{ try{ const f=await fbWeb(); const r=await f.au.getRedirectResult(f.auth); if(r && r.user) window.googleGirisSonuc(_webKullanici(r.user)); }catch(e){} }, 300);
 }
 
 const ADIM_HEDEF = { hazirlik:{x:1.2,y:2.6}, kalkis:{x:12,y:0.4}, rampa:{x:11.5,y:0}, paralel:{x:10.1,y:2.6}, cep:{x:10,y:5.5}, kavsak:{x:11.4,y:5}, udonus_o:{x:4.75,y:0}, hazirlik_m:{x:2.7,y:0} };
@@ -3089,6 +3132,7 @@ const fsBelge = d => ({...fsNesne(d.fields), _id: d.name.split('/').pop()});
 let _jetonSayac = 0; const _jetonBekleyen = {};
 window.jetonCevap = (no, jeton) => { const f=_jetonBekleyen[no]; delete _jetonBekleyen[no]; f && f(jeton||null); };
 function jetonAl(){
+  if(WEB) return D.kullanici?.tur==='google' ? webJeton() : Promise.resolve(null);
   if(!window.YolHakkiAndroid?.jeton || D.kullanici?.tur!=='google') return Promise.resolve(null);
   return new Promise(res => { const no = ++_jetonSayac; _jetonBekleyen[no]=res; try{ YolHakkiAndroid.jeton(no); }catch(e){ res(null); } setTimeout(()=>{ if(_jetonBekleyen[no]){ delete _jetonBekleyen[no]; res(null); } }, 15000); });
 }
