@@ -1,5 +1,5 @@
 {
- "surum": "2026-11-12-34",
+ "surum": "2026-11-13-42",
  "aciklama": "EHLİYET BENDE soru bankası güncellemesi. Uygulama bu dosyayı internetten düzenli olarak okur.",
  "sorular": [
   {
@@ -443,7 +443,111 @@
    ],
    "cozum": "ABS'li araçta ani frende pedala sonuna kadar basılır ve araç yönlendirilebilir.",
    "levha": null
+  },
+  {
+   "uid": "k058",
+   "kat": "tc",
+   "metin": "Geçilmekte olan aracın sürücüsü ne yapmalıdır?",
+   "dogru": "Hızını artırmamalı ve geçişi kolaylaştırmalıdır",
+   "yanlislar": [
+    "Hızlanarak geçişi engellemelidir",
+    "Sola kayarak yolu kapatmalıdır",
+    "Selektör yapıp korna çalmalıdır"
+   ],
+   "cozum": "Geçilen aracın hızlanması ya da yolu kapatması ciddi kazalara yol açar.",
+   "levha": null
+  },
+  {
+   "uid": "k008",
+   "kat": "iy",
+   "metin": "Aşağıdakilerden hangisi şokun belirtilerinden biridir?",
+   "dogru": "Soğuk, soluk ve nemli deri",
+   "yanlislar": [
+    "Yavaş ve dolgun nabız",
+    "Kızarmış ve sıcak yüz",
+    "Derin ve yavaş solunum"
+   ],
+   "cozum": "Şokta nabız hızlı ve zayıf, deri soğuk, soluk ve nemlidir; kazazede huzursuz olabilir.",
+   "levha": null
+  },
+  {
+   "uid": "k059",
+   "kat": "tc",
+   "metin": "Yol çizgilerinden 'devamlı yol çizgisi' ne anlama gelir?",
+   "dogru": "Çizginin üzerine basılamaz ve geçilemez",
+   "yanlislar": [
+    "Geçmek serbesttir",
+    "Park yeri olduğunu gösterir",
+    "Sadece toplu taşıma araçları içindir"
+   ],
+   "cozum": "Devamlı çizgi şerit değiştirme ve geçme yasağını gösterir.",
+   "levha": null
+  },
+  {
+   "uid": "k127",
+   "kat": "mt",
+   "metin": "ESP (elektronik denge programı) ne işe yarar?",
+   "dogru": "Savrulma eğilimini algılayıp tekerlere ayrı ayrı fren uygulayarak aracı dengeler",
+   "yanlislar": [
+    "Motoru soğutur",
+    "Lastik basıncını ölçer",
+    "Farları otomatik yakar"
+   ],
+   "cozum": "ESP özellikle virajlarda ve kaygan zeminde kayma riskini azaltır.",
+   "levha": null
+  },
+  {
+   "uid": "k009",
+   "kat": "iy",
+   "metin": "Burnu kanayan kişiye ilk yardımda ne yapılır?",
+   "dogru": "Baş hafifçe öne eğilir, burun kanatları yaklaşık 5 dakika bastırılır",
+   "yanlislar": [
+    "Baş geriye yatırılır",
+    "Burnuna pamuk sıkıca tıkanır ve sırtüstü yatırılır",
+    "Bol su içirilir"
+   ],
+   "cozum": "Baş geriye atılırsa kan boğaza akar ve kusmaya yol açabilir; baş öne eğilip burun kanatları sıkılır.",
+   "levha": null
+  },
+  {
+   "uid": "k061",
+   "kat": "tc",
+   "metin": "Bir tarafı devamlı, diğer tarafı kesik çizgili yol çizgisinde hangi taraftaki sürücü geçme yapabilir?",
+   "dogru": "Kesik çizgi tarafındaki sürücü",
+   "yanlislar": [
+    "Devamlı çizgi tarafındaki sürücü",
+    "Her iki taraftaki sürücü",
+    "Hiçbir sürücü"
+   ],
+   "cozum": "Sürücü kendi tarafındaki çizgiye göre hareket eder; kesik çizgi tarafında geçiş serbesttir.",
+   "levha": null
+  },
+  {
+   "uid": "k154",
+   "kat": "ta",
+   "metin": "Empati kavramı trafikte neyi ifade eder?",
+   "dogru": "Kendini diğer yol kullanıcılarının yerine koyarak davranmayı",
+   "yanlislar": [
+    "Yalnızca kendi hakkını savunmayı",
+    "Hızlı araç kullanmayı",
+    "Kuralları esnetmeyi"
+   ],
+   "cozum": "Empati kuran sürücü yaya, yaşlı, çocuk ve engelli yol kullanıcılarının ihtiyaçlarını gözetir.",
+   "levha": null
+  },
+  {
+   "uid": "k128",
+   "kat": "mt",
+   "metin": "Lastik hava basıncı düşükse ne olur?",
+   "dogru": "Lastik aşırı ısınır, yakıt tüketimi artar ve yol tutuş bozulur",
+   "yanlislar": [
+    "Fren mesafesi kısalır",
+    "Yakıt tüketimi azalır",
+    "Lastik ömrü uzar"
+   ],
+   "cozum": "Doğru basınç, araç üreticisinin önerdiği değerlerde ve lastikler soğukken ölçülmelidir.",
+   "levha": null
   }
  ],
- "guncelleme": "2026-11-12"
+ "guncelleme": "2026-11-13"
 }
