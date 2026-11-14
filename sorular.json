@@ -1,5 +1,5 @@
 {
- "surum": "2026-11-13-42",
+ "surum": "2026-11-14-50",
  "aciklama": "EHLİYET BENDE soru bankası güncellemesi. Uygulama bu dosyayı internetten düzenli olarak okur.",
  "sorular": [
   {
@@ -547,7 +547,111 @@
    ],
    "cozum": "Doğru basınç, araç üreticisinin önerdiği değerlerde ve lastikler soğukken ölçülmelidir.",
    "levha": null
+  },
+  {
+   "uid": "k062",
+   "kat": "tc",
+   "metin": "Gece karşıdan araç gelirken uzun huzmeli farlar ne zaman kısa hüzmeye çevrilmelidir?",
+   "dogru": "Karşıdaki sürücünün gözünü almayacak mesafede, karşılaşmadan önce",
+   "yanlislar": [
+    "Karşılaştıktan sonra",
+    "Hiçbir zaman",
+    "Sadece yerleşim yerinde"
+   ],
+   "cozum": "Uzun far karşıdaki sürücüyü kamaştırır; karşılaşmalarda ve yakın takipte kısa far kullanılır.",
+   "levha": null
+  },
+  {
+   "uid": "k010",
+   "kat": "iy",
+   "metin": "Hafif dereceli yanıklarda ilk yapılması gereken nedir?",
+   "dogru": "Yanık bölge en az 10–20 dakika soğuk (çeşme) suyla soğutulur",
+   "yanlislar": [
+    "Yanık bölgeye diş macunu sürülür",
+    "Su toplayan kabarcıklar patlatılır",
+    "Yanığa buz doğrudan bastırılır"
+   ],
+   "cozum": "Soğuk su ısı hasarını durdurur ve ağrıyı azaltır; diş macunu, yoğurt gibi maddeler ve buz zarar verir.",
+   "levha": null
+  },
+  {
+   "uid": "k063",
+   "kat": "tc",
+   "metin": "Öndeki aracı yakından takip ederken gece hangi far kullanılmalıdır?",
+   "dogru": "Kısa huzmeli far",
+   "yanlislar": [
+    "Uzun huzmeli far",
+    "Sis farı",
+    "Dörtlü flaşör"
+   ],
+   "cozum": "Uzun far öndeki sürücüyü aynalardan kamaştırır.",
+   "levha": null
+  },
+  {
+   "uid": "k129",
+   "kat": "mt",
+   "metin": "Rot–balans ayarı bozuk olan araçta hangisi görülür?",
+   "dogru": "Direksiyonda titreme ve lastiklerde düzensiz aşınma",
+   "yanlislar": [
+    "Motor yağının artması",
+    "Akünün hızla şarj olması",
+    "Farların daha parlak yanması"
+   ],
+   "cozum": "Rot ayarı aracın düz gitmesini, balans ise tekerleklerin titreşimsiz dönmesini sağlar.",
+   "levha": null
+  },
+  {
+   "uid": "k011",
+   "kat": "iy",
+   "metin": "Elbisesi yanmakta olan kişiye ilk ne yapılmalıdır?",
+   "dogru": "Koşması engellenip yere yatırılır, battaniye ile sarılarak alev söndürülür",
+   "yanlislar": [
+    "Koşarak su aramasına izin verilir",
+    "Üzerine benzin dökülür",
+    "Ayakta tutulup üzerine hava üflenir"
+   ],
+   "cozum": "Koşmak alevi büyütür; kişi yere yatırılıp yuvarlanır veya battaniyeyle sarılır.",
+   "levha": null
+  },
+  {
+   "uid": "k064",
+   "kat": "tc",
+   "metin": "Sisli havada hangi ışıklar kullanılmalıdır?",
+   "dogru": "Kısa huzmeli far ve varsa sis lambaları",
+   "yanlislar": [
+    "Uzun huzmeli far",
+    "Sadece park lambaları",
+    "Hiçbir ışık"
+   ],
+   "cozum": "Uzun far sis zerreciklerinden yansıyarak görüşü azaltır.",
+   "levha": null
+  },
+  {
+   "uid": "k155",
+   "kat": "ta",
+   "metin": "Yaşlı ve engelli yayalar karşıya geçerken sürücü nasıl davranmalıdır?",
+   "dogru": "Sabırla beklemeli, acele ettirmemelidir",
+   "yanlislar": [
+    "Korna çalarak hızlandırmalıdır",
+    "Yanlarından hızla geçmelidir",
+    "Selektör yapmalıdır"
+   ],
+   "cozum": "Hareket kısıtlılığı olan yayalara karşı anlayışlı olmak trafik adabının gereğidir.",
+   "levha": null
+  },
+  {
+   "uid": "k130",
+   "kat": "mt",
+   "metin": "Lastik değiştirirken bijonlar nasıl sıkılır?",
+   "dogru": "Çapraz sırayla",
+   "yanlislar": [
+    "Saat yönünde sırayla tek tek sonuna kadar",
+    "Rastgele",
+    "Sadece üstteki bijon sıkılarak"
+   ],
+   "cozum": "Çapraz sıkma, jantın göbeğe düzgün oturmasını sağlar.",
+   "levha": null
   }
  ],
- "guncelleme": "2026-11-13"
+ "guncelleme": "2026-11-14"
 }
