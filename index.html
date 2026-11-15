@@ -494,7 +494,7 @@ html,body{overflow-x:clip}
   // 3D sınıf araçları: bölüm yaklaşınca yükle
   const sb=document.getElementById('siniflar');
   if(sb){ const yukle=src=>new Promise((ok,hata)=>{ const s=document.createElement('script'); s.src=src; s.onload=ok; s.onerror=hata; document.body.appendChild(s); });
-    new IntersectionObserver((es,o)=>{ if(es.some(e=>e.isIntersecting)){ o.disconnect(); yukle('js/three.min.js').then(()=>yukle('js/modeller.js?v=2')).then(()=>yukle('js/siniflar3d.js?v=2')).catch(()=>{}); } },{rootMargin:'600px 0px'}).observe(sb); }
+    new IntersectionObserver((es,o)=>{ if(es.some(e=>e.isIntersecting)){ o.disconnect(); yukle('js/three.min.js').then(()=>yukle('js/modeller.js?v=3')).then(()=>yukle('js/siniflar3d.js?v=2')).catch(()=>{}); } },{rootMargin:'600px 0px'}).observe(sb); }
   const il=document.querySelector('.ilerleme');
   const yaz=()=>{ const h=document.documentElement; const y=h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight)*100; il && il.style.setProperty('--y',y.toFixed(1)+'%'); };
   addEventListener('scroll',yaz,{passive:true}); yaz();

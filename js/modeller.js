@@ -223,7 +223,7 @@ const MODEL = (() => {
     M.direksiyon = a => onTeker.forEach(t=>t.rotation.y = a);
     M.isikSifirla();
     dogrusal(grup);
-    return M;
+    return sadelestir(M);
   }
 
 
@@ -289,6 +289,39 @@ const MODEL = (() => {
     g.userData.don = [don]; return g;
   }
   // Ortak araç nesnesi: lamba / teker / direksiyon denetimi
+
+  /* Statik parçaları malzemeye göre tek ağa birleştir (çizim çağrısı ~150 → ~25). Hareketli/ışıklı parçalar korunur. */
+  function sadelestir(M){
+    const koru = new Set();
+    const ekle = o => { if(o) koru.add(o); };
+    (M.tekerler||[]).forEach(t=>{ ekle(t); (t.userData.don||[]).forEach(ekle); }); (M.onTeker||[]).forEach(ekle); ekle(M.dorse);
+    (M.aynalar||[]).forEach(a=>{ ekle(a.grup); ekle(a.cam); });
+    Object.values(M.lambalar||{}).forEach(l=>(l||[]).forEach(ekle));
+    const birlestirAlt = kok => {
+      kok.updateMatrixWorld(true);
+      const ters = new T.Matrix4().copy(kok.matrixWorld).invert();
+      const gruplar = new Map(), silinecek = [];
+      const gez = n => { for(const c of [...n.children]){ if(koru.has(c)){ birlestirAlt(c); continue; }
+        if(c.isMesh && !Array.isArray(c.material) && c.geometry && c.geometry.attributes.position){ const k=c.material; (gruplar.get(k)||gruplar.set(k,[]).get(k)).push(c); silinecek.push(c); }
+        gez(c); } };
+      gez(kok);
+      for(const [m, liste] of gruplar){
+        if(liste.length<2) { silinecek.splice(silinecek.indexOf(liste[0]),1); continue; }
+        const P=[], N=[], U=[];
+        for(const me of liste){ let g = me.geometry.index ? me.geometry.toNonIndexed() : me.geometry.clone();
+          const mt = new T.Matrix4().multiplyMatrices(ters, me.matrixWorld); g.applyMatrix4(mt);
+          if(!g.attributes.normal) g.computeVertexNormals();
+          const n=g.attributes.position.count; P.push(g.attributes.position.array); N.push(g.attributes.normal.array);
+          U.push(g.attributes.uv ? g.attributes.uv.array : new Float32Array(n*2)); g.dispose(); }
+        const bir = a => { const L=a.reduce((t,x)=>t+x.length,0), o=new Float32Array(L); let i=0; for(const x of a){ o.set(x,i); i+=x.length; } return o; };
+        const geo = new T.BufferGeometry(); geo.setAttribute('position', new T.BufferAttribute(bir(P),3)); geo.setAttribute('normal', new T.BufferAttribute(bir(N),3)); geo.setAttribute('uv', new T.BufferAttribute(bir(U),2));
+        geo.computeBoundingSphere(); const yeni = new T.Mesh(geo, m); yeni.castShadow = true; yeni.name='birlesik'; kok.add(yeni);
+      }
+      for(const me of silinecek) me.parent && me.parent.remove(me);
+    };
+    birlestirAlt(M.grup);
+    return M;
+  }
   function aracBitir(grup, o){
     grup.traverse(m=>{ if(m.isMesh){ m.castShadow = true; m.receiveShadow = false; } });
     const lambalar = o.lambalar, tekerler = o.tekerler;
@@ -298,7 +331,7 @@ const MODEL = (() => {
     M.isikSifirla = () => { ['far','sinyalSol','sinyalSag','fren','geri'].forEach(a=>M.lamba(a,false)); M.lamba('gunduz',true,sabit.gunduz); M.lamba('arka',true,sabit.arka); };
     M.tekerDon = aci => tekerler.forEach(t=>{ const y = Math.abs(t.rotation.y)>1 ? 1 : -1; (t.userData.don||[t]).forEach(p=>p.rotation.z = y*aci); });
     M.direksiyon = a => (o.onTeker||[]).forEach(t=>t.rotation.y = a);
-    M.isikSifirla(); dogrusal(grup); return M;
+    M.isikSifirla(); dogrusal(grup); return sadelestir(M);
   }
   const bosLamba = () => ({ far:[], gunduz:[], sinyalSol:[], sinyalSag:[], fren:[], geri:[], arka:[] });
   const sinyal = (lb, z, ...m) => (z<0?lb.sinyalSol:lb.sinyalSag).push(...m);
