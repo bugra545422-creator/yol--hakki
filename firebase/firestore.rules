@@ -52,5 +52,28 @@ service cloud.firestore {
         && request.resource.data.yanlislar.size() == 3 && request.resource.data.metin.size() < 1000;
       allow update, delete: if yonetici() || (rolVar() && resource.data.ekleyenUid == request.auth.uid);
     }
+
+    // Haftalık sıralama: herkes okur; giriş yapmış kullanıcı yalnızca kendi satırını yazar/siler
+    match /siralama/{hafta}/{liste}/{uid} {
+      allow read: if true;
+      allow create, update: if girisli() && request.auth.uid == uid
+        && request.resource.data.puan is int && request.resource.data.puan >= 0 && request.resource.data.puan <= 3000
+        && request.resource.data.ad is string && request.resource.data.ad.size() <= 40
+        && request.resource.data.size() <= 6;
+      allow delete: if girisli() && request.auth.uid == uid;
+    }
+
+    // Düello: giriş yapmış kullanıcılar okur; kurucu oluşturur ve kendi sonucunu, rakip yalnızca bir kez kendi sonucunu yazar
+    match /duello/{kod} {
+      allow read: if girisli();
+      allow create: if girisli() && request.resource.data.kurucu == request.auth.uid
+        && request.resource.data.sorular is list && request.resource.data.sorular.size() == 10
+        && request.resource.data.r == null && request.resource.data.k == null;
+      allow update: if girisli() && (
+        (resource.data.kurucu == request.auth.uid && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['k']))
+        || (resource.data.r == null && resource.data.kurucu != request.auth.uid
+            && request.resource.data.r.uid == request.auth.uid
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['r'])));
+    }
   }
 }

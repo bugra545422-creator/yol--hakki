@@ -636,6 +636,28 @@ kbd{display:inline-flex;align-items:center;justify-content:center;min-width:26px
 @media (min-width:900px){ html.web .oyun-kartlar{grid-template-columns:1.2fr 1fr;margin:18px 18px 0}html.web .rozet-serit{grid-column:1/-1} }
 @media (prefers-reduced-motion:reduce){.seri-kutlama .alev,.rozet-bildirim{animation:none}}
 
+/* ---- sıralama ve düello ---- */
+.rekabet-kartlar{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rekabet-kart{display:flex;gap:10px;align-items:center;text-align:left;background:var(--yuzey);border:1px solid var(--cizgi);border-radius:14px;padding:12px;color:var(--metin)}
+.rekabet-kart>span:first-child{font-size:1.7rem}.rekabet-kart b{display:block;font-size:.95rem}.rekabet-kart small{color:var(--soluk);font-size:.8rem}
+@media (min-width:900px){ html.web .rekabet-kartlar{grid-column:1/-1} }
+.sira-puan{font-size:1.6rem;color:var(--mavi)}
+.baglanti{color:var(--mavi);text-decoration:underline;font:inherit;padding:0;background:none}
+.sira-liste{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.sira-liste li{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;background:var(--yuzey2)}
+.sira-liste li.ben{background:rgba(242,194,27,.2);outline:2px solid var(--serit)}
+.sira-no{width:34px;text-align:center;font-weight:800;font-size:1.05rem;color:var(--soluk)}
+.sira-ad{flex:1;min-width:0;display:flex;flex-direction:column}.sira-ad b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sira-ad small{color:var(--soluk);font-size:.8rem}
+.sira-p{font-size:1.15rem;font-variant-numeric:tabular-nums}
+.duello-skor{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:14px 0}
+.duello-skor>div{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 8px;border-radius:14px;background:var(--yuzey2);text-align:center}
+.duello-skor>div.ben{outline:2px solid var(--serit)}
+.duello-skor small{color:var(--soluk);font-size:.8rem}.duello-skor b{font-size:2rem;line-height:1.1}.duello-skor b i{font-style:normal;font-size:.9rem;color:var(--soluk)}.duello-skor span{font-size:.82rem;color:var(--soluk)}
+.duello-skor .vs{font-weight:900;color:var(--kirmizi);font-size:1.1rem}
+.duello-kod{display:flex;flex-direction:column;align-items:center;margin:10px 0;padding:12px;border:2px dashed var(--serit);border-radius:14px}
+.duello-kod small{color:var(--soluk)}.duello-kod b{font-size:2rem;letter-spacing:.25em;font-variant-numeric:tabular-nums}
+.duello-liste{display:grid;gap:8px;margin-top:8px}
+
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -6184,6 +6206,185 @@ profilSayfa = function(){
   const s=seriGuncel();
   ilk.insertAdjacentHTML('afterend', `<div class="blok"><div class="satir ara"><h3 style="margin:0">Rozetler</h3><span class="soluk">🔥 ${s.gun} gün seri · en uzun ${s.enUzun||0}</span></div>${rozetIzgaraHTML()}</div>`);
 };
+
+/* ================== Haftalık sıralama ve arkadaşla düello ==================
+   Firestore:
+   - siralama/{hafta}/tr/{uid}  ve  siralama/{hafta}/il-{il}/{uid}  → {ad, sehir, puan, seri, guncel}
+     Herkes okur; kullanıcı yalnızca kendi satırını yazar. Katılım isteğe bağlıdır (Sıralamaya katıl).
+   - duello/{KOD} → {kurucu, kurucuAd, sorular:[id×10], tarih, k:{d,sure}|null, r:{uid,ad,d,sure}|null}
+   Puan: o hafta doğru cevaplanan soru sayısı (e-sınav, konu testi, günün 10 sorusu, düello). */
+const HAFTA_ANAHTAR = 'eb:hafta', SIRA_KATIL = 'eb:siralamaKatil', DUELLO_ANAHTAR = 'eb:duellolar';
+function haftaKodu(t=Date.now()){ const d=new Date(t); d.setHours(0,0,0,0); d.setDate(d.getDate()+3-((d.getDay()+6)%7)); const h1=new Date(d.getFullYear(),0,4);
+  return d.getFullYear()+'-H'+String(1+Math.round(((d-h1)/864e5-3+((h1.getDay()+6)%7))/7)).padStart(2,'0'); }
+function haftaOku(){ let h=null; try{ h=JSON.parse(localStorage.getItem(HAFTA_ANAHTAR)||'null'); }catch(e){} return (h && h.hafta===haftaKodu()) ? h : {hafta:haftaKodu(), puan:0}; }
+const siralamadaMi = () => { try{ return localStorage.getItem(SIRA_KATIL)==='1'; }catch(e){ return false; } };
+const ilKodu = s => (s||'').toLocaleLowerCase('tr').replace(/ç/g,'c').replace(/ğ/g,'g').replace(/ı/g,'i').replace(/ö/g,'o').replace(/ş/g,'s').replace(/ü/g,'u').replace(/[^a-z]/g,'');
+const kisaAd = ad => { const p=(ad||'Sürücü adayı').trim().split(/\s+/); return p.length>1 ? p[0]+' '+p[p.length-1][0].toLocaleUpperCase('tr')+'.' : p[0]; };
+
+// Her doğru cevap haftalık puana eklenir
+const _cevapKaydetRek = cevapKaydet;
+cevapKaydet = function(q, dogruMu){ _cevapKaydetRek(q, dogruMu); if(dogruMu){ const h=haftaOku(); h.puan++; try{ localStorage.setItem(HAFTA_ANAHTAR, JSON.stringify(h)); }catch(e){} siraZamanla(); } };
+let _siraZaman=null;
+function siraZamanla(){ if(!siralamadaMi() || D.kullanici?.tur!=='google' || !D.kullanici.uid) return; clearTimeout(_siraZaman); _siraZaman=setTimeout(siraGonder, 5000); }
+async function siraGonder(){
+  const h=haftaOku(), uid=D.kullanici?.uid; if(!uid) return;
+  const s=(typeof sehirim==='function' && sehirim()) || '';
+  const satir={ ad:kisaAd(D.kullanici.ad), sehir:s, puan:h.puan, seri:(typeof seriGuncel==='function'?seriGuncel().gun:0), guncel:Date.now() };
+  try{ await fsYaz(`siralama/${h.hafta}/tr/${uid}`, satir); if(s) await fsYaz(`siralama/${h.hafta}/il-${ilKodu(s)}/${uid}`, satir); return true; }catch(e){ return false; }
+}
+async function siraListe(liste, limit=50){
+  const h=haftaKodu();
+  const r = await fetch(`${FS_URL}/siralama/${h}:runQuery`, {method:'POST', headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({structuredQuery:{from:[{collectionId:liste}], orderBy:[{field:{fieldPath:'puan'},direction:'DESCENDING'}], limit}})});
+  if(!r.ok) throw new Error('fs '+r.status);
+  return (await r.json()).filter(x=>x.document).map(x=>fsBelge(x.document));
+}
+
+/* ---- sıralama ekranı ---- */
+const siraD = { sekme:'tr' };
+async function siralamaSayfa(){
+  const s=(typeof sehirim==='function' && sehirim()) || null, h=haftaOku(), google=D.kullanici?.tur==='google', katil=siralamadaMi();
+  kabuk(`
+  <section class="yol"><h1>Haftalık sıralama</h1><p style="margin-top:6px;color:#C9CFD4">Bu hafta doğru cevapladığın her soru 1 puan. Sıralama her pazartesi sıfırlanır.</p></section>
+  <div class="sekmeler" role="tablist"><button role="tab" data-sk="tr" aria-selected="${siraD.sekme==='tr'}">🇹🇷 Türkiye</button><button role="tab" data-sk="il" aria-selected="${siraD.sekme==='il'}">📍 ${s?esc(s):'Şehrim'}</button></div>
+  <div class="blok sira-ben"><div class="satir ara"><span>Bu haftaki puanın</span><b class="sira-puan">${h.puan}</b></div>
+    ${!google ? `<p class="soluk" style="margin-top:6px">Sıralamada görünmek için Google ile giriş yap.</p><button class="btn google tam" style="margin-top:10px;border:2px solid var(--cizgi)" id="sGiris">${GICON} Google ile giriş yap</button>`
+      : !katil ? `<p class="soluk" style="margin-top:6px">Katılırsan adının kısaltması (ör. ${esc(kisaAd(D.kullanici.ad))}), şehrin ve haftalık puanın sıralamada herkese görünür. İstediğin zaman çıkabilirsin.</p><button class="btn ana tam" style="margin-top:10px" id="sKatil">Sıralamaya katıl</button>`
+      : `<p class="soluk" style="margin-top:6px">Sıralamada <b>${esc(kisaAd(D.kullanici.ad))}</b> olarak görünüyorsun. <button class="baglanti" id="sCik">Sıralamadan çık</button></p>`}
+  </div>
+  <div class="blok" id="siraListe"><p class="soluk">Sıralama yükleniyor…</p></div>`, 'siralama');
+  document.querySelectorAll('[data-sk]').forEach(b=>b.onclick=()=>{ if(b.dataset.sk==='il' && !s){ return typeof sehirSec==='function' ? sehirSec(()=>{ siraD.sekme='il'; siralamaSayfa(); }) : bilgiNotu('Önce Eğitmenler bölümünden şehrini seç.'); } siraD.sekme=b.dataset.sk; siralamaSayfa(); });
+  $('#sGiris') && ($('#sGiris').onclick=googleGiris);
+  $('#sKatil') && ($('#sKatil').onclick=async()=>{ try{ localStorage.setItem(SIRA_KATIL,'1'); }catch(e){} const ok=await siraGonder(); if(!ok) bilgiNotu('Sıralamaya şu an bağlanılamadı, birazdan tekrar dener.'); siralamaSayfa(); });
+  $('#sCik') && ($('#sCik').onclick=async()=>{ try{ localStorage.removeItem(SIRA_KATIL); }catch(e){} const hk=haftaKodu(), uid=D.kullanici.uid;
+    try{ await fsSil(`siralama/${hk}/tr/${uid}`); if(s) await fsSil(`siralama/${hk}/il-${ilKodu(s)}/${uid}`); }catch(e){} siralamaSayfa(); });
+  const kutu=$('#siraListe');
+  try{
+    const liste = await siraListe(siraD.sekme==='il' && s ? 'il-'+ilKodu(s) : 'tr');
+    if(D.ekran!=='siralama') return;
+    if(!liste.length){ kutu.innerHTML='<p class="soluk">Bu hafta henüz kimse yok. İlk sen ol!</p>'; return; }
+    const ben=D.kullanici?.uid;
+    kutu.innerHTML = `<ol class="sira-liste">${liste.map((x,i)=>`<li class="${x._id===ben?'ben':''}"><span class="sira-no">${i<3?['🥇','🥈','🥉'][i]:i+1}</span><span class="sira-ad"><b>${esc(x.ad||'—')}</b><small>${esc(x.sehir||'')}${x.seri?` · 🔥 ${x.seri}`:''}</small></span><b class="sira-p">${x.puan}</b></li>`).join('')}</ol>`;
+  }catch(e){ if(D.ekran==='siralama') kutu.innerHTML='<p class="soluk">Sıralama şu an yüklenemedi. İnternet bağlantını kontrol edip tekrar dene.</p>'; }
+}
+
+/* ---- düello ---- */
+const DUELLO_HARF='ABCDEFGHJKLMNPRSTUVYZ23456789';
+const duelloKodUret = () => Array.from({length:6},()=>DUELLO_HARF[Math.floor(Math.random()*DUELLO_HARF.length)]).join('');
+function duelloKayitlar(){ try{ return JSON.parse(localStorage.getItem(DUELLO_ANAHTAR)||'[]'); }catch(e){ return []; } }
+function duelloKaydetYerel(kod){ const l=[kod, ...duelloKayitlar().filter(k=>k!==kod)].slice(0,20); try{ localStorage.setItem(DUELLO_ANAHTAR, JSON.stringify(l)); }catch(e){} }
+const duelloLink = kod => `https://ehliyetbende.com/uygulama/?duello=${kod}`;
+async function fsGuncelle(yol, veri){ const m=Object.keys(veri).map(k=>'updateMask.fieldPaths='+encodeURIComponent(k)).join('&');
+  return fsIstek('/'+yol+'?'+m, {method:'PATCH', body:JSON.stringify({fields:fsNesne2(veri)})}); }
+function duelloOyna(kod, sorular, rol){
+  const tum=new Map(tumSorular().map(s=>[String(s.id),s])); const liste=sorular.map(id=>tum.get(String(id))).filter(Boolean);
+  if(liste.length<sorular.length) return hataGoster('Bu düellonun bazı soruları uygulamanda yok. Uygulamayı güncelleyip tekrar dene.');
+  KONU_FILTRE.duello = () => false; KONU_AD.duello = 'Düello · '+kod;
+  D.konu = { f:'duello', duello:{kod, rol, bas:Date.now()}, liste: liste.map(s=>({...s, siklar:karistir([s.dogru,...s.yanlislar]), cevap:null})), i:0 };
+  git('konu');
+}
+async function duelloBaslat(){
+  if(D.kullanici?.tur!=='google') return sayfaAc(`<h2>Düello için giriş yap</h2><p class="soluk">Arkadaşının sonucunu görebilmen için düellolar Google hesabınla kaydedilir.</p><div style="display:grid;gap:10px;margin-top:14px"><button class="btn google tam" id="dG">${GICON} Google ile giriş yap</button><button class="btn cerceve tam" onclick="sayfaKapat()">Vazgeç</button></div>`), $('#dG').onclick=googleGiris;
+  const havuz=SORULAR.filter(s=>!s.anim), dag={iy:2,tc:5,mt:2,ta:1}, sec=[];
+  for(const [k,n] of Object.entries(dag)) sec.push(...karistir(havuz.filter(s=>s.kat===k)).slice(0,n));
+  const kod=duelloKodUret(), sorular=karistir(sec).map(s=>s.id);
+  yukleniyor('Düello hazırlanıyor');
+  try{ await fsYaz(`duello/${kod}`, {kurucu:D.kullanici.uid, kurucuAd:kisaAd(D.kullanici.ad), sorular, tarih:Date.now(), k:null, r:null}); }
+  catch(e){ return hataGoster('Düello oluşturulamadı. İnternet bağlantını kontrol edip tekrar dene.'); }
+  sayfaKapat(); duelloKaydetYerel(kod); duelloOyna(kod, sorular, 'k');
+}
+async function duelloKatil(kod){
+  kod=(kod||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
+  if(kod.length!==6) return bilgiNotu('Düello kodu 6 karakter olmalı.');
+  if(D.kullanici?.tur!=='google') return sayfaAc(`<h2>Düelloya katılmak için giriş yap</h2><p class="soluk">Sonucun arkadaşına iletilebilmesi için Google hesabınla giriş yapman gerekiyor.</p><div style="display:grid;gap:10px;margin-top:14px"><button class="btn google tam" id="dG">${GICON} Google ile giriş yap</button><button class="btn cerceve tam" onclick="sayfaKapat()">Vazgeç</button></div>`), $('#dG').onclick=()=>{ try{ sessionStorage.setItem('eb:bekleyenDuello',kod); }catch(e){} googleGiris(); };
+  yukleniyor('Düello açılıyor');
+  let d; try{ d=await fsGetir(`duello/${kod}`); }catch(e){ return hataGoster('Düello açılamadı. Bağlantını kontrol edip tekrar dene.'); }
+  if(!d) return hataGoster('Bu kodla bir düello bulunamadı. Kodu kontrol et.');
+  sayfaKapat(); duelloKaydetYerel(kod);
+  if(d.kurucu===D.kullanici.uid){ return d.k ? duelloSonuc(kod) : duelloOyna(kod, d.sorular, 'k'); }
+  if(d.r && d.r.uid!==D.kullanici.uid) return hataGoster('Bu düelloya başka biri katılmış. Arkadaşından yeni bir kod iste.');
+  if(d.r) return duelloSonuc(kod);
+  duelloOyna(kod, d.sorular, 'r');
+}
+async function duelloSonuc(kod){
+  yukleniyor('Sonuç yükleniyor');
+  let d; try{ d=await fsGetir(`duello/${kod}`); }catch(e){ return hataGoster('Sonuç yüklenemedi.'); }
+  if(!d) return hataGoster('Düello bulunamadı.');
+  const ben=D.kullanici?.uid, k=d.k, r=d.r, benK=d.kurucu===ben;
+  const sn = x => x? Math.round(x.sure)+' sn':'—';
+  let baslik='Arkadaşını bekliyorsun', alt='Arkadaşın çözdüğünde sonucu burada göreceksin.';
+  if(k && r){ const kaz = k.d!==r.d ? (k.d>r.d?'k':'r') : (k.sure<=r.sure?'k':'r'); const benKaz = (kaz==='k')===benK;
+    baslik = benKaz ? '🏆 Kazandın!' : 'Bu sefer arkadaşın kazandı'; alt = k.d===r.d ? 'Doğru sayınız eşit; daha hızlı olan kazandı.' : benKaz ? 'Tebrikler, rövanş ister mi bir sor!' : 'Yanlışlarına bakıp rövanş iste.'; }
+  else if(!k) { baslik='Düello hazır'; alt='Önce kendi turunu tamamla.'; }
+  sayfaAc(`<h2>${baslik}</h2><p class="soluk">${alt}</p>
+    <div class="duello-skor"><div class="${benK?'ben':''}"><small>${esc(d.kurucuAd||'Kurucu')}</small><b>${k?k.d:'—'}<i>/10</i></b><span>${sn(k)}</span></div><span class="vs">VS</span>
+      <div class="${!benK?'ben':''}"><small>${r?esc(r.ad):'Rakip bekleniyor'}</small><b>${r?r.d:'—'}<i>/10</i></b><span>${sn(r)}</span></div></div>
+    ${(!r && benK) ? duelloPaylasHTML(kod) : ''}
+    <div style="display:grid;gap:10px;margin-top:14px">${(k&&r)?'<button class="btn ana tam" id="dRovans">Yeni düello başlat</button>':''}<button class="btn cerceve tam" onclick="sayfaKapat()">Kapat</button></div>`);
+  $('#dRovans') && ($('#dRovans').onclick=()=>{ sayfaKapat(); duelloBaslat(); });
+  duelloPaylasBagla(kod);
+}
+function duelloPaylasHTML(kod){
+  return `<div class="duello-kod"><small>Düello kodu</small><b>${kod}</b></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button class="btn koyu" id="dPaylas">Paylaş</button><a class="btn cerceve" style="text-decoration:none;color:var(--metin);display:flex;align-items:center;justify-content:center" id="dWa" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent('Ehliyet Bende’de seni düelloya davet ediyorum! Aynı 10 soruyu çözelim, bakalım kim kazanacak. Kod: '+kod+' '+duelloLink(kod))}">WhatsApp</a></div>`;
+}
+function duelloPaylasBagla(kod){
+  $('#dPaylas') && ($('#dPaylas').onclick=async()=>{ const metin=`Ehliyet Bende’de seni düelloya davet ediyorum! Kod: ${kod}`;
+    if(navigator.share){ try{ await navigator.share({title:'Ehliyet Bende düello', text:metin, url:duelloLink(kod)}); return; }catch(e){ if(e?.name==='AbortError') return; } }
+    try{ await navigator.clipboard.writeText(metin+' '+duelloLink(kod)); bilgiNotu('Davet bağlantısı kopyalandı.'); }catch(e){ bilgiNotu('Kod: '+kod); } });
+}
+// Düello turu bitince sonucu yaz
+const _konuEkraniRek = konuEkrani;
+konuEkrani = function(){
+  _konuEkraniRek();
+  const K=D.konu; if(K?.f!=='duello') return;
+  const b=$('#bitti'); if(!b) return;
+  b.onclick = async ()=>{
+    await verileriKaydet();
+    const d=K.liste.filter(x=>x.cevap===x.dogru).length, sure=(Date.now()-K.duello.bas)/1000, kod=K.duello.kod;
+    yukleniyor('Sonuç kaydediliyor');
+    try{ if(K.duello.rol==='k') await fsGuncelle(`duello/${kod}`, {k:{d, sure}}); else await fsGuncelle(`duello/${kod}`, {r:{uid:D.kullanici.uid, ad:kisaAd(D.kullanici.ad), d, sure}}); }
+    catch(e){ return hataGoster('Sonuç kaydedilemedi. Bağlantını kontrol edip Düello ekranından tekrar dene.'); }
+    sayfaKapat(); git('duello'); duelloSonuc(kod); setTimeout(()=>typeof rozetKontrol==='function'&&rozetKontrol(), 600);
+  };
+};
+async function duelloSayfa(){
+  const kayit=duelloKayitlar();
+  kabuk(`
+  <section class="yol"><h1>Arkadaşla düello</h1><p style="margin-top:6px;color:#C9CFD4">Aynı 10 soruyu ikiniz de çözün. Daha çok doğru yapan kazanır; eşitlikte hızlı olan.</p></section>
+  <div class="pad" style="display:grid;gap:10px">
+    <button class="btn ana tam" id="dYeni">⚔️ Yeni düello başlat</button>
+    <div class="blok" style="margin:0"><label class="etiket">Arkadaşından gelen kod<input class="girdi" id="dKod" maxlength="6" autocapitalize="characters" autocomplete="off" placeholder="ör. K7MP2A" style="text-transform:uppercase;letter-spacing:.2em;font-weight:700"></label><button class="btn koyu tam" id="dKatil" style="margin-top:10px">Düelloya katıl</button></div>
+  </div>
+  ${kayit.length?`<div class="blok"><h3>Düellolarım</h3><div class="duello-liste">${kayit.map(k=>`<button class="liste-btn" data-dk="${k}"><span class="ikon" aria-hidden="true">⚔️</span><span><b>${k}</b><span>Sonucu gör</span></span></button>`).join('')}</div></div>`:''}`, 'duello');
+  $('#dYeni').onclick=duelloBaslat;
+  $('#dKatil').onclick=()=>duelloKatil($('#dKod').value);
+  $('#dKod').onkeydown=e=>{ if(e.key==='Enter') duelloKatil($('#dKod').value); };
+  document.querySelectorAll('[data-dk]').forEach(b=>b.onclick=()=>duelloSonuc(b.dataset.dk));
+}
+
+/* ---- ekranları uygulamaya ekle ---- */
+const _gitRek = git;
+git = function(ekran, ek){
+  if(ekran==='siralama' || ekran==='duello'){ animDurdur(); D.ekran=ekran; window.scrollTo(0,0); setTimeout(()=>reklamKose(),0); return ekran==='siralama' ? siralamaSayfa() : duelloSayfa(); }
+  return _gitRek(ekran, ek);
+};
+// Ana sayfaya kartlar
+const _anaSayfaRek = anaSayfa;
+anaSayfa = function(){
+  _anaSayfaRek();
+  const r=document.querySelector('.rozet-serit'); if(!r) return;
+  const h=haftaOku();
+  r.insertAdjacentHTML('afterend', `<div class="rekabet-kartlar"><button class="rekabet-kart" id="aSira"><span aria-hidden="true">🏆</span><span><b>Haftalık sıralama</b><small>Bu hafta ${h.puan} puan</small></span></button><button class="rekabet-kart" id="aDuello"><span aria-hidden="true">⚔️</span><span><b>Arkadaşla düello</b><small>Aynı 10 soru, kim kazanacak?</small></span></button></div>`);
+  $('#aSira').onclick=()=>git('siralama'); $('#aDuello').onclick=()=>git('duello');
+};
+// Bağlantıyla gelen düello daveti (?duello=KOD) ve girişten sonra bekleyen davet
+(function(){
+  let kod=null; try{ kod=new URLSearchParams(location.search).get('duello') || sessionStorage.getItem('eb:bekleyenDuello'); }catch(e){}
+  if(!kod) return;
+  const bekle=setInterval(()=>{ if(D.kullanici && D.ekran && D.ekran!=='giris'){ clearInterval(bekle); try{ sessionStorage.removeItem('eb:bekleyenDuello'); history.replaceState(null,'',location.pathname); }catch(e){} git('duello'); duelloKatil(kod); } }, 500);
+  setTimeout(()=>clearInterval(bekle), 120000);
+})();
 
 /* ================== Dersler ================== */
 const DERS_SEKME = [['hata','Sınav hataları'],['levha','Trafik levhaları'],['polis','Polis işaretleri'],['tc','Trafik ve çevre'],['mt','Araç tekniği'],['ta','Trafik adabı'],['iy','İlk yardım']];
