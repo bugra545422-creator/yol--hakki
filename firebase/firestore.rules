@@ -37,6 +37,32 @@ service cloud.firestore {
       allow delete: if yonetici() || (girisli() && request.auth.uid == uid);
     }
 
+    // Paylaşım akışı: herkes okur; onaylı eğitmen/kurs ve yönetici paylaşır; öne çıkarma ve düzenleme yalnızca yönetici
+    match /paylasimlar/{id} {
+      allow read: if true;
+      allow create: if (rolVar() || yonetici()) && request.resource.data.uid == request.auth.uid
+        && request.resource.data.sehir is string && request.resource.data.size() < 16
+        && request.resource.data.get('metin', '').size() <= 600
+        && request.resource.data.get('foto', '').size() < 350000
+        && request.resource.data.get('oneCikan', false) == false
+        && (!('foto' in request.resource.data) || request.resource.data.izin == true);
+      allow update: if yonetici();
+      allow delete: if yonetici() || (girisli() && resource.data.uid == request.auth.uid);
+      match /begeniler/{uid} {
+        allow read: if true;
+        allow create, update: if girisli() && request.auth.uid == uid && request.resource.data.size() < 3;
+        allow delete: if girisli() && request.auth.uid == uid;
+      }
+    }
+
+    // Şikayetler: herkes bildirim oluşturabilir; yalnızca yönetici okur ve kapatır
+    match /sikayetler/{id} {
+      allow create: if request.resource.data.keys().hasOnly(['pid', 'neden', 'aciklama', 'uid', 'tarih', 'durum'])
+        && request.resource.data.pid is string && request.resource.data.neden is string && request.resource.data.neden.size() < 80
+        && request.resource.data.get('aciklama', '').size() <= 300 && request.resource.data.durum == 'acik';
+      allow read, update, delete: if yonetici();
+    }
+
     // Kullanıcı verileri: sınav geçmişi, istatistikler, Premium ve güzergah rekoru (telefon ↔ site eşitleme). Yalnızca kendisi okur/yazar.
     match /kullanicilar/{uid} {
       allow read, write: if girisli() && request.auth.uid == uid;
