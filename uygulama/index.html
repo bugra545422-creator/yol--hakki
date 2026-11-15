@@ -607,6 +607,35 @@ kbd{display:inline-flex;align-items:center;justify-content:center;min-width:26px
 .sekmeler.kay-sol,.adimlar.kay-sol{-webkit-mask-image:linear-gradient(90deg,transparent,#000 36px);mask-image:linear-gradient(90deg,transparent,#000 36px)}
 .sekmeler.kay-sol.kay-sag,.adimlar.kay-sol.kay-sag{-webkit-mask-image:linear-gradient(90deg,transparent,#000 36px,#000 calc(100% - 36px),transparent);mask-image:linear-gradient(90deg,transparent,#000 36px,#000 calc(100% - 36px),transparent)}
 
+/* ---- hazırlık, günlük seri, rozetler ---- */
+.oyun-kartlar{display:grid;gap:10px;margin:14px 18px 0}
+.hazir-kart{display:flex;gap:14px;align-items:center;background:var(--yuzey);border:1px solid var(--cizgi);border-radius:16px;padding:14px;color:var(--metin)}
+.hazir-halka{flex:none;color:var(--metin)}
+.halka-dolu{transition:stroke-dashoffset 1s ease}
+.hazir-yazi{display:flex;flex-direction:column;gap:3px;min-width:0}
+.hazir-yazi small{color:var(--soluk);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.hazir-yazi b{font-size:1.15rem}.hazir-yazi>span{color:var(--soluk);font-size:.9rem}
+.btn.kucuk{min-height:38px;padding:6px 14px;font-size:.88rem;align-self:flex-start;margin-top:6px}
+.gunluk-kart{display:flex;gap:14px;align-items:center;text-align:left;width:100%;background:linear-gradient(135deg,#2F353B,#20252A);color:#fff;border-radius:16px;padding:14px 16px;border:2px solid var(--serit)}
+.gunluk-kart.tamam{border-color:#1E8E4F}
+.seri-rozet{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;width:62px;height:62px;border-radius:14px;background:rgba(242,194,27,.14);line-height:1}
+.seri-rozet b{font-size:1.35rem;color:var(--serit)}.seri-rozet small{font-size:.7rem;color:#C9CFD4}
+.gunluk-yazi{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}.gunluk-yazi b{font-size:1.05rem}.gunluk-yazi span{font-size:.86rem;color:#C9CFD4}
+.gunluk-ok{font-size:2rem;color:var(--serit);line-height:1}
+.rozet-serit{display:flex;justify-content:space-between;align-items:center;width:100%;background:var(--yuzey);border:1px solid var(--cizgi);border-radius:12px;padding:10px 14px;color:var(--metin);font-weight:700}
+.rozet-izgara{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-top:12px}
+.rozet{display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;padding:12px 8px;border-radius:14px;background:var(--yuzey2);border:1px solid var(--cizgi);opacity:.55;filter:grayscale(1)}
+.rozet.kazanildi{opacity:1;filter:none;background:linear-gradient(180deg,rgba(242,194,27,.18),transparent);border-color:var(--serit)}
+.rozet .r-ikon{font-size:1.8rem}.rozet b{font-size:.88rem}.rozet small{font-size:.72rem;color:var(--soluk)}
+.seri-kutlama{display:flex;flex-direction:column;align-items:center;gap:2px;margin:10px 0;padding:12px;border-radius:14px;background:rgba(242,194,27,.15);text-align:center}
+.seri-kutlama .alev{font-size:2.2rem;animation:alev 1s ease-in-out infinite alternate}.seri-kutlama b{font-size:1.2rem}.seri-kutlama span:last-child{font-size:.9rem;color:var(--soluk)}
+@keyframes alev{from{transform:scale(1)}to{transform:scale(1.15)}}
+.rozet-bildirim{position:fixed;left:50%;top:calc(16px + env(safe-area-inset-top));transform:translateX(-50%);z-index:300;display:flex;gap:10px;align-items:center;background:#14181B;color:#fff;border:2px solid var(--serit);border-radius:16px;padding:10px 16px;box-shadow:0 10px 30px rgba(0,0,0,.35);animation:rozetGel .4s ease}
+.rozet-bildirim>span:first-child{font-size:1.8rem}.rozet-bildirim small{display:block;color:var(--serit);font-size:.72rem;font-weight:700;text-transform:uppercase}.rozet-bildirim b{font-size:1rem}
+@keyframes rozetGel{from{opacity:0;transform:translate(-50%,-12px)}}
+@media (min-width:900px){ html.web .oyun-kartlar{grid-template-columns:1.2fr 1fr;margin:18px 18px 0}html.web .rozet-serit{grid-column:1/-1} }
+@media (prefers-reduced-motion:reduce){.seri-kutlama .alev,.rozet-bildirim{animation:none}}
+
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -5979,6 +6008,8 @@ function hesapBirlestir(u){
   const top=x=>x?((x.g||0)+(x.d||0)+(x.y||0)):0;
   for(const [id,x] of Object.entries(u.istat||{})){ if(top(x)>top(D.istat[id])){ D.istat[id]=x; degisti=true; } }
   if(u.premium && u.premium.bitis > (D.premium?.bitis||0)){ D.premium=u.premium; try{ localStorage.setItem('yolhakki:premium', JSON.stringify(D.premium)); }catch(e){} degisti=true; }
+  try{ const ys=JSON.parse(localStorage.getItem('eb:seri')||'null'); if(u.seri && (!ys || (u.seri.son||'')>(ys.son||'') || ((u.seri.son===ys.son) && (u.seri.gun||0)>(ys.gun||0)))){ const m={...u.seri, enUzun:Math.max(u.seri.enUzun||0, ys?.enUzun||0), kusursuz:Math.max(u.seri.kusursuz||0, ys?.kusursuz||0)}; localStorage.setItem('eb:seri', JSON.stringify(m)); } }catch(e){}
+  try{ const yr=JSON.parse(localStorage.getItem('eb:rozet')||'{}'); if(u.rozet){ const m={...u.rozet, ...yr}; if(Object.keys(m).length>Object.keys(yr).length) localStorage.setItem('eb:rozet', JSON.stringify(m)); } }catch(e){}
   const yerel=_gzEnIyi(); if(u.gzEnIyi && (!yerel || u.gzEnIyi.puan>yerel.puan)){ try{ localStorage.setItem('eb:gzEnIyi', JSON.stringify(u.gzEnIyi)); }catch(e){} }
   return degisti;
 }
@@ -5989,6 +6020,7 @@ async function hesapGonder(){
     const veri={ gecmis:(D.gecmis||[]).slice(0,300), istat:D.istat||{}, guncel:Date.now(), ad:D.kullanici.ad||'', eposta:D.kullanici.email||'' };
     if(D.premium && D.premium.bitis) veri.premium = {plan:D.premium.plan||'', bitis:D.premium.bitis, kaynak:D.premium.kaynak||(WEB?'web':'play')};
     const gz=_gzEnIyi(); if(gz) veri.gzEnIyi=gz;
+    try{ const sr=JSON.parse(localStorage.getItem('eb:seri')||'null'); if(sr) veri.seri=sr; const rz=JSON.parse(localStorage.getItem('eb:rozet')||'null'); if(rz) veri.rozet=rz; }catch(e){}
     await fsYaz('kullanicilar/'+D.kullanici.uid, veri);
   }catch(e){ /* çevrimdışı ya da oturum yok: bir sonraki kayıtta tekrar denenir */ }
   HESAP.gonderiliyor=false;
@@ -6015,6 +6047,143 @@ const _googleHesabaGec = googleHesabaGec;
 googleHesabaGec = async function(p){ HESAP.esitlendi=false; await _googleHesabaGec(p); };
 // Güzergah rekoru değişince de gönder
 window.addEventListener('storage', e=>{ if(e.key==='eb:gzEnIyi') hesapZamanla(); });
+
+/* ================== Hazırlık göstergesi, günlük seri, rozetler ==================
+   - "Sınava %X hazırsın": konu kapsamı (öğrenilen soru oranı, e-sınav konu ağırlıklarıyla) + son e-sınav skorları
+   - Günün 10 sorusu: her gün 10 soruluk karışık test; üst üste gün sayısı (seri) tutulur
+   - Rozetler: ilerlemeye göre otomatik kazanılır, yeni rozette kısa kutlama gösterilir */
+const SERI_ANAHTAR = 'eb:seri', ROZET_ANAHTAR = 'eb:rozet';
+const gunKodu = (t=Date.now()) => { const d=new Date(t); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); };
+const dunKodu = () => gunKodu(Date.now()-864e5);
+function seriOku(){ try{ return JSON.parse(localStorage.getItem(SERI_ANAHTAR)||'null') || {son:null, gun:0, enUzun:0, toplam:0, kusursuz:0}; }catch(e){ return {son:null, gun:0, enUzun:0, toplam:0, kusursuz:0}; } }
+function seriYaz(s){ try{ localStorage.setItem(SERI_ANAHTAR, JSON.stringify(s)); }catch(e){} typeof hesapZamanla==='function' && hesapZamanla(); }
+// Bugün yapılmadıysa ve dün de yapılmadıysa seri sıfırlanmış sayılır (gösterimde)
+function seriGuncel(){ const s=seriOku(); if(s.son!==gunKodu() && s.son!==dunKodu()) s.gun=0; return s; }
+function gunlukTamam(){ return seriOku().son===gunKodu(); }
+function seriIsle(dogru, toplam){
+  const s=seriOku(), bugun=gunKodu();
+  if(s.son!==bugun){ s.gun = (s.son===dunKodu()) ? s.gun+1 : 1; s.son=bugun; s.toplam=(s.toplam||0)+1; }
+  if(dogru===toplam) s.kusursuz=(s.kusursuz||0)+1;
+  s.enUzun=Math.max(s.enUzun||0, s.gun); s.sonSkor=dogru; seriYaz(s); return s;
+}
+
+/* ---- hazırlık ---- */
+function hazirlik(){
+  const havuz = SORULAR, kat = {};
+  for(const k of Object.keys(KATEGORI)) kat[k]={t:0,o:0};
+  for(const q of havuz){ const k=kat[q.kat]; if(!k) continue; k.t++; const i=D.istat[q.id]; if(i && i.s===1 && i.d>=1) k.o++; }
+  let kapsam=0; const zayif=[];
+  for(const [k,m] of Object.entries(KATEGORI)){ const x=kat[k], oran=x.t? Math.min(1, x.o/(x.t*0.8)) : 0; kapsam += (m.adet/50)*oran; zayif.push({k, ad:m.ad, oran}); }
+  zayif.sort((a,b)=>a.oran-b.oran);
+  const son = (D.gecmis||[]).filter(g=>!g.ozel).slice(0,3);
+  const sinav = son.length ? son.reduce((a,g)=>a+Math.min(1, g.dogru/42),0)/son.length : 0;   // 42/50 doğru = tam hazır
+  const yuzde = Math.round(100*(son.length ? 0.5*kapsam + 0.5*sinav : 0.6*kapsam));
+  return { yuzde:Math.max(0,Math.min(100,yuzde)), zayif:zayif[0], sinavSayisi:son.length };
+}
+function halka(yuzde){
+  const r=34, c=2*Math.PI*r, renk = yuzde>=75?'#1E8E4F':yuzde>=45?'#F2C21B':'#E2563B';
+  return `<svg viewBox="0 0 84 84" width="84" height="84" aria-hidden="true"><circle cx="42" cy="42" r="${r}" fill="none" stroke="var(--cizgi)" stroke-width="9"/>
+    <circle cx="42" cy="42" r="${r}" fill="none" stroke="${renk}" stroke-width="9" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-yuzde/100)}" transform="rotate(-90 42 42)" class="halka-dolu"/>
+    <text x="42" y="48" text-anchor="middle" font-size="20" font-weight="800" fill="currentColor">%${yuzde}</text></svg>`;
+}
+
+/* ---- günlük 10 soru ---- */
+function gunlukBaslat(){
+  KONU_FILTRE.gunluk = () => true; KONU_AD.gunluk = 'Günün 10 sorusu';
+  animDurdur?.();
+  const dagilim = {iy:2, tc:5, mt:2, ta:1}, sec=[];
+  for(const [k,n] of Object.entries(dagilim)){
+    const h = tumSorular().filter(s=>s.kat===k && !s.anim).map(s=>({s,p:oncelik(s)})).sort((a,b)=>a.p-b.p).slice(0,n).map(x=>x.s);
+    sec.push(...h);
+  }
+  if(!sec.length) return bilgiNotu('Sorular yükleniyor, birazdan tekrar dene.');
+  D.konu = { f:'gunluk', liste: karistir(sec).map(s=>({...s, siklar:karistir([s.dogru,...s.yanlislar]), cevap:null})), i:0 };
+  git('konu');
+}
+// Konu testi bitince (günlük test dahil) seri ve rozetleri işle
+const _konuEkraniOyun = konuEkrani;
+konuEkrani = function(){
+  _konuEkraniOyun();
+  const b=$('#bitti'); if(!b) return;
+  b.addEventListener('click', ()=>{ const K=D.konu; const d=K.liste.filter(x=>x.cevap===x.dogru).length;
+    if(K.f==='gunluk'){ const once=gunlukTamam(); const s=seriIsle(d, K.liste.length);
+      setTimeout(()=>{ const p=document.querySelector('#perde .sayfa'); if(p && !once){ const n=document.createElement('div'); n.className='seri-kutlama'; n.innerHTML=`<span class="alev" aria-hidden="true">🔥</span><b>${s.gun} günlük seri</b><span>${s.gun===1?'Yarın da gel, seriyi büyüt!':'Harika gidiyorsun, yarın da devam!'}</span>`; p.insertBefore(n, p.children[1]||null); } }, 30); }
+    setTimeout(rozetKontrol, 400); }, { once:true });
+};
+const _sinavBitirOyun = sinavBitir;
+sinavBitir = async function(){ await _sinavBitirOyun(); setTimeout(rozetKontrol, 1200); };
+
+/* ---- rozetler ---- */
+const ROZETLER = [
+  ['ilk','🚦','İlk adım','İlk e-sınavını çöz', V=>V.sinav>=1],
+  ['gecer','✅','Geçer not','Bir e-sınavda 35 ve üzeri yap', V=>V.enIyi>=35],
+  ['usta','🏆','Usta sürücü','Bir e-sınavda 45 ve üzeri yap', V=>V.enIyi>=45],
+  ['seri3','🔥','3 gün seri','Günün 10 sorusunu 3 gün üst üste çöz', V=>V.enUzun>=3],
+  ['seri7','⚡','7 gün seri','Günün 10 sorusunu 7 gün üst üste çöz', V=>V.enUzun>=7],
+  ['seri30','👑','30 gün seri','Günün 10 sorusunu 30 gün üst üste çöz', V=>V.enUzun>=30],
+  ['kusursuz','🎯','Kusursuz','Günün 10 sorusunda 10/10 yap', V=>V.kusursuz>=1],
+  ['soru100','📚','100 soru','Toplam 100 soru çöz', V=>V.soru>=100],
+  ['soru500','🧠','500 soru','Toplam 500 soru çöz', V=>V.soru>=500],
+  ['hazir','💯','Sınava hazır','Hazırlık göstergesini %80\'e çıkar', V=>V.hazir>=80],
+  ['yol','🛣️','Yol ustası','Trafik güzergahını 70+ puanla bitir', V=>V.gz>=70],
+];
+function rozetVeri(){
+  const s=seriOku(); let gz=0; try{ const g=JSON.parse(localStorage.getItem('eb:gzEnIyi')||'null'); if(g) gz=g.puan||0; }catch(e){}
+  return { sinav:(D.gecmis||[]).length, enIyi:Math.max(0,...(D.gecmis||[]).map(g=>g.dogru)), enUzun:s.enUzun||0, kusursuz:s.kusursuz||0,
+    soru:Object.values(D.istat||{}).reduce((a,x)=>a+(x.g||0),0), hazir:hazirlik().yuzde, gz };
+}
+function rozetlerim(){ try{ return JSON.parse(localStorage.getItem(ROZET_ANAHTAR)||'{}'); }catch(e){ return {}; } }
+function rozetKontrol(){
+  if(!D.kullanici) return;
+  const V=rozetVeri(), var_=rozetlerim(), yeni=[];
+  for(const [id,ik,ad,,kosul] of ROZETLER) if(!var_[id] && kosul(V)){ var_[id]=Date.now(); yeni.push([ik,ad]); }
+  if(!yeni.length) return;
+  try{ localStorage.setItem(ROZET_ANAHTAR, JSON.stringify(var_)); }catch(e){} typeof hesapZamanla==='function' && hesapZamanla();
+  yeni.forEach(([ik,ad],i)=>setTimeout(()=>{ const n=document.createElement('div'); n.className='rozet-bildirim'; n.setAttribute('role','status');
+    n.innerHTML=`<span aria-hidden="true">${ik}</span><span><small>Yeni rozet</small><b>${ad}</b></span>`; document.body.appendChild(n); setTimeout(()=>n.remove(), 3600); }, i*1800));
+}
+function rozetIzgaraHTML(){
+  const var_=rozetlerim();
+  return `<div class="rozet-izgara">${ROZETLER.map(([id,ik,ad,acik])=>`<div class="rozet ${var_[id]?'kazanildi':''}" title="${esc(acik)}"><span class="r-ikon" aria-hidden="true">${ik}</span><b>${ad}</b><small>${var_[id]?'Kazanıldı':esc(acik)}</small></div>`).join('')}</div>`;
+}
+
+/* ---- ana sayfa kartları ---- */
+function oyunKartlariHTML(){
+  const h=hazirlik(), s=seriGuncel(), tamam=gunlukTamam(), kaz=Object.keys(rozetlerim()).length;
+  const mesaj = h.yuzde>=80 ? 'Sınava hazırsın, deneme e-sınavıyla formunu koru.' : h.sinavSayisi===0 ? 'Bir deneme e-sınavı çöz, hazırlığını daha doğru ölçelim.' : `En çok ${esc(h.zayif.ad)} konusuna çalışmalısın.`;
+  return `<div class="oyun-kartlar">
+    <div class="hazir-kart">
+      <div class="hazir-halka">${halka(h.yuzde)}</div>
+      <div class="hazir-yazi"><small>Hazırlık durumu</small><b>Sınava %${h.yuzde} hazırsın</b><span>${mesaj}</span>
+        ${h.yuzde<80 && h.zayif ? `<button class="btn cerceve kucuk" id="zayifCalis">${esc(h.zayif.ad)} testi çöz</button>` : ''}</div>
+    </div>
+    <button class="gunluk-kart ${tamam?'tamam':''}" id="gunluk">
+      <span class="seri-rozet" aria-label="${s.gun} günlük seri"><span aria-hidden="true">🔥</span><b>${s.gun}</b><small>gün</small></span>
+      <span class="gunluk-yazi"><b>${tamam?'Bugünkü 10 soru tamam ✓':'Günün 10 sorusu'}</b><span>${tamam?`Yarın tekrar gel, seri ${s.gun+1} gün olsun. İstersen yeniden çöz.`:s.gun?`Serini kaybetme! Bugün çözünce ${s.gun+1} gün olacak.`:'2 dakikalık kısa test. Her gün çöz, seri yap.'}</span></span>
+      <span class="gunluk-ok" aria-hidden="true">›</span>
+    </button>
+    <button class="rozet-serit" id="rozetGit"><span>🏅 Rozetler</span><b>${kaz} / ${ROZETLER.length}</b></button>
+  </div>`;
+}
+function oyunKartlariBagla(){
+  $('#gunluk') && ($('#gunluk').onclick=gunlukBaslat);
+  $('#zayifCalis') && ($('#zayifCalis').onclick=()=>konuTestiBaslat(hazirlik().zayif.k));
+  $('#rozetGit') && ($('#rozetGit').onclick=()=>sayfaAc(`<h2>Rozetler</h2><p class="soluk">Çalıştıkça yeni rozetler kazanırsın.</p>${rozetIzgaraHTML()}<button class="btn koyu tam" style="margin-top:14px" onclick="sayfaKapat()">Kapat</button>`));
+}
+const _anaSayfaOyun = anaSayfa;
+anaSayfa = function(){
+  _anaSayfaOyun();
+  const iz=document.querySelector('.ana-izgara'); if(!iz) return;
+  iz.insertAdjacentHTML('beforebegin', oyunKartlariHTML()); oyunKartlariBagla();
+  setTimeout(rozetKontrol, 800);
+};
+const _profilSayfaOyun = profilSayfa;
+profilSayfa = function(){
+  _profilSayfaOyun();
+  const ilk=document.querySelector('#m .blok'); if(!ilk) return;
+  const s=seriGuncel();
+  ilk.insertAdjacentHTML('afterend', `<div class="blok"><div class="satir ara"><h3 style="margin:0">Rozetler</h3><span class="soluk">🔥 ${s.gun} gün seri · en uzun ${s.enUzun||0}</span></div>${rozetIzgaraHTML()}</div>`);
+};
 
 /* ================== Dersler ================== */
 const DERS_SEKME = [['hata','Sınav hataları'],['levha','Trafik levhaları'],['polis','Polis işaretleri'],['tc','Trafik ve çevre'],['mt','Araç tekniği'],['ta','Trafik adabı'],['iy','İlk yardım']];
