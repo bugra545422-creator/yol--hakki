@@ -662,6 +662,7 @@ kbd{display:inline-flex;align-items:center;justify-content:center;min-width:26px
 .ucretsiz-etiket{display:inline-block;vertical-align:middle;margin-left:6px;padding:2px 9px;border-radius:999px;background:#1E8E4F;color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.06em}
 .ucretsiz-bant .ucretsiz-etiket{margin:0 0 6px;font-size:.8rem}
 .ucretsiz-bant b{display:block}
+.sim-kabin.tamekran .gz-ust-dugme .k-tus{width:auto;height:30px;padding:2px 10px;background:rgba(20,24,27,.72);color:#fff;white-space:nowrap}
 
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -1959,6 +1960,20 @@ if(WEB){
   tara();
 })();
 
+/* Telefonda yan çevrilince simülatör kendiliğinden tam ekran olur; dik tutulunca geri döner */
+(function yatayTamEkran(){
+  const dokun = () => matchMedia('(pointer:coarse)').matches;
+  const kontrol = () => {
+    const k=document.getElementById('kabin'), b=document.getElementById('tamBtn'); if(!k || !b || !dokun()) return;
+    const yatay = innerWidth > innerHeight && innerHeight < 520, tam = k.classList.contains('tamekran');
+    if(yatay && !tam){ k.dataset.otoTam='1'; b.click(); }
+    else if(!yatay && tam && k.dataset.otoTam){ delete k.dataset.otoTam; b.click(); }
+  };
+  addEventListener('orientationchange', () => setTimeout(kontrol, 250));
+  addEventListener('resize', () => setTimeout(kontrol, 250));
+  new MutationObserver(() => { if(document.getElementById('kabin') && !document.getElementById('kabin').dataset.otoBakildi){ document.getElementById('kabin').dataset.otoBakildi='1'; setTimeout(kontrol, 300); } }).observe(document.body, {childList:true, subtree:true});
+})();
+
 /* ================== Web: Firebase ile Google girişi (Android ile aynı hesap) ================== */
 const FB_WEB = { apiKey:'AIzaSyA8lituMJdUZlGL_AzsiaU3qbQwIsA4k5k', authDomain:'ehliyet-bende.firebaseapp.com', projectId:'ehliyet-bende',
   storageBucket:'ehliyet-bende.firebasestorage.app', messagingSenderId:'575547204439', appId:'1:575547204439:web:846498138aded776729412' };
@@ -2243,13 +2258,13 @@ function pistSayfa(ek){
   <div class="sekmeler" role="tablist" style="padding-top:8px">
     <button role="tab" data-mod="anlatim" aria-selected="${pistD.mod==='anlatim'}">Anlatım</button>
     <button role="tab" data-mod="sim" aria-selected="${pistD.mod==='sim'}">Sürüş simülasyonu</button>
-    ${WEB&&T==='oto'?`<button role="tab" data-mod="guzergah" aria-selected="${pistD.mod==='guzergah'}">🚦 Trafik güzergahı · 50 km</button>`:''}
+    ${T==='oto'?`<button role="tab" data-mod="guzergah" aria-selected="${pistD.mod==='guzergah'}">🚦 Trafik güzergahı · 50 km</button>`:''}
   </div>
   <div id="pistIc"></div>`, 'pist');
   document.querySelectorAll('[data-tur]').forEach(b=>b.onclick=()=>{ if(AGIR.includes(b.dataset.tur) && !simAcik()) return premiumTeklif('Kamyon, otobüs ve tır pistleri'); pistD.tur=b.dataset.tur; pistD.adim=0; pistD.sen=0; animDurdur(); pistSayfa(); });
   document.querySelectorAll('[data-mod]').forEach(b=>b.onclick=()=>{ pistD.mod=b.dataset.mod; animDurdur(); pistSayfa(); });
   G3.kamSifirla();
-  if(pistD.mod==='guzergah' && !(WEB&&T==='oto')) pistD.mod='sim';
+  if(pistD.mod==='guzergah' && T!=='oto') pistD.mod='sim';
   pistD.mod==='anlatim' ? anlatimCiz() : pistD.mod==='guzergah' ? guzergahCiz() : simCiz();
 }
 function anlatimCiz(){
@@ -2680,7 +2695,7 @@ function gzBaslat(devam){
       <div class="gz-ust-dugme"><button class="k-tus" id="gKam">🎥 Kamera</button><button class="k-tus" id="gBitir">Bitir</button></div>
       <div id="bild"></div>${TAM_DUGME}
     </div>${kokpitHTML('oto')}</div>
-    <p class="pad soluk" id="ipucu" style="padding-top:10px">Kemerini tak (K), vitesi D'ye al, el frenini indir (H) ve yola çık.</p>
+    <p class="pad soluk" id="ipucu" style="padding-top:10px">${matchMedia('(pointer:coarse)').matches ? "Kemer düğmesine dokun, vitesi D'ye al, el frenini indir ve yola çık. Telefonu yan çevirirsen tam ekran olur." : "Kemerini tak (K), vitesi D'ye al, el frenini indir (H) ve yola çık."}</p>
     ${simKontrolHTML('oto')}`;
   const tk=$('#tk');
   // Renderer (tek örnek, yeniden kullanılır)
