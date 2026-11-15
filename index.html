@@ -214,8 +214,10 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
 .figur-k.bagla .kol-a.k1{transform:rotate(-40deg)}.figur-k.bagla .kol-a.k2{transform:rotate(40deg)}
 .figur-k.bagla .kol-c{opacity:1;transform:none}
 .figur-k.bagla .kafa{animation:bas-sall .9s ease .3s}
+html,body{overflow-x:clip}
 .balon{position:absolute;left:52%;top:-6px;background:#fff;color:#14181B;font-weight:700;font-size:.92rem;padding:9px 13px;border-radius:14px 14px 14px 4px;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;white-space:nowrap}
 .figur-k.bagla .balon{animation:balon .45s ease .5s forwards}
+@media (max-width:520px){.balon{left:auto;right:0;white-space:normal;max-width:200px}}
 .kurs-one{background:#fff;color:#14181B;border-radius:20px;padding:20px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;border:3px solid var(--serit);position:relative}
 .kurs-one img{width:150px;height:auto;border-radius:8px}
 .kurs-one .rozet2{position:absolute;top:-12px;left:18px;background:var(--serit);color:#14181B;font-weight:800;font-size:.78rem;padding:3px 10px;border-radius:999px;letter-spacing:.04em}
