@@ -1,5 +1,5 @@
 {
- "surum": "2026-11-14-50",
+ "surum": "2026-11-15-58",
  "aciklama": "EHLİYET BENDE soru bankası güncellemesi. Uygulama bu dosyayı internetten düzenli olarak okur.",
  "sorular": [
   {
@@ -651,7 +651,111 @@
    ],
    "cozum": "Çapraz sıkma, jantın göbeğe düzgün oturmasını sağlar.",
    "levha": null
+  },
+  {
+   "uid": "k065",
+   "kat": "tc",
+   "metin": "Arızalanan aracını yolda durdurmak zorunda kalan sürücü ne yapmalıdır?",
+   "dogru": "Dörtlü flaşörü yakmalı ve yeterli uzaklığa yansıtıcı (reflektör) koymalıdır",
+   "yanlislar": [
+    "Aracı olduğu yerde bırakıp gitmelidir",
+    "Sadece kornaya basmalıdır",
+    "Uzun farlarını yakmalıdır"
+   ],
+   "cozum": "Diğer sürücüleri zamanında uyarmak için flaşör ve reflektör kullanılır.",
+   "levha": null
+  },
+  {
+   "uid": "k013",
+   "kat": "iy",
+   "metin": "Kırık şüphesi olan kol ya da bacakta ilk yardım nasıl yapılır?",
+   "dogru": "Kırık bölge bulunduğu şekilde, bir üst ve alt eklemi içine alacak biçimde tespit edilir",
+   "yanlislar": [
+    "Kırık yerine oturtulmaya çalışılır",
+    "Kazazede yürütülerek hastaneye götürülür",
+    "Bölgeye masaj yapılır"
+   ],
+   "cozum": "Tespit, kırık uçlarının hareketini ve ek yaralanmaları önler; kırık asla yerine oturtulmaya çalışılmaz.",
+   "levha": null
+  },
+  {
+   "uid": "k066",
+   "kat": "tc",
+   "metin": "Yerleşim yeri içinde korna nasıl kullanılmalıdır?",
+   "dogru": "Zorunlu olmadıkça kullanılmamalı, gerektiğinde kısa süreli çalınmalıdır",
+   "yanlislar": [
+    "Sık ve uzun çalınmalıdır",
+    "Selamlaşmak için kullanılmalıdır",
+    "Kırmızı ışıkta öndekini uyarmak için kullanılmalıdır"
+   ],
+   "cozum": "Gereksiz korna gürültü kirliliğine ve gerginliğe yol açar.",
+   "levha": null
+  },
+  {
+   "uid": "k131",
+   "kat": "mt",
+   "metin": "Akü kutup başlarında beyaz oksitlenme oluşursa ne yapılır?",
+   "dogru": "Temizlenip ince bir koruyucu (vazelin vb.) sürülür",
+   "yanlislar": [
+    "Üzerine su dökülür",
+    "Kutup başları sökülüp atılır",
+    "Hiçbir şey yapılmaz"
+   ],
+   "cozum": "Oksitlenme elektrik iletimini zayıflatır ve marş sorunlarına yol açar.",
+   "levha": null
+  },
+  {
+   "uid": "k014",
+   "kat": "iy",
+   "metin": "Açık kırıkta kemik ucu dışarı çıkmışsa ne yapılır?",
+   "dogru": "Kemik içeri itilmez, yara temiz bir bezle örtülüp tespit edilir",
+   "yanlislar": [
+    "Kemik ucu içeri itilir",
+    "Yara alkolle yıkanıp açık bırakılır",
+    "Kemiğin üzerine sıkı turnike yapılır"
+   ],
+   "cozum": "Kemiği içeri itmek enfeksiyon ve ek hasar yaratır; yara örtülür, bölge hareketsiz hale getirilir.",
+   "levha": null
+  },
+  {
+   "uid": "k067",
+   "kat": "tc",
+   "metin": "Yaya geçidine yaklaşan sürücü, geçitte yaya varsa ne yapmalıdır?",
+   "dogru": "Yavaşlamalı ve gerekirse durarak yayaya yol vermelidir",
+   "yanlislar": [
+    "Korna çalarak yayayı uyarmalıdır",
+    "Hızlanarak yaya geçmeden geçmelidir",
+    "Selektör yapıp geçmelidir"
+   ],
+   "cozum": "Işıksız yaya geçitlerinde yayaların geçiş hakkı vardır.",
+   "levha": null
+  },
+  {
+   "uid": "k156",
+   "kat": "ta",
+   "metin": "Su birikintisinin yanından geçerken yayalara karşı nasıl davranılmalıdır?",
+   "dogru": "Yavaşlanarak yayaların ıslanması önlenmelidir",
+   "yanlislar": [
+    "Hızla geçilmelidir",
+    "Korna çalınmalıdır",
+    "Yayalara selektör yapılmalıdır"
+   ],
+   "cozum": "Yayaları ıslatmak hem saygısızlıktır hem de onları tehlikeli harekete zorlayabilir.",
+   "levha": null
+  },
+  {
+   "uid": "k132",
+   "kat": "mt",
+   "metin": "Aküden takviye kablosuyla çalıştırma yapılırken nasıl bağlantı yapılır?",
+   "dogru": "Artı kutup artıya, eksi kutup eksiye (veya şaseye) bağlanır",
+   "yanlislar": [
+    "Artı kutup eksiye bağlanır",
+    "Sadece eksi kutuplar bağlanır",
+    "Kablolar rastgele bağlanır"
+   ],
+   "cozum": "Ters bağlantı elektronik aksama ve aküye ciddi zarar verir; kıvılcım riskine dikkat edilir.",
+   "levha": null
   }
  ],
- "guncelleme": "2026-11-14"
+ "guncelleme": "2026-11-15"
 }
