@@ -264,7 +264,7 @@ body.kilit{overflow:hidden}
 .girdi{min-height:54px;font-size:1.1rem;padding:13px 14px}
 textarea.girdi{min-height:90px}
 .etiket{font-size:1rem}
-@media (min-width:600px){.perde{align-items:center}.sayfa{border-radius:18px;max-width:560px}}
+@media (min-width:600px){.perde{align-items:center}.sayfa{border-radius:18px;max-width:560px;min-height:0;max-height:90vh;overflow:auto}}
 .giris .alt-alan .btn{min-height:62px;font-size:1.15rem;border-radius:14px}
 .giris .alt-alan small{font-size:.95rem}
 .btn.egitmen{border:2px solid #69737C;color:#fff;background:transparent}
@@ -336,8 +336,9 @@ textarea.girdi{min-height:90px}
 .vites-sec{width:38px;height:25px;border-radius:7px;color:#9AA3AB;font-weight:800;font-size:.95rem;touch-action:none}
 .vites-sec[aria-checked="true"]{background:var(--serit);color:#14181B}
 .vites-sec[data-v="R"][aria-checked="true"]{background:#F4F5F2}
-.anlatim-kilit{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:min(86%,340px);display:flex;flex-direction:column;gap:4px;text-align:center;background:rgba(20,24,27,.86);color:#fff;border-radius:14px;padding:14px 16px;border:2px solid var(--serit)}
-.anlatim-kilit b{font-size:1rem}.anlatim-kilit span{font-size:.85rem;color:#C9CFD4}
+.anlatim-kilit{position:absolute;left:50%;top:auto;bottom:12px;transform:translateX(-50%);z-index:4;width:min(calc(100% - 24px),360px);display:flex;flex-direction:column;gap:2px;text-align:center;background:rgba(20,24,27,.88);color:#fff;border-radius:14px;padding:10px 14px;border:2px solid var(--serit)}
+.anim-kutu .anlatim-kilit{bottom:56px}
+.anlatim-kilit b{font-size:.95rem}.anlatim-kilit span{font-size:.8rem;color:#C9CFD4}
 .izle-btn{min-height:44px;padding:8px 16px;margin-left:8px;pointer-events:auto;background:rgba(255,255,255,.92);color:#14181C}
 .izle-bant{position:absolute;left:10px;bottom:10px;white-space:nowrap;display:flex;align-items:center;gap:10px;background:rgba(20,24,28,.85);color:#fff;padding:6px 8px 6px 14px;border-radius:999px;font-weight:700;font-size:.9rem;pointer-events:auto;z-index:6}
 .izle-bant span{color:#FF5A4F}
@@ -457,7 +458,12 @@ html.web .site-alt::before{content:"";position:absolute;left:0;right:0;top:0;hei
 html.web .site-alt .site-ic{justify-content:space-between;flex-wrap:wrap;padding-top:22px;padding-bottom:calc(22px + 76px)}
 html.web .site-alt nav{display:flex;gap:16px;flex-wrap:wrap}
 html.web .site-alt a{color:#E6EAED}
-html.web .sponsor-kose{top:64px}
+/* Site (dar ekran): sponsor kartı başlıkların üstüne binmesin; alt menünün hemen üstünde dursun */
+html.web .sponsor-kose{top:auto;bottom:calc(76px + env(safe-area-inset-bottom))}
+html.web body[data-ekran="giris"] .sponsor-kose{display:none}
+html.web body.sponsorlu section.yol{padding-top:22px}
+html.web body.sponsorlu #m > :first-child:not(.yol){margin-top:0}
+html.web body.sponsorlu main#m{padding-bottom:64px}
 @media (min-width:900px){
   html.web body{background:var(--bg)}
   html.web #app{max-width:900px}
@@ -484,6 +490,8 @@ html.web .sponsor-kose{top:64px}
   html.web main#m > section.yol h1{font-size:2.3rem}
   /* Sponsor: başlıkların üstüne binmesin, sağ alt köşe */
   html.web .sponsor-kose{top:auto;bottom:18px;left:auto;right:18px;transform:none;width:300px;box-shadow:0 6px 24px rgba(0,0,0,.28)}
+  html.web body.sponsorlu main#m{padding-bottom:84px}
+  html.web body[data-ekran="giris"] .sponsor-kose{display:flex;bottom:18px}
   /* İki sütun */
   html.web .web-iki{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 6px;align-items:start}
   html.web .web-iki > div{min-width:0}
@@ -497,6 +505,7 @@ html.web .sponsor-kose{top:64px}
   html.web #pistIc > .tuval-kutu{grid-column:1;grid-row:2 / span 6;border-radius:16px;position:sticky;top:72px}
   html.web #pistIc > .pad{padding:0}
   /* Sürüş simülasyonu: araç ekranı solda büyük, kontroller sağda */
+  html.web #pistIc > .gz-harita{grid-column:1;grid-row:1 / span 4}
   html.web #pistIc > .sim-kabin{grid-column:1/-1}
   html.web #pistIc > .sim-kabin ~ *{grid-column:1/-1}
   html.web .sim-kabin:not(.tamekran){display:grid;grid-template-columns:minmax(0,1.7fr) minmax(300px,1fr);gap:20px;align-items:start}
@@ -588,6 +597,15 @@ kbd{display:inline-flex;align-items:center;justify-content:center;min-width:26px
   .gz-ikon{left:auto;right:52px;transform:none;bottom:12px;gap:4px}.gz-sin{width:28px;height:26px;font-size:.9rem}.gz-kemer{font-size:.72rem;padding:4px 8px}
   .gz-tuval .bildirim{font-size:.85rem}
 }
+
+/* ---- güzergah giriş haritası ---- */
+.gz-harita{margin:12px 18px 0}
+.gz-harita svg{display:block;width:100%;height:auto;border-radius:22px;box-shadow:0 8px 28px rgba(0,0,0,.18)}
+@media (prefers-reduced-motion:reduce){.gz-harita .gz-arac{display:none}}
+/* ---- taşan yatay satırlar için solma ipucu ---- */
+.sekmeler.kay-sag,.adimlar.kay-sag{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 36px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 36px),transparent)}
+.sekmeler.kay-sol,.adimlar.kay-sol{-webkit-mask-image:linear-gradient(90deg,transparent,#000 36px);mask-image:linear-gradient(90deg,transparent,#000 36px)}
+.sekmeler.kay-sol.kay-sag,.adimlar.kay-sol.kay-sag{-webkit-mask-image:linear-gradient(90deg,transparent,#000 36px,#000 calc(100% - 36px),transparent);mask-image:linear-gradient(90deg,transparent,#000 36px,#000 calc(100% - 36px),transparent)}
 
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -1864,6 +1882,27 @@ if(WEB){
   GENIS.addEventListener && GENIS.addEventListener('change',()=>{ if(typeof D!=='undefined' && D.ekran) try{ git(D.ekran); }catch(e){} });
 }
 
+/* Yatay kaydırılan sekme/adım satırları: taşan kenarda solma ipucu, seçili öğe görünür */
+(function kaydirmaIpucu(){
+  const SEC = '.sekmeler,.adimlar';
+  const guncelle = el => {
+    const tas = el.scrollWidth > el.clientWidth + 2;
+    el.classList.toggle('kay-sag', tas && el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
+    el.classList.toggle('kay-sol', tas && el.scrollLeft > 4);
+  };
+  const hazirla = el => {
+    if(el.dataset.kay) return; el.dataset.kay = '1';
+    el.addEventListener('scroll', () => guncelle(el), { passive:true });
+    const s = el.querySelector('[aria-selected="true"],.secili,[aria-current="true"]');
+    if(s && s.offsetLeft + s.offsetWidth > el.clientWidth) el.scrollLeft = s.offsetLeft - 18;
+    guncelle(el);
+  };
+  const tara = () => document.querySelectorAll(SEC).forEach(hazirla);
+  new MutationObserver(tara).observe(document.body, { childList:true, subtree:true });
+  addEventListener('resize', () => document.querySelectorAll(SEC).forEach(guncelle));
+  tara();
+})();
+
 /* ================== Web: Firebase ile Google girişi (Android ile aynı hesap) ================== */
 const FB_WEB = { apiKey:'AIzaSyA8lituMJdUZlGL_AzsiaU3qbQwIsA4k5k', authDomain:'ehliyet-bende.firebaseapp.com', projectId:'ehliyet-bende',
   storageBucket:'ehliyet-bende.firebasestorage.app', messagingSenderId:'575547204439', appId:'1:575547204439:web:846498138aded776729412' };
@@ -2531,6 +2570,27 @@ function guzergahCiz(){
   let kayit=null; try{ kayit=JSON.parse(localStorage.getItem('eb:gz')||'null'); }catch(e){}
   let enIyi=null; try{ enIyi=JSON.parse(localStorage.getItem('eb:gzEnIyi')||'null'); }catch(e){}
   $('#pistIc').innerHTML = `
+    <figure class="gz-harita" aria-label="Güzergah haritası: şehir merkezi, çevre yolu, şehirlerarası yol, köy geçişi, otoyol ve şehre dönüş">
+      <svg viewBox="0 0 640 400" role="img" aria-hidden="true">
+        <defs><linearGradient id="gzZem" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F353B"/><stop offset="1" stop-color="#22272B"/></linearGradient></defs>
+        <rect width="640" height="400" rx="22" fill="url(#gzZem)"/>
+        <g opacity=".22" fill="#6E7881"><rect x="70" y="250" width="26" height="54" rx="3"/><rect x="102" y="232" width="22" height="72" rx="3"/><rect x="130" y="262" width="30" height="42" rx="3"/><rect x="88" y="190" width="18" height="40" rx="3"/></g>
+        <g fill="#3E6B48" opacity=".55"><circle cx="420" cy="92" r="12"/><circle cx="440" cy="84" r="9"/><circle cx="530" cy="300" r="13"/><circle cx="552" cy="292" r="9"/><circle cx="300" cy="320" r="10"/></g>
+        <path id="gzYol" d="M120 300 C 120 250, 150 215, 200 205 S 300 190, 330 150 S 390 80, 470 80 S 580 120, 580 190 S 560 300, 470 320 S 300 345, 220 335 S 120 340, 120 300 Z" fill="none" stroke="#4A525A" stroke-width="26" stroke-linejoin="round"/>
+        <use href="#gzYol" fill="none" stroke="#F2C21B" stroke-width="2.5" stroke-dasharray="10 12"/>
+        <g font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#F4F5F2">
+          <g transform="translate(64 335)"><rect x="-10" y="-18" width="128" height="28" rx="14" fill="#14181B"/><text x="0" y="1">🏙️ Şehir merkezi</text></g>
+          <g transform="translate(176 176)"><rect x="-10" y="-18" width="108" height="28" rx="14" fill="#14181B"/><text x="0" y="1">🔁 Çevre yolu</text></g>
+          <g transform="translate(232 112)"><rect x="-10" y="-18" width="136" height="28" rx="14" fill="#14181B"/><text x="0" y="1">🛣️ Şehirlerarası</text></g>
+          <g transform="translate(520 224)"><rect x="-10" y="-18" width="98" height="28" rx="14" fill="#14181B"/><text x="0" y="1">🏡 Köy yolu</text></g>
+          <g transform="translate(330 372)"><rect x="-10" y="-18" width="92" height="28" rx="14" fill="#14181B"/><text x="0" y="1">🚀 Otoyol</text></g>
+        </g>
+        <g transform="translate(120 300)"><circle r="11" fill="#F4F5F2"/><text x="0" y="5" text-anchor="middle" font-size="13">🏁</text></g>
+        <g class="gz-arac"><rect x="-11" y="-6" width="22" height="12" rx="4" fill="#F2C21B" stroke="#14181B" stroke-width="2"/>
+          <animateMotion dur="14s" repeatCount="indefinite" rotate="auto"><mpath href="#gzYol"/></animateMotion></g>
+        <text x="610" y="40" text-anchor="end" font-family="system-ui,sans-serif" font-size="30" font-weight="800" fill="#F2C21B">50 km</text>
+        <text x="610" y="62" text-anchor="end" font-family="system-ui,sans-serif" font-size="13" fill="#C9CFD4">100 puanla başla · 70 ve üzeri geçer</text>
+      </svg></figure>
     <div class="blok gz-giris">
       <h3>Trafik güzergahı · ${GZ_UZ/1000} km</h3>
       <p class="soluk">Şehir merkezinden başlayıp çevre yolu, şehirlerarası yol, köy geçişi ve otoyoldan geçerek şehre dönen bir sürüş. Trafik ışıkları, DUR levhaları, yaya geçitleri, okul bölgeleri, hız sınırları ve diğer araçlar var. 100 puanla başlarsın; her kural ihlali puan düşürür. <b>70 ve üzeri</b> geçer.</p>
@@ -4774,7 +4834,7 @@ function sponsorAc(){ disAc(SPONSOR.url); }
 function reklamKose(){
   let k = document.getElementById('sponsorKose');
   const goster = !reklamsiz() && KOSE_EKRANLAR.includes(D.ekran) && !document.querySelector('.sim-kabin');
-  document.body.classList.toggle('sponsorlu', goster);
+  document.body.classList.toggle('sponsorlu', goster); document.body.dataset.ekran = D.ekran||'';
   if(!goster){ k && k.remove(); return; }
   if(!k){
     k = document.createElement('a'); k.id='sponsorKose'; k.className='sponsor-kose'; k.href=SPONSOR.url; k.target='_blank'; k.rel='noopener sponsored';
