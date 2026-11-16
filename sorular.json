@@ -1,5 +1,5 @@
 {
- "surum": "2026-11-15-58",
+ "surum": "2026-11-16-66",
  "aciklama": "EHLİYET BENDE soru bankası güncellemesi. Uygulama bu dosyayı internetten düzenli olarak okur.",
  "sorular": [
   {
@@ -755,7 +755,111 @@
    ],
    "cozum": "Ters bağlantı elektronik aksama ve aküye ciddi zarar verir; kıvılcım riskine dikkat edilir.",
    "levha": null
+  },
+  {
+   "uid": "k068",
+   "kat": "tc",
+   "metin": "Okul geçidinde görevli bulunduğunda sürücü ne yapmalıdır?",
+   "dogru": "Görevlinin uyarılarına uymalı ve öğrencilere yol vermelidir",
+   "yanlislar": [
+    "Korna çalarak geçmelidir",
+    "Hızını artırmalıdır",
+    "Öğrencilerin kenara çekilmesini beklemeden geçmelidir"
+   ],
+   "cozum": "Okul bölgelerinde çocukların hareketleri beklenmedik olabileceği için azami dikkat gerekir.",
+   "levha": null
+  },
+  {
+   "uid": "k015",
+   "kat": "iy",
+   "metin": "Omurga yaralanması şüphesi olan kazazedede en önemli kural nedir?",
+   "dogru": "Baş–boyun–gövde ekseni bozulmadan hareket ettirilmemelidir",
+   "yanlislar": [
+    "Hemen oturtulmalıdır",
+    "Başı bir yana çevrilip yastık konulmalıdır",
+    "Ayağa kaldırılıp yürümesi denenmelidir"
+   ],
+   "cozum": "Omurga yaralanmasında eksenin bozulması felce yol açabilir; zorunlu değilse kazazede yerinden oynatılmaz.",
+   "levha": null
+  },
+  {
+   "uid": "k069",
+   "kat": "tc",
+   "metin": "Hemzemin geçide yaklaşan sürücü bariyerler inmeye başladıysa ne yapmalıdır?",
+   "dogru": "Durmalı ve bariyer tamamen kalkana kadar beklemelidir",
+   "yanlislar": [
+    "Bariyerler kapanmadan hızla geçmelidir",
+    "Bariyerlerin arasından geçmelidir",
+    "Korna çalarak geçmelidir"
+   ],
+   "cozum": "Bariyer inerken, ışıklı uyarı yanarken ya da tren yaklaşırken geçide girilmez.",
+   "levha": null
+  },
+  {
+   "uid": "k134",
+   "kat": "mt",
+   "metin": "Triger kayışının kopması motorda neye yol açabilir?",
+   "dogru": "Supap ve pistonların çarpışarak ciddi motor hasarına",
+   "yanlislar": [
+    "Silecek motorunun durmasına",
+    "Akünün şarj olmasına",
+    "Lastiklerin aşınmasına"
+   ],
+   "cozum": "Triger kayışı üreticinin önerdiği kilometrede değiştirilmelidir.",
+   "levha": null
+  },
+  {
+   "uid": "k016",
+   "kat": "iy",
+   "metin": "Kaza yapmış araç içindeki kazazede, araçta yangın tehlikesi varsa hangi yöntemle çıkarılır?",
+   "dogru": "Rentek (Rautek) manevrası ile",
+   "yanlislar": [
+    "Kolundan çekilerek",
+    "Ayaklarından sürüklenerek",
+    "Kazazede kendi başına çıkmaya zorlanarak"
+   ],
+   "cozum": "Rentek manevrası baş–boyun–gövde eksenini mümkün olduğunca koruyarak hızlı çıkarmayı sağlar.",
+   "levha": null
+  },
+  {
+   "uid": "k070",
+   "kat": "tc",
+   "metin": "Bariyersiz hemzemin geçitten geçerken nasıl davranılmalıdır?",
+   "dogru": "Yavaşlanmalı, durulup iki tarafa bakılarak tren gelmiyorsa geçilmelidir",
+   "yanlislar": [
+    "Hızlanarak geçilmelidir",
+    "Geçitte durup beklenmelidir",
+    "Vites boşa alınarak geçilmelidir"
+   ],
+   "cozum": "Trenin durma mesafesi çok uzundur; tren her zaman önceliklidir.",
+   "levha": null
+  },
+  {
+   "uid": "k157",
+   "kat": "ta",
+   "metin": "Trafikte 'öfke kontrolü' neden önemlidir?",
+   "dogru": "Öfke dikkat ve karar verme yeteneğini bozarak kaza riskini artırır",
+   "yanlislar": [
+    "Öfke sürüş becerisini artırır",
+    "Öfkeli sürücü daha dikkatli olur",
+    "Öfkenin trafikte etkisi yoktur"
+   ],
+   "cozum": "Öfkelenen sürücü risk alır, mesafeyi ve hızı ayarlayamaz.",
+   "levha": null
+  },
+  {
+   "uid": "k136",
+   "kat": "mt",
+   "metin": "Hava filtresinin tıkanması neye yol açar?",
+   "dogru": "Motor gücünün düşmesine ve yakıt tüketiminin artmasına",
+   "yanlislar": [
+    "Fren mesafesinin kısalmasına",
+    "Lastik basıncının artmasına",
+    "Farların daha iyi aydınlatmasına"
+   ],
+   "cozum": "Motor yanma için temiz ve yeterli hava ister; tıkalı filtre karışımı bozar.",
+   "levha": null
   }
  ],
- "guncelleme": "2026-11-15"
+ "guncelleme": "2026-11-16"
 }
