@@ -1,31 +1,5 @@
 [
  {
-  "uid": "k017",
-  "kat": "iy",
-  "metin": "Dış kanamada ilk uygulanacak yöntem hangisidir?",
-  "dogru": "Kanayan yere temiz bir bezle doğrudan baskı uygulamak",
-  "yanlislar": [
-   "Hemen turnike uygulamak",
-   "Yarayı açık bırakıp beklemek",
-   "Yaraya toprak ya da kahve koymak"
-  ],
-  "cozum": "Doğrudan baskı çoğu kanamayı durdurur; turnike yalnızca kopmalarda ve diğer yöntemler yetersizse en son başvurulan yöntemdir.",
-  "levha": null
- },
- {
-  "uid": "k018",
-  "kat": "iy",
-  "metin": "Turnike uygulandığında nelere dikkat edilir?",
-  "dogru": "Uygulama saati not edilir ve görünür yere yazılır",
-  "yanlislar": [
-   "Turnike her 2 dakikada bir gevşetilir",
-   "Turnikenin üzeri sıkıca kapatılıp gizlenir",
-   "Turnike eklem üzerine uygulanır"
-  ],
-  "cozum": "Sağlık ekibinin turnike süresini bilmesi gerekir; turnike kendi başına gevşetilmez ve eklem üzerine uygulanmaz.",
-  "levha": null
- },
- {
   "uid": "k019",
   "kat": "iy",
   "metin": "Kopan bir uzuv sağlık kuruluşuna nasıl gönderilir?",
@@ -374,45 +348,6 @@
    "Tanıdığı kişiye"
   ],
   "cozum": "Önceliklendirme (triyaj) hayatı tehdit eden durumlara göre yapılır; sessiz kazazede daha ağır olabilir.",
-  "levha": null
- },
- {
-  "uid": "k071",
-  "kat": "tc",
-  "metin": "Park etmenin yasak olduğu yerlerden biri aşağıdakilerden hangisidir?",
-  "dogru": "Yaya geçitleri ve kavşaklar",
-  "yanlislar": [
-   "Park yeri olarak işaretlenmiş alan",
-   "Otopark",
-   "Kendi evinin otoparkı"
-  ],
-  "cozum": "Yaya geçitleri, kavşaklar, tüneller, köprüler, dönemeçler ve tepe üstleri gibi yerlerde park etmek yasaktır.",
-  "levha": null
- },
- {
-  "uid": "k072",
-  "kat": "tc",
-  "metin": "'Duraklama' ile 'park etme' arasındaki fark nedir?",
-  "dogru": "Duraklama; trafik zorunluluğu dışında, yolcu indirme-bindirme veya yükleme için kısa süreli durmadır, park etme ise daha uzun süreli bırakmadır",
-  "yanlislar": [
-   "İkisi aynıdır",
-   "Park sadece gece yapılır",
-   "Duraklama sadece otoyolda yapılır"
-  ],
-  "cozum": "Duraklama kısa süreli ve amaçlıdır; park ise aracın belirli bir süre bırakılmasıdır.",
-  "levha": null
- },
- {
-  "uid": "k073",
-  "kat": "tc",
-  "metin": "Otoyolda geri gitmek ve U dönüşü yapmak hakkında hangisi doğrudur?",
-  "dogru": "Yasaktır",
-  "yanlislar": [
-   "Gece serbesttir",
-   "Trafik azsa serbesttir",
-   "Emniyet şeridinde serbesttir"
-  ],
-  "cozum": "Otoyolda geri gitme, U dönüşü ve orta refüjden geçiş kesinlikle yasaktır.",
   "levha": null
  },
  {
@@ -962,32 +897,6 @@
   "levha": null
  },
  {
-  "uid": "k137",
-  "kat": "mt",
-  "metin": "Motor yağı ne zaman değiştirilmelidir?",
-  "dogru": "Üreticinin belirttiği kilometre veya süre dolduğunda",
-  "yanlislar": [
-   "Hiç değiştirilmez, eksildikçe eklenir",
-   "Sadece motor arıza yaptığında",
-   "Her depo dolumunda"
-  ],
-  "cozum": "Yağ zamanla kirlenir ve özelliğini kaybeder; filtresiyle birlikte zamanında değiştirilir.",
-  "levha": null
- },
- {
-  "uid": "k138",
-  "kat": "mt",
-  "metin": "Fren hidroliği seviyesinin sürekli azalması neye işaret eder?",
-  "dogru": "Fren sisteminde kaçak veya balataların aşırı aşınmasına",
-  "yanlislar": [
-   "Normal bir durumdur",
-   "Motor yağının fazla olduğuna",
-   "Akünün iyi şarj olduğuna"
-  ],
-  "cozum": "Fren hidroliğindeki düşüş fren güvenliğini doğrudan etkiler; vakit kaybetmeden kontrol ettirilmelidir.",
-  "levha": null
- },
- {
   "uid": "k139",
   "kat": "mt",
   "metin": "Direksiyon simidinin normalden ağır dönmesi hangi nedenden kaynaklanabilir?",
@@ -1141,19 +1050,6 @@
    "Motorun durması"
   ],
   "cozum": "Gereksiz uzun rölanti yakıt israfı ve hava kirliliği demektir.",
-  "levha": null
- },
- {
-  "uid": "k158",
-  "kat": "ta",
-  "metin": "Kavşakta yeşil ışık yanar yanmaz öndeki araç hemen hareket etmediğinde ne yapılmalıdır?",
-  "dogru": "Birkaç saniye sabırla beklenmelidir",
-  "yanlislar": [
-   "Uzun süre korna çalınmalıdır",
-   "Selektör yapılmalıdır",
-   "Sağından geçilmelidir"
-  ],
-  "cozum": "Öndeki sürücü kavşağın güvenli olduğunu kontrol ediyor olabilir; sabırlı olmak gerekir.",
   "levha": null
  },
  {
