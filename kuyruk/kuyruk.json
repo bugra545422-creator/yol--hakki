@@ -1,31 +1,5 @@
 [
  {
-  "uid": "k019",
-  "kat": "iy",
-  "metin": "Kopan bir uzuv sağlık kuruluşuna nasıl gönderilir?",
-  "dogru": "Temiz bir beze sarılıp naylon poşete konur, poşet buzlu suya yerleştirilir",
-  "yanlislar": [
-   "Doğrudan buzun içine gömülür",
-   "Alkole batırılır",
-   "Sıcak suda bekletilir"
-  ],
-  "cozum": "Uzuv buza doğrudan değerse doku zarar görür; temiz ve serin şekilde, kazazedeyle birlikte gönderilir.",
-  "levha": null
- },
- {
-  "uid": "k020",
-  "kat": "iy",
-  "metin": "Solunum yolu tam tıkanmış (konuşamayan, öksüremeyen) yetişkine hangi uygulama yapılır?",
-  "dogru": "Heimlich manevrası",
-  "yanlislar": [
-   "Kalp masajı",
-   "Şok pozisyonu",
-   "Su içirme"
-  ],
-  "cozum": "Heimlich manevrasında göbeğin biraz üstünden içe ve yukarı doğru baskı uygulanarak yabancı cisim çıkarılmaya çalışılır.",
-  "levha": null
- },
- {
   "uid": "k021",
   "kat": "iy",
   "metin": "Solunum yolu kısmen tıkanmış ve öksürebilen kişiye ne yapılır?",
@@ -348,45 +322,6 @@
    "Tanıdığı kişiye"
   ],
   "cozum": "Önceliklendirme (triyaj) hayatı tehdit eden durumlara göre yapılır; sessiz kazazede daha ağır olabilir.",
-  "levha": null
- },
- {
-  "uid": "k075",
-  "kat": "tc",
-  "metin": "Otoyola giriş şeridinden ana yola katılan sürücü ne yapmalıdır?",
-  "dogru": "Hızını ana yol trafiğine uydurup boşluk bulunca güvenle katılmalıdır",
-  "yanlislar": [
-   "Giriş şeridinin sonunda durup beklemelidir",
-   "Ana yoldaki araçların yol vermesini zorlamalıdır",
-   "Emniyet şeridine geçmelidir"
-  ],
-  "cozum": "Hızlanma şeridi, ana yol hızına ulaşıp güvenli katılmak için kullanılır.",
-  "levha": null
- },
- {
-  "uid": "k076",
-  "kat": "tc",
-  "metin": "Bölünmüş yollarda en sol şerit hangi amaçla kullanılır?",
-  "dogru": "Geçme amacıyla",
-  "yanlislar": [
-   "Yavaş giden araçlar için",
-   "Park etmek için",
-   "Duraklamak için"
-  ],
-  "cozum": "Sol şerit geçiş içindir; geçiş bitince sağdaki şeride dönülür.",
-  "levha": null
- },
- {
-  "uid": "k077",
-  "kat": "tc",
-  "metin": "Sürücü sola dönüş yapacaksa nasıl hareket etmelidir?",
-  "dogru": "Önceden sinyal verip yolun sol kenarına yakın şeride geçmeli, yavaşlayarak dönmelidir",
-  "yanlislar": [
-   "Sağ şeritten aniden sola dönmelidir",
-   "Sinyal vermeden dönmelidir",
-   "Dönüşü hızlanarak yapmalıdır"
-  ],
-  "cozum": "Dönüşe hazırlık önceden yapılır; ani şerit değiştirmek kazalara neden olur.",
   "levha": null
  },
  {
@@ -897,32 +832,6 @@
   "levha": null
  },
  {
-  "uid": "k139",
-  "kat": "mt",
-  "metin": "Direksiyon simidinin normalden ağır dönmesi hangi nedenden kaynaklanabilir?",
-  "dogru": "Direksiyon (hidrolik/elektrik) yardımında arıza veya ön lastik basıncının düşük olması",
-  "yanlislar": [
-   "Yakıtın azalması",
-   "Silecek suyunun bitmesi",
-   "Klima gazının azalması"
-  ],
-  "cozum": "Direksiyonun ağırlaşması hem yorgunluk hem de manevra güçlüğü yaratır.",
-  "levha": null
- },
- {
-  "uid": "k140",
-  "kat": "mt",
-  "metin": "Gösterge panelinde motor arıza (check engine) lambasının sürekli yanması neyi gösterir?",
-  "dogru": "Motor yönetim sisteminin bir arıza algıladığını",
-  "yanlislar": [
-   "Emniyet kemerinin takılı olduğunu",
-   "Sinyal lambasının yandığını",
-   "Kapıların kapalı olduğunu"
-  ],
-  "cozum": "Lamba yanıyorsa araç en kısa sürede serviste arıza tespit cihazıyla kontrol ettirilmelidir.",
-  "levha": null
- },
- {
   "uid": "k141",
   "kat": "mt",
   "metin": "Silecek lastikleri aşındığında ne olur?",
@@ -1050,19 +959,6 @@
    "Motorun durması"
   ],
   "cozum": "Gereksiz uzun rölanti yakıt israfı ve hava kirliliği demektir.",
-  "levha": null
- },
- {
-  "uid": "k159",
-  "kat": "ta",
-  "metin": "Trafikte 'fermuar sistemi' (dönüşümlü geçiş) ne zaman uygulanır?",
-  "dogru": "Şerit daralmalarında araçların sırayla birer birer birleşmesi için",
-  "yanlislar": [
-   "Park ederken",
-   "Otoyola girişte hiç uygulanmaz",
-   "Yaya geçidinde"
-  ],
-  "cozum": "Fermuar sistemi daralan yolda trafiğin adil ve akıcı birleşmesini sağlar.",
   "levha": null
  },
  {
