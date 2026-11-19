@@ -1,31 +1,5 @@
 [
  {
-  "uid": "k021",
-  "kat": "iy",
-  "metin": "Solunum yolu kısmen tıkanmış ve öksürebilen kişiye ne yapılır?",
-  "dogru": "Öksürmesi teşvik edilir, müdahale edilmez",
-  "yanlislar": [
-   "Hemen Heimlich manevrası yapılır",
-   "Sırtına sertçe vurulur",
-   "Ağzına parmak sokulup cisim aranır"
-  ],
-  "cozum": "Öksürük en etkili temizleme yoludur; kişi öksürebiliyorsa öksürmesi desteklenir ve izlenir.",
-  "levha": null
- },
- {
-  "uid": "k023",
-  "kat": "iy",
-  "metin": "Sara (epilepsi) nöbeti geçiren kişiye ne yapılmalıdır?",
-  "dogru": "Çevresindeki tehlikeli eşyalar uzaklaştırılır, başının altına yumuşak bir şey konur",
-  "yanlislar": [
-   "Ağzına kaşık ya da bez sıkıştırılır",
-   "Kasılmaları güç kullanılarak durdurulur",
-   "Su içirilmeye çalışılır"
-  ],
-  "cozum": "Nöbet sırasında ağza bir şey konulmaz ve hareketler engellenmez; nöbet sonrası koma pozisyonu verilir.",
-  "levha": null
- },
- {
   "uid": "k024",
   "kat": "iy",
   "metin": "Güneş çarpması yaşayan kişiye ilk yardımda ne yapılır?",
@@ -322,45 +296,6 @@
    "Tanıdığı kişiye"
   ],
   "cozum": "Önceliklendirme (triyaj) hayatı tehdit eden durumlara göre yapılır; sessiz kazazede daha ağır olabilir.",
-  "levha": null
- },
- {
-  "uid": "k078",
-  "kat": "tc",
-  "metin": "Sağa dönüş yapacak sürücü dönüşten önce hangi şeritte olmalıdır?",
-  "dogru": "En sağdaki şeritte",
-  "yanlislar": [
-   "En soldaki şeritte",
-   "Orta şeritte",
-   "Emniyet şeridinde"
-  ],
-  "cozum": "Sağa dönüşler en sağ şeritten, kısa ve kavisli yapılır.",
-  "levha": null
- },
- {
-  "uid": "k079",
-  "kat": "tc",
-  "metin": "Işıklı trafik işaretinde sarı ışık tek başına yanarken sürücü ne yapmalıdır?",
-  "dogru": "Kavşağa girmemek için durmaya hazırlanmalı, güvenle durabiliyorsa durmalıdır",
-  "yanlislar": [
-   "Hızlanarak kavşaktan geçmelidir",
-   "Hemen ani fren yapmalıdır",
-   "Korna çalarak geçmelidir"
-  ],
-  "cozum": "Sarı ışık kırmızının geleceğini gösterir; kavşağa girmiş araç geçişini tamamlar.",
-  "levha": null
- },
- {
-  "uid": "k080",
-  "kat": "tc",
-  "metin": "Sürekli yanıp sönen sarı ışık ne anlama gelir?",
-  "dogru": "Dikkatli ve yavaş geçilmesi gerektiğini",
-  "yanlislar": [
-   "Durmanın zorunlu olduğunu",
-   "Geçişin yasak olduğunu",
-   "Yolun trafiğe kapalı olduğunu"
-  ],
-  "cozum": "Yanıp sönen sarı ışık, kavşakta dikkat ve yavaşlamayı ifade eder; geçiş kuralları uygulanır.",
   "levha": null
  },
  {
@@ -832,32 +767,6 @@
   "levha": null
  },
  {
-  "uid": "k141",
-  "kat": "mt",
-  "metin": "Silecek lastikleri aşındığında ne olur?",
-  "dogru": "Camı iyi temizleyemez, yağmurda görüş azalır",
-  "yanlislar": [
-   "Motor ısınır",
-   "Fren etkisizleşir",
-   "Yakıt tüketimi düşer"
-  ],
-  "cozum": "Görüş güvenli sürüşün temelidir; silecekler düzenli yenilenmelidir.",
-  "levha": null
- },
- {
-  "uid": "k142",
-  "kat": "mt",
-  "metin": "Motor yağı seviyesi kontrol edilirken yağ çubuğunda seviye nerede olmalıdır?",
-  "dogru": "Alt (min) ve üst (max) işaretleri arasında",
-  "yanlislar": [
-   "Alt işaretin altında",
-   "Üst işaretin çok üstünde",
-   "Çubukta hiç yağ görünmemeli"
-  ],
-  "cozum": "Eksik yağ motoru aşındırır, fazla yağ da contalara zarar verebilir.",
-  "levha": null
- },
- {
   "uid": "k143",
   "kat": "mt",
   "metin": "Katalitik konvertörün görevi nedir?",
@@ -959,19 +868,6 @@
    "Motorun durması"
   ],
   "cozum": "Gereksiz uzun rölanti yakıt israfı ve hava kirliliği demektir.",
-  "levha": null
- },
- {
-  "uid": "k160",
-  "kat": "ta",
-  "metin": "Sürücülerin birbirine selam vermek için uzun süre korna çalması hakkında hangisi doğrudur?",
-  "dogru": "Gürültü kirliliği yaratır ve trafik adabına uygun değildir",
-  "yanlislar": [
-   "Trafik adabının gereğidir",
-   "Zorunludur",
-   "Gece yapılması uygundur"
-  ],
-  "cozum": "Korna yalnızca tehlikeyi önlemek için kullanılmalıdır.",
   "levha": null
  },
  {
