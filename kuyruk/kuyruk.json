@@ -1,31 +1,5 @@
 [
  {
-  "uid": "k024",
-  "kat": "iy",
-  "metin": "Güneş çarpması yaşayan kişiye ilk yardımda ne yapılır?",
-  "dogru": "Serin bir yere alınır, giysileri gevşetilir ve vücudu ıslak bezle soğutulur",
-  "yanlislar": [
-   "Güneşte bekletilir",
-   "Kalın battaniyeyle sarılır",
-   "Alkol içirilir"
-  ],
-  "cozum": "Vücut ısısını düşürmek esastır; bilinci açıksa yudum yudum su verilebilir.",
-  "levha": null
- },
- {
-  "uid": "k025",
-  "kat": "iy",
-  "metin": "Donma vakasında donan bölge nasıl ısıtılır?",
-  "dogru": "Ilık suyla yavaş yavaş, ovalamadan",
-  "yanlislar": [
-   "Kar ile ovularak",
-   "Ateşe tutularak",
-   "Sıcak su torbasıyla doğrudan"
-  ],
-  "cozum": "Donmuş doku hassastır; ovalamak ve ani yüksek ısı dokuya zarar verir.",
-  "levha": null
- },
- {
   "uid": "k026",
   "kat": "iy",
   "metin": "Bilinci kapalı zehirlenmiş bir kişiye ne yapılmamalıdır?",
@@ -296,45 +270,6 @@
    "Tanıdığı kişiye"
   ],
   "cozum": "Önceliklendirme (triyaj) hayatı tehdit eden durumlara göre yapılır; sessiz kazazede daha ağır olabilir.",
-  "levha": null
- },
- {
-  "uid": "k081",
-  "kat": "tc",
-  "metin": "Yeşil ışıkta kavşağa giren sürücü kavşak çıkışının dolu olduğunu görürse ne yapmalıdır?",
-  "dogru": "Kavşağa girmemeli, yol açılana kadar beklemelidir",
-  "yanlislar": [
-   "Kavşağın ortasında durmalıdır",
-   "Korna çalarak öndekileri zorlamalıdır",
-   "Karşı şeride geçmelidir"
-  ],
-  "cozum": "Kavşak içinde kalan araç diğer yöndeki trafiği kilitler.",
-  "levha": null
- },
- {
-  "uid": "k082",
-  "kat": "tc",
-  "metin": "Sürücü belgesi olmadan araç kullanmanın sonucu nedir?",
-  "dogru": "Yasaktır ve idari para cezası uygulanır, araç trafikten men edilir",
-  "yanlislar": [
-   "Gündüz serbesttir",
-   "Şehir içinde serbesttir",
-   "Sadece uyarı verilir"
-  ],
-  "cozum": "Sürücü belgesi olmadan araç kullanmak Karayolları Trafik Kanunu'na göre yasaktır.",
-  "levha": null
- },
- {
-  "uid": "k083",
-  "kat": "tc",
-  "metin": "Araç kullanırken cep telefonu kullanımıyla ilgili hangisi doğrudur?",
-  "dogru": "Elde tutularak konuşmak ve mesajlaşmak yasaktır",
-  "yanlislar": [
-   "Kırmızı ışıkta beklerken mesajlaşmak serbesttir",
-   "Hız düşükse serbesttir",
-   "Şehir dışında serbesttir"
-  ],
-  "cozum": "Telefon dikkatin dağılmasına yol açar; sürüş sırasında elde tutularak kullanılması yasaktır.",
   "levha": null
  },
  {
@@ -767,32 +702,6 @@
   "levha": null
  },
  {
-  "uid": "k143",
-  "kat": "mt",
-  "metin": "Katalitik konvertörün görevi nedir?",
-  "dogru": "Egzoz gazındaki zararlı maddeleri daha az zararlı gazlara dönüştürmek",
-  "yanlislar": [
-   "Motor gücünü artırmak",
-   "Yakıt deposunu soğutmak",
-   "Lastik basıncını ayarlamak"
-  ],
-  "cozum": "Katalitik konvertör hava kirliliğini azaltır; kurşunlu yakıt ve yağ yakan motor ona zarar verir.",
-  "levha": null
- },
- {
-  "uid": "k144",
-  "kat": "mt",
-  "metin": "Turbo şarjlı motorlarda uzun yolculuktan hemen sonra ne yapılması önerilir?",
-  "dogru": "Motor bir süre rölantide çalıştırılıp turbonun soğuması beklenir",
-  "yanlislar": [
-   "Motor yüksek devirde gazlanıp kapatılır",
-   "Motor hemen kapatılıp üzerine su dökülür",
-   "Kontak açık bırakılıp araç terk edilir"
-  ],
-  "cozum": "Ani kapatma sıcak turbonun yağlamasını keser; kısa rölanti ömrünü uzatır.",
-  "levha": null
- },
- {
   "uid": "k145",
   "kat": "mt",
   "metin": "Lastik diş derinliği azaldığında en büyük risk nedir?",
@@ -868,19 +777,6 @@
    "Motorun durması"
   ],
   "cozum": "Gereksiz uzun rölanti yakıt israfı ve hava kirliliği demektir.",
-  "levha": null
- },
- {
-  "uid": "k161",
-  "kat": "ta",
-  "metin": "Araçla düğün konvoyu ya da kutlama yaparken hangisi doğrudur?",
-  "dogru": "Trafik kurallarına uyulmalı, yolu kapatmak ve tehlikeli manevra yapmak yasaktır",
-  "yanlislar": [
-   "Yolu kapatmak serbesttir",
-   "Kırmızı ışıkta geçmek serbesttir",
-   "Camdan sarkmak serbesttir"
-  ],
-  "cozum": "Kutlamalar başkalarının can güvenliğini tehlikeye atamaz.",
   "levha": null
  },
  {
