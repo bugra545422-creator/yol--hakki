@@ -1,31 +1,5 @@
 [
  {
-  "uid": "k026",
-  "kat": "iy",
-  "metin": "Bilinci kapalı zehirlenmiş bir kişiye ne yapılmamalıdır?",
-  "dogru": "Kusturulmaya çalışılmamalıdır",
-  "yanlislar": [
-   "Koma pozisyonu verilmemelidir",
-   "112 aranmamalıdır",
-   "Solunumu kontrol edilmemelidir"
-  ],
-  "cozum": "Bilinci kapalı kişiyi kusturmak kusmuğun soluk yoluna kaçmasına neden olur.",
-  "levha": null
- },
- {
-  "uid": "k027",
-  "kat": "iy",
-  "metin": "Göze yabancı cisim batmışsa ne yapılır?",
-  "dogru": "Cisim çıkarılmaz, her iki göz kapatılarak sağlık kuruluşuna gidilir",
-  "yanlislar": [
-   "Cisim hemen çekilerek çıkarılır",
-   "Göz ovuşturulur",
-   "Göze kolonya damlatılır"
-  ],
-  "cozum": "İki göz birlikte hareket ettiği için her ikisi de kapatılır; batmış cisim yerinden oynatılmaz.",
-  "levha": null
- },
- {
   "uid": "k028",
   "kat": "iy",
   "metin": "Göze kimyasal madde kaçtığında ne yapılır?",
@@ -270,45 +244,6 @@
    "Tanıdığı kişiye"
   ],
   "cozum": "Önceliklendirme (triyaj) hayatı tehdit eden durumlara göre yapılır; sessiz kazazede daha ağır olabilir.",
-  "levha": null
- },
- {
-  "uid": "k084",
-  "kat": "tc",
-  "metin": "Emniyet kemeri ile ilgili hangisi doğrudur?",
-  "dogru": "Araçta emniyet kemeri bulunan koltuklarda oturanların kemer takması zorunludur",
-  "yanlislar": [
-   "Sadece sürücü takmalıdır",
-   "Şehir içinde takmak gerekmez",
-   "Arka koltuktakiler takmaz"
-  ],
-  "cozum": "Kemer ön ve arka koltuktakileri çarpmanın etkisinden korur.",
-  "levha": null
- },
- {
-  "uid": "k085",
-  "kat": "tc",
-  "metin": "Yorgun ve uykusuz araç kullanmanın en önemli tehlikesi nedir?",
-  "dogru": "Tepki süresinin uzaması ve direksiyonda uyuklama",
-  "yanlislar": [
-   "Yakıt tüketiminin azalması",
-   "Lastiklerin daha az aşınması",
-   "Motorun daha az ısınması"
-  ],
-  "cozum": "Yorgunluk alkol etkisine benzer şekilde dikkat ve tepki süresini bozar; düzenli mola verilmelidir.",
-  "levha": null
- },
- {
-  "uid": "k086",
-  "kat": "tc",
-  "metin": "Alkollü araç kullanmanın sürüşe etkisi nedir?",
-  "dogru": "Tepki süresini uzatır, görüş alanını daraltır ve mesafe tahminini bozar",
-  "yanlislar": [
-   "Dikkati artırır",
-   "Reflekslerin hızlanmasını sağlar",
-   "Hiçbir etkisi yoktur"
-  ],
-  "cozum": "Alkol küçük miktarlarda bile karar verme ve algılama yeteneğini olumsuz etkiler.",
   "levha": null
  },
  {
@@ -702,32 +637,6 @@
   "levha": null
  },
  {
-  "uid": "k145",
-  "kat": "mt",
-  "metin": "Lastik diş derinliği azaldığında en büyük risk nedir?",
-  "dogru": "Islak zeminde yol tutuşun azalması ve kızaklama",
-  "yanlislar": [
-   "Yakıt tüketiminin düşmesi",
-   "Motor gücünün artması",
-   "Direksiyonun hafiflemesi"
-  ],
-  "cozum": "Diş kanalları suyu tahliye eder; aşınmış lastik suyu atamaz ve araç kayar.",
-  "levha": null
- },
- {
-  "uid": "k146",
-  "kat": "mt",
-  "metin": "Araçta yangın çıkması halinde ilk ne yapılmalıdır?",
-  "dogru": "Kontak kapatılır, yolcular uzaklaştırılır ve yangın söndürücü kullanılır",
-  "yanlislar": [
-   "Motor kaputu hızla sonuna kadar açılır",
-   "Yangına su dökülür",
-   "Araç hızla sürülmeye devam edilir"
-  ],
-  "cozum": "Kontağı kapatmak yakıt akışını ve elektrik kıvılcımını keser; kaput sonuna kadar açılırsa yangına hava girer.",
-  "levha": null
- },
- {
   "uid": "k147",
   "kat": "mt",
   "metin": "Yakıt deposu tamamen boşalana kadar araç kullanmanın sakıncası nedir?",
@@ -777,19 +686,6 @@
    "Motorun durması"
   ],
   "cozum": "Gereksiz uzun rölanti yakıt israfı ve hava kirliliği demektir.",
-  "levha": null
- },
- {
-  "uid": "k162",
-  "kat": "ta",
-  "metin": "Trafik kurallarına uymanın temel nedeni ne olmalıdır?",
-  "dogru": "Kendisinin ve başkalarının can güvenliğini korumak",
-  "yanlislar": [
-   "Ceza almamak için sadece polis varken",
-   "Sınavı geçmek",
-   "Araç sigortası için"
-  ],
-  "cozum": "Kurallar herkesin güvenle yol kullanabilmesi içindir; denetim olsun ya da olmasın uyulmalıdır.",
   "levha": null
  },
  {
