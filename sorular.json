@@ -1,5 +1,5 @@
 {
- "surum": "2026-11-21-106",
+ "surum": "2026-11-22-114",
  "aciklama": "EHLİYET BENDE soru bankası güncellemesi. Uygulama bu dosyayı internetten düzenli olarak okur.",
  "sorular": [
   {
@@ -1379,7 +1379,111 @@
    ],
    "cozum": "Kontağı kapatmak yakıt akışını ve elektrik kıvılcımını keser; kaput sonuna kadar açılırsa yangına hava girer.",
    "levha": null
+  },
+  {
+   "uid": "k087",
+   "kat": "tc",
+   "metin": "Sürüş sırasında ilaç kullanan sürücü neye dikkat etmelidir?",
+   "dogru": "İlacın uyku hali yapıp yapmadığını öğrenmeli, böyle ilaçlarda araç kullanmamalıdır",
+   "yanlislar": [
+    "Tüm ilaçlar sürüşe engel değildir, düşünmeye gerek yoktur",
+    "İlacı alkolle birlikte almalıdır",
+    "İlaç kullanırken hızını artırmalıdır"
+   ],
+   "cozum": "Bazı ilaçlar uyuşukluk ve dikkat dağınıklığı yapar; prospektüs ve hekim uyarıları dikkate alınmalıdır.",
+   "levha": null
+  },
+  {
+   "uid": "k028",
+   "kat": "iy",
+   "metin": "Göze kimyasal madde kaçtığında ne yapılır?",
+   "dogru": "Göz bol temiz suyla en az 15 dakika yıkanır",
+   "yanlislar": [
+    "Göz kapatılıp beklenir",
+    "Göz ovuşturulur",
+    "Göze süt damlatılır"
+   ],
+   "cozum": "Bol suyla yıkama kimyasalın yoğunluğunu azaltır; yıkama yanaktan dışa doğru yapılır.",
+   "levha": null
+  },
+  {
+   "uid": "k088",
+   "kat": "tc",
+   "metin": "Trafik kazası sonrası olay yerinde sürücülerin yükümlülüklerinden biri hangisidir?",
+   "dogru": "Yaralı varsa ilk yardım yapmak ve yetkililere haber vermek",
+   "yanlislar": [
+    "Olay yerinden hemen uzaklaşmak",
+    "Kaza yerindeki izleri silmek",
+    "Yaralıları tanımadığı araçlara bindirmek"
+   ],
+   "cozum": "Yaralanmalı kazalarda yetkililere haber verilir, olay yeri korunur ve ilk yardım sağlanır.",
+   "levha": null
+  },
+  {
+   "uid": "k147",
+   "kat": "mt",
+   "metin": "Yakıt deposu tamamen boşalana kadar araç kullanmanın sakıncası nedir?",
+   "dogru": "Depo dibindeki tortu yakıt sistemine geçebilir ve yakıt pompası zarar görebilir",
+   "yanlislar": [
+    "Hiçbir sakıncası yoktur",
+    "Fren balataları aşınır",
+    "Farlar zayıflar"
+   ],
+   "cozum": "Ayrıca yolda kalmak tehlikeli durumlara yol açar; yakıt seviyesi düzenli takip edilmelidir.",
+   "levha": null
+  },
+  {
+   "uid": "k030",
+   "kat": "iy",
+   "metin": "112 aranırken aşağıdakilerden hangisi mutlaka bildirilmelidir?",
+   "dogru": "Olay yerinin açık adresi ve yaralı sayısı",
+   "yanlislar": [
+    "Kazazedelerin meslekleri",
+    "Araçların kasko şirketleri",
+    "Kazanın kimin hatası olduğu"
+   ],
+   "cozum": "Ekibin doğru yere hızlı ulaşması için açık adres, olayın türü ve yaralı sayısı bildirilir; telefon ilk kapatan arayan olmamalıdır.",
+   "levha": null
+  },
+  {
+   "uid": "k089",
+   "kat": "tc",
+   "metin": "Ölümlü veya yaralanmalı kazada araçların yeri nasıl olmalıdır?",
+   "dogru": "Yetkililer gelene kadar araçların yeri değiştirilmemeli, yeri işaretlenmelidir",
+   "yanlislar": [
+    "Araçlar hemen yol kenarına çekilmelidir",
+    "Araçlar başka yere götürülmelidir",
+    "İzler temizlenmelidir"
+   ],
+   "cozum": "Kaza tespiti için araçların konumu önemlidir; ancak tehlike yaratıyorsa yeri işaretlenip kaldırılabilir.",
+   "levha": null
+  },
+  {
+   "uid": "k163",
+   "kat": "ta",
+   "metin": "Trafikte bencil davranışa örnek hangisidir?",
+   "dogru": "Kuyruğu atlayıp emniyet şeridinden ilerlemek",
+   "yanlislar": [
+    "Yayaya yol vermek",
+    "Sinyal vermek",
+    "Takip mesafesini korumak"
+   ],
+   "cozum": "Emniyet şeridini işgal etmek acil araçların geçişini engeller ve haksızlıktır.",
+   "levha": null
+  },
+  {
+   "uid": "k148",
+   "kat": "mt",
+   "metin": "Hararet göstergesi motor çalışırken neyi gösterir?",
+   "dogru": "Motor soğutma suyunun sıcaklığını",
+   "yanlislar": [
+    "Yağ miktarını",
+    "Yakıt miktarını",
+    "Lastik basıncını"
+   ],
+   "cozum": "Gösterge kırmızı bölgeye yaklaşırsa motor aşırı ısınıyordur.",
+   "levha": null
   }
  ],
- "guncelleme": "2026-11-21"
+ "guncelleme": "2026-11-22"
 }
