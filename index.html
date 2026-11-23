@@ -136,6 +136,16 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
 :focus-visible{outline:3px solid var(--serit);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+.btn.play-buyuk{position:relative;background:#fff;color:#14181B;padding:14px 30px 14px 18px;min-height:82px;border-radius:18px;gap:14px;box-shadow:0 14px 36px rgba(0,0,0,.35),0 0 0 4px rgba(242,194,27,.0);transition:transform .15s ease,box-shadow .15s ease}
+.btn.play-buyuk:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(0,0,0,.4),0 0 0 4px rgba(242,194,27,.45)}
+.play-ik{width:52px;height:52px;border-radius:14px;background:#EEF3FB;display:flex;align-items:center;justify-content:center;flex:none}
+.play-yazi{display:flex;flex-direction:column;line-height:1.1;text-align:left}
+.play-yazi small{font-size:.86rem;font-weight:600;color:#5C656E;letter-spacing:.02em}
+.play-yazi b{font-size:1.5rem;font-weight:800;letter-spacing:-.01em}
+.play-rozet{position:absolute;top:-11px;right:-10px;background:#E0262E;color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.06em;padding:5px 10px;border-radius:999px;box-shadow:0 6px 14px rgba(224,38,46,.45);transform:rotate(4deg)}
+.kahraman .dugmeler{align-items:center}
+@media (max-width:560px){.btn.play-buyuk{width:100%;justify-content:center}.kahraman .dugmeler .btn.ikincil{width:100%;justify-content:center}}
+
 /* ===== Animasyonlar ===== */
 @keyframes yukari{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 @keyframes serit-ak{to{background-position:-88px 0}}
@@ -264,11 +274,12 @@ html,body{overflow-x:clip}
       <h1>Ehliyetin <em>bir sınav</em> uzağında.</h1>
       <p class="alt">Gerçek e-sınav düzeninde denemeler, adım adım pist anlatımları ve 3D sürüş simülasyonu. Hepsi tek uygulamada.</p>
       <div class="dugmeler">
-        <a class="btn ana" href="uygulama/">▶ Tarayıcıda hemen dene</a>
-        <a class="btn ikincil" href="https://play.google.com/store/apps/details?id=com.ehliyetbende.app" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.6v18.8c0 .5.5.8 1 .6l10.4-10-10.4-10c-.5-.2-1 .1-1 .6Zm12.4 10.3 2.7 2.6-11.3 6.4 8.6-9Zm0-1.8L7.8 2.1l11.3 6.4-2.7 2.6Zm3.9-2 3.1 1.8c.8.5.8 1.6 0 2.1l-3.1 1.8-2.9-2.8 2.9-2.9Z"/></svg>
-          Google Play
+        <a class="btn play-buyuk" href="https://play.google.com/store/apps/details?id=com.ehliyetbende.app" rel="noopener">
+          <span class="play-ik"><svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E6FD0"/><stop offset=".55" stop-color="#2B8CF0"/><stop offset="1" stop-color="#E0262E"/></linearGradient></defs><path fill="url(#pg)" d="M4 2.6v18.8c0 .5.5.8 1 .6l10.4-10-10.4-10c-.5-.2-1 .1-1 .6Zm12.4 10.3 2.7 2.6-11.3 6.4 8.6-9Zm0-1.8L7.8 2.1l11.3 6.4-2.7 2.6Zm3.9-2 3.1 1.8c.8.5.8 1.6 0 2.1l-3.1 1.8-2.9-2.8 2.9-2.9Z"/></svg></span>
+          <span class="play-yazi"><small>Google Play'den</small><b>Ücretsiz indir</b></span>
+          <span class="play-rozet">ÜCRETSİZ</span>
         </a>
+        <a class="btn ikincil" href="uygulama/">▶ Tarayıcıda hemen dene</a>
       </div>
       <p class="not">Üyelik gerekmez · Türkçe, English, العربية, فارسی, Русский, Français, Italiano, Deutsch</p>
       <div class="plaka-satir" aria-label="Sınav bilgileri">
