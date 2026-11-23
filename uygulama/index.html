@@ -676,6 +676,13 @@ kbd{display:inline-flex;align-items:center;justify-content:center;min-width:26px
 .giris-ayrac{display:flex;align-items:center;gap:10px;color:#8E98A2;font-size:.85rem;margin:6px 0 2px}
 .giris-ayrac::before,.giris-ayrac::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.14)}
 .site-marka img.site-logo-yatay{width:auto;height:34px;border-radius:0}
+.giris .apple-btn{display:flex;align-items:center;justify-content:center;gap:14px;width:100%;background:#000;color:#fff;border:1px solid rgba(255,255,255,.28);min-height:78px;padding:12px 22px;border-radius:18px;font:inherit;cursor:pointer}
+.giris .apple-btn:active{transform:scale(.98)}
+.giris .apple-ik{width:48px;height:48px;border-radius:13px;background:#1C1C1E;display:flex;align-items:center;justify-content:center;flex:none}
+.giris .apple-btn .play-yazi small{color:#A1A1A6}
+.giris .apple-btn .play-yazi b{color:#fff;font-size:1.3rem}
+.giris .apple-not{color:#9AA4AD;text-align:center;font-size:.82rem;line-height:1.4}
+html.ios .giris .play-buyuk{display:none}
 
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -1105,7 +1112,9 @@ function girisEkrani(){
         <span class="play-ik"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="pgG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E6FD0"/><stop offset=".55" stop-color="#2B8CF0"/><stop offset="1" stop-color="#E0262E"/></linearGradient></defs><path fill="url(#pgG)" d="M4 2.6v18.8c0 .5.5.8 1 .6l10.4-10-10.4-10c-.5-.2-1 .1-1 .6Zm12.4 10.3 2.7 2.6-11.3 6.4 8.6-9Zm0-1.8L7.8 2.1l11.3 6.4-2.7 2.6Zm3.9-2 3.1 1.8c.8.5.8 1.6 0 2.1l-3.1 1.8-2.9-2.8 2.9-2.9Z"/></svg></span>
         <span class="play-yazi"><small>Google Play'den</small><b>Ücretsiz indir</b></span>
         <span class="play-rozet">ÜCRETSİZ</span></a>
-      <div class="giris-ayrac"><span>ya da tarayıcıda devam et</span></div>` : ''}
+      <button class="apple-btn" id="aBtn" type="button"><span class="apple-ik"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.73c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.72-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.33-3.51ZM14.2 6.27c.6-.73 1.01-1.75.9-2.77-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.21Z"/></svg></span><span class="play-yazi"><small>iPhone &amp; iPad kullanıcıları</small><b>Tarayıcıda devam et</b></span></button>
+      <small class="apple-not">Şu an App Store'da hizmet veremiyoruz; iPhone ve iPad'de web sitemizden aynı deneyimi kullanabilirsin.</small>
+      <div class="giris-ayrac"><span>ya da hesabınla giriş yap</span></div>` : ''}
       <button class="btn google tam" id="gBtn">${GICON} Google ile giriş yap</button>
       <button class="btn misafir tam" id="mBtn">Misafir olarak devam et</button>
       <button class="btn egitmen tam" id="eBtn">Eğitmen / kurum başvurusu ve girişi</button>
@@ -1117,6 +1126,8 @@ function girisEkrani(){
   const misafir = async () => { D.kullanici = {tur:'misafir', ad:'Misafir'}; await yaz('yolhakki:oturum', D.kullanici); await verileriYukle(); };
   $('#mBtn').onclick = async () => { await misafir(); git('ana'); };
   $('#eBtn').onclick = async () => { await misafir(); egitmenGirisi(); };
+  if($('#aBtn')) $('#aBtn').onclick = async () => { await misafir(); git('ana'); };
+  if(/iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1)) document.documentElement.classList.add('ios');
   $('#dilBtn').onclick = dilSec;
 }
 const GICON = '<svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.5l6.7-6.7C35.6 2.4 30.2 0 24 0 14.6 0 6.6 5.4 2.6 13.2l7.8 6.1C12.3 13.6 17.6 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.6 5.9c4.4-4.1 7-10.1 7-17.6z"/><path fill="#FBBC05" d="M10.4 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.9-4.7l-7.8-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.8-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.4 0-11.7-4.1-13.6-9.8l-7.8 6.1C6.6 42.6 14.6 48 24 48z"/></svg>';
