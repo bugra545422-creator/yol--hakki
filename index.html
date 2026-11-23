@@ -9,13 +9,13 @@
 <meta property="og:description" content="E-sınav denemeleri, pist anlatımları ve 3D sürüş simülasyonu tek uygulamada.">
 <meta property="og:image" content="https://ehliyetbende.com/gorsel/play-ozellik-grafigi.png">
 <meta name="theme-color" content="#2F353B">
-<link rel="icon" href="gorsel/favicon.png">
+<link rel="icon" href="gorsel/favicon.png?v=2">
 <link rel="canonical" href="https://ehliyetbende.com/">
 <meta property="og:url" content="https://ehliyetbende.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="apple-touch-icon" href="gorsel/ikon.png">
+<link rel="apple-touch-icon" href="gorsel/ikon.png?v=2">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Ehliyet Bende", "alternateName": "EHLİYET BENDE", "url": "https://ehliyetbende.com/", "inLanguage": "tr"}, {"@type": "Organization", "name": "BE STUDIO", "url": "https://ehliyetbende.com/", "logo": "https://ehliyetbende.com/gorsel/play-store-icon-512.png", "email": "bestudio5454@gmail.com"}, {"@type": "MobileApplication", "name": "Ehliyet Bende", "operatingSystem": "Android, Web", "applicationCategory": "EducationalApplication", "description": "Ehliyet sınavına hazırlık: 50 soruluk e-sınav denemeleri, konu anlatımları, otomobil, motosiklet, kamyon, otobüs ve tır pistleri, 3D sürüş simülasyonu.", "url": "https://ehliyetbende.com/", "image": "https://ehliyetbende.com/gorsel/play-store-icon-512.png", "inLanguage": "tr", "publisher": {"@type": "Organization", "name": "BE STUDIO"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "TRY"}, "installUrl": "https://play.google.com/store/apps/details?id=com.ehliyetbende.app"}]}</script>
 
 <style>
@@ -136,6 +136,9 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
 :focus-visible{outline:3px solid var(--serit);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+.marka img.marka-logo{width:auto;height:44px;border-radius:0}
+@media (max-width:420px){.marka img.marka-logo{height:36px}}
+
 .btn.play-buyuk{position:relative;background:#fff;color:#14181B;padding:14px 30px 14px 18px;min-height:82px;border-radius:18px;gap:14px;box-shadow:0 14px 36px rgba(0,0,0,.35),0 0 0 4px rgba(242,194,27,.0);transition:transform .15s ease,box-shadow .15s ease}
 .btn.play-buyuk:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(0,0,0,.4),0 0 0 4px rgba(242,194,27,.45)}
 .play-ik{width:52px;height:52px;border-radius:14px;background:#EEF3FB;display:flex;align-items:center;justify-content:center;flex:none}
@@ -252,7 +255,7 @@ html,body{overflow-x:clip}
 <header class="ust">
   <div class="ilerleme" aria-hidden="true"><i></i><b></b></div>
   <div class="ic">
-    <a class="marka" href="#"><img src="gorsel/ikon.png" alt="" width="36" height="36">EHLİYET BENDE</a>
+    <a class="marka" href="#" aria-label="EHLİYET BENDE"><img class="marka-logo" src="gorsel/logo-yatay-acik.png?v=1" alt="EHLİYET BENDE" width="221" height="44"></a>
     <nav aria-label="Bölümler">
       <a href="#ozellikler">Özellikler</a>
       <a href="#siniflar">Ehliyet sınıfları</a>

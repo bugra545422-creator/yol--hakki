@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ehliyet Bende — Sürücü Kursu</title>
-<link rel="icon" href="../gorsel/favicon.png">
+<link rel="icon" href="../gorsel/favicon.png?v=2">
 <meta name="description" content="Ehliyet sınavı deneme: 50 soruluk e-sınav, konu anlatımları, direksiyon pistleri ve 3D sürüş simülasyonu. Tarayıcıda ücretsiz, üyelik gerekmez.">
 <link rel="canonical" href="https://ehliyetbende.com/uygulama/">
 <style>
@@ -663,6 +663,19 @@ kbd{display:inline-flex;align-items:center;justify-content:center;min-width:26px
 .ucretsiz-bant .ucretsiz-etiket{margin:0 0 6px;font-size:.8rem}
 .ucretsiz-bant b{display:block}
 .sim-kabin.tamekran .gz-ust-dugme .k-tus{width:auto;height:30px;padding:2px 10px;background:rgba(20,24,27,.72);color:#fff;white-space:nowrap}
+/* Web giriş: yatay logo + büyük Google Play düğmesi */
+.giris-logo-yatay{display:block;height:56px;width:auto;margin-top:84px;max-width:100%}
+.giris .play-buyuk{position:relative;display:flex;align-items:center;justify-content:center;gap:14px;width:100%;background:#fff;color:#14181B;text-decoration:none;min-height:84px;padding:12px 22px;border-radius:18px;box-shadow:0 14px 34px rgba(0,0,0,.35);transition:transform .15s ease,box-shadow .15s ease}
+.giris .play-buyuk:active{transform:scale(.98)}
+.giris .play-buyuk:hover{box-shadow:0 18px 40px rgba(0,0,0,.4),0 0 0 4px rgba(242,194,27,.45)}
+.giris .play-ik{width:52px;height:52px;border-radius:14px;background:#EEF3FB;display:flex;align-items:center;justify-content:center;flex:none}
+.giris .play-yazi{display:flex;flex-direction:column;line-height:1.1;text-align:left}
+.giris .play-yazi small{font-size:.86rem;font-weight:600;color:#5C656E}
+.giris .play-yazi b{font-size:1.5rem;font-weight:800;letter-spacing:-.01em}
+.giris .play-rozet{position:absolute;top:-11px;right:-6px;background:#E0262E;color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.06em;padding:5px 10px;border-radius:999px;box-shadow:0 6px 14px rgba(224,38,46,.45);transform:rotate(4deg)}
+.giris-ayrac{display:flex;align-items:center;gap:10px;color:#8E98A2;font-size:.85rem;margin:6px 0 2px}
+.giris-ayrac::before,.giris-ayrac::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.14)}
+.site-marka img.site-logo-yatay{width:auto;height:34px;border-radius:0}
 
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -1078,16 +1091,21 @@ async function verileriYukle(){ const v = await oku(anahtar()); D.gecmis = v?.ge
 async function verileriKaydet(){ await yaz(anahtar(), {gecmis:D.gecmis, istat:D.istat}); }
 
 /* ================== Giriş ================== */
+function girisWeb(){ return typeof WEB!=='undefined' && WEB && !window.YolHakkiAndroid; }
 function girisEkrani(){
   $('#app').innerHTML = `
   <div class="giris">${dilDugmesi()}
     <div class="ust-alan"><div class="serit-dikey"></div>
-      <img src="logo.png" width="96" height="96" alt="Ehliyet Bende" style="border-radius:22px;display:block;margin-top:72px">
-      <h1>Ehliyet Bende</h1>
+      ${girisWeb() ? '<img class="giris-logo-yatay" src="../gorsel/logo-yatay-acik.png?v=1" alt="EHLİYET BENDE" width="281" height="56">' : '<img src="logo.png" width="96" height="96" alt="Ehliyet Bende" style="border-radius:22px;display:block;margin-top:72px"><h1>Ehliyet Bende</h1>'}
       <p style="margin-top:10px;color:#C9CFD4;max-width:30ch">Ehliyet sınavına hazırlık: E-Sınav denemeleri, 3D pist anlatımları, sürüş simülasyonu ve konu anlatımları.</p>
       <ul class="giris-ozellik"><li>50 soruluk gerçek düzende E-Sınav denemeleri</li><li>Otomobil, motosiklet ve ağır vasıta pistleri 3D</li><li>Klavye ve oyun koluyla sürüş simülasyonu</li><li>Konu anlatımları, levhalar ve ilk yardım</li></ul>
     </div>
     <div class="alt-alan">
+      ${girisWeb() ? `<a class="play-buyuk" href="https://play.google.com/store/apps/details?id=com.ehliyetbende.app" target="_blank" rel="noopener">
+        <span class="play-ik"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="pgG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E6FD0"/><stop offset=".55" stop-color="#2B8CF0"/><stop offset="1" stop-color="#E0262E"/></linearGradient></defs><path fill="url(#pgG)" d="M4 2.6v18.8c0 .5.5.8 1 .6l10.4-10-10.4-10c-.5-.2-1 .1-1 .6Zm12.4 10.3 2.7 2.6-11.3 6.4 8.6-9Zm0-1.8L7.8 2.1l11.3 6.4-2.7 2.6Zm3.9-2 3.1 1.8c.8.5.8 1.6 0 2.1l-3.1 1.8-2.9-2.8 2.9-2.9Z"/></svg></span>
+        <span class="play-yazi"><small>Google Play'den</small><b>Ücretsiz indir</b></span>
+        <span class="play-rozet">ÜCRETSİZ</span></a>
+      <div class="giris-ayrac"><span>ya da tarayıcıda devam et</span></div>` : ''}
       <button class="btn google tam" id="gBtn">${GICON} Google ile giriş yap</button>
       <button class="btn misafir tam" id="mBtn">Misafir olarak devam et</button>
       <button class="btn egitmen tam" id="eBtn">Eğitmen / kurum başvurusu ve girişi</button>
@@ -1767,7 +1785,7 @@ const WEB_MENU = [['ana','Ana sayfa'],['sinav','E-Sınav'],['pist','Pist'],['der
 function webUstHTML(aktif){
   if(!WEB) return '';
   return `<header class="site-ust"><div class="site-ic">
-    <a class="site-marka" href="../" title="Tanıtım sitesi"><img src="../gorsel/ikon.png" alt="" width="32" height="32"><span>EHLİYET BENDE</span></a>
+    <a class="site-marka" href="../" title="Tanıtım sitesi" aria-label="EHLİYET BENDE"><img class="site-logo-yatay" src="../gorsel/logo-yatay-acik.png?v=1" alt="EHLİYET BENDE" width="171" height="34"></a>
     <nav class="site-menu" aria-label="Site menüsü">${WEB_MENU.map(([k,a])=>`<button data-git="${k}" ${aktif===k?'aria-current="page"':''}>${a}</button>`).join('')}</nav>
     <span class="site-sag">${dilDugmesi('site').replace('id="dilBtn"','id="dilBtnSite"')}<span class="kol-durum" id="kolDurum" ${navigator.getGamepads&&[...navigator.getGamepads()].some(Boolean)?'':'hidden'} title="Oyun kolu bağlı">🎮</span></span>
   </div></header>`;
