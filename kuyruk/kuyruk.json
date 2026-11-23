@@ -1,31 +1,5 @@
 [
  {
-  "uid": "k031",
-  "kat": "iy",
-  "metin": "İlk yardımcı kaza yerinde öncelikle ne yapmalıdır?",
-  "dogru": "Kendi ve çevresinin güvenliğini sağlamalıdır",
-  "yanlislar": [
-   "Hemen kazazedeleri araçtan çıkarmalıdır",
-   "Kazazedelere su içirmelidir",
-   "Olay yerinin fotoğrafını çekmelidir"
-  ],
-  "cozum": "Olay yerini güvenli hale getirmeden yapılan müdahale yeni kazalara ve ilk yardımcının yaralanmasına yol açabilir.",
-  "levha": null
- },
- {
-  "uid": "k032",
-  "kat": "iy",
-  "metin": "Kaza yerinde ilk yardımcının kazazedelere ilk yaklaşımında öncelik sıralaması hangisidir?",
-  "dogru": "Bilinç, solunum ve dolaşım değerlendirmesi",
-  "yanlislar": [
-   "Giysilerin düzeltilmesi",
-   "Kimlik bilgilerinin alınması",
-   "Yaralıların su ihtiyacının sorulması"
-  ],
-  "cozum": "Hayati bulgular (ABC) önce değerlendirilir; hayatı tehdit eden durumlar öncelikle ele alınır.",
-  "levha": null
- },
- {
   "uid": "k034",
   "kat": "iy",
   "metin": "Karın bölgesinden organları dışarı çıkmış yaralıya ne yapılır?",
@@ -218,45 +192,6 @@
    "Tanıdığı kişiye"
   ],
   "cozum": "Önceliklendirme (triyaj) hayatı tehdit eden durumlara göre yapılır; sessiz kazazede daha ağır olabilir.",
-  "levha": null
- },
- {
-  "uid": "k090",
-  "kat": "tc",
-  "metin": "Sadece maddi hasarlı kazada sürücüler anlaşmışsa ne yapabilirler?",
-  "dogru": "Kaza tespit tutanağını birlikte doldurup araçları yoldan kaldırabilirler",
-  "yanlislar": [
-   "Trafiği kapatıp polisi beklemek zorundadırlar",
-   "Tutanak düzenlemeden ayrılmalıdırlar",
-   "Araçları olay yerinde bırakmalıdırlar"
-  ],
-  "cozum": "Maddi hasarlı kazalarda trafiği aksatmamak için tutanak doldurulup yol açılır.",
-  "levha": null
- },
- {
-  "uid": "k091",
-  "kat": "tc",
-  "metin": "Trafik işaret levhalarından üçgen şeklinde, kırmızı kenarlı olanlar hangi gruba girer?",
-  "dogru": "Tehlike uyarı işaretleri",
-  "yanlislar": [
-   "Bilgi işaretleri",
-   "Yasaklama işaretleri",
-   "Durma ve park işaretleri"
-  ],
-  "cozum": "Üçgen levhalar ileride bir tehlike olduğunu bildirir.",
-  "levha": null
- },
- {
-  "uid": "k092",
-  "kat": "tc",
-  "metin": "Yuvarlak, kırmızı çerçeveli trafik levhaları genel olarak neyi bildirir?",
-  "dogru": "Yasaklama ve kısıtlamaları",
-  "yanlislar": [
-   "Turistik yerleri",
-   "Yön bilgisini",
-   "Tehlike yaklaşımını"
-  ],
-  "cozum": "Yuvarlak kırmızı çerçeveli levhalar yasak veya sınırlama getirir.",
   "levha": null
  },
  {
@@ -569,45 +504,6 @@
    "Çocuk bagajda taşınmalıdır"
   ],
   "cozum": "Kucakta taşınan çocuk çarpışmada yetişkin tarafından ezilebilir veya fırlayabilir.",
-  "levha": null
- },
- {
-  "uid": "k149",
-  "kat": "mt",
-  "metin": "Soğuk havada dizel aracı çalıştırırken neye dikkat edilir?",
-  "dogru": "Kızdırma lambası sönene kadar beklenip sonra marşa basılır",
-  "yanlislar": [
-   "Marşa sürekli 30 saniye basılır",
-   "Gaz pedalına defalarca basılır",
-   "Motor yüksek devirde soğuk çalıştırılır"
-  ],
-  "cozum": "Kızdırma bujileri yanma odasını ısıtır; lamba sönünce çalıştırmak kolaylaşır.",
-  "levha": null
- },
- {
-  "uid": "k150",
-  "kat": "mt",
-  "metin": "Araçta 'rölanti' ne demektir?",
-  "dogru": "Gaz pedalına basılmadan motorun boşta çalışması",
-  "yanlislar": [
-   "Aracın en yüksek hızı",
-   "Vitesin geri konumu",
-   "Motorun durması"
-  ],
-  "cozum": "Gereksiz uzun rölanti yakıt israfı ve hava kirliliği demektir.",
-  "levha": null
- },
- {
-  "uid": "k164",
-  "kat": "ta",
-  "metin": "Yağmurlu havada otobüs durağında bekleyenlerin yanından geçerken nasıl davranılır?",
-  "dogru": "Yavaşlanıp su sıçratmamaya özen gösterilir",
-  "yanlislar": [
-   "Hızla geçilir",
-   "Korna çalınır",
-   "Durağa yanaşılıp beklenir"
-  ],
-  "cozum": "Yol kullanıcılarına saygı, onları rahatsız edecek davranışlardan kaçınmayı gerektirir.",
   "levha": null
  },
  {
