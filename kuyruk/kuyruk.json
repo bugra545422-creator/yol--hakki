@@ -1,44 +1,5 @@
 [
  {
-  "uid": "k034",
-  "kat": "iy",
-  "metin": "Karın bölgesinden organları dışarı çıkmış yaralıya ne yapılır?",
-  "dogru": "Organlar içeri itilmez, nemli temiz bir bezle örtülür",
-  "yanlislar": [
-   "Organlar içeri itilir",
-   "Yaralıya su içirilir",
-   "Yara üzerine kuru pamuk bastırılır"
-  ],
-  "cozum": "Organların içeri itilmesi enfeksiyon ve ek hasar yaratır; üzeri nemli temiz bezle örtülür, dizler bükük pozisyonda tutulur.",
-  "levha": null
- },
- {
-  "uid": "k035",
-  "kat": "iy",
-  "metin": "Hayvan ısırıklarında ilk yardımda ne yapılır?",
-  "dogru": "Yara bol sabunlu suyla yıkanır ve kuduz riski için sağlık kuruluşuna gidilir",
-  "yanlislar": [
-   "Yara dikilmeye çalışılır",
-   "Yaraya tuz basılır",
-   "Hiçbir şey yapılmaz"
-  ],
-  "cozum": "Sabunlu suyla yıkama mikrop yükünü azaltır; kuduz aşısı değerlendirmesi için hekime başvurulur.",
-  "levha": null
- },
- {
-  "uid": "k036",
-  "kat": "iy",
-  "metin": "Arı sokmasında iğne deride kalmışsa ne yapılır?",
-  "dogru": "İğne cımbızla sıkılmadan, kazınarak çıkarılır ve bölgeye soğuk uygulanır",
-  "yanlislar": [
-   "İğne parmakla sıkılarak çıkarılır",
-   "Bölgeye sıcak uygulanır",
-   "Bölge sertçe ovalanır"
-  ],
-  "cozum": "İğneyi sıkmak zehir kesesindeki zehrin daha fazla yayılmasına neden olur.",
-  "levha": null
- },
- {
   "uid": "k037",
   "kat": "iy",
   "metin": "Kalp krizi şüphesi olan bilinci açık kişi hangi pozisyonda dinlendirilir?",
@@ -192,58 +153,6 @@
    "Tanıdığı kişiye"
   ],
   "cozum": "Önceliklendirme (triyaj) hayatı tehdit eden durumlara göre yapılır; sessiz kazazede daha ağır olabilir.",
-  "levha": null
- },
- {
-  "uid": "k093",
-  "kat": "tc",
-  "metin": "Mavi zemin üzerine beyaz semboller içeren yuvarlak levhalar genel olarak neyi bildirir?",
-  "dogru": "Mecburiyetleri",
-  "yanlislar": [
-   "Yasakları",
-   "Tehlikeleri",
-   "Turistik bilgileri"
-  ],
-  "cozum": "Mavi yuvarlak levhalar (ör. mecburi yön, mecburi asgari hız) uyulması zorunlu kuralları gösterir.",
-  "levha": null
- },
- {
-  "uid": "k094",
-  "kat": "tc",
-  "metin": "'DUR' levhası bulunan kavşağa gelen sürücü ne yapmalıdır?",
-  "dogru": "Tam durmalı, yolun durumunu kontrol edip geçiş hakkına uyarak hareket etmelidir",
-  "yanlislar": [
-   "Yavaşlayıp durmadan geçmelidir",
-   "Korna çalarak geçmelidir",
-   "Sadece gece durmalıdır"
-  ],
-  "cozum": "DUR levhasında trafik olmasa bile tam duruş zorunludur.",
-  "levha": null
- },
- {
-  "uid": "k095",
-  "kat": "tc",
-  "metin": "'Yol ver' levhası ile karşılaşan sürücü ne yapmalıdır?",
-  "dogru": "Ana yoldaki araçlara yol vermeli, gerekirse durmalıdır",
-  "yanlislar": [
-   "Hızını artırmalıdır",
-   "Mutlaka tam durmalıdır, yol boş olsa da beklemelidir",
-   "Ana yoldaki araçları durdurmalıdır"
-  ],
-  "cozum": "Yol ver işareti, ana yoldaki trafiğe öncelik tanınmasını ister.",
-  "levha": null
- },
- {
-  "uid": "k096",
-  "kat": "tc",
-  "metin": "Taşıt yolu üzerindeki 'balık kılçığı' (zebra) şeklindeki taralı alanlar ne anlama gelir?",
-  "dogru": "Bu alanlara girilmez ve durulmaz",
-  "yanlislar": [
-   "Park alanıdır",
-   "Geçiş üstünlüğü gösterir",
-   "Yaya geçididir"
-  ],
-  "cozum": "Taralı alanlar trafiği yönlendirmek içindir; üzerinden geçmek ve durmak yasaktır.",
   "levha": null
  },
  {
@@ -504,19 +413,6 @@
    "Çocuk bagajda taşınmalıdır"
   ],
   "cozum": "Kucakta taşınan çocuk çarpışmada yetişkin tarafından ezilebilir veya fırlayabilir.",
-  "levha": null
- },
- {
-  "uid": "k165",
-  "kat": "ta",
-  "metin": "Sürücünün trafikte 'sorumluluk' duygusu neyi gerektirir?",
-  "dogru": "Davranışlarının sonuçlarını üstlenmeyi ve kurallara uymayı",
-  "yanlislar": [
-   "Hatalarını başkalarına yüklemeyi",
-   "Sadece kendi güvenliğini düşünmeyi",
-   "Hızlı gitmeyi"
-  ],
-  "cozum": "Sorumlu sürücü hem kendi hem başkalarının güvenliğini gözetir.",
   "levha": null
  },
  {
