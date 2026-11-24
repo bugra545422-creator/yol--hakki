@@ -684,6 +684,10 @@ kbd{display:inline-flex;align-items:center;justify-content:center;min-width:26px
 .giris .apple-btn .play-yazi b{color:#fff;font-size:1.3rem}
 .giris .apple-not{color:#9AA4AD;text-align:center;font-size:.82rem;line-height:1.4}
 html.ios .giris .play-buyuk{display:none}
+.giris .apple-btn{position:relative}
+.giris .apple-btn .play-rozet{position:absolute;top:-11px;right:-6px}
+.giris .pc-btn .apple-ik{gap:3px;width:58px}
+.giris .direksiyon-not{color:#F2C21B;text-align:center;font-size:.85rem;font-weight:600}
 
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -1113,7 +1117,9 @@ function girisEkrani(){
         <span class="play-ik"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="pgG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E6FD0"/><stop offset=".55" stop-color="#2B8CF0"/><stop offset="1" stop-color="#E0262E"/></linearGradient></defs><path fill="url(#pgG)" d="M4 2.6v18.8c0 .5.5.8 1 .6l10.4-10-10.4-10c-.5-.2-1 .1-1 .6Zm12.4 10.3 2.7 2.6-11.3 6.4 8.6-9Zm0-1.8L7.8 2.1l11.3 6.4-2.7 2.6Zm3.9-2 3.1 1.8c.8.5.8 1.6 0 2.1l-3.1 1.8-2.9-2.8 2.9-2.9Z"/></svg></span>
         <span class="play-yazi"><small>Google Play'den</small><b>Ücretsiz indir</b></span>
         <span class="play-rozet">ÜCRETSİZ</span></a>
-      <button class="apple-btn" id="aBtn" type="button"><span class="apple-ik"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.73c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.72-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.33-3.51ZM14.2 6.27c.6-.73 1.01-1.75.9-2.77-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.21Z"/></svg></span><span class="play-yazi"><small>iPhone &amp; iPad kullanıcıları</small><b>Tarayıcıda devam et</b></span></button>
+      <button class="apple-btn" id="aBtn" type="button"><span class="apple-ik"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.73c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.72-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.33-3.51ZM14.2 6.27c.6-.73 1.01-1.75.9-2.77-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.21Z"/></svg></span><span class="play-yazi"><small>iPhone &amp; iPad kullanıcıları</small><b>Tarayıcıda devam et</b></span><span class="play-rozet">ÜCRETSİZ</span></button>
+      <button class="apple-btn pc-btn" id="pcBtn" type="button"><span class="apple-ik"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5.1 10.4 4v7.1H3V5.1Zm8.4-1.2L21 2.5v8.6h-9.6V3.9ZM3 12.9h7.4V20L3 18.9v-6Zm8.4 0H21v8.6l-9.6-1.4v-7.2Z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.73c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.72-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.33-3.51ZM14.2 6.27c.6-.73 1.01-1.75.9-2.77-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.21Z"/></svg></span><span class="play-yazi"><small>Windows &amp; Mac bilgisayarlar</small><b>Tarayıcıda devam et</b></span><span class="play-rozet">ÜCRETSİZ</span></button>
+      <small class="direksiyon-not">🎮 Windows ve Mac'te direksiyon seti desteklenmektedir.</small>
       <small class="apple-not">Şu an App Store'da hizmet veremiyoruz; iPhone ve iPad'de web sitemizden aynı deneyimi kullanabilirsin.</small>
       <div class="giris-ayrac"><span>ya da hesabınla giriş yap</span></div>` : ''}
       <button class="btn google tam" id="gBtn">${GICON} Google ile giriş yap</button>
@@ -1128,6 +1134,7 @@ function girisEkrani(){
   $('#mBtn').onclick = async () => { await misafir(); git('ana'); };
   $('#eBtn').onclick = async () => { await misafir(); egitmenGirisi(); };
   if($('#aBtn')) $('#aBtn').onclick = async () => { await misafir(); git('ana'); };
+  if($('#pcBtn')) $('#pcBtn').onclick = async () => { await misafir(); git('ana'); };
   if(/iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1)) document.documentElement.classList.add('ios');
   $('#dilBtn').onclick = dilSec;
 }
