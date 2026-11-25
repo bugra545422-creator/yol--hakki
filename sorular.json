@@ -1,5 +1,5 @@
 {
- "surum": "2026-11-24-130",
+ "surum": "2026-11-25-138",
  "aciklama": "EHLİYET BENDE soru bankası güncellemesi. Uygulama bu dosyayı internetten düzenli olarak okur.",
  "sorular": [
   {
@@ -1691,7 +1691,111 @@
    ],
    "cozum": "İğneyi sıkmak zehir kesesindeki zehrin daha fazla yayılmasına neden olur.",
    "levha": null
+  },
+  {
+   "uid": "k097",
+   "kat": "tc",
+   "metin": "Yayaların karşıya geçişi için ışıklı trafik işareti bulunmayan yaya geçitlerinde öncelik kimindir?",
+   "dogru": "Yayaların",
+   "yanlislar": [
+    "Taşıtların",
+    "Büyük taşıtların",
+    "Motosikletlerin"
+   ],
+   "cozum": "Işıksız yaya geçitlerinde sürücüler yayaya yol vermek zorundadır.",
+   "levha": null
+  },
+  {
+   "uid": "k037",
+   "kat": "iy",
+   "metin": "Kalp krizi şüphesi olan bilinci açık kişi hangi pozisyonda dinlendirilir?",
+   "dogru": "Yarı oturur pozisyonda",
+   "yanlislar": [
+    "Baş aşağı pozisyonda",
+    "Yüzüstü",
+    "Ayakta"
+   ],
+   "cozum": "Yarı oturur pozisyon solunumu ve kalbin iş yükünü kolaylaştırır; kişi hareket ettirilmez, 112 aranır.",
+   "levha": null
+  },
+  {
+   "uid": "k098",
+   "kat": "tc",
+   "metin": "Bisikletli ve motosikletliyi geçerken sürücü nelere dikkat etmelidir?",
+   "dogru": "Yan mesafeyi yeterli bırakmalı ve geçişten sonra hemen önüne kırmamalıdır",
+   "yanlislar": [
+    "Korna çalıp hızla yanından geçmelidir",
+    "Onları yol kenarına sıkıştırmalıdır",
+    "Yakından takip etmelidir"
+   ],
+   "cozum": "İki tekerlekliler rüzgâr ve yol bozukluklarından kolay etkilenir; geniş mesafe bırakılmalıdır.",
+   "levha": null
+  },
+  {
+   "uid": "k038",
+   "kat": "iy",
+   "metin": "Kaza yerinde ölmüş görünen bir kişiye ilk yardımcının tutumu ne olmalıdır?",
+   "dogru": "Ölüm kararını sağlık personeli verir; yaşam bulguları kontrol edilip gerekirse temel yaşam desteği yapılır",
+   "yanlislar": [
+    "Hemen üzeri örtülüp bırakılır",
+    "Olay yerinden uzaklaştırılır",
+    "Kimliği alınıp ailesine haber verilir"
+   ],
+   "cozum": "İlk yardımcı ölüm kararı veremez; yaşam belirtilerini değerlendirir ve gerekli müdahaleyi yapar.",
+   "levha": null
+  },
+  {
+   "uid": "k099",
+   "kat": "tc",
+   "metin": "Araçla tünele girerken hangi ışık yakılmalıdır?",
+   "dogru": "Kısa huzmeli far",
+   "yanlislar": [
+    "Hiçbir ışık yakılmaz",
+    "Uzun far",
+    "Sadece sis lambası"
+   ],
+   "cozum": "Tünelde gündüz bile kısa far yakılarak görme ve görülme sağlanır.",
+   "levha": null
+  },
+  {
+   "uid": "k166",
+   "kat": "ta",
+   "metin": "Trafikte yardımlaşmaya örnek hangisidir?",
+   "dogru": "Arızalı araca güvenli şekilde yardım edip trafiği uyarmak",
+   "yanlislar": [
+    "Kaza yerinde fotoğraf çekmek",
+    "Kaza yerinde yavaşlayıp trafiği kilitlemek",
+    "Arızalı aracın yanından korna çalarak geçmek"
+   ],
+   "cozum": "Yardım ederken güvenlik önlemleri alınmalıdır; meraktan yavaşlamak ise ikincil kazalara yol açar.",
+   "levha": null
+  },
+  {
+   "uid": "k100",
+   "kat": "tc",
+   "metin": "Dik ve uzun yokuş aşağı inerken nasıl hareket edilmelidir?",
+   "dogru": "Küçük vites kullanılarak motor freninden yararlanılmalıdır",
+   "yanlislar": [
+    "Vites boşa alınmalıdır",
+    "Sürekli ayak freni kullanılmalıdır",
+    "Kontak kapatılmalıdır"
+   ],
+   "cozum": "Boş viteste ve sürekli frenle inmek frenlerin ısınıp etkisini kaybetmesine yol açar.",
+   "levha": null
+  },
+  {
+   "uid": "k039",
+   "kat": "iy",
+   "metin": "Aşağıdakilerden hangisi ilk yardımın amaçlarından biri değildir?",
+   "dogru": "İlaçla tedavi etmek",
+   "yanlislar": [
+    "Hayati tehlikeyi ortadan kaldırmak",
+    "Durumun kötüleşmesini önlemek",
+    "İyileşmeyi kolaylaştırmak"
+   ],
+   "cozum": "İlk yardım ilaçsız uygulamalardır; tedavi sağlık personelinin görevidir.",
+   "levha": null
   }
  ],
- "guncelleme": "2026-11-24"
+ "guncelleme": "2026-11-25"
 }
