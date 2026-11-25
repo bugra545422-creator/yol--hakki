@@ -137,6 +137,74 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
 :focus-visible{outline:3px solid var(--serit);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+.tur-sahne.kah-icinde .tur-ipucu{left:auto;right:90px;transform:none}
+
+.kahraman.tur-giris .plaka-satir{display:none}
+.kahraman.tur-giris .giris-a > .not:last-of-type{display:none}
+.kahraman.tur-giris h1{font-size:clamp(2.2rem,4.2vw,3.4rem)}
+.tur-ipucu span{white-space:nowrap}
+
+/* ===== Kampüs turu (3D, kaydırınca ileri yürü) ===== */
+.tur{position:relative;background:#DDE8F2}
+.tur-sahne{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:linear-gradient(180deg,#6FA6DC 0%,#DDE8F2 52%,#7BA05B 52.2%,#6E9450 100%)}
+.tur-tuval{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0;transition:opacity .9s ease}
+.tur-sahne.hazir .tur-tuval{opacity:1}
+.tur-yuk{position:absolute;left:50%;top:58%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:10px;color:#14204A;font-weight:600;font-size:.95rem;background:rgba(255,255,255,.85);padding:10px 16px;border-radius:999px;transition:opacity .5s}
+.tur-sahne.hazir .tur-yuk{opacity:0}
+.tur-yuk i{width:16px;height:16px;border-radius:50%;border:3px solid #14204A;border-right-color:transparent;animation:tur-don 0.8s linear infinite}
+@keyframes tur-don{to{transform:rotate(360deg)}}
+.kahraman.tur-giris{position:absolute;inset:0;z-index:3;background:transparent;display:flex;align-items:center;padding:72px 0 40px;overflow:visible}
+.kahraman.tur-giris::after{display:none}
+.kahraman.tur-giris::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,19,30,.9) 0%,rgba(15,19,30,.7) 34%,rgba(15,19,30,.15) 58%,rgba(15,19,30,0) 70%);pointer-events:none}
+.kahraman.tur-giris .yol-arac,.kahraman.tur-giris .isik,.kahraman.tur-giris .telefonlar{display:none}
+.kahraman.tur-giris .ic{position:relative;width:100%}
+.kahraman.tur-giris .giris-a{max-width:560px}
+.tur-hos{position:absolute;left:0;right:0;top:0;z-index:3;padding:84px 22px 60px;color:#fff;background:linear-gradient(180deg,rgba(15,19,30,.85),rgba(15,19,30,0));text-align:left}
+.tur-hos h2{font-size:1.7rem;line-height:1.15;margin:6px 0 8px}
+.tur-hos p{color:#D8DEE6;font-size:1rem;max-width:30rem}
+.tur-hos .ust-yazi{color:var(--serit)}
+.tur-ipucu{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:4;display:flex;flex-direction:column;align-items:center;gap:8px;color:#fff;font-weight:600;font-size:.95rem;text-shadow:0 1px 8px rgba(0,0,0,.55);pointer-events:none}
+.tur-ipucu i{width:22px;height:34px;border:2.5px solid #fff;border-radius:12px;position:relative;box-shadow:0 1px 8px rgba(0,0,0,.35)}
+.tur-ipucu i::after{content:"";position:absolute;left:50%;top:6px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:#fff;animation:tur-tekerlek 1.4s ease-in-out infinite}
+@keyframes tur-tekerlek{0%{transform:translateY(0);opacity:1}70%{transform:translateY(12px);opacity:0}100%{opacity:0}}
+.tur-kart{position:absolute;left:28px;bottom:28px;z-index:4;width:min(380px,calc(100% - 56px));background:rgba(17,22,34,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#F4F5F2;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:18px 20px;box-shadow:0 16px 40px rgba(0,0,0,.35);transition:opacity .15s linear}
+.tur-kart.sag{left:auto;right:84px}
+.tur-kart .tk-ust{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.tur-kart .harf{flex:none;min-width:56px;height:56px;padding:0 10px;border-radius:14px;background:var(--serit);color:#14181B;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center;white-space:nowrap}
+.tur-kart h3{font-size:1.2rem;margin:0 0 2px;color:#fff}
+.tur-kart .yas{font-size:.85rem;color:#C9D2DC}
+.tur-kart p{font-size:.94rem;line-height:1.5;color:#E3E8EE;margin:0 0 8px}
+.tur-kart .tk-not{color:#B9C3CE;font-size:.88rem}
+.tur-kart .tk-link{display:inline-block;margin-top:4px;color:var(--serit);font-weight:700;text-decoration:none}
+.tur-kart .tk-link:hover{text-decoration:underline}
+.tur-balon{position:absolute;left:0;top:0;z-index:4;max-width:250px;background:#fff;color:#14181B;border-radius:16px;padding:12px 44px 12px 14px;font-size:.92rem;line-height:1.4;font-weight:500;box-shadow:0 12px 30px rgba(0,0,0,.28);margin-top:-14px;pointer-events:auto;will-change:transform}
+.tur-balon::after{content:"";position:absolute;left:50%;bottom:-8px;margin-left:-8px;border:8px solid transparent;border-bottom:0;border-top-color:#fff}
+.tur-balon button{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;border:0;background:#EEF3FB;cursor:pointer;font-size:.9rem}
+.tur-ray{position:absolute;right:18px;top:50%;transform:translateY(-50%);z-index:4;display:flex;flex-direction:column;gap:10px}
+.tur-ray button{position:relative;width:14px;height:14px;border-radius:50%;border:2px solid #fff;background:rgba(20,32,74,.35);cursor:pointer;padding:0;box-shadow:0 1px 6px rgba(0,0,0,.35)}
+.tur-ray button.on{background:var(--serit);border-color:var(--serit);transform:scale(1.25)}
+.tur-ray button span{position:absolute;right:22px;top:50%;transform:translateY(-50%);white-space:nowrap;background:rgba(17,22,34,.85);color:#fff;font-size:.8rem;font-weight:600;padding:3px 9px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none}
+.tur-ray button:hover span,.tur-ray button.on span{opacity:1}
+.tur-atla{position:absolute;right:18px;top:84px;z-index:4;background:rgba(17,22,34,.72);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 14px;font-weight:600;font-size:.88rem;cursor:pointer}
+.tur-atla:hover{background:rgba(17,22,34,.9)}
+.tur-son{position:absolute;left:50%;bottom:36px;transform:translateX(-50%);z-index:4;width:min(560px,calc(100% - 32px));background:rgba(17,22,34,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;border-radius:22px;padding:22px 24px;text-align:center;box-shadow:0 18px 44px rgba(0,0,0,.35)}
+.tur-son h2{font-size:1.6rem;margin:4px 0 6px;color:#fff}
+.tur-son p{color:#D2D9E1;margin:0 0 14px}
+.tur-son .ust-yazi{color:var(--serit)}
+.tur-son .dugmeler{display:flex;flex-direction:column;align-items:stretch;gap:12px}
+.tur-son .dugmeler .btn{width:100%;justify-content:center}
+@media (max-width:760px){
+  .tur-kart,.tur-kart.sag{left:12px;right:12px;bottom:12px;width:auto;padding:14px 16px}
+  .tur-kart p{font-size:.88rem}
+  .tur-kart .tk-not{display:none}
+  .tur-ray{right:8px;gap:8px}
+  .tur-ray button span{display:none}
+  .tur-atla{top:78px;right:10px}
+  .tur-balon{max-width:200px;font-size:.84rem}
+  .tur-son{bottom:12px;padding:16px}
+  .tur-son h2{font-size:1.3rem}
+}
+
 .kahraman .giris-a .dugmeler{flex-direction:column;align-items:flex-start}
 .kahraman .dugmeler .btn.play-buyuk,.kahraman .dugmeler .btn.apple-btn{width:360px;max-width:100%;justify-content:flex-start}
 @media (max-width:560px){.kahraman .dugmeler{align-items:stretch}.kahraman .dugmeler .btn.play-buyuk,.kahraman .dugmeler .btn.apple-btn{width:100%;justify-content:center}}
@@ -530,6 +598,7 @@ html,body{overflow-x:clip}
     </nav>
   </div>
 </footer>
+<script src="js/tur3d.js?v=4" defer></script>
 
 <script>
 (()=>{
