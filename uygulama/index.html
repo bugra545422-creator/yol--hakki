@@ -6941,5 +6941,22 @@ function profilSayfa(){
   if(o){ D.kullanici=o; await verileriYukle(); git('ana'); } else girisEkrani();
 })();
 </script>
+<script>
+// Siteden doğrudan bölüm açma: ?ac=sinav (E-Sınav) · ?ac=sim (sürüş simülatörü)
+(function(){
+  let ac=null; try{ ac=new URLSearchParams(location.search).get('ac'); }catch(e){}
+  if(!ac || !/^(sinav|sim)$/.test(ac)) return;
+  let tiklandi=false;
+  const bekle=setInterval(()=>{
+    if(typeof D==='undefined') return;
+    if(!D.kullanici){ const m=document.getElementById('mBtn'); if(m && !tiklandi){ tiklandi=true; m.click(); } return; }
+    clearInterval(bekle);
+    try{ history.replaceState(null,'',location.pathname); }catch(e){}
+    if(ac==='sim'){ try{ pistD.mod='sim'; }catch(e){} git('pist'); }
+    else git('sinav');
+  }, 150);
+  setTimeout(()=>clearInterval(bekle), 20000);
+})();
+</script>
 </body>
 </html>

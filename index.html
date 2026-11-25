@@ -137,6 +137,22 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
 :focus-visible{outline:3px solid var(--serit);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+.tur-sahne .tur-son{bottom:24px;width:min(620px,calc(100% - 32px));text-align:left;padding:18px 20px 20px}
+.tur-son::before{content:"";position:absolute;left:50%;top:-10px;margin-left:-10px;border:10px solid transparent;border-top:0;border-bottom-color:rgba(17,22,34,.88)}
+.tur-son .ts-ust{display:flex;align-items:center;justify-content:space-between}
+.tur-son .ts-ses{width:34px;height:34px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;cursor:pointer}
+.tur-sahne .tur-son h2{font-size:1.45rem;margin:2px 0 14px}
+.tur-secim{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ts-btn{display:flex;align-items:center;gap:12px;padding:14px 14px;border-radius:14px;background:#fff;color:#14181B;text-decoration:none;min-height:64px;transition:transform .15s ease,box-shadow .15s ease}
+.ts-btn:hover{transform:translateY(-2px);box-shadow:0 0 0 3px rgba(242,194,27,.6)}
+.ts-btn svg{flex:none;color:#14204A;background:#EEF3FB;border-radius:10px;padding:6px;width:40px;height:40px;box-sizing:border-box}
+.ts-btn b{display:block;font-size:1.05rem}
+.ts-btn small{display:block;color:#5C656E;font-size:.8rem;margin-top:2px}
+.ts-btn.ts-play{background:var(--serit)}
+.ts-btn.ts-play svg{background:rgba(255,255,255,.55)}
+.ts-btn.ts-play small{color:#3A3F44}
+@media (max-width:760px){.tur-son h2{font-size:1.15rem;margin-bottom:10px}.ts-btn{padding:10px;min-height:56px;gap:8px}.ts-btn svg{width:34px;height:34px}.ts-btn b{font-size:.95rem}.ts-btn small{font-size:.72rem}}
+
 .tur-sahne.kah-icinde .tur-ipucu{left:auto;right:90px;transform:none}
 
 .kahraman.tur-giris .plaka-satir{display:none}
@@ -598,7 +614,7 @@ html,body{overflow-x:clip}
     </nav>
   </div>
 </footer>
-<script src="js/tur3d.js?v=4" defer></script>
+<script src="js/tur3d.js?v=6" defer></script>
 
 <script>
 (()=>{
