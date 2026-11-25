@@ -55,7 +55,7 @@
 
   // Kahraman (başlık + indirme düğmeleri) ekrana sığıyorsa giriş kapısının önüne yerleşir
   let kahIcinde = false;
-  if (!mobil && innerHeight >= 560) {
+  if (innerHeight >= 520) {
     kah.parentNode.insertBefore(tur, kah);
     kah.classList.add('tur-giris'); sahneEl.appendChild(kah);
     const yuk = kah.querySelector('.giris-a')?.getBoundingClientRect().height || 9999;
@@ -252,11 +252,90 @@
     /* --- Danışma: arka duvar, masa, sekreter --- */
     const duvarM = mat(0xD8DCE1, 0.9);
     const arka = new T.Mesh(new T.PlaneGeometry(28, 9), duvarM); arka.position.set(0, 4.5, sonZ); arka.receiveShadow = true; S.add(arka);
-    const logoPanoD = doku(1024, 320, (x, w, h) => { x.fillStyle = '#14204A'; x.fillRect(0, 0, w, h); x.fillStyle = '#F2C21B'; x.fillRect(0, h - 14, w, 14); });
-    const logoPano = new T.Mesh(new T.PlaneGeometry(9, 2.8), new T.MeshStandardMaterial({ map: logoPanoD, roughness: 0.5 }));
-    logoPano.position.set(0, 5.1, sonZ + 0.03); S.add(logoPano);
-    const logo2 = new Image(); logo2.src = 'gorsel/logo-yatay-acik.png?v=1';
-    logo2.onload = () => { const c = logoPanoD.image, x = c.getContext('2d'); const hh = 170, ww = logo2.width * hh / logo2.height; x.drawImage(logo2, (c.width - ww) / 2, 50, ww, hh); x.fillStyle = '#C9D2DC'; x.font = '600 40px Poppins, Arial, sans-serif'; x.textAlign = 'center'; x.fillText('DANIŞMA', c.width / 2, 268); logoPanoD.needsUpdate = true; ciz(); };
+    /* --- Ekran duvarı: uygulama ve site nasıl kullanılır (döngüde animasyon) --- */
+    const EW = 1024, EH = 576;
+    const ekranC = document.createElement('canvas'); ekranC.width = EW; ekranC.height = EH;
+    const ex = ekranC.getContext('2d');
+    const ekranD = new T.CanvasTexture(ekranC); ekranD.encoding = T.sRGBEncoding; ekranD.anisotropy = 4;
+    const cerceve = new T.Mesh(new T.BoxGeometry(8.6, 4.95, 0.22), mat(0x0B0D12, 0.35, 0.3));
+    cerceve.position.set(0, 4.45, sonZ + 0.14); S.add(cerceve);
+    const panel = new T.Mesh(new T.PlaneGeometry(8.2, 4.61), new T.MeshBasicMaterial({ map: ekranD, toneMapped: false }));
+    panel.position.set(0, 4.45, sonZ + 0.26); S.add(panel);
+    const isikSerit = new T.Mesh(new T.BoxGeometry(8.6, 0.06, 0.06), ledM); isikSerit.position.set(0, 1.94, sonZ + 0.2); S.add(isikSerit);
+    const gorsel = {}; ['giris', 'sinav', 'ders', 'pist', 'sim', 'gz', 'ana', 'duello'].forEach(k => { const im = new Image(); im.src = `gorsel/tur-${k}.webp`; gorsel[k] = im; });
+    const logoE = new Image(); logoE.src = 'gorsel/logo-yatay-acik.png?v=1';
+    const ADIM = [
+      { k: 'giris', b: 'Giriş yap', a: 'Google ile ya da misafir olarak', m: ['Üyelik şart değil', 'Telefonda ve sitede aynı hesap'], h: [0.5, 0.62] },
+      { k: 'sinav', b: 'E-Sınav denemesi', a: '50 soru · 45 dakika · 35 doğru geçer', m: ['Gerçek sınav düzeni', 'Yanlışlarından özel sınav'], h: [0.5, 0.32] },
+      { k: 'ders', b: 'Konu anlatımları', a: 'Müfredata göre kısa özetler', m: ['Trafik, ilk yardım, motor', 'Sık yapılan sınav hataları'], h: [0.2, 0.2] },
+      { k: 'pist', b: '3D pist anlatımı', a: 'Direksiyon sınavı adım adım', m: ['Otomobil, motor, kamyon, tır', 'Park, rampa, geri manevra'], h: [0.2, 0.25] },
+      { k: 'sim', b: 'Sürüş simülatörü', a: 'Kendin sür, hatanı gör', m: ['Direksiyon seti ve oyun kolu', 'Klavye ve dokunmatik'], h: [0.82, 0.78] },
+      { k: 'gz', b: '50 km güzergah', a: 'Trafikli sınav yolu', m: ['Işıklar, yayalar, şehir içi', '100 puanı korumaya çalış'], h: [0.5, 0.36] },
+      { k: 'ana', b: 'Her gün 10 soru', a: 'Seri yap, hazırlığını izle', m: ['Hazırlık göstergesi', 'Rozetler ve haftalık sıralama'], h: [0.5, 0.37] },
+      { k: 'duello', b: 'Arkadaşınla düello', a: 'Aynı 10 soru, kim önde?', m: ['Bağlantıyla davet et', 'Eşitlikte hızlı olan kazanır'], h: [0.5, 0.22] },
+    ];
+    const SLAYT = 3.6, TOPLAM = (ADIM.length + 2) * SLAYT;
+    const yum = x => { x = Math.min(1, Math.max(0, x)); return 1 - Math.pow(1 - x, 3); };
+    const yuvarlak = (x, y, w, h, r) => { ex.beginPath(); ex.moveTo(x + r, y); ex.arcTo(x + w, y, x + w, y + h, r); ex.arcTo(x + w, y + h, x, y + h, r); ex.arcTo(x, y + h, x, y, r); ex.arcTo(x, y, x + w, y, r); ex.closePath(); };
+    const F = (w, px) => `${w} ${px}px Poppins, Inter, Arial, sans-serif`;
+    let ekranSon = -1;
+    function ekranCiz(t) {
+      if (t - ekranSon < 1 / 26) return; ekranSon = t;
+      const z0 = t % TOPLAM, idx = Math.floor(z0 / SLAYT), u = (z0 % SLAYT) / SLAYT;
+      const gir = yum(u / 0.16), cik = 1 - yum((u - 0.9) / 0.1);
+      const g = ex.createLinearGradient(0, 0, EW, EH); g.addColorStop(0, '#0E1A3B'); g.addColorStop(1, '#1D3366');
+      ex.fillStyle = g; ex.fillRect(0, 0, EW, EH);
+      // akan yol şeridi
+      ex.fillStyle = 'rgba(242,194,27,.85)'; const of = (t * 160) % 120;
+      for (let x = -120 + of; x < EW; x += 120) ex.fillRect(x, EH - 40, 70, 8);
+      ex.globalAlpha = cik;
+      if (idx === 0 || idx === ADIM.length + 1) {
+        const sonMu = idx !== 0;
+        ex.textAlign = 'center'; ex.textBaseline = 'middle';
+        if (logoE.complete && logoE.naturalWidth) { const hh = 92 * (0.85 + 0.15 * gir), ww = logoE.naturalWidth * hh / logoE.naturalHeight; ex.globalAlpha = cik * gir; ex.drawImage(logoE, (EW - ww) / 2, sonMu ? 110 : 140, ww, hh); }
+        ex.globalAlpha = cik * yum((u - 0.08) / 0.16);
+        ex.fillStyle = '#FFFFFF'; ex.font = F(800, 58); ex.fillText(sonMu ? 'Hazırsın!' : 'Nasıl kullanılır?', EW / 2, sonMu ? 270 : 300);
+        ex.fillStyle = '#C9D2DC'; ex.font = F(500, 28);
+        ex.fillText(sonMu ? 'Google Play\'den indir ya da tarayıcıda devam et' : `${ADIM.length} adımda uygulama ve site`, EW / 2, sonMu ? 330 : 360);
+        if (sonMu) { ex.globalAlpha = cik * yum((u - 0.2) / 0.16); ex.fillStyle = '#F2C21B'; yuvarlak(EW / 2 - 170, 375, 340, 64, 32); ex.fill(); ex.fillStyle = '#14181B'; ex.font = F(800, 30); ex.fillText('ÜCRETSİZ · ehliyetbende.com', EW / 2, 408); }
+      } else {
+        const a = ADIM[idx - 1], im = gorsel[a.k];
+        // sol: metin
+        const dx = -60 * (1 - gir); ex.globalAlpha = cik * gir; ex.textAlign = 'left'; ex.textBaseline = 'alphabetic';
+        ex.fillStyle = '#F2C21B'; yuvarlak(70 + dx, 112, 150, 44, 22); ex.fill();
+        ex.fillStyle = '#14181B'; ex.font = F(800, 22); ex.fillText(`ADIM ${idx} / ${ADIM.length}`, 88 + dx, 142);
+        ex.fillStyle = '#FFFFFF'; ex.font = F(800, 50); ex.fillText(a.b, 70 + dx, 222);
+        ex.fillStyle = '#C9D2DC'; ex.font = F(500, 26); ex.fillText(a.a, 70 + dx, 266);
+        a.m.forEach((m, j) => {
+          const gj = yum((u - 0.14 - j * 0.08) / 0.14); ex.globalAlpha = cik * gj; const yy = 330 + j * 52, xx = 70 + dx - 30 * (1 - gj);
+          ex.fillStyle = 'rgba(34,211,111,.18)'; ex.beginPath(); ex.arc(xx + 15, yy - 9, 15, 0, Math.PI * 2); ex.fill();
+          ex.strokeStyle = '#22D36F'; ex.lineWidth = 3.5; ex.beginPath(); ex.moveTo(xx + 8, yy - 9); ex.lineTo(xx + 13, yy - 3); ex.lineTo(xx + 22, yy - 15); ex.stroke();
+          ex.fillStyle = '#E9EEF4'; ex.font = F(600, 25); ex.fillText(m, xx + 42, yy);
+        });
+        // sağ: telefon
+        ex.globalAlpha = cik;
+        const ph = 470, pw = ph * 390 / 844, px = 760 - pw / 2, py = 52 + (1 - gir) * 380 + Math.sin(t * 1.6) * 5;
+        ex.save(); ex.shadowColor = 'rgba(0,0,0,.45)'; ex.shadowBlur = 30; ex.shadowOffsetY = 14;
+        ex.fillStyle = '#05070B'; yuvarlak(px - 9, py - 9, pw + 18, ph + 18, 34); ex.fill(); ex.restore();
+        ex.save(); yuvarlak(px, py, pw, ph, 26); ex.clip();
+        if (im.complete && im.naturalWidth) { const zz = 1 + 0.06 * u, w2 = pw * zz, h2 = ph * zz; ex.drawImage(im, px - (w2 - pw) * a.h[0], py - (h2 - ph) * a.h[1], w2, h2); }
+        else { ex.fillStyle = '#2A2F38'; ex.fillRect(px, py, pw, ph); }
+        ex.restore();
+        // dokunma göstergesi
+        const tu = (u - 0.35) / 0.4;
+        if (tu > 0 && tu < 1) {
+          const hx = px + pw * a.h[0], hy = py + ph * a.h[1];
+          ex.globalAlpha = cik * (1 - tu); ex.strokeStyle = '#F2C21B'; ex.lineWidth = 5; ex.beginPath(); ex.arc(hx, hy, 14 + tu * 34, 0, Math.PI * 2); ex.stroke();
+          ex.globalAlpha = cik * Math.min(1, (1 - tu) * 2); ex.fillStyle = 'rgba(242,194,27,.55)'; ex.beginPath(); ex.arc(hx, hy, 14, 0, Math.PI * 2); ex.fill();
+        }
+      }
+      // ilerleme çubukları
+      ex.globalAlpha = 1;
+      const n = ADIM.length + 2, bw = (EW - 140 - (n - 1) * 8) / n;
+      for (let k = 0; k < n; k++) { const x = 70 + k * (bw + 8); ex.fillStyle = 'rgba(255,255,255,.18)'; ex.fillRect(x, 26, bw, 6); ex.fillStyle = '#F2C21B'; ex.fillRect(x, 26, bw * (k < idx ? 1 : k === idx ? u : 0), 6); }
+      ekranD.needsUpdate = true;
+    }
+    ekranCiz(0);
     const masa = new T.Group();
     const masaGovde = new T.Mesh(new T.BoxGeometry(4.4, 1.08, 0.9), [mat(0xF4F5F6, 0.5), mat(0xF4F5F6, 0.5), mat(0x2B2F36, 0.4), mat(0xF4F5F6, 0.5), new T.MeshStandardMaterial({ map: doku(512, 128, (x, w, h) => { x.fillStyle = '#F4F5F6'; x.fillRect(0, 0, w, h); x.fillStyle = '#14204A'; x.fillRect(0, h - 34, w, 34); x.fillStyle = '#F2C21B'; x.fillRect(0, h - 40, w, 6); x.fillStyle = '#14204A'; x.font = '800 42px Poppins, Arial, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText('DANIŞMA', w / 2, 44); }), roughness: 0.5 }), mat(0xF4F5F6, 0.5)]);
     masaGovde.position.set(0, 0.54, 0); masa.add(masaGovde);
@@ -360,7 +439,7 @@
     }
 
     /* --- Kamera yolu: her durakta hafifçe yavaşlar --- */
-    const K = DUR.map((d, i) => i === 0 ? 14 : (i === N - 1 ? binaOn + 5.4 : istasyon[i].onZ + 6.5));
+    const K = DUR.map((d, i) => i === 0 ? 14 : (i === N - 1 ? binaOn + 7.2 : istasyon[i].onZ + 6.5));
     const yumusak = t => { const a = Math.min(1, Math.max(0, (t - 0.16) / 0.68)); return a * a * (3 - 2 * a); };
     const zAt = p => { const f = p * (N - 1), i = Math.min(N - 2, Math.floor(f)); return K[i] + (K[i + 1] - K[i]) * yumusak(f - i); };
 
@@ -402,7 +481,7 @@
         const w = (dar ? 0.85 : 0.62) * Math.exp(-(u * u) / 26);
         if (w > topW) { topW = w; hedefN.set(st.x, Math.min(1.3, 0.55 + st.W * 0.12), st.z + st.L * 0.1); } });
       if (topW > 0.001) bak.lerp(hedefN, topW);
-      const sonY = Math.max(0, 1 - Math.abs(z - K[N - 1]) / 9); if (sonY > 0) bak.lerp(hedefN.set(0, dar ? 1.15 : 0.95, binaOn - 1.35), sonY);
+      const sonY = Math.max(0, 1 - Math.abs(z - K[N - 1]) / 9); if (sonY > 0) bak.lerp(hedefN.set(0, dar ? 1.6 : 1.75, binaOn - 1.35), sonY);
       kam.position.set(0, 1.66 + Math.sin(yurume * 2.1) * 0.022, z);
       kam.lookAt(bak);
       // gölge kamerayla gelir
@@ -414,9 +493,11 @@
         const a = ((ac + Math.PI) % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2) - Math.PI;
         if (o.bas) o.bas.rotation.y = Math.max(-0.9, Math.min(0.9, a));
       });
+      const ekranYakin = Math.abs(z - K[N - 1]) < 32;
+      if (ekranYakin) ekranCiz(t / 1000);
       R.render(S, kam);
       arayuz(z);
-      if (Math.abs(hedef - pc) > 0.00005) planla();
+      if (Math.abs(hedef - pc) > 0.00005 || ekranYakin) planla();
     }
 
     /* --- Arayüz katmanları --- */
@@ -430,6 +511,7 @@
       const giris = kahIcinde ? kah : sahneEl.querySelector('.tur-hos');
       if (giris) { giris.style.opacity = g.toFixed(3); giris.style.transform = `translateY(${(-40 * (1 - g)).toFixed(1)}px)`; giris.style.visibility = g < 0.02 ? 'hidden' : ''; }
       ipucu.style.opacity = Math.max(0, 1 - pc * 30).toFixed(2);
+      sahneEl.classList.toggle('basta', g > 0.5);
       // durak kartı
       const d = DUR[yakin];
       if (d && d.metin) {

@@ -137,6 +137,22 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
 :focus-visible{outline:3px solid var(--serit);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+.tur-ray{transition:opacity .3s}
+@media (max-width:760px){.tur-sahne.basta .tur-ray{opacity:0;pointer-events:none}.tur-sahne.basta .tur-atla{top:auto;bottom:14px;right:12px}}
+
+@media (max-width:760px){
+  .tur-sahne .kahraman.tur-giris{align-items:flex-start;padding:74px 0 0}
+  .tur-sahne .kahraman.tur-giris::before{background:linear-gradient(180deg,rgba(15,19,30,.95) 0%,rgba(15,19,30,.9) 66%,rgba(15,19,30,.4) 82%,rgba(15,19,30,0) 94%)}
+  .kahraman.tur-giris .giris-a > .not,.kahraman.tur-giris .etiket{display:none}
+  .kahraman.tur-giris h1{font-size:2rem;margin-bottom:6px}
+  .kahraman.tur-giris p.alt{font-size:.92rem;margin-bottom:10px}
+  .kahraman.tur-giris .dugmeler{gap:12px}
+  .kahraman.tur-giris .btn.play-buyuk,.kahraman.tur-giris .btn.apple-btn{min-height:62px;padding:8px 16px}
+  .kahraman.tur-giris .play-ik,.kahraman.tur-giris .apple-ik{width:42px;height:42px}
+  .kahraman.tur-giris .play-yazi b{font-size:1.2rem}
+  .tur-sahne.kah-icinde .tur-ipucu{left:50%;right:auto;transform:translateX(-50%);bottom:18px}
+}
+
 .tur-sahne .tur-son{bottom:24px;width:min(620px,calc(100% - 32px));text-align:left;padding:18px 20px 20px}
 .tur-son::before{content:"";position:absolute;left:50%;top:-10px;margin-left:-10px;border:10px solid transparent;border-top:0;border-bottom-color:rgba(17,22,34,.88)}
 .tur-son .ts-ust{display:flex;align-items:center;justify-content:space-between}
@@ -614,7 +630,7 @@ html,body{overflow-x:clip}
     </nav>
   </div>
 </footer>
-<script src="js/tur3d.js?v=6" defer></script>
+<script src="js/tur3d.js?v=8" defer></script>
 
 <script>
 (()=>{
