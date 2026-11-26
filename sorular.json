@@ -1,5 +1,5 @@
 {
- "surum": "2026-11-25-138",
+ "surum": "2026-11-26-146",
  "aciklama": "EHLİYET BENDE soru bankası güncellemesi. Uygulama bu dosyayı internetten düzenli olarak okur.",
  "sorular": [
   {
@@ -1795,7 +1795,111 @@
    ],
    "cozum": "İlk yardım ilaçsız uygulamalardır; tedavi sağlık personelinin görevidir.",
    "levha": null
+  },
+  {
+   "uid": "k101",
+   "kat": "tc",
+   "metin": "Dar yolda yokuş yukarı ve yokuş aşağı giden iki araç karşılaşırsa geçiş hakkı genellikle kimindir?",
+   "dogru": "Yokuş yukarı çıkan aracın",
+   "yanlislar": [
+    "Yokuş aşağı inen aracın",
+    "Küçük aracın",
+    "Hızlı giden aracın"
+   ],
+   "cozum": "Yokuş aşağı inen araç yer müsaitse durarak yokuş yukarı çıkana yol verir.",
+   "levha": null
+  },
+  {
+   "uid": "k040",
+   "kat": "iy",
+   "metin": "Kazazedenin vücut ısısını korumak için ne yapılmalıdır?",
+   "dogru": "Üzeri battaniye veya giysiyle örtülür",
+   "yanlislar": [
+    "Islak giysileriyle bekletilir",
+    "Soğuk zemine yatırılıp açık bırakılır",
+    "Alkol içirilir"
+   ],
+   "cozum": "Kazazedeler, özellikle şok riskinde, ısı kaybına karşı korunmalıdır.",
+   "levha": null
+  },
+  {
+   "uid": "k102",
+   "kat": "tc",
+   "metin": "Yağmurda su birikintisinin üzerinden hızla geçerken lastiklerin yolla temasını kaybetmesine ne denir?",
+   "dogru": "Kızaklama (aquaplaning)",
+   "yanlislar": [
+    "Patinaj",
+    "Balans",
+    "Rot ayarı"
+   ],
+   "cozum": "Su tabakası lastik ile yol arasına girer; direksiyon ve fren etkisizleşir. Hız düşürülmelidir.",
+   "levha": null
+  },
+  {
+   "uid": "k041",
+   "kat": "iy",
+   "metin": "Kafa travması geçiren kişinin kulağından kan ve berrak sıvı geliyorsa ne yapılır?",
+   "dogru": "Kulak tıkanmaz, kazazede sıvının aktığı tarafa yan yatırılır (omurga şüphesi yoksa)",
+   "yanlislar": [
+    "Kulak pamukla sıkıca tıkanır",
+    "Kulağa su dökülür",
+    "Başı sertçe sallanarak sıvı boşaltılır"
+   ],
+   "cozum": "Bu durum kafa tabanı kırığını düşündürür; akıntı engellenmez, kazazede izlenir ve 112 aranır.",
+   "levha": null
+  },
+  {
+   "uid": "k103",
+   "kat": "tc",
+   "metin": "Buzlu yolda fren yapılırken nasıl davranılmalıdır?",
+   "dogru": "Ani fren yapılmamalı, frene yumuşak ve kademeli basılmalıdır",
+   "yanlislar": [
+    "Frene sonuna kadar ani basılmalıdır",
+    "El freni çekilmelidir",
+    "Direksiyon sert kırılmalıdır"
+   ],
+   "cozum": "Ani fren ve sert direksiyon hareketleri buzda savrulmaya yol açar.",
+   "levha": null
+  },
+  {
+   "uid": "k167",
+   "kat": "ta",
+   "metin": "Hastane ve okul çevresinde sürücü nasıl davranmalıdır?",
+   "dogru": "Yavaş ve sessiz sürmeli, korna çalmamalıdır",
+   "yanlislar": [
+    "Hızlanarak bölgeden çıkmalıdır",
+    "Korna ile uyarı yapmalıdır",
+    "Müzik sesini açmalıdır"
+   ],
+   "cozum": "Hassas bölgelerde gürültü ve hız insanların sağlığını ve güvenliğini etkiler.",
+   "levha": null
+  },
+  {
+   "uid": "k104",
+   "kat": "tc",
+   "metin": "Kış lastiklerinin kullanılmasının temel amacı nedir?",
+   "dogru": "Soğuk, karlı ve buzlu yolda yol tutuşunu artırmak",
+   "yanlislar": [
+    "Yakıt tüketimini artırmak",
+    "Aracın daha gürültülü çalışması",
+    "Lastik basıncını düşürmek"
+   ],
+   "cozum": "Kış lastiklerinin hamuru soğukta sertleşmez ve diş yapısı karda tutuşu artırır.",
+   "levha": null
+  },
+  {
+   "uid": "k042",
+   "kat": "iy",
+   "metin": "Bilinci yerinde olmayan kazazedeye neden ağızdan yiyecek ya da içecek verilmez?",
+   "dogru": "Soluk yoluna kaçarak boğulmaya yol açabileceği için",
+   "yanlislar": [
+    "Midesi bulanacağı için",
+    "Ateşini yükselteceği için",
+    "Kan şekerini düşüreceği için"
+   ],
+   "cozum": "Yutma refleksi zayıfladığından verilen sıvı ya da yiyecek soluk yolunu tıkayabilir.",
+   "levha": null
   }
  ],
- "guncelleme": "2026-11-25"
+ "guncelleme": "2026-11-26"
 }
