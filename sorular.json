@@ -1,5 +1,5 @@
 {
- "surum": "2026-11-26-146",
+ "surum": "2026-11-27-154",
  "aciklama": "EHLİYET BENDE soru bankası güncellemesi. Uygulama bu dosyayı internetten düzenli olarak okur.",
  "sorular": [
   {
@@ -1899,7 +1899,111 @@
    ],
    "cozum": "Yutma refleksi zayıfladığından verilen sıvı ya da yiyecek soluk yolunu tıkayabilir.",
    "levha": null
+  },
+  {
+   "uid": "k105",
+   "kat": "tc",
+   "metin": "Taşıt yolu ile ilgili 'şerit' nedir?",
+   "dogru": "Taşıt yolunun, taşıtların bir sıra halinde güvenle gidebilmesi için çizgilerle ayrılmış bölümü",
+   "yanlislar": [
+    "Yolun kenarındaki toprak kısım",
+    "Yaya kaldırımı",
+    "Yolun ortasındaki refüj"
+   ],
+   "cozum": "Şerit, taşıtların tek sıra halinde ilerlediği yol bölümüdür.",
+   "levha": null
+  },
+  {
+   "uid": "k043",
+   "kat": "iy",
+   "metin": "Tetanoz riski hangi yaralanmalarda daha yüksektir?",
+   "dogru": "Toprak ve paslı cisimle kirlenmiş derin yaralarda",
+   "yanlislar": [
+    "Hafif güneş yanıklarında",
+    "Burun kanamalarında",
+    "Kas kramplarında"
+   ],
+   "cozum": "Kirli ve derin yaralarda tetanoz riski vardır; aşı durumu için sağlık kuruluşuna başvurulmalıdır.",
+   "levha": null
+  },
+  {
+   "uid": "k106",
+   "kat": "tc",
+   "metin": "'Banket' nedir?",
+   "dogru": "Taşıt yolu ile kaldırım veya hendek arasındaki, araçların zorunlu hallerde durabileceği yol kenarı bölümü",
+   "yanlislar": [
+    "Yolun ortasındaki ada",
+    "Bisiklet yolu",
+    "Otoyolun hızlanma şeridi"
+   ],
+   "cozum": "Banket zorunlu durumlarda kullanılır; normal sürüşte trafiğe açık değildir.",
+   "levha": null
+  },
+  {
+   "uid": "k044",
+   "kat": "iy",
+   "metin": "Boğulma (suda) vakasında sudan çıkarılan kişinin solunumu yoksa ne yapılır?",
+   "dogru": "Hemen temel yaşam desteğine başlanır",
+   "yanlislar": [
+    "Önce midesindeki su boşaltılmaya çalışılır",
+    "Ayaklarından tutulup sallanır",
+    "Güneşte kurumaya bırakılır"
+   ],
+   "cozum": "Midedeki suyu boşaltmaya çalışmak zaman kaybettirir; solunum yoksa derhal temel yaşam desteği başlatılır.",
+   "levha": null
+  },
+  {
+   "uid": "k107",
+   "kat": "tc",
+   "metin": "Araçlardan çıkan egzoz gazının çevreye etkisini azaltmak için sürücü ne yapabilir?",
+   "dogru": "Aracın bakımını düzenli yaptırıp gereksiz rölantide çalıştırmamalıdır",
+   "yanlislar": [
+    "Motoru sürekli yüksek devirde çalıştırmalıdır",
+    "Katalitik konvertörü söktürmelidir",
+    "Lastik basıncını düşük tutmalıdır"
+   ],
+   "cozum": "Düzenli bakım, doğru lastik basıncı ve sakin sürüş hem yakıtı hem emisyonu azaltır.",
+   "levha": null
+  },
+  {
+   "uid": "k168",
+   "kat": "ta",
+   "metin": "Aracın camından yüksek sesle müzik dinlemek hakkında hangisi doğrudur?",
+   "dogru": "Çevreyi rahatsız eder ve dışarıdaki uyarı seslerini duymayı engeller",
+   "yanlislar": [
+    "Trafik güvenliğini artırır",
+    "Sadece otoyolda serbesttir",
+    "Hiçbir etkisi yoktur"
+   ],
+   "cozum": "Ambulans sireni gibi uyarıların duyulmaması tehlikeli sonuçlar doğurabilir.",
+   "levha": null
+  },
+  {
+   "uid": "k108",
+   "kat": "tc",
+   "metin": "Aracın atık motor yağı nasıl bertaraf edilmelidir?",
+   "dogru": "Yetkili servis ya da atık yağ toplama noktalarına teslim edilerek",
+   "yanlislar": [
+    "Kanalizasyona dökülerek",
+    "Toprağa dökülerek",
+    "Dereye bırakılarak"
+   ],
+   "cozum": "Atık yağ toprağı ve suyu kirletir; lisanslı toplama noktalarına verilmelidir.",
+   "levha": null
+  },
+  {
+   "uid": "k045",
+   "kat": "iy",
+   "metin": "Elektrik çarpmasında kazazedeye dokunmadan önce ne yapılır?",
+   "dogru": "Akım kesilir ya da kazazede yalıtkan bir cisimle akımdan uzaklaştırılır",
+   "yanlislar": [
+    "Kazazedeye çıplak elle hemen dokunulur",
+    "Üzerine su dökülür",
+    "Islak bir sopayla itilir"
+   ],
+   "cozum": "İlk yardımcının da çarpılmaması için önce akım kesilir; ıslak cisimler iletken olabilir.",
+   "levha": null
   }
  ],
- "guncelleme": "2026-11-26"
+ "guncelleme": "2026-11-27"
 }
