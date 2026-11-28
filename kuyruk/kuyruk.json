@@ -1,96 +1,5 @@
 [
  {
-  "uid": "k046",
-  "kat": "iy",
-  "metin": "Hipotermi (vücut ısısının aşırı düşmesi) yaşayan kazazedeye ne yapılır?",
-  "dogru": "Ilık ortama alınır, ıslak giysileri çıkarılıp kuru örtülerle sarılır",
-  "yanlislar": [
-   "Alkol içirilir",
-   "Kolları ve bacakları sertçe ovulur",
-   "Soğuk suyla yıkanır"
-  ],
-  "cozum": "Isınma yavaş ve kontrollü olmalıdır; alkol ve ovalama zararlıdır.",
-  "levha": null
- },
- {
-  "uid": "k047",
-  "kat": "iy",
-  "metin": "Kas krampı yaşayan kişiye ne yapılır?",
-  "dogru": "Kas yavaşça gerilir ve hafif masaj yapılır",
-  "yanlislar": [
-   "Kas üzerine buz bastırılıp sertçe vurulur",
-   "Kişi koşmaya zorlanır",
-   "Hiçbir şey yapılmaz, sıcakta beklenir"
-  ],
-  "cozum": "Kasın yavaşça germe hareketi ve hafif masaj krampı çözer; sıvı alımı desteklenir.",
-  "levha": null
- },
- {
-  "uid": "k048",
-  "kat": "iy",
-  "metin": "Kaza yerinde birden fazla yaralı varsa ilk yardımcı öncelikle kime müdahale eder?",
-  "dogru": "Hayati tehlikesi olan ve hızlı müdahaleyle kurtarılabilecek kazazedeye",
-  "yanlislar": [
-   "En çok bağıran kazazedeye",
-   "En yakındaki kazazedeye",
-   "Tanıdığı kişiye"
-  ],
-  "cozum": "Önceliklendirme (triyaj) hayatı tehdit eden durumlara göre yapılır; sessiz kazazede daha ağır olabilir.",
-  "levha": null
- },
- {
-  "uid": "k109",
-  "kat": "tc",
-  "metin": "Aracın penceresinden çöp atmak hakkında hangisi doğrudur?",
-  "dogru": "Hem çevreyi kirletir hem de trafikte tehlike oluşturur",
-  "yanlislar": [
-   "Otoyolda serbesttir",
-   "Sadece gece serbesttir",
-   "Çevreye zararı yoktur"
-  ],
-  "cozum": "Atılan cisimler arkadaki araçlara çarpabilir; çevre kirliliğine yol açar.",
-  "levha": null
- },
- {
-  "uid": "k110",
-  "kat": "tc",
-  "metin": "Ekonomik sürüş için hangisi yapılmalıdır?",
-  "dogru": "Ani hızlanma ve ani frenlerden kaçınılmalı, uygun viteste sabit hızla gidilmelidir",
-  "yanlislar": [
-   "Motor sürekli yüksek devirde tutulmalıdır",
-   "Klima ve camlar aynı anda açık tutulmalıdır",
-   "Bagajda gereksiz yük taşınmalıdır"
-  ],
-  "cozum": "Akıcı ve öngörülü sürüş yakıt tüketimini ve emisyonu belirgin biçimde azaltır.",
-  "levha": null
- },
- {
-  "uid": "k111",
-  "kat": "tc",
-  "metin": "Sürücünün araç kullanırken kör noktaları kontrol etmesi neden önemlidir?",
-  "dogru": "Aynalarda görünmeyen araçlarla çarpışmayı önlemek için",
-  "yanlislar": [
-   "Yakıt tasarrufu için",
-   "Motor sağlığı için",
-   "Hız sınırını öğrenmek için"
-  ],
-  "cozum": "Şerit değiştirmeden önce omuz üstünden bakış, aynalarda görünmeyen araçları fark etmeyi sağlar.",
-  "levha": null
- },
- {
-  "uid": "k112",
-  "kat": "tc",
-  "metin": "Okul taşıtı, üzerinde 'DUR' yazılı lambalar yanarken öğrenci indiriyorsa diğer sürücüler ne yapmalıdır?",
-  "dogru": "Durmalı veya çok yavaşlayarak öğrencilere dikkat etmelidir",
-  "yanlislar": [
-   "Korna çalarak geçmelidir",
-   "Hızlanarak geçmelidir",
-   "Okul taşıtının önüne park etmelidir"
-  ],
-  "cozum": "Öğrenciler taşıt çevresinde aniden yola çıkabilir; azami dikkat gerekir.",
-  "levha": null
- },
- {
   "uid": "k113",
   "kat": "tc",
   "metin": "Trafik görevlisinin kolunu yukarı kaldırması ne anlama gelir?",
@@ -140,19 +49,6 @@
    "Çocuk bagajda taşınmalıdır"
   ],
   "cozum": "Kucakta taşınan çocuk çarpışmada yetişkin tarafından ezilebilir veya fırlayabilir.",
-  "levha": null
- },
- {
-  "uid": "k169",
-  "kat": "ta",
-  "metin": "Trafikte sabırlı olmanın sürücüye faydası nedir?",
-  "dogru": "Stresi azaltır, daha güvenli kararlar vermesini sağlar",
-  "yanlislar": [
-   "Varış süresini her zaman yarıya indirir",
-   "Yakıtı artırır",
-   "Kurallardan muaf tutar"
-  ],
-  "cozum": "Sabırlı sürücü riskli sollama ve agresif manevralardan kaçınır.",
   "levha": null
  }
 ]
